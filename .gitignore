@@ -4,7 +4,11 @@
 .venv_new/
 __pycache__/
 *.pyc
-daily_ai_reports/
-automation_logs/
-data/
-Final/
+/daily_ai_reports/
+/automation_logs/
+/data/
+/Final/
+
+# Keep published web data tracked for GitHub Pages
+!docs/data/
+!docs/data/**
