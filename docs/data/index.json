@@ -1,0 +1,11 @@
+{
+  "latest_date": "2026-03-10",
+  "reports": [
+    {
+      "date": "2026-03-10",
+      "json": "daily_ai_brief_2026-03-10.json",
+      "md": "daily_ai_brief_2026-03-10.md",
+      "article_count": 10
+    }
+  ]
+}
