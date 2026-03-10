@@ -1,0 +1,235 @@
+{
+  "sources": [
+    {
+      "name": "OpenAI News",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "authority": "official",
+      "topic_hint": "모델/제품",
+      "max_items": 20
+    },
+    {
+      "name": "Google Research Blog",
+      "feed_url": "https://research.google/blog/rss/",
+      "authority": "official",
+      "topic_hint": "연구/제품",
+      "max_items": 20
+    },
+    {
+      "name": "Google Blog AI",
+      "feed_url": "https://blog.google/technology/ai/rss/",
+      "fallback_feed_urls": [
+        "https://blog.google/rss/"
+      ],
+      "authority": "official",
+      "topic_hint": "모델/제품",
+      "max_items": 20
+    },
+    {
+      "name": "DeepMind Blog",
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "authority": "official",
+      "topic_hint": "연구",
+      "max_items": 20
+    },
+    {
+      "name": "Hugging Face Blog",
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "authority": "official",
+      "topic_hint": "오픈소스",
+      "max_items": 20
+    },
+    {
+      "name": "MIT Technology Review AI",
+      "feed_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "authority": "media",
+      "topic_hint": "산업/정책",
+      "max_items": 25
+    },
+    {
+      "name": "VentureBeat AI",
+      "feed_url": "https://venturebeat.com/category/ai/feed/",
+      "authority": "media",
+      "topic_hint": "시장/투자",
+      "max_items": 25
+    },
+    {
+      "name": "Apple Machine Learning Research",
+      "feed_url": "https://machinelearning.apple.com/rss.xml",
+      "authority": "research",
+      "topic_hint": "연구",
+      "max_items": 30
+    }
+  ],
+  "topic_rules": {
+    "모델/출시": [
+      "model",
+      "llm",
+      "gpt",
+      "claude",
+      "gemini",
+      "release",
+      "launch",
+      "preview",
+      "api",
+      "버전",
+      "출시"
+    ],
+    "에이전트/자동화": [
+      "agent",
+      "workflow",
+      "orchestration",
+      "tool use",
+      "automation",
+      "copilot",
+      "multi-agent",
+      "에이전트",
+      "자동화"
+    ],
+    "멀티모달": [
+      "multimodal",
+      "vision",
+      "video",
+      "audio",
+      "speech",
+      "image",
+      "text-to-video",
+      "text-to-image",
+      "음성",
+      "이미지",
+      "비전"
+    ],
+    "성능/벤치마크": [
+      "benchmark",
+      "reasoning",
+      "evaluation",
+      "latency",
+      "throughput",
+      "cost",
+      "accuracy",
+      "hallucination",
+      "평가",
+      "성능"
+    ],
+    "정책/규제/안전": [
+      "policy",
+      "regulation",
+      "compliance",
+      "governance",
+      "safety",
+      "risk",
+      "law",
+      "eu ai act",
+      "nist",
+      "규제",
+      "정책",
+      "안전"
+    ],
+    "기업/투자": [
+      "funding",
+      "acquisition",
+      "partnership",
+      "enterprise",
+      "pricing",
+      "revenue",
+      "startup",
+      "investment",
+      "투자",
+      "매출",
+      "기업"
+    ],
+    "오픈소스/개발자": [
+      "open source",
+      "github",
+      "sdk",
+      "framework",
+      "library",
+      "python",
+      "hugging face",
+      "developer",
+      "오픈소스",
+      "개발자"
+    ],
+    "연구/논문": [
+      "paper",
+      "arxiv",
+      "preprint",
+      "dataset",
+      "training",
+      "alignment",
+      "model card",
+      "논문",
+      "연구",
+      "데이터셋"
+    ]
+  },
+  "issue_rules": {
+    "신규 모델/제품 발표": [
+      "release",
+      "launch",
+      "new model",
+      "preview",
+      "introducing",
+      "출시",
+      "공개"
+    ],
+    "에이전트 워크플로 확장": [
+      "agent",
+      "workflow",
+      "automation",
+      "tool use",
+      "multi-agent",
+      "에이전트"
+    ],
+    "비용/성능 경쟁": [
+      "cost",
+      "latency",
+      "benchmark",
+      "faster",
+      "cheaper",
+      "throughput",
+      "성능",
+      "비용"
+    ],
+    "정책/규제 변화": [
+      "policy",
+      "regulation",
+      "law",
+      "ai act",
+      "compliance",
+      "규제",
+      "정책"
+    ],
+    "안전/리스크 논의": [
+      "safety",
+      "risk",
+      "alignment",
+      "misuse",
+      "responsible ai",
+      "안전",
+      "리스크"
+    ],
+    "기업 파트너십/투자": [
+      "partnership",
+      "funding",
+      "acquisition",
+      "enterprise",
+      "investment",
+      "파트너십",
+      "투자"
+    ]
+  },
+  "llm": {
+    "enabled": true,
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite-preview",
+    "temperature": 0.1,
+    "max_articles_per_run": 10,
+    "api_key_env": "GEMINI_API_KEY",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/"
+  },
+  "report_options": {
+    "default_lookback_days": 7,
+    "target_articles": 10,
+    "max_total_articles": 10
+  }
+}

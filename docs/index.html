@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily AI Brief</title>
+    <style>
+      :root {
+        --bg-a: #0e1116;
+        --bg-b: #182432;
+        --panel: rgba(255, 255, 255, 0.06);
+        --line: rgba(255, 255, 255, 0.14);
+        --text: #ecf1f8;
+        --muted: #b5c0d0;
+        --accent: #6ee7b7;
+        --accent-2: #60a5fa;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 500px at 85% -10%, rgba(96, 165, 250, 0.25), transparent),
+          radial-gradient(1000px 450px at -5% 0%, rgba(110, 231, 183, 0.18), transparent),
+          linear-gradient(135deg, var(--bg-a), var(--bg-b));
+        font-family: "Pretendard", "SUIT", "Segoe UI", "Noto Sans KR", sans-serif;
+        min-height: 100vh;
+      }
+      .wrap {
+        width: min(1080px, 92vw);
+        margin: 24px auto 56px;
+      }
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        backdrop-filter: blur(6px);
+        padding: 20px 22px;
+      }
+      .title {
+        margin: 0;
+        font-size: clamp(1.3rem, 2.5vw, 2rem);
+        letter-spacing: 0.01em;
+      }
+      .meta {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .chips {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--muted);
+        font-size: 0.85rem;
+        border-radius: 999px;
+        padding: 6px 10px;
+      }
+      .grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .topic {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--panel);
+        padding: 14px;
+      }
+      .topic h2 {
+        margin: 0 0 10px;
+        font-size: 1.02rem;
+        color: var(--accent);
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 12px;
+      }
+      .card + .card {
+        margin-top: 10px;
+      }
+      .card-title {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .card-title a {
+        color: var(--text);
+        text-decoration: none;
+      }
+      .card-title a:hover {
+        color: var(--accent-2);
+      }
+      .sub {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .summary {
+        margin: 10px 0 0;
+        color: #d8e0ec;
+        line-height: 1.58;
+        font-size: 0.95rem;
+      }
+      .keywords {
+        margin-top: 9px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .k {
+        border-radius: 999px;
+        background: rgba(110, 231, 183, 0.14);
+        color: #9ef3d0;
+        font-size: 0.78rem;
+        padding: 4px 8px;
+      }
+      .history {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+      .history a {
+        color: var(--accent-2);
+      }
+      .err {
+        color: #fecaca;
+        border: 1px solid rgba(254, 202, 202, 0.35);
+        background: rgba(127, 29, 29, 0.25);
+        border-radius: 12px;
+        padding: 10px 12px;
+      }
+      @media (max-width: 640px) {
+        .wrap {
+          width: 94vw;
+          margin-top: 14px;
+        }
+        .hero {
+          border-radius: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1 class="title">Daily AI Brief</h1>
+        <div id="meta" class="meta">로딩 중...</div>
+        <div id="issues" class="chips"></div>
+        <div id="history" class="history"></div>
+      </section>
+      <section id="content" class="grid"></section>
+    </main>
+
+    <script>
+      const el = {
+        meta: document.getElementById("meta"),
+        issues: document.getElementById("issues"),
+        content: document.getElementById("content"),
+        history: document.getElementById("history"),
+      };
+
+      function byTopic(articles) {
+        const map = new Map();
+        for (const a of articles || []) {
+          const topics = a.topics && a.topics.length ? a.topics : ["기타"];
+          for (const t of topics) {
+            if (!map.has(t)) map.set(t, []);
+            map.get(t).push(a);
+          }
+        }
+        return [...map.entries()].sort((a, b) => b[1].length - a[1].length);
+      }
+
+      function renderIssueChips(issuesTop) {
+        el.issues.innerHTML = "";
+        for (const item of issuesTop || []) {
+          const [issue, count] = item;
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          chip.textContent = `${issue} ${count}건`;
+          el.issues.appendChild(chip);
+        }
+      }
+
+      function renderTopics(articles) {
+        const groups = byTopic(articles);
+        el.content.innerHTML = "";
+        for (const [topic, list] of groups) {
+          const sec = document.createElement("article");
+          sec.className = "topic";
+          const h2 = document.createElement("h2");
+          h2.textContent = `${topic} (${list.length})`;
+          sec.appendChild(h2);
+
+          for (const a of list) {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+              <h3 class="card-title"><a href="${a.link}" target="_blank" rel="noreferrer">${a.title}</a></h3>
+              <div class="sub">${a.source || "-"} | ${a.published_local || "-"}</div>
+              <p class="summary">${a.summary || ""}</p>
+              <div class="keywords">
+                ${(a.keywords || []).map((k) => `<span class="k">${k}</span>`).join("")}
+              </div>
+            `;
+            sec.appendChild(card);
+          }
+          el.content.appendChild(sec);
+        }
+      }
+
+      async function renderHistory() {
+        try {
+          const r = await fetch("./data/index.json", { cache: "no-store" });
+          if (!r.ok) return;
+          const index = await r.json();
+          const latestDate = index.latest_date || "-";
+          const top = (index.reports || []).slice(0, 7);
+          const links = top
+            .map((item) => {
+              const md = item.md ? `./data/${item.md}` : "#";
+              return `<a href="${md}" target="_blank" rel="noreferrer">${item.date}</a>`;
+            })
+            .join(" | ");
+          el.history.innerHTML = `최근 리포트 (${latestDate} 포함): ${links}`;
+        } catch {
+          el.history.innerHTML = "";
+        }
+      }
+
+      async function boot() {
+        try {
+          const res = await fetch("./data/latest.json", { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          el.meta.innerHTML = `
+            <span>기준일: ${data.report_date || "-"}</span>
+            <span>기사 수: ${data.article_count ?? 0}</span>
+            <span>생성시각: ${data.generated_at || "-"}</span>
+          `;
+          renderIssueChips(data.issues_top || []);
+          renderTopics(data.articles || []);
+          renderHistory();
+        } catch (err) {
+          el.meta.innerHTML = `<div class="err">리포트를 불러오지 못했습니다: ${err}</div>`;
+        }
+      }
+
+      boot();
+    </script>
+  </body>
+</html>

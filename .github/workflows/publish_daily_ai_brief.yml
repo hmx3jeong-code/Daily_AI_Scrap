@@ -1,0 +1,53 @@
+name: Publish Daily AI Brief
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekdays 09:00 KST = 00:00 UTC (Mon-Fri)
+    - cron: "0 0 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  run-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements_daily_agent.txt
+
+      - name: Generate daily report
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python daily_ai_news_agent.py \
+            --config daily_ai_agent_config.json \
+            --output-dir docs/data \
+            --target-articles 10 \
+            --max-total-articles 10
+
+      - name: Publish latest aliases
+        run: |
+          python scripts/publish_latest_report.py --input-dir docs/data
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: publish daily AI brief"
+            git push
+          fi

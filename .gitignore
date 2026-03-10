@@ -1,0 +1,10 @@
+﻿.env
+.venv/
+.venv2/
+.venv_new/
+__pycache__/
+*.pyc
+daily_ai_reports/
+automation_logs/
+data/
+Final/
