@@ -358,7 +358,9 @@
         </div>
 
         <div class="llm-panel">
-          <div class="llm-head">기사 카드별 질문하기 (Gemini API Key: 브라우저에만 저장)</div>
+          <div class="llm-head">
+            기사 카드별 질문하기 (모델: gemini-3.1-flash-lite-preview, API Key는 브라우저에만 저장)
+          </div>
           <div class="llm-controls">
             <input id="geminiKeyInput" type="password" placeholder="Gemini API Key (선택)" />
             <button id="saveKeyBtn" class="btn" type="button">키 저장</button>
@@ -376,6 +378,7 @@
 
     <script>
       const API_KEY_STORAGE = "daily_ai_brief_gemini_key";
+      const GEMINI_CHAT_MODEL = "gemini-3.1-flash-lite-preview";
 
       const state = {
         issueToCardId: new Map(),
@@ -530,7 +533,7 @@
         ].join("\n");
 
         const endpoint =
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${encodeURIComponent(state.geminiApiKey)}`;
+          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_CHAT_MODEL)}:generateContent?key=${encodeURIComponent(state.geminiApiKey)}`;
         const payload = {
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: {
