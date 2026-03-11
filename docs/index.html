@@ -157,7 +157,7 @@
     <main class="wrap">
       <section class="hero">
         <h1 class="title">Daily AI Brief</h1>
-        <div id="meta" class="meta">濡쒕뵫 以?..</div>
+        <div id="meta" class="meta">Loading...</div>
         <div id="issues" class="chips"></div>
         <div id="history" class="history"></div>
       </section>
@@ -175,7 +175,7 @@
       function byTopic(articles) {
         const map = new Map();
         for (const a of articles || []) {
-          const topics = a.topics && a.topics.length ? a.topics : ["湲고?"];
+          const topics = a.topics && a.topics.length ? a.topics : ["Other"];
           for (const t of topics) {
             if (!map.has(t)) map.set(t, []);
             map.get(t).push(a);
@@ -190,7 +190,7 @@
           const [issue, count] = item;
           const chip = document.createElement("span");
           chip.className = "chip";
-          chip.textContent = `${issue} ${count}嫄?;
+                    chip.textContent = `${issue} ${count} items`;
           el.issues.appendChild(chip);
         }
       }
@@ -235,7 +235,7 @@
               return `<a href="${md}" target="_blank" rel="noreferrer">${item.date}</a>`;
             })
             .join(" | ");
-          el.history.innerHTML = `理쒓렐 由ы룷??(${latestDate} ?ы븿): ${links}`;
+          el.history.innerHTML = `Recent reports (incl. ${latestDate}): ${links}`;
         } catch {
           el.history.innerHTML = "";
         }
@@ -273,15 +273,15 @@
           const generatedAtKst = formatGeneratedAtKst(data.generated_at);
           const generatedAtUtc = data.generated_at || "-";
           el.meta.innerHTML = `
-            <span>湲곗??? ${data.report_date || "-"}</span>
-            <span>湲곗궗 ?? ${data.article_count ?? 0}</span>
-            <span title="UTC: ${generatedAtUtc}">?앹꽦?쒓컖: ${generatedAtKst}</span>
+            <span>Report date: ${data.report_date || "-"}</span>
+            <span>Article count: ${data.article_count ?? 0}</span>
+            <span title="UTC: ${generatedAtUtc}">Generated at (KST): ${generatedAtKst}</span>
           `;
           renderIssueChips(data.issues_top || []);
           renderTopics(data.articles || []);
           renderHistory();
         } catch (err) {
-          el.meta.innerHTML = `<div class="err">由ы룷?몃? 遺덈윭?ㅼ? 紐삵뻽?듬땲?? ${err}</div>`;
+          el.meta.innerHTML = `<div class="err">Failed to load report: ${err}</div>`;
         }
       }
 
@@ -289,4 +289,5 @@
     </script>
   </body>
 </html>
+
 
