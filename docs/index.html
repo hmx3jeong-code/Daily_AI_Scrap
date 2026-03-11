@@ -273,7 +273,6 @@
         padding: 8px 10px;
         font-size: 0.86rem;
         line-height: 1.55;
-        white-space: pre-wrap;
       }
 
       .msg-user {
@@ -287,6 +286,64 @@
       .msg-system {
         background: rgba(255, 255, 255, 0.06);
         color: var(--muted);
+      }
+
+      .msg-content {
+        display: grid;
+        gap: 8px;
+      }
+
+      .msg-content p {
+        margin: 0;
+      }
+
+      .msg-content h4,
+      .msg-content h5,
+      .msg-content h6 {
+        margin: 0;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+      }
+
+      .msg-content h4 {
+        font-size: 0.96rem;
+        color: #d8ebff;
+      }
+
+      .msg-content h5 {
+        font-size: 0.9rem;
+        color: #c6dcf6;
+      }
+
+      .msg-content h6 {
+        font-size: 0.86rem;
+        color: #b6cae0;
+      }
+
+      .msg-content ul,
+      .msg-content ol {
+        margin: 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 4px;
+      }
+
+      .msg-content li {
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .msg-content strong {
+        color: #f8fbff;
+      }
+
+      .msg-content code {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 6px;
+        padding: 0 6px;
+        font-size: 0.8rem;
+        background: rgba(0, 0, 0, 0.2);
       }
 
       .chat-form {
@@ -504,9 +561,96 @@
       function appendMessage(logEl, role, text) {
         const msg = document.createElement("div");
         msg.className = `msg ${role === "user" ? "msg-user" : role === "ai" ? "msg-ai" : "msg-system"}`;
-        msg.textContent = text;
+        const content = document.createElement("div");
+        content.className = "msg-content";
+        if (role === "ai") {
+          content.innerHTML = renderMarkdownToHtml(text);
+        } else {
+          content.innerHTML = `<p>${formatInlineMarkdown(text)}</p>`;
+        }
+        msg.appendChild(content);
         logEl.appendChild(msg);
         logEl.scrollTop = logEl.scrollHeight;
+      }
+
+      function formatInlineMarkdown(raw) {
+        let safe = escapeHtml(raw || "");
+        safe = safe.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+        safe = safe.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+        safe = safe.replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+        return safe;
+      }
+
+      function renderMarkdownToHtml(raw) {
+        const lines = String(raw || "").replace(/\r\n/g, "\n").split("\n");
+        const blocks = [];
+        let index = 0;
+
+        const isBullet = (line) => /^[-*]\s+/.test(line);
+        const isNumbered = (line) => /^\d+\.\s+/.test(line);
+        const isHeading = (line) => /^#{1,6}\s+/.test(line);
+
+        while (index < lines.length) {
+          const line = lines[index];
+          const trimmed = line.trim();
+          if (!trimmed) {
+            index += 1;
+            continue;
+          }
+
+          const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
+          if (heading) {
+            const depth = Math.min(heading[1].length, 6);
+            const tag = depth <= 4 ? "h4" : depth === 5 ? "h5" : "h6";
+            blocks.push(`<${tag}>${formatInlineMarkdown(heading[2])}</${tag}>`);
+            index += 1;
+            continue;
+          }
+
+          if (isBullet(trimmed)) {
+            const items = [];
+            while (index < lines.length && isBullet(lines[index].trim())) {
+              items.push(lines[index].trim().replace(/^[-*]\s+/, ""));
+              index += 1;
+            }
+            blocks.push(
+              `<ul>${items.map((item) => `<li>${formatInlineMarkdown(item)}</li>`).join("")}</ul>`
+            );
+            continue;
+          }
+
+          if (isNumbered(trimmed)) {
+            const items = [];
+            while (index < lines.length && isNumbered(lines[index].trim())) {
+              items.push(lines[index].trim().replace(/^\d+\.\s+/, ""));
+              index += 1;
+            }
+            blocks.push(
+              `<ol>${items.map((item) => `<li>${formatInlineMarkdown(item)}</li>`).join("")}</ol>`
+            );
+            continue;
+          }
+
+          const paragraphLines = [];
+          while (index < lines.length) {
+            const current = lines[index];
+            const currentTrimmed = current.trim();
+            if (!currentTrimmed) break;
+            if (isHeading(currentTrimmed) || isBullet(currentTrimmed) || isNumbered(currentTrimmed)) {
+              break;
+            }
+            paragraphLines.push(currentTrimmed);
+            index += 1;
+          }
+          blocks.push(
+            `<p>${paragraphLines.map((item) => formatInlineMarkdown(item)).join("<br>")}</p>`
+          );
+        }
+
+        if (blocks.length === 0) {
+          return "<p>(응답 없음)</p>";
+        }
+        return blocks.join("");
       }
 
       async function askGeminiForArticle(article, question, conversationSummary) {
