@@ -230,6 +230,7 @@
   "report_options": {
     "default_lookback_days": 7,
     "target_articles": 10,
-    "max_total_articles": 10
+    "max_total_articles": 10,
+    "history_dedupe_days": 14
   }
 }

@@ -36,6 +36,58 @@ USER_AGENT = (
 
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 WHITESPACE_RE = re.compile(r"\s+")
+TEXT_SIG_RE = re.compile(r"[^0-9a-zA-Z가-힣]+")
+REPORT_JSON_NAME_RE = re.compile(r"^daily_ai_brief_(\d{4}-\d{2}-\d{2})\.json$")
+
+TRACKING_QUERY_KEYS = {
+    "ref",
+    "source",
+    "output",
+    "fbclid",
+    "gclid",
+    "mc_cid",
+    "mc_eid",
+    "spm",
+    "igshid",
+    "feature",
+}
+
+TITLE_STOPWORDS = {
+    "a",
+    "an",
+    "the",
+    "to",
+    "for",
+    "of",
+    "and",
+    "in",
+    "on",
+    "with",
+    "at",
+    "by",
+    "is",
+    "are",
+    "new",
+    "latest",
+    "update",
+    "introducing",
+    "official",
+    "blog",
+    "news",
+    "ai",
+    "및",
+    "에서",
+    "으로",
+    "에서의",
+    "관련",
+    "대한",
+    "그리고",
+    "이번",
+    "최신",
+    "공개",
+    "출시",
+    "발표",
+}
 
 
 @dataclass
@@ -625,6 +677,190 @@ def normalize_feed_url(link: str) -> str:
     )
 
 
+def normalize_signature_text(text: str) -> str:
+    cleaned = normalize_whitespace(strip_html(text)).lower()
+    cleaned = TEXT_SIG_RE.sub(" ", cleaned)
+    return normalize_whitespace(cleaned)
+
+
+def title_token_set(title: str) -> set[str]:
+    tokens = []
+    for token in normalize_signature_text(title).split():
+        if len(token) <= 1:
+            continue
+        if token in TITLE_STOPWORDS:
+            continue
+        tokens.append(token)
+    return set(tokens)
+
+
+def jaccard_similarity(a: set[str], b: set[str]) -> float:
+    if not a or not b:
+        return 0.0
+    intersection = len(a & b)
+    union = len(a | b)
+    if union == 0:
+        return 0.0
+    return intersection / union
+
+
+def canonical_article_url_signature(link: str) -> str:
+    if not link:
+        return ""
+    parsed = urllib.parse.urlsplit(link.strip())
+    if not parsed.scheme or not parsed.netloc:
+        return ""
+    host = parsed.netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    path = re.sub(r"/+", "/", (parsed.path or "/").rstrip("/"))
+    if not path:
+        path = "/"
+    if path.endswith("/amp"):
+        path = path[: -len("/amp")] or "/"
+    query = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
+    filtered = []
+    for key, value in query:
+        lowered = key.lower()
+        if lowered.startswith("utm_"):
+            continue
+        if lowered in TRACKING_QUERY_KEYS:
+            continue
+        filtered.append((lowered, value))
+    filtered.sort()
+    normalized_query = urllib.parse.urlencode(filtered, doseq=True)
+    if normalized_query:
+        return f"{host}{path}?{normalized_query}"
+    return f"{host}{path}"
+
+
+def article_title_signature(title: str) -> str:
+    normalized = normalize_signature_text(title)
+    if not normalized:
+        return ""
+    tokens = [t for t in normalized.split() if t not in TITLE_STOPWORDS]
+    if tokens:
+        return " ".join(tokens[:12])
+    return normalized
+
+
+def article_primary_dedupe_key(article: Article) -> str:
+    url_sig = canonical_article_url_signature(article.link)
+    if url_sig:
+        return f"url:{url_sig}"
+    title_sig = article_title_signature(article.title)
+    if title_sig:
+        return f"title:{title_sig}"
+    fallback = normalize_signature_text(article.title)
+    return f"title:{fallback}" if fallback else ""
+
+
+def article_signature_keys_from_values(title: str, link: str) -> set[str]:
+    signatures: set[str] = set()
+    url_sig = canonical_article_url_signature(link)
+    title_sig = article_title_signature(title)
+    if url_sig:
+        signatures.add(f"url:{url_sig}")
+    if title_sig:
+        signatures.add(f"title:{title_sig}")
+    return signatures
+
+
+def article_signature_keys(article: Article) -> set[str]:
+    return article_signature_keys_from_values(article.title, article.link)
+
+
+def dedupe_articles(articles: list[Article]) -> list[Article]:
+    seen_primary_keys: set[str] = set()
+    seen_title_signatures: set[str] = set()
+    kept_title_tokens: list[tuple[set[str], str]] = []
+    out: list[Article] = []
+    for article in articles:
+        primary_key = article_primary_dedupe_key(article)
+        if primary_key and primary_key in seen_primary_keys:
+            continue
+
+        title_sig = article_title_signature(article.title)
+        if title_sig and title_sig in seen_title_signatures:
+            continue
+
+        current_tokens = title_token_set(article.title)
+        is_near_duplicate = False
+        if current_tokens:
+            for previous_tokens, previous_source in kept_title_tokens:
+                similarity = jaccard_similarity(current_tokens, previous_tokens)
+                # Same-title variants often appear with slightly different URLs/categories.
+                # For same source we use a lower threshold, cross-source keeps stricter threshold.
+                if similarity >= 0.88 and article.source_name == previous_source:
+                    is_near_duplicate = True
+                    break
+                if similarity >= 0.94:
+                    is_near_duplicate = True
+                    break
+        if is_near_duplicate:
+            continue
+
+        out.append(article)
+        if primary_key:
+            seen_primary_keys.add(primary_key)
+        if title_sig:
+            seen_title_signatures.add(title_sig)
+        kept_title_tokens.append((current_tokens, article.source_name))
+    return out
+
+
+def load_historical_article_signatures(
+    output_dir: Path,
+    report_date: dt.date,
+    history_days: int,
+) -> set[str]:
+    if history_days <= 0 or not output_dir.exists():
+        return set()
+    lower_bound = report_date - dt.timedelta(days=history_days)
+    signatures: set[str] = set()
+    for report_path in output_dir.glob("daily_ai_brief_*.json"):
+        match = REPORT_JSON_NAME_RE.match(report_path.name)
+        if not match:
+            continue
+        try:
+            past_date = dt.date.fromisoformat(match.group(1))
+        except ValueError:
+            continue
+        if past_date >= report_date or past_date < lower_bound:
+            continue
+        try:
+            payload = json.loads(report_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        raw_articles = payload.get("articles", [])
+        if not isinstance(raw_articles, list):
+            continue
+        for raw_article in raw_articles:
+            if not isinstance(raw_article, dict):
+                continue
+            title = str(raw_article.get("title_original") or raw_article.get("title") or "")
+            link = str(raw_article.get("link") or "")
+            signatures.update(article_signature_keys_from_values(title, link))
+    return signatures
+
+
+def filter_previously_reported_articles(
+    articles: list[Article],
+    historical_signatures: set[str],
+) -> tuple[list[Article], int]:
+    if not historical_signatures:
+        return articles, 0
+    filtered: list[Article] = []
+    dropped = 0
+    for article in articles:
+        signatures = article_signature_keys(article)
+        if signatures and any(sig in historical_signatures for sig in signatures):
+            dropped += 1
+            continue
+        filtered.append(article)
+    return filtered, dropped
+
+
 def in_date_window(
     published_dt: dt.datetime | None, report_date: dt.date, lookback_days: int
 ) -> bool:
@@ -635,18 +871,6 @@ def in_date_window(
     lower = report_date - dt.timedelta(days=max(lookback_days, 1) - 1)
     upper = report_date
     return lower <= converted.date() <= upper
-
-
-def dedupe_articles(articles: list[Article]) -> list[Article]:
-    seen: set[str] = set()
-    out: list[Article] = []
-    for article in articles:
-        key = f"{normalize_whitespace(article.title).lower()}|{article.link}"
-        if key in seen:
-            continue
-        seen.add(key)
-        out.append(article)
-    return out
 
 
 def article_sort_key(article: Article) -> dt.datetime:
@@ -819,6 +1043,7 @@ def build_json_report(
                 "link": article.link,
                 "published_raw": article.published_raw,
                 "published_local": format_dt(article.published_dt),
+                "primary_topic": article.topics[0] if article.topics else "기타",
                 "topics": article.topics,
                 "issues": article.issues,
                 "keywords": display_keywords,
@@ -880,15 +1105,18 @@ def run() -> int:
         if args.max_total_articles is not None
         else int(report_options.get("max_total_articles", 10))
     )
+    history_dedupe_days = int(report_options.get("history_dedupe_days", 14))
     lookback_days = max(1, lookback_days)
     target_articles = max(1, target_articles)
     max_total_articles = max(target_articles, max_total_articles)
+    history_dedupe_days = max(0, history_dedupe_days)
 
     print(
         f"[INFO] report_date={report_date.isoformat()} "
         f"lookback_days={lookback_days} "
         f"target_articles={target_articles} "
         f"max_total_articles={max_total_articles} "
+        f"history_dedupe_days={history_dedupe_days} "
         f"sources={len(sources)}"
     )
 
@@ -937,19 +1165,40 @@ def run() -> int:
     all_articles = sort_articles_desc(dedupe_articles(all_articles))
     backfill_pool = sort_articles_desc(dedupe_articles(backfill_pool))
 
+    historical_signatures = load_historical_article_signatures(
+        output_dir=args.output_dir,
+        report_date=report_date,
+        history_days=history_dedupe_days,
+    )
+    if historical_signatures:
+        all_articles, dropped_current = filter_previously_reported_articles(
+            all_articles, historical_signatures
+        )
+        backfill_pool, dropped_backfill = filter_previously_reported_articles(
+            backfill_pool, historical_signatures
+        )
+        if dropped_current or dropped_backfill:
+            print(
+                "[INFO] Historical dedupe removed "
+                f"{dropped_current + dropped_backfill} article(s) "
+                f"(current={dropped_current}, backfill={dropped_backfill}) "
+                f"from last {history_dedupe_days} day(s)."
+            )
+
     if len(all_articles) < target_articles and backfill_pool:
-        seen_keys = {
-            f"{normalize_whitespace(item.title).lower()}|{item.link}" for item in all_articles
-        }
+        seen_keys: set[str] = set()
+        for item in all_articles:
+            item_key = article_primary_dedupe_key(item)
+            if item_key:
+                seen_keys.add(item_key)
         added = 0
         for candidate in backfill_pool:
-            candidate_key = (
-                f"{normalize_whitespace(candidate.title).lower()}|{candidate.link}"
-            )
+            candidate_key = article_primary_dedupe_key(candidate)
             if candidate_key in seen_keys:
                 continue
             all_articles.append(candidate)
-            seen_keys.add(candidate_key)
+            if candidate_key:
+                seen_keys.add(candidate_key)
             added += 1
             if len(all_articles) >= target_articles:
                 break
@@ -1017,8 +1266,8 @@ def run() -> int:
     for article in all_articles:
         for issue in article.issues:
             issues_counter[issue] += 1
-        for topic in article.topics:
-            topic_to_articles[topic].append(article)
+        primary_topic = article.topics[0] if article.topics else "기타"
+        topic_to_articles[primary_topic].append(article)
 
     for topic in topic_to_articles:
         topic_to_articles[topic].sort(
