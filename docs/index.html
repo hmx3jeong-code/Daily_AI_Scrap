@@ -3,6 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07121f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Daily AI Brief" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://generativelanguage.googleapis.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <title>Daily AI Brief</title>
     <style>
       :root {
@@ -108,6 +121,23 @@
         background: rgba(125, 211, 252, 0.16);
       }
 
+      .install-panel {
+        margin-top: 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 10px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .install-hint {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
       .llm-panel {
         margin-top: 14px;
         border: 1px dashed var(--line);
@@ -127,6 +157,19 @@
         gap: 8px;
         flex-wrap: wrap;
         align-items: center;
+      }
+
+      .llm-opt-in {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .llm-opt-in input {
+        margin: 0;
       }
 
       .llm-controls input {
@@ -154,6 +197,11 @@
       .btn:hover {
         border-color: rgba(52, 211, 153, 0.75);
         background: rgba(52, 211, 153, 0.14);
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
       }
 
       .llm-status {
@@ -414,11 +462,20 @@
           <div id="issues" class="issues"></div>
         </div>
 
+        <div class="install-panel">
+          <button id="installBtn" class="btn" type="button" hidden>앱 설치</button>
+          <span id="installHint" class="install-hint">모바일 홈 화면 앱 설치를 준비 중입니다.</span>
+        </div>
+
         <div class="llm-panel">
           <div class="llm-head">
-            기사 카드별 질문하기 (모델: gemini-3.1-flash-lite-preview, API Key는 브라우저에만 저장)
+            기사 카드별 질문하기 (외부 API 호출 기능, 기본 꺼짐)
           </div>
           <div class="llm-controls">
+            <label class="llm-opt-in">
+              <input id="llmOptIn" type="checkbox" />
+              <span>질문 기능 사용 동의 (외부 API 호출 및 요금 발생 가능)</span>
+            </label>
             <input id="geminiKeyInput" type="password" placeholder="Gemini API Key (선택)" />
             <button id="saveKeyBtn" class="btn" type="button">키 저장</button>
             <button id="clearKeyBtn" class="btn" type="button">키 삭제</button>
@@ -435,11 +492,62 @@
 
     <script>
       const API_KEY_STORAGE = "daily_ai_brief_gemini_key";
+      const LLM_OPT_IN_STORAGE = "daily_ai_brief_llm_opt_in";
+      const CACHED_LATEST_STORAGE = "daily_ai_brief_cached_latest";
+      const CACHED_INDEX_STORAGE = "daily_ai_brief_cached_index";
       const GEMINI_CHAT_MODEL = "gemini-3.1-flash-lite-preview";
+      const FETCH_TIMEOUT_MS = 10000;
+      const GEMINI_TIMEOUT_MS = 20000;
+      const MAX_QUESTION_LENGTH = 500;
+
+      function safeStorageGet(key, fallback = "") {
+        try {
+          const value = localStorage.getItem(key);
+          return value === null ? fallback : value;
+        } catch {
+          return fallback;
+        }
+      }
+
+      function safeStorageSet(key, value) {
+        try {
+          localStorage.setItem(key, value);
+        } catch {
+          // Ignore storage failures in strict privacy mode.
+        }
+      }
+
+      function safeStorageRemove(key) {
+        try {
+          localStorage.removeItem(key);
+        } catch {
+          // Ignore storage failures in strict privacy mode.
+        }
+      }
+
+      function safeStorageGetJson(key) {
+        try {
+          const raw = localStorage.getItem(key);
+          if (!raw) return null;
+          return JSON.parse(raw);
+        } catch {
+          return null;
+        }
+      }
+
+      function safeStorageSetJson(key, value) {
+        try {
+          localStorage.setItem(key, JSON.stringify(value));
+        } catch {
+          // Ignore storage failures in strict privacy mode.
+        }
+      }
 
       const state = {
         issueToCardId: new Map(),
-        geminiApiKey: localStorage.getItem(API_KEY_STORAGE) || "",
+        geminiApiKey: safeStorageGet(API_KEY_STORAGE, ""),
+        llmOptIn: safeStorageGet(LLM_OPT_IN_STORAGE, "0") === "1",
+        deferredInstallPrompt: null,
       };
 
       const el = {
@@ -448,11 +556,31 @@
         history: document.getElementById("history"),
         topics: document.getElementById("topics"),
         errorBox: document.getElementById("errorBox"),
+        installBtn: document.getElementById("installBtn"),
+        installHint: document.getElementById("installHint"),
+        llmOptIn: document.getElementById("llmOptIn"),
         geminiKeyInput: document.getElementById("geminiKeyInput"),
         saveKeyBtn: document.getElementById("saveKeyBtn"),
         clearKeyBtn: document.getElementById("clearKeyBtn"),
         llmStatus: document.getElementById("llmStatus"),
       };
+
+      function normalizeHttpUrl(rawUrl) {
+        if (typeof rawUrl !== "string" || !rawUrl.trim()) return null;
+        try {
+          const parsed = new URL(rawUrl, window.location.href);
+          if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return null;
+          return parsed.href;
+        } catch {
+          return null;
+        }
+      }
+
+      function buildSafeReportLink(fileName) {
+        if (typeof fileName !== "string") return null;
+        if (!/^(daily_ai_brief_\d{4}-\d{2}-\d{2}|latest)\.md$/.test(fileName)) return null;
+        return `./data/${fileName}`;
+      }
 
       function escapeHtml(text) {
         return String(text || "")
@@ -487,33 +615,116 @@
       }
 
       function updateLlmStatus() {
-        if (state.geminiApiKey) {
-          el.llmStatus.textContent = "API 키가 저장되어 있습니다.";
+        el.geminiKeyInput.disabled = !state.llmOptIn;
+        el.saveKeyBtn.disabled = !state.llmOptIn;
+        el.clearKeyBtn.disabled = !state.llmOptIn;
+
+        if (!state.llmOptIn) {
+          el.llmStatus.textContent = "기본 OFF: 외부 API 호출과 과금 방지를 위해 질문 기능이 비활성화되어 있습니다.";
           return;
         }
-        el.llmStatus.textContent = "API 키 미설정: 카드 질문 시 키 입력 안내가 표시됩니다.";
+        if (state.geminiApiKey) {
+          el.llmStatus.textContent = "질문 기능 ON: API 키가 브라우저에 저장되어 있습니다.";
+          return;
+        }
+        el.llmStatus.textContent = "질문 기능 ON: API 키를 입력하면 카드별 질문을 사용할 수 있습니다.";
       }
 
       function initializeLlmControls() {
+        el.llmOptIn.checked = state.llmOptIn;
         el.geminiKeyInput.value = state.geminiApiKey;
         updateLlmStatus();
 
+        el.llmOptIn.addEventListener("change", () => {
+          state.llmOptIn = el.llmOptIn.checked;
+          safeStorageSet(LLM_OPT_IN_STORAGE, state.llmOptIn ? "1" : "0");
+          updateLlmStatus();
+        });
+
         el.saveKeyBtn.addEventListener("click", () => {
+          if (!state.llmOptIn) {
+            updateLlmStatus();
+            return;
+          }
           state.geminiApiKey = (el.geminiKeyInput.value || "").trim();
           if (state.geminiApiKey) {
-            localStorage.setItem(API_KEY_STORAGE, state.geminiApiKey);
+            safeStorageSet(API_KEY_STORAGE, state.geminiApiKey);
           } else {
-            localStorage.removeItem(API_KEY_STORAGE);
+            safeStorageRemove(API_KEY_STORAGE);
           }
           updateLlmStatus();
         });
 
         el.clearKeyBtn.addEventListener("click", () => {
           state.geminiApiKey = "";
-          localStorage.removeItem(API_KEY_STORAGE);
+          safeStorageRemove(API_KEY_STORAGE);
           el.geminiKeyInput.value = "";
           updateLlmStatus();
         });
+      }
+
+      function initializeInstallControls() {
+        const isStandalone =
+          window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+        if (isStandalone) {
+          el.installBtn.hidden = true;
+          el.installHint.textContent = "이미 홈 화면 앱으로 실행 중입니다.";
+          return;
+        }
+
+        const isIos = /iphone|ipad|ipod/i.test(window.navigator.userAgent || "");
+        el.installHint.textContent = isIos
+          ? "iOS Safari: 공유 버튼 > 홈 화면에 추가를 눌러 설치하세요."
+          : "설치 가능 브라우저에서는 앱 설치 버튼이 표시됩니다.";
+
+        window.addEventListener("beforeinstallprompt", (event) => {
+          event.preventDefault();
+          state.deferredInstallPrompt = event;
+          el.installBtn.hidden = false;
+          el.installHint.textContent = "앱으로 설치할 수 있습니다.";
+        });
+
+        window.addEventListener("appinstalled", () => {
+          state.deferredInstallPrompt = null;
+          el.installBtn.hidden = true;
+          el.installHint.textContent = "앱 설치가 완료되었습니다.";
+        });
+
+        el.installBtn.addEventListener("click", async () => {
+          if (!state.deferredInstallPrompt) {
+            el.installHint.textContent = "현재 브라우저에서는 자동 설치 창을 사용할 수 없습니다.";
+            return;
+          }
+
+          const promptEvent = state.deferredInstallPrompt;
+          promptEvent.prompt();
+          await promptEvent.userChoice;
+          state.deferredInstallPrompt = null;
+          el.installBtn.hidden = true;
+        });
+      }
+
+      async function registerServiceWorker() {
+        if (!("serviceWorker" in navigator)) return;
+        try {
+          await navigator.serviceWorker.register("./sw.js");
+        } catch {
+          // Service worker registration is optional; continue without blocking boot.
+        }
+      }
+
+      async function fetchJsonWithTimeout(path) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+        try {
+          const response = await fetch(path, { cache: "no-cache", signal: controller.signal });
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          return await response.json();
+        } finally {
+          clearTimeout(timeoutId);
+        }
       }
 
       function getPrimaryTopic(article) {
@@ -654,8 +865,14 @@
       }
 
       async function askGeminiForArticle(article, question, conversationSummary) {
+        if (!state.llmOptIn) {
+          return "질문 기능이 꺼져 있습니다. 상단에서 기능 동의를 먼저 켜주세요.";
+        }
         if (!state.geminiApiKey) {
           return "Gemini API 키가 설정되지 않았습니다. 상단에서 키를 저장한 뒤 다시 질문해 주세요.";
+        }
+        if ((question || "").length > MAX_QUESTION_LENGTH) {
+          return `질문 길이가 너무 깁니다. ${MAX_QUESTION_LENGTH}자 이하로 줄여 주세요.`;
         }
 
         const prompt = [
@@ -673,7 +890,7 @@
           "직전 대화 요약:",
           conversationSummary || "(없음)",
           "",
-          `사용자 질문: ${question}`,
+          `사용자 질문: ${(question || "").trim()}`,
         ].join("\n");
 
         const endpoint =
@@ -682,31 +899,37 @@
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: {
             temperature: 0.2,
-            maxOutputTokens: 3000,
+            maxOutputTokens: 1200,
           },
         };
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS);
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+          });
 
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            const message = data?.error?.message || `HTTP ${response.status}`;
+            throw new Error(message);
+          }
 
-        const data = await response.json().catch(() => ({}));
-        if (!response.ok) {
-          const message = data?.error?.message || `HTTP ${response.status}`;
-          throw new Error(message);
+          const text =
+            data?.candidates?.[0]?.content?.parts
+              ?.map((part) => part?.text || "")
+              .join("\n")
+              .trim() || "";
+          if (!text) {
+            throw new Error("LLM 응답이 비어 있습니다.");
+          }
+          return text;
+        } finally {
+          clearTimeout(timeoutId);
         }
-
-        const text =
-          data?.candidates?.[0]?.content?.parts
-            ?.map((part) => part?.text || "")
-            .join("\n")
-            .trim() || "";
-        if (!text) {
-          throw new Error("LLM 응답이 비어 있습니다.");
-        }
-        return text;
       }
 
       function createChatPanel(article) {
@@ -791,14 +1014,15 @@
         }
 
         const safeTitle = escapeHtml(article.title || "-");
-        const safeLink = escapeHtml(article.link || "#");
+        const articleLink = normalizeHttpUrl(article.link) || "#";
+        const safeLink = escapeHtml(articleLink);
         const safeSource = escapeHtml(article.source || article.source_name || "-");
         const safeTime = escapeHtml(article.published_local || "-");
         const safeSummary = escapeHtml(article.summary || "");
         const keywords = (article.keywords || []).map((k) => `<span class="kw">${escapeHtml(k)}</span>`).join("");
 
         card.innerHTML = `
-          <h3 class="card-title"><a href="${safeLink}" target="_blank" rel="noreferrer">${safeTitle}</a></h3>
+          <h3 class="card-title"><a href="${safeLink}" target="_blank" rel="noopener noreferrer">${safeTitle}</a></h3>
           <div class="sub">${safeSource} | ${safeTime}</div>
           <p class="summary">${safeSummary}</p>
           <div class="keywords">${keywords}</div>
@@ -809,9 +1033,9 @@
 
         const originBtn = document.createElement("a");
         originBtn.className = "btn";
-        originBtn.href = article.link || "#";
+        originBtn.href = articleLink;
         originBtn.target = "_blank";
-        originBtn.rel = "noreferrer";
+        originBtn.rel = "noopener noreferrer";
         originBtn.textContent = "원문 보기";
         actions.appendChild(originBtn);
 
@@ -858,48 +1082,68 @@
       }
 
       async function renderHistory() {
+        let data = null;
         try {
-          const response = await fetch("./data/index.json", { cache: "no-store" });
-          if (!response.ok) {
-            el.history.textContent = "";
-            return;
-          }
-          const data = await response.json();
-          const latestDate = data.latest_date || "-";
-          const items = (data.reports || []).slice(0, 7);
-          const links = items
-            .map((item) => {
-              const href = item.md ? `./data/${item.md}` : "#";
-              return `<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(item.date)}</a>`;
-            })
-            .join(" | ");
-          el.history.innerHTML = `최근 리포트 (${escapeHtml(latestDate)} 포함): ${links}`;
+          data = await fetchJsonWithTimeout("./data/index.json");
+          safeStorageSetJson(CACHED_INDEX_STORAGE, data);
         } catch {
-          el.history.textContent = "";
+          data = safeStorageGetJson(CACHED_INDEX_STORAGE);
         }
+
+        if (!data) {
+          el.history.textContent = "";
+          return;
+        }
+
+        const latestDate = data.latest_date || "-";
+        const items = (data.reports || []).slice(0, 7);
+        const links = items
+          .map((item) => {
+            const href = buildSafeReportLink(item.md);
+            if (!href) {
+              return `<span>${escapeHtml(item.date || "-")}</span>`;
+            }
+            return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.date || "-")}</a>`;
+          })
+          .join(" | ");
+        el.history.innerHTML = `최근 리포트 (${escapeHtml(latestDate)} 포함): ${links || "-"}`;
+      }
+
+      function renderLatestReport(data, isCached = false) {
+        const generatedAtKst = formatGeneratedAtKst(data.generated_at);
+        const generatedAtUtc = data.generated_at || "-";
+
+        el.meta.innerHTML = `
+          <span class="meta-pill">Report date: ${escapeHtml(data.report_date || "-")}</span>
+          <span class="meta-pill">Article count: ${escapeHtml(String(data.article_count ?? 0))}</span>
+          <span class="meta-pill" title="UTC: ${escapeHtml(generatedAtUtc)}">Generated at (KST): ${escapeHtml(generatedAtKst)}</span>
+          ${isCached ? '<span class="meta-pill">Offline cache mode</span>' : ""}
+        `;
+
+        renderIssueChips(data.issues_top || []);
+        renderTopics(data.articles || []);
       }
 
       async function boot() {
+        initializeInstallControls();
         initializeLlmControls();
+        await registerServiceWorker();
+
         try {
-          const response = await fetch("./data/latest.json", { cache: "no-store" });
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-          const data = await response.json();
-          const generatedAtKst = formatGeneratedAtKst(data.generated_at);
-          const generatedAtUtc = data.generated_at || "-";
-
-          el.meta.innerHTML = `
-            <span class="meta-pill">Report date: ${escapeHtml(data.report_date || "-")}</span>
-            <span class="meta-pill">Article count: ${escapeHtml(String(data.article_count ?? 0))}</span>
-            <span class="meta-pill" title="UTC: ${escapeHtml(generatedAtUtc)}">Generated at (KST): ${escapeHtml(generatedAtKst)}</span>
-          `;
-
-          renderIssueChips(data.issues_top || []);
-          renderTopics(data.articles || []);
+          const data = await fetchJsonWithTimeout("./data/latest.json");
+          safeStorageSetJson(CACHED_LATEST_STORAGE, data);
+          renderLatestReport(data, false);
+          el.errorBox.innerHTML = "";
           await renderHistory();
         } catch (err) {
+          const cached = safeStorageGetJson(CACHED_LATEST_STORAGE);
+          if (cached) {
+            renderLatestReport(cached, true);
+            el.errorBox.innerHTML = `<div class="err">네트워크 오류로 캐시된 리포트를 표시 중입니다: ${escapeHtml(String(err))}</div>`;
+            await renderHistory();
+            return;
+          }
+
           el.meta.innerHTML = `<span class="meta-pill">로딩 실패</span>`;
           el.errorBox.innerHTML = `<div class="err">리포트를 불러오지 못했습니다: ${escapeHtml(String(err))}</div>`;
         }
