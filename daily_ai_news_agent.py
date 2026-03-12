@@ -120,12 +120,13 @@ class Article:
 class LlmSummarizer:
     def __init__(self, llm_config: dict[str, Any]) -> None:
         self.enabled = bool(llm_config.get("enabled", False))
-        self.provider = str(llm_config.get("provider", "azure")).strip().lower()
-        self.model = str(llm_config.get("model", "")).strip()
+        self.provider = "gemini"
+        self.model = "gemini-3.1-flash-lite-preview"
         self.temperature = float(llm_config.get("temperature", 0.1))
         self.max_articles_per_run = int(llm_config.get("max_articles_per_run", 20))
         self.client: Any | None = None
         self._init_error = ""
+        self.config_notes: list[str] = []
         self.calls_attempted = 0
         self.calls_success_json = 0
         self.calls_success_freeform = 0
@@ -134,74 +135,34 @@ class LlmSummarizer:
 
         if not self.enabled:
             return
-        if not self.model:
-            self.enabled = False
-            self._init_error = "llm.model is empty."
-            return
+
+        requested_provider = str(llm_config.get("provider", "")).strip().lower()
+        if requested_provider and requested_provider != self.provider:
+            self.config_notes.append(
+                f"llm.provider='{requested_provider}' is ignored. Using '{self.provider}' only."
+            )
+        requested_model = str(llm_config.get("model", "")).strip()
+        if requested_model and requested_model != self.model:
+            self.config_notes.append(
+                f"llm.model='{requested_model}' is ignored. Using '{self.model}' only."
+            )
 
         try:
-            from openai import AzureOpenAI, OpenAI  # type: ignore
+            from openai import OpenAI  # type: ignore
         except ImportError:
             self.enabled = False
             self._init_error = "openai package is not installed."
             return
 
         try:
-            if self.provider == "azure":
-                api_key = os.getenv(
-                    str(llm_config.get("api_key_env", "AZURE_OPENAI_API_KEY"))
-                )
-                endpoint = os.getenv(
-                    str(llm_config.get("endpoint_env", "AZURE_OPENAI_ENDPOINT"))
-                )
-                api_version = os.getenv(
-                    str(llm_config.get("api_version_env", "AZURE_OPENAI_VERSION")),
-                    str(llm_config.get("api_version", "2024-12-01-preview")),
-                )
-                if not api_key or not endpoint:
-                    self.enabled = False
-                    self._init_error = (
-                        "Missing Azure OpenAI environment variables "
-                        "(api key or endpoint)."
-                    )
-                    return
-                self.client = AzureOpenAI(
-                    api_key=api_key,
-                    azure_endpoint=endpoint,
-                    api_version=api_version,
-                )
+            api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+            if not api_key:
+                self.enabled = False
+                self._init_error = "Missing GEMINI_API_KEY (or GOOGLE_API_KEY)."
                 return
 
-            if self.provider == "openai":
-                api_key = os.getenv(str(llm_config.get("api_key_env", "OPENAI_API_KEY")))
-                if not api_key:
-                    self.enabled = False
-                    self._init_error = "Missing OPENAI_API_KEY."
-                    return
-                self.client = OpenAI(api_key=api_key)
-                return
-
-            if self.provider == "gemini":
-                api_key = os.getenv(str(llm_config.get("api_key_env", "GEMINI_API_KEY")))
-                if not api_key:
-                    api_key = os.getenv("GOOGLE_API_KEY")
-                if not api_key:
-                    self.enabled = False
-                    self._init_error = "Missing GEMINI_API_KEY (or GOOGLE_API_KEY)."
-                    return
-                base_url = str(
-                    llm_config.get(
-                        "base_url",
-                        "https://generativelanguage.googleapis.com/v1beta/openai/",
-                    )
-                ).strip()
-                self.client = OpenAI(api_key=api_key, base_url=base_url)
-                return
-
-            self.enabled = False
-            self._init_error = (
-                "Unsupported llm.provider. Use 'azure', 'openai', or 'gemini'."
-            )
+            base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+            self.client = OpenAI(api_key=api_key, base_url=base_url)
         except Exception as exc:  # pragma: no cover - network/client init variability
             self.enabled = False
             self._init_error = f"Failed to initialize LLM client: {exc}"
@@ -1216,6 +1177,9 @@ def run() -> int:
         classify_keywords(article, topic_rules, issue_rules)
 
     llm = LlmSummarizer(config.get("llm", {}))
+    if llm.config_notes:
+        for note in llm.config_notes:
+            print(f"[WARN] {note}")
     if llm.enabled:
         print(f"[INFO] LLM summarization enabled: provider={llm.provider}, model={llm.model}")
     elif llm.init_error:
