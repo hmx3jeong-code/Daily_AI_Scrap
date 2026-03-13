@@ -495,6 +495,7 @@
       const LLM_OPT_IN_STORAGE = "daily_ai_brief_llm_opt_in";
       const CACHED_LATEST_STORAGE = "daily_ai_brief_cached_latest";
       const CACHED_INDEX_STORAGE = "daily_ai_brief_cached_index";
+      const ENTRY_RELOAD_PARAM = "_entry_reload";
       const GEMINI_CHAT_MODEL = "gemini-3.1-flash-lite-preview";
       const FETCH_TIMEOUT_MS = 10000;
       const GEMINI_TIMEOUT_MS = 20000;
@@ -591,10 +592,10 @@
           .replaceAll("'", "&#39;");
       }
 
-      function formatGeneratedAtKst(raw) {
-        if (!raw) return "-";
+      function parseToKstParts(raw) {
+        if (!raw) return null;
         const parsed = new Date(raw);
-        if (Number.isNaN(parsed.getTime())) return raw;
+        if (Number.isNaN(parsed.getTime())) return null;
         const formatter = new Intl.DateTimeFormat("ko-KR", {
           timeZone: "Asia/Seoul",
           year: "numeric",
@@ -611,7 +612,26 @@
             parts[part.type] = part.value;
           }
         }
+        if (!parts.year || !parts.month || !parts.day) return null;
+        return parts;
+      }
+
+      function formatGeneratedAtKst(raw) {
+        const parts = parseToKstParts(raw);
+        if (!parts) return raw || "-";
         return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} KST`;
+      }
+
+      function formatReportDateKst(data) {
+        const explicitKst = String(data?.report_date_kst || "").trim();
+        if (/^\d{4}-\d{2}-\d{2}$/.test(explicitKst)) {
+          return explicitKst;
+        }
+        const fromGeneratedAt = parseToKstParts(data?.generated_at);
+        if (fromGeneratedAt) {
+          return `${fromGeneratedAt.year}-${fromGeneratedAt.month}-${fromGeneratedAt.day}`;
+        }
+        return String(data?.report_date || "").trim() || "-";
       }
 
       function updateLlmStatus() {
@@ -725,6 +745,56 @@
         } finally {
           clearTimeout(timeoutId);
         }
+      }
+
+      function withRefreshQuery(path) {
+        const url = new URL(path, window.location.href);
+        url.searchParams.set("_ts", String(Date.now()));
+        return url.toString();
+      }
+
+      async function refreshLatestIfUpdated(currentData) {
+        try {
+          const fresh = await fetchJsonWithTimeout(withRefreshQuery("./data/latest.json"));
+          if (!fresh || !fresh.report_date) return;
+
+          const currentKey = `${currentData?.report_date || ""}|${currentData?.generated_at || ""}`;
+          const freshKey = `${fresh.report_date || ""}|${fresh.generated_at || ""}`;
+          if (!freshKey || freshKey === currentKey) return;
+
+          safeStorageSetJson(CACHED_LATEST_STORAGE, fresh);
+          renderLatestReport(fresh, false);
+          await renderHistory();
+          el.errorBox.innerHTML = "";
+        } catch {
+          // Ignore background refresh failures.
+        }
+      }
+
+      function buildCleanPathWithoutReloadParam(url) {
+        const next = new URL(url.toString());
+        next.searchParams.delete(ENTRY_RELOAD_PARAM);
+        const query = next.searchParams.toString();
+        return `${next.pathname}${query ? `?${query}` : ""}${next.hash}`;
+      }
+
+      function forceSingleReloadOnEntry() {
+        try {
+          const url = new URL(window.location.href);
+          const alreadyReloaded = url.searchParams.get(ENTRY_RELOAD_PARAM) === "1";
+
+          if (!alreadyReloaded) {
+            url.searchParams.set(ENTRY_RELOAD_PARAM, "1");
+            window.location.replace(url.toString());
+            return true;
+          }
+
+          const cleanPath = buildCleanPathWithoutReloadParam(url);
+          window.history.replaceState({}, "", cleanPath);
+        } catch {
+          // If URL parsing fails, skip forced reload.
+        }
+        return false;
       }
 
       function getPrimaryTopic(article) {
@@ -1110,11 +1180,13 @@
       }
 
       function renderLatestReport(data, isCached = false) {
+        const reportDateKst = formatReportDateKst(data);
         const generatedAtKst = formatGeneratedAtKst(data.generated_at);
         const generatedAtUtc = data.generated_at || "-";
+        const rawReportDate = data.report_date || "-";
 
         el.meta.innerHTML = `
-          <span class="meta-pill">Report date: ${escapeHtml(data.report_date || "-")}</span>
+          <span class="meta-pill" title="Raw report_date: ${escapeHtml(rawReportDate)}">Report date (KST): ${escapeHtml(reportDateKst)}</span>
           <span class="meta-pill">Article count: ${escapeHtml(String(data.article_count ?? 0))}</span>
           <span class="meta-pill" title="UTC: ${escapeHtml(generatedAtUtc)}">Generated at (KST): ${escapeHtml(generatedAtKst)}</span>
           ${isCached ? '<span class="meta-pill">Offline cache mode</span>' : ""}
@@ -1125,6 +1197,8 @@
       }
 
       async function boot() {
+        if (forceSingleReloadOnEntry()) return;
+
         initializeInstallControls();
         initializeLlmControls();
         await registerServiceWorker();
@@ -1135,12 +1209,14 @@
           renderLatestReport(data, false);
           el.errorBox.innerHTML = "";
           await renderHistory();
+          void refreshLatestIfUpdated(data);
         } catch (err) {
           const cached = safeStorageGetJson(CACHED_LATEST_STORAGE);
           if (cached) {
             renderLatestReport(cached, true);
             el.errorBox.innerHTML = `<div class="err">네트워크 오류로 캐시된 리포트를 표시 중입니다: ${escapeHtml(String(err))}</div>`;
             await renderHistory();
+            void refreshLatestIfUpdated(cached);
             return;
           }
 

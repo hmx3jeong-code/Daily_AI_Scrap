@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-03-12-1";
+const CACHE_VERSION = "2026-03-13-1";
 const STATIC_CACHE = `daily-ai-brief-static-${CACHE_VERSION}`;
 const DATA_CACHE = `daily-ai-brief-data-${CACHE_VERSION}`;
 
@@ -53,18 +53,26 @@ function isDataRequest(requestUrl) {
   return url.pathname.endsWith(".json") && url.pathname.includes("/data/");
 }
 
-async function staleWhileRevalidate(request) {
+function toDataCacheKey(request) {
+  const url = new URL(request.url);
+  url.search = "";
+  return new Request(url.toString(), { method: "GET" });
+}
+
+async function networkFirstData(request) {
   const cache = await caches.open(DATA_CACHE);
-  const cached = await cache.match(request);
-  const networkPromise = fetch(request)
-    .then((response) => {
-      if (response && response.ok) {
-        cache.put(request, response.clone());
-      }
-      return response;
-    })
-    .catch(() => null);
-  return cached || networkPromise || new Response("{}", { headers: { "Content-Type": "application/json" } });
+  const cacheKey = toDataCacheKey(request);
+  try {
+    const response = await fetch(request);
+    if (response && response.ok) {
+      cache.put(cacheKey, response.clone());
+    }
+    return response;
+  } catch {
+    const cached = (await cache.match(cacheKey)) || (await caches.match(cacheKey));
+    if (cached) return cached;
+    return new Response("{}", { headers: { "Content-Type": "application/json" } });
+  }
 }
 
 async function cacheFirst(request) {
@@ -105,7 +113,7 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (isDataRequest(request.url)) {
-    event.respondWith(staleWhileRevalidate(request));
+    event.respondWith(networkFirstData(request));
     return;
   }
 

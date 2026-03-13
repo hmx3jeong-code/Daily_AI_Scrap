@@ -28,6 +28,7 @@ if load_dotenv is not None:
 DEFAULT_CONFIG_PATH = Path("daily_ai_agent_config.json")
 DEFAULT_OUTPUT_DIR = Path("daily_ai_reports")
 DEFAULT_TIMEOUT_SEC = 20
+REPORT_TZ = dt.timezone(dt.timedelta(hours=9), "KST")
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -369,6 +370,10 @@ def normalize_whitespace(text: str) -> str:
     return WHITESPACE_RE.sub(" ", (text or "").strip())
 
 
+def now_in_report_tz() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc).astimezone(REPORT_TZ)
+
+
 def strip_html(raw_html: str) -> str:
     text = html.unescape(raw_html or "")
     text = HTML_TAG_RE.sub(" ", text)
@@ -377,7 +382,7 @@ def strip_html(raw_html: str) -> str:
 
 def parse_report_date(raw: str) -> dt.date:
     if not raw:
-        return dt.datetime.now().astimezone().date()
+        return now_in_report_tz().date()
     try:
         return dt.date.fromisoformat(raw)
     except ValueError as exc:
@@ -827,8 +832,7 @@ def in_date_window(
 ) -> bool:
     if published_dt is None:
         return True
-    local_tz = dt.datetime.now().astimezone().tzinfo
-    converted = published_dt.astimezone(local_tz) if published_dt.tzinfo else published_dt
+    converted = published_dt.astimezone(REPORT_TZ) if published_dt.tzinfo else published_dt
     lower = report_date - dt.timedelta(days=max(lookback_days, 1) - 1)
     upper = report_date
     return lower <= converted.date() <= upper
@@ -913,8 +917,7 @@ def truncate_text(text: str, max_len: int) -> str:
 def format_dt(value: dt.datetime | None) -> str:
     if value is None:
         return "Unknown"
-    local_tz = dt.datetime.now().astimezone().tzinfo
-    converted = value.astimezone(local_tz) if value.tzinfo else value
+    converted = value.astimezone(REPORT_TZ) if value.tzinfo else value
     return converted.strftime("%Y-%m-%d %H:%M")
 
 
@@ -927,7 +930,7 @@ def build_markdown_report(
     source_kept: dict[str, int],
 ) -> str:
     lines: list[str] = []
-    created_at = dt.datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %Z")
+    created_at = now_in_report_tz().strftime("%Y-%m-%d %H:%M:%S KST")
     lines.append(f"# Daily AI Brief - {report_date.isoformat()}")
     lines.append("")
     lines.append(f"- Generated at: {created_at}")
@@ -987,6 +990,10 @@ def build_json_report(
     source_kept: dict[str, int],
     llm_stats: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    generated_at_kst = now_in_report_tz()
+    generated_at_utc = generated_at_kst.astimezone(dt.timezone.utc)
+    report_date_kst = generated_at_kst.date().isoformat()
+
     serialized_articles = []
     for article in articles:
         display_title = article.translated_title or article.title
@@ -1016,7 +1023,9 @@ def build_json_report(
 
     return {
         "report_date": report_date.isoformat(),
-        "generated_at": dt.datetime.now().astimezone().isoformat(),
+        "report_date_kst": report_date_kst,
+        "generated_at": generated_at_utc.isoformat(),
+        "generated_at_kst": generated_at_kst.isoformat(),
         "article_count": len(articles),
         "issues_top": issues_counter.most_common(20),
         "source_totals": source_totals,

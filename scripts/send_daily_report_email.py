@@ -1,4 +1,5 @@
 import argparse
+import datetime as dt
 import json
 import os
 import re
@@ -9,6 +10,8 @@ from pathlib import Path
 
 
 REPORT_JSON_RE = re.compile(r"^daily_ai_brief_(\d{4}-\d{2}-\d{2})\.json$")
+ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+KST = dt.timezone(dt.timedelta(hours=9), "KST")
 
 
 def parse_args() -> argparse.Namespace:
@@ -64,12 +67,52 @@ def pick_report_json(input_dir: Path, report_date: str) -> Path:
     return found[0][1]
 
 
+def parse_iso_datetime(raw: str) -> dt.datetime | None:
+    if not raw:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(raw)
+    except Exception:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed
+
+
+def resolve_report_date_kst(payload: dict) -> str:
+    explicit = str(payload.get("report_date_kst") or "").strip()
+    if ISO_DATE_RE.fullmatch(explicit):
+        return explicit
+
+    generated_raw = str(payload.get("generated_at_kst") or payload.get("generated_at") or "").strip()
+    generated_dt = parse_iso_datetime(generated_raw)
+    if generated_dt is not None:
+        return generated_dt.astimezone(KST).date().isoformat()
+
+    fallback = str(payload.get("report_date") or "").strip()
+    if ISO_DATE_RE.fullmatch(fallback):
+        return fallback
+    return fallback or "unknown-date"
+
+
+def format_generated_at_kst(payload: dict) -> str:
+    generated_raw = str(payload.get("generated_at_kst") or payload.get("generated_at") or "").strip()
+    generated_dt = parse_iso_datetime(generated_raw)
+    if generated_dt is None:
+        return ""
+    return generated_dt.astimezone(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+
+
 def load_report_info(report_json_path: Path) -> dict:
     payload = json.loads(report_json_path.read_text(encoding="utf-8"))
-    report_date = payload.get("report_date") or "unknown-date"
+    report_date_raw = str(payload.get("report_date") or "unknown-date")
+    report_date_kst = resolve_report_date_kst(payload)
+    generated_at_kst = format_generated_at_kst(payload)
     article_count = payload.get("article_count")
     return {
-        "report_date": report_date,
+        "report_date_raw": report_date_raw,
+        "report_date_kst": report_date_kst,
+        "generated_at_kst": generated_at_kst,
         "article_count": article_count,
         "payload": payload,
     }
@@ -99,13 +142,19 @@ def make_subject(report_date: str, article_count: int | None) -> str:
 def build_body(
     report_date: str,
     article_count: int | None,
+    generated_at_kst: str,
     site_url: str,
     markdown_text: str,
 ) -> str:
     count_text = f"{article_count}건" if isinstance(article_count, int) else "N/A"
     lines = [
-        f"일일 AI 브리프 ({report_date})",
+        f"일일 AI 브리프 ({report_date}, KST)",
         "",
+        f"- 기준 날짜(KST): {report_date}",
+    ]
+    if generated_at_kst:
+        lines.append(f"- 생성 시각(KST): {generated_at_kst}")
+    lines += [
         f"- 기사 수: {count_text}",
     ]
     if site_url:
@@ -213,12 +262,14 @@ def main() -> int:
 
     report_json_path = pick_report_json(input_dir, args.report_date)
     report_info = load_report_info(report_json_path)
-    report_date = report_info["report_date"]
+    report_date_raw = report_info["report_date_raw"]
+    report_date_kst = report_info["report_date_kst"]
+    generated_at_kst = report_info["generated_at_kst"]
     article_count = report_info["article_count"]
-    md_path = pick_markdown_path(input_dir, report_json_path, report_date)
+    md_path = pick_markdown_path(input_dir, report_json_path, report_date_raw)
     md_text = md_path.read_text(encoding="utf-8") if md_path and md_path.exists() else ""
-    subject = make_subject(report_date, article_count)
-    body = build_body(report_date, article_count, site_url, md_text)
+    subject = make_subject(report_date_kst, article_count)
+    body = build_body(report_date_kst, article_count, generated_at_kst, site_url, md_text)
 
     send_email(
         smtp_host=smtp_host,
