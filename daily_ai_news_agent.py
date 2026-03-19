@@ -41,12 +41,18 @@ TEXT_SIG_RE = re.compile(r"[^0-9a-zA-Z가-힣]+")
 REPORT_JSON_NAME_RE = re.compile(r"^daily_ai_brief_(\d{4}-\d{2}-\d{2})\.json$")
 MATH_BLOCK_RE = re.compile(r"\$\$(.+?)\$\$", flags=re.DOTALL)
 MATH_INLINE_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", flags=re.DOTALL)
+MATH_PAREN_RE = re.compile(r"\\\((.+?)\\\)", flags=re.DOTALL)
+MATH_BRACKET_RE = re.compile(r"\\\[(.+?)\\\]", flags=re.DOTALL)
+MATH_LATEX_HINT_RE = re.compile(
+    r"\\(?:frac|sqrt|sum|prod|int|alpha|beta|gamma|delta|epsilon|lambda|mu|sigma|theta|pi|phi|psi|omega|cdot|times|mid|Vert|hat|tilde|bar|vec|mathcal|mathbb|mathsf|mathrm|text|operatorname|left|right)\b"
+)
 LATEX_TEXT_WRAPPER_RE = re.compile(
-    r"\\(?:text|mathrm|operatorname|mathit|mathbf)\{([^{}]+)\}"
+    r"\\(?:text|mathrm|operatorname|mathit|mathbf|mathcal|mathbb|mathsf)\{([^{}]+)\}"
 )
 LATEX_FRAC_RE = re.compile(r"\\frac\{([^{}]+)\}\{([^{}]+)\}")
 LATEX_SUBSCRIPT_RE = re.compile(r"_\{([^{}]+)\}")
 LATEX_SUPERSCRIPT_RE = re.compile(r"\^\{([^{}]+)\}")
+LATEX_ACCENT_RE = re.compile(r"\\(?:hat|tilde|bar|vec)\{([^{}]+)\}")
 
 LATEX_TOKEN_MAP = {
     r"\alpha": "alpha",
@@ -62,6 +68,8 @@ LATEX_TOKEN_MAP = {
     r"\phi": "phi",
     r"\psi": "psi",
     r"\omega": "omega",
+    r"\dots": "...",
+    r"\sim": "~",
     r"\cdot": "*",
     r"\times": "*",
     r"\mid": "|",
@@ -248,6 +256,9 @@ class LlmSummarizer:
             "반드시 JSON만 반환하고 코드블록은 쓰지 마라.\n"
             "출력 형식:\n"
             '{"title_ko":"...", "summary_ko":"...", "keywords_ko":["...", "..."]}\n\n'
+            "Hard rule:\n"
+            "- Do NOT use LaTeX or markdown math delimiters ($, $$, \\(...\\), \\[...\\]).\n"
+            "- Write every formula in plain text, e.g. L_total = L_supervised + lambda * KL(...).\n\n"
             "규칙:\n"
             "- title_ko: 어색하지 않은 한국어 제목으로 번역 (고유명사/제품명은 유지)\n"
             "- summary_ko: 한국어 10~12문장 상세 요약\n"
@@ -412,6 +423,7 @@ def _latex_math_to_readable(math_expr: str) -> str:
 
     text = text.replace(r"\left", "").replace(r"\right", "")
     text = text.replace(r"\,", " ").replace(r"\;", " ").replace(r"\!", "")
+    text = text.replace(r"\{", "{").replace(r"\}", "}")
 
     while True:
         updated = LATEX_FRAC_RE.sub(r"(\1)/(\2)", text)
@@ -420,6 +432,7 @@ def _latex_math_to_readable(math_expr: str) -> str:
         text = updated
 
     text = LATEX_TEXT_WRAPPER_RE.sub(r"\1", text)
+    text = LATEX_ACCENT_RE.sub(r"\1", text)
     text = LATEX_SUBSCRIPT_RE.sub(r"_\1", text)
     text = LATEX_SUPERSCRIPT_RE.sub(r"^\1", text)
 
@@ -437,11 +450,23 @@ def _latex_math_to_readable(math_expr: str) -> str:
 
 def format_math_for_readability(text: str) -> str:
     raw = text or ""
-    if "$" not in raw:
-        return raw
-
-    formatted = MATH_BLOCK_RE.sub(lambda m: _latex_math_to_readable(m.group(1)), raw)
-    formatted = MATH_INLINE_RE.sub(lambda m: _latex_math_to_readable(m.group(1)), formatted)
+    formatted = raw
+    if "$" in formatted:
+        formatted = MATH_BLOCK_RE.sub(
+            lambda m: _latex_math_to_readable(m.group(1)), formatted
+        )
+        formatted = MATH_INLINE_RE.sub(
+            lambda m: _latex_math_to_readable(m.group(1)), formatted
+        )
+    if r"\(" in formatted or r"\[" in formatted:
+        formatted = MATH_PAREN_RE.sub(
+            lambda m: _latex_math_to_readable(m.group(1)), formatted
+        )
+        formatted = MATH_BRACKET_RE.sub(
+            lambda m: _latex_math_to_readable(m.group(1)), formatted
+        )
+    if MATH_LATEX_HINT_RE.search(formatted):
+        formatted = _latex_math_to_readable(formatted)
     return normalize_whitespace(formatted)
 
 
