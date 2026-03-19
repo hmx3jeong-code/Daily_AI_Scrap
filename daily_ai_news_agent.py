@@ -39,6 +39,35 @@ HTML_TAG_RE = re.compile(r"<[^>]+>")
 WHITESPACE_RE = re.compile(r"\s+")
 TEXT_SIG_RE = re.compile(r"[^0-9a-zA-Z가-힣]+")
 REPORT_JSON_NAME_RE = re.compile(r"^daily_ai_brief_(\d{4}-\d{2}-\d{2})\.json$")
+MATH_BLOCK_RE = re.compile(r"\$\$(.+?)\$\$", flags=re.DOTALL)
+MATH_INLINE_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", flags=re.DOTALL)
+LATEX_TEXT_WRAPPER_RE = re.compile(
+    r"\\(?:text|mathrm|operatorname|mathit|mathbf)\{([^{}]+)\}"
+)
+LATEX_FRAC_RE = re.compile(r"\\frac\{([^{}]+)\}\{([^{}]+)\}")
+LATEX_SUBSCRIPT_RE = re.compile(r"_\{([^{}]+)\}")
+LATEX_SUPERSCRIPT_RE = re.compile(r"\^\{([^{}]+)\}")
+
+LATEX_TOKEN_MAP = {
+    r"\alpha": "alpha",
+    r"\beta": "beta",
+    r"\gamma": "gamma",
+    r"\delta": "delta",
+    r"\epsilon": "epsilon",
+    r"\lambda": "lambda",
+    r"\mu": "mu",
+    r"\sigma": "sigma",
+    r"\theta": "theta",
+    r"\pi": "pi",
+    r"\phi": "phi",
+    r"\psi": "psi",
+    r"\omega": "omega",
+    r"\cdot": "*",
+    r"\times": "*",
+    r"\mid": "|",
+    r"\Vert": "||",
+    r"\|": "||",
+}
 
 TRACKING_QUERY_KEYS = {
     "ref",
@@ -248,29 +277,35 @@ class LlmSummarizer:
             )
             parsed = self._extract_json_dict(content)
             if not parsed:
-                guessed_summary = normalize_whitespace(content)
+                guessed_summary = format_math_for_readability(content)
                 if guessed_summary:
                     self.calls_success_freeform += 1
                     return {
-                        "title_ko": article.title,
+                        "title_ko": format_math_for_readability(article.title),
                         "summary_ko": truncate_text(guessed_summary, 800),
-                        "keywords_ko": article.keywords[:5],
+                        "keywords_ko": [
+                            format_math_for_readability(keyword)
+                            for keyword in article.keywords[:5]
+                        ],
                     }
-            title_ko = normalize_whitespace(str(parsed.get("title_ko", "")))
-            summary_ko = normalize_whitespace(str(parsed.get("summary_ko", "")))
+            title_ko = format_math_for_readability(str(parsed.get("title_ko", "")))
+            summary_ko = format_math_for_readability(str(parsed.get("summary_ko", "")))
             keywords_raw = parsed.get("keywords_ko", [])
             keywords_ko: list[str] = []
             if isinstance(keywords_raw, list):
                 for keyword in keywords_raw:
-                    cleaned = normalize_whitespace(str(keyword))
+                    cleaned = format_math_for_readability(str(keyword))
                     if cleaned:
                         keywords_ko.append(cleaned)
             if not title_ko:
-                title_ko = article.title
+                title_ko = format_math_for_readability(article.title)
             if not summary_ko:
-                summary_ko = default_summary
+                summary_ko = format_math_for_readability(default_summary)
             if not keywords_ko:
-                keywords_ko = article.keywords[:5]
+                keywords_ko = [
+                    format_math_for_readability(keyword)
+                    for keyword in article.keywords[:5]
+                ]
             self.calls_success_json += 1
             return {
                 "title_ko": title_ko,
@@ -368,6 +403,46 @@ def parse_args() -> argparse.Namespace:
 
 def normalize_whitespace(text: str) -> str:
     return WHITESPACE_RE.sub(" ", (text or "").strip())
+
+
+def _latex_math_to_readable(math_expr: str) -> str:
+    text = normalize_whitespace((math_expr or "").replace("\n", " "))
+    if not text:
+        return ""
+
+    text = text.replace(r"\left", "").replace(r"\right", "")
+    text = text.replace(r"\,", " ").replace(r"\;", " ").replace(r"\!", "")
+
+    while True:
+        updated = LATEX_FRAC_RE.sub(r"(\1)/(\2)", text)
+        if updated == text:
+            break
+        text = updated
+
+    text = LATEX_TEXT_WRAPPER_RE.sub(r"\1", text)
+    text = LATEX_SUBSCRIPT_RE.sub(r"_\1", text)
+    text = LATEX_SUPERSCRIPT_RE.sub(r"^\1", text)
+
+    for latex_token, readable in LATEX_TOKEN_MAP.items():
+        text = text.replace(latex_token, readable)
+
+    text = text.replace(r"\(", "(").replace(r"\)", ")")
+    text = text.replace(r"\[", "[").replace(r"\]", "]")
+    text = text.replace("{", "").replace("}", "")
+    text = re.sub(r"\\([A-Za-z]+)", r"\1", text)
+    text = text.replace("||", " || ")
+    text = re.sub(r"(?<!\|)\|(?!\|)", " | ", text)
+    return normalize_whitespace(text)
+
+
+def format_math_for_readability(text: str) -> str:
+    raw = text or ""
+    if "$" not in raw:
+        return raw
+
+    formatted = MATH_BLOCK_RE.sub(lambda m: _latex_math_to_readable(m.group(1)), raw)
+    formatted = MATH_INLINE_RE.sub(lambda m: _latex_math_to_readable(m.group(1)), formatted)
+    return normalize_whitespace(formatted)
 
 
 def now_in_report_tz() -> dt.datetime:
@@ -1198,27 +1273,33 @@ def run() -> int:
 
     summarize_budget = llm.max_articles_per_run if llm.enabled else 0
     for idx, article in enumerate(all_articles):
-        article.translated_title = article.title
-        article.translated_keywords = article.keywords[:]
+        article.translated_title = format_math_for_readability(article.title)
+        article.translated_keywords = [
+            format_math_for_readability(keyword) for keyword in article.keywords[:]
+        ]
         if llm.enabled and idx < summarize_budget:
             localized = llm.localize_article(article)
             article.translated_title = normalize_whitespace(
-                str(localized.get("title_ko", article.title))
+                format_math_for_readability(str(localized.get("title_ko", article.title)))
             )
             article.final_summary = normalize_whitespace(
-                str(localized.get("summary_ko", fallback_summary(article)))
+                format_math_for_readability(
+                    str(localized.get("summary_ko", fallback_summary(article)))
+                )
             )
             localized_keywords = localized.get("keywords_ko", [])
             if isinstance(localized_keywords, list):
                 article.translated_keywords = [
-                    normalize_whitespace(str(keyword))
+                    normalize_whitespace(format_math_for_readability(str(keyword)))
                     for keyword in localized_keywords
-                    if normalize_whitespace(str(keyword))
+                    if normalize_whitespace(format_math_for_readability(str(keyword)))
                 ][:5]
             if not article.translated_keywords:
-                article.translated_keywords = article.keywords[:]
+                article.translated_keywords = [
+                    format_math_for_readability(keyword) for keyword in article.keywords[:]
+                ]
         else:
-            article.final_summary = fallback_summary(article)
+            article.final_summary = format_math_for_readability(fallback_summary(article))
 
     llm_run_stats = llm.stats()
     if summarize_budget > 0:
