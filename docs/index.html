@@ -592,6 +592,121 @@
           .replaceAll("'", "&#39;");
       }
 
+      const LATEX_TOKEN_MAP = [
+        ["\\alpha", "alpha"],
+        ["\\beta", "beta"],
+        ["\\gamma", "gamma"],
+        ["\\delta", "delta"],
+        ["\\epsilon", "epsilon"],
+        ["\\lambda", "lambda"],
+        ["\\mu", "mu"],
+        ["\\sigma", "sigma"],
+        ["\\theta", "theta"],
+        ["\\pi", "pi"],
+        ["\\phi", "phi"],
+        ["\\psi", "psi"],
+        ["\\omega", "omega"],
+        ["\\dots", "..."],
+        ["\\sim", "~"],
+        ["\\cdot", "*"],
+        ["\\times", "*"],
+        ["\\mid", "|"],
+        ["\\Vert", "||"],
+        ["\\|", "||"],
+      ];
+
+      function normalizeInlineSpaces(text) {
+        return String(text || "").replace(/\s+/g, " ").trim();
+      }
+
+      function latexMathToReadable(mathExpr) {
+        let text = normalizeInlineSpaces(String(mathExpr || "").replace(/\n/g, " "));
+        if (!text) return "";
+
+        text = text
+          .replace(/\\left/g, "")
+          .replace(/\\right/g, "")
+          .replace(/\\,/g, " ")
+          .replace(/\\;/g, " ")
+          .replace(/\\!/g, "")
+          .replace(/\\\{/g, "{")
+          .replace(/\\\}/g, "}");
+
+        let previous = "";
+        while (previous !== text) {
+          previous = text;
+          text = text.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "($1)/($2)");
+        }
+
+        text = text
+          .replace(/\\(?:text|mathrm|operatorname|mathit|mathbf|mathcal|mathbb|mathsf)\{([^{}]+)\}/g, "$1")
+          .replace(/\\(?:hat|tilde|bar|vec)\{([^{}]+)\}/g, "$1")
+          .replace(/_\{([^{}]+)\}/g, "_$1")
+          .replace(/\^\{([^{}]+)\}/g, "^$1");
+
+        for (const [token, replacement] of LATEX_TOKEN_MAP) {
+          text = text.split(token).join(replacement);
+        }
+
+        text = text
+          .replace(/\\\(/g, "(")
+          .replace(/\\\)/g, ")")
+          .replace(/\\\[/g, "[")
+          .replace(/\\\]/g, "]")
+          .replace(/[{}]/g, "")
+          .replace(/\\([A-Za-z]+)/g, "$1");
+
+        text = text.replace(/\|\|/g, " __DOUBLE_BAR__ ");
+        text = text.replace(/\|/g, " | ");
+        text = text.replace(/__DOUBLE_BAR__/g, " || ");
+        return normalizeInlineSpaces(text);
+      }
+
+      function replaceInlineDollarMath(text) {
+        const raw = String(text || "");
+        let out = "";
+        let index = 0;
+        while (index < raw.length) {
+          const start = raw.indexOf("$", index);
+          if (start < 0) {
+            out += raw.slice(index);
+            break;
+          }
+          if (start + 1 < raw.length && raw[start + 1] === "$") {
+            out += raw.slice(index, start + 2);
+            index = start + 2;
+            continue;
+          }
+          const end = raw.indexOf("$", start + 1);
+          if (end < 0) {
+            out += raw.slice(index);
+            break;
+          }
+          out += raw.slice(index, start);
+          out += latexMathToReadable(raw.slice(start + 1, end));
+          index = end + 1;
+        }
+        return out;
+      }
+
+      function formatMathForReadability(raw) {
+        let formatted = String(raw || "");
+        formatted = formatted.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => latexMathToReadable(math));
+        formatted = replaceInlineDollarMath(formatted);
+        formatted = formatted.replace(/\\\(([\s\S]+?)\\\)/g, (_, math) => latexMathToReadable(math));
+        formatted = formatted.replace(/\\\[([\s\S]+?)\\\]/g, (_, math) => latexMathToReadable(math));
+
+        const latexHint =
+          /\\(?:frac|sqrt|sum|prod|int|alpha|beta|gamma|delta|epsilon|lambda|mu|sigma|theta|pi|phi|psi|omega|cdot|times|mid|Vert|hat|tilde|bar|vec|mathcal|mathbb|mathsf|mathrm|text|operatorname|left|right)\b/;
+        if (latexHint.test(formatted)) {
+          formatted = formatted
+            .split("\n")
+            .map((line) => (latexHint.test(line) ? latexMathToReadable(line) : line))
+            .join("\n");
+        }
+        return formatted;
+      }
+
       function parseToKstParts(raw) {
         if (!raw) return null;
         const parsed = new Date(raw);
@@ -845,7 +960,7 @@
         const content = document.createElement("div");
         content.className = "msg-content";
         if (role === "ai") {
-          content.innerHTML = renderMarkdownToHtml(text);
+          content.innerHTML = renderMarkdownToHtml(formatMathForReadability(text));
         } else {
           content.innerHTML = `<p>${formatInlineMarkdown(text)}</p>`;
         }
@@ -949,6 +1064,8 @@
           "너는 AI 뉴스 분석 어시스턴트다.",
           "아래 기사 정보와 일반적인 LLM 지식을 함께 사용해 한국어로 답변해라.",
           "확실하지 않은 내용은 추정이라고 명시해라.",
+          "Do not output LaTeX or markdown math delimiters ($, $$, \\(...\\), \\[...\\]).",
+          "Write formulas in plain text, for example: L_total = L_supervised + lambda * KL(...).",
           "",
           `기사 제목: ${article.title || "-"}`,
           `출처: ${article.source || article.source_name || "-"}`,
@@ -995,7 +1112,7 @@
           if (!text) {
             throw new Error("LLM 응답이 비어 있습니다.");
           }
-          return text;
+          return formatMathForReadability(text);
         } finally {
           clearTimeout(timeoutId);
         }
@@ -1087,7 +1204,7 @@
         const safeLink = escapeHtml(articleLink);
         const safeSource = escapeHtml(article.source || article.source_name || "-");
         const safeTime = escapeHtml(article.published_local || "-");
-        const safeSummary = escapeHtml(article.summary || "");
+        const safeSummary = escapeHtml(formatMathForReadability(article.summary || ""));
         const keywords = (article.keywords || []).map((k) => `<span class="kw">${escapeHtml(k)}</span>`).join("");
 
         card.innerHTML = `

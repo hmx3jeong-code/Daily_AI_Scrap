@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-03-13-1";
+const CACHE_VERSION = "2026-03-19-1";
 const STATIC_CACHE = `daily-ai-brief-static-${CACHE_VERSION}`;
 const DATA_CACHE = `daily-ai-brief-data-${CACHE_VERSION}`;
 
