@@ -274,6 +274,38 @@
         font-size: 0.95rem;
       }
 
+      .math-inline,
+      .math-display {
+        font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+        letter-spacing: 0.01em;
+      }
+
+      .math-inline {
+        color: #f3f8ff;
+      }
+
+      .math-display {
+        display: block;
+        margin: 8px 0;
+        padding: 6px 10px;
+        border-left: 3px solid rgba(125, 211, 252, 0.65);
+        background: rgba(125, 211, 252, 0.08);
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      .math-inline sub,
+      .math-inline sup,
+      .math-display sub,
+      .math-display sup {
+        font-size: 0.78em;
+        line-height: 0;
+      }
+
+      .math-frac {
+        white-space: nowrap;
+      }
+
       .keywords {
         margin-top: 9px;
         display: flex;
@@ -592,119 +624,300 @@
           .replaceAll("'", "&#39;");
       }
 
-      const LATEX_TOKEN_MAP = [
-        ["\\alpha", "alpha"],
-        ["\\beta", "beta"],
-        ["\\gamma", "gamma"],
-        ["\\delta", "delta"],
-        ["\\epsilon", "epsilon"],
-        ["\\lambda", "lambda"],
-        ["\\mu", "mu"],
-        ["\\sigma", "sigma"],
-        ["\\theta", "theta"],
-        ["\\pi", "pi"],
-        ["\\phi", "phi"],
-        ["\\psi", "psi"],
-        ["\\omega", "omega"],
-        ["\\dots", "..."],
-        ["\\sim", "~"],
-        ["\\cdot", "*"],
-        ["\\times", "*"],
-        ["\\mid", "|"],
-        ["\\Vert", "||"],
-        ["\\|", "||"],
-      ];
+      const LATEX_TOKEN_MAP = new Map([
+        ["alpha", "α"],
+        ["beta", "β"],
+        ["gamma", "γ"],
+        ["delta", "δ"],
+        ["epsilon", "ε"],
+        ["lambda", "λ"],
+        ["mu", "μ"],
+        ["sigma", "σ"],
+        ["theta", "θ"],
+        ["pi", "π"],
+        ["phi", "φ"],
+        ["psi", "ψ"],
+        ["omega", "ω"],
+        ["cdot", "·"],
+        ["times", "×"],
+        ["mid", "|"],
+        ["Vert", "||"],
+        ["|", "|"],
+        ["dots", "..."],
+        ["sim", "∼"],
+      ]);
+
+      const PLAIN_SYMBOL_MAP = new Map([
+        ["lambda", "λ"],
+        ["alpha", "α"],
+        ["beta", "β"],
+        ["gamma", "γ"],
+        ["delta", "δ"],
+        ["theta", "θ"],
+        ["sigma", "σ"],
+        ["pi", "π"],
+      ]);
+
+      const MATH_TEXT_WRAPPERS = new Set(["text", "mathrm", "operatorname", "mathit", "mathbf", "mathcal", "mathbb", "mathsf"]);
+      const MATH_ACCENT_WRAPPERS = new Set(["hat", "tilde", "bar", "vec"]);
 
       function normalizeInlineSpaces(text) {
         return String(text || "").replace(/\s+/g, " ").trim();
       }
 
-      function latexMathToReadable(mathExpr) {
-        let text = normalizeInlineSpaces(String(mathExpr || "").replace(/\n/g, " "));
-        if (!text) return "";
+      function readControlWord(text, startIndex) {
+        if (startIndex >= text.length) {
+          return { name: "", next: startIndex };
+        }
+        let index = startIndex;
+        while (index < text.length && /[A-Za-z]/.test(text[index])) {
+          index += 1;
+        }
+        if (index === startIndex) {
+          return { name: text[startIndex], next: startIndex + 1 };
+        }
+        return { name: text.slice(startIndex, index), next: index };
+      }
 
-        text = text
-          .replace(/\\left/g, "")
-          .replace(/\\right/g, "")
+      function readBracedGroup(text, startIndex) {
+        let index = startIndex;
+        while (index < text.length && /\s/.test(text[index])) {
+          index += 1;
+        }
+        if (text[index] !== "{") {
+          return null;
+        }
+        let depth = 0;
+        for (let cursor = index; cursor < text.length; cursor += 1) {
+          const ch = text[cursor];
+          if (ch === "\\" && cursor + 1 < text.length) {
+            cursor += 1;
+            continue;
+          }
+          if (ch === "{") {
+            depth += 1;
+          } else if (ch === "}") {
+            depth -= 1;
+            if (depth === 0) {
+              return { value: text.slice(index + 1, cursor), next: cursor + 1 };
+            }
+          }
+        }
+        return null;
+      }
+
+      function readScriptAtom(text, startIndex) {
+        let index = startIndex;
+        while (index < text.length && /\s/.test(text[index])) {
+          index += 1;
+        }
+        if (index >= text.length) {
+          return null;
+        }
+        if (text[index] === "{") {
+          return readBracedGroup(text, index);
+        }
+        if (text[index] === "\\") {
+          const cmd = readControlWord(text, index + 1);
+          if (!cmd.name) {
+            return { value: text[index], next: index + 1 };
+          }
+          if (cmd.name === "frac") {
+            const left = readBracedGroup(text, cmd.next);
+            if (!left) {
+              return { value: `\\${cmd.name}`, next: cmd.next };
+            }
+            const right = readBracedGroup(text, left.next);
+            if (!right) {
+              return { value: `\\${cmd.name}{${left.value}}`, next: left.next };
+            }
+            return { value: `\\${cmd.name}{${left.value}}{${right.value}}`, next: right.next };
+          }
+          if (MATH_TEXT_WRAPPERS.has(cmd.name) || MATH_ACCENT_WRAPPERS.has(cmd.name)) {
+            const group = readBracedGroup(text, cmd.next);
+            if (group) {
+              return { value: `\\${cmd.name}{${group.value}}`, next: group.next };
+            }
+          }
+          return { value: `\\${cmd.name}`, next: cmd.next };
+        }
+        return { value: text[index], next: index + 1 };
+      }
+
+      function renderLatexMathToHtml(rawMath) {
+        const text = String(rawMath || "")
+          .replace(/\n/g, " ")
           .replace(/\\,/g, " ")
           .replace(/\\;/g, " ")
           .replace(/\\!/g, "")
           .replace(/\\\{/g, "{")
           .replace(/\\\}/g, "}");
-
-        let previous = "";
-        while (previous !== text) {
-          previous = text;
-          text = text.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "($1)/($2)");
-        }
-
-        text = text
-          .replace(/\\(?:text|mathrm|operatorname|mathit|mathbf|mathcal|mathbb|mathsf)\{([^{}]+)\}/g, "$1")
-          .replace(/\\(?:hat|tilde|bar|vec)\{([^{}]+)\}/g, "$1")
-          .replace(/_\{([^{}]+)\}/g, "_$1")
-          .replace(/\^\{([^{}]+)\}/g, "^$1");
-
-        for (const [token, replacement] of LATEX_TOKEN_MAP) {
-          text = text.split(token).join(replacement);
-        }
-
-        text = text
-          .replace(/\\\(/g, "(")
-          .replace(/\\\)/g, ")")
-          .replace(/\\\[/g, "[")
-          .replace(/\\\]/g, "]")
-          .replace(/[{}]/g, "")
-          .replace(/\\([A-Za-z]+)/g, "$1");
-
-        text = text.replace(/\|\|/g, " __DOUBLE_BAR__ ");
-        text = text.replace(/\|/g, " | ");
-        text = text.replace(/__DOUBLE_BAR__/g, " || ");
-        return normalizeInlineSpaces(text);
-      }
-
-      function replaceInlineDollarMath(text) {
-        const raw = String(text || "");
-        let out = "";
+        let output = "";
         let index = 0;
-        while (index < raw.length) {
-          const start = raw.indexOf("$", index);
-          if (start < 0) {
-            out += raw.slice(index);
-            break;
-          }
-          if (start + 1 < raw.length && raw[start + 1] === "$") {
-            out += raw.slice(index, start + 2);
-            index = start + 2;
+
+        while (index < text.length) {
+          const ch = text[index];
+
+          if (ch === "\\") {
+            const cmd = readControlWord(text, index + 1);
+            if (!cmd.name) {
+              index += 1;
+              continue;
+            }
+            if (cmd.name === "left" || cmd.name === "right") {
+              index = cmd.next;
+              continue;
+            }
+            if (cmd.name === "frac") {
+              const left = readBracedGroup(text, cmd.next);
+              if (!left) {
+                output += "frac";
+                index = cmd.next;
+                continue;
+              }
+              const right = readBracedGroup(text, left.next);
+              if (!right) {
+                output += `(${renderLatexMathToHtml(left.value)})`;
+                index = left.next;
+                continue;
+              }
+              output += `<span class="math-frac">(${renderLatexMathToHtml(left.value)})/(${renderLatexMathToHtml(right.value)})</span>`;
+              index = right.next;
+              continue;
+            }
+            if (MATH_TEXT_WRAPPERS.has(cmd.name) || MATH_ACCENT_WRAPPERS.has(cmd.name)) {
+              const group = readBracedGroup(text, cmd.next);
+              if (group) {
+                output += renderLatexMathToHtml(group.value);
+                index = group.next;
+                continue;
+              }
+            }
+            if (LATEX_TOKEN_MAP.has(cmd.name)) {
+              output += LATEX_TOKEN_MAP.get(cmd.name);
+              index = cmd.next;
+              continue;
+            }
+            output += escapeHtml(cmd.name);
+            index = cmd.next;
             continue;
           }
-          const end = raw.indexOf("$", start + 1);
-          if (end < 0) {
-            out += raw.slice(index);
-            break;
+
+          if (ch === "^" || ch === "_") {
+            const atom = readScriptAtom(text, index + 1);
+            if (!atom || !atom.value) {
+              output += escapeHtml(ch);
+              index += 1;
+              continue;
+            }
+            const tag = ch === "^" ? "sup" : "sub";
+            output += `<${tag}>${renderLatexMathToHtml(atom.value)}</${tag}>`;
+            index = atom.next;
+            continue;
           }
-          out += raw.slice(index, start);
-          out += latexMathToReadable(raw.slice(start + 1, end));
-          index = end + 1;
+
+          if (ch === "{") {
+            const group = readBracedGroup(text, index);
+            if (group) {
+              output += renderLatexMathToHtml(group.value);
+              index = group.next;
+              continue;
+            }
+          }
+
+          if (ch === "}") {
+            index += 1;
+            continue;
+          }
+
+          if (ch === "*") {
+            output += "·";
+            index += 1;
+            continue;
+          }
+
+          output += escapeHtml(ch);
+          index += 1;
         }
-        return out;
+
+        return normalizeInlineSpaces(output);
       }
 
-      function formatMathForReadability(raw) {
-        let formatted = String(raw || "");
-        formatted = formatted.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => latexMathToReadable(math));
-        formatted = replaceInlineDollarMath(formatted);
-        formatted = formatted.replace(/\\\(([\s\S]+?)\\\)/g, (_, math) => latexMathToReadable(math));
-        formatted = formatted.replace(/\\\[([\s\S]+?)\\\]/g, (_, math) => latexMathToReadable(math));
+      function looksLikePlainMathLine(rawText) {
+        const text = normalizeInlineSpaces(rawText);
+        if (!text) return false;
+        if (!/^[A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)?\s*=/.test(text)) return false;
+        return /[+\-*/^]/.test(text);
+      }
 
-        const latexHint =
-          /\\(?:frac|sqrt|sum|prod|int|alpha|beta|gamma|delta|epsilon|lambda|mu|sigma|theta|pi|phi|psi|omega|cdot|times|mid|Vert|hat|tilde|bar|vec|mathcal|mathbb|mathsf|mathrm|text|operatorname|left|right)\b/;
-        if (latexHint.test(formatted)) {
-          formatted = formatted
-            .split("\n")
-            .map((line) => (latexHint.test(line) ? latexMathToReadable(line) : line))
-            .join("\n");
+      function renderPlainMathExpression(rawText) {
+        let html = escapeHtml(normalizeInlineSpaces(rawText));
+        for (const [word, symbol] of PLAIN_SYMBOL_MAP.entries()) {
+          const pattern = new RegExp(`\\b${word}\\b`, "g");
+          html = html.replace(pattern, symbol);
         }
-        return formatted;
+        html = html.replace(/\b([A-Za-z]+)_([A-Za-z0-9_]+)\b/g, "$1<sub>$2</sub>");
+        html = html.replace(/\b([A-Za-z]+)\^([A-Za-z0-9+\-]+)\b/g, "$1<sup>$2</sup>");
+        html = html.replace(/\s\*\s/g, " · ");
+        return `<span class="math-inline">${html}</span>`;
+      }
+
+      function extractMathSegments(rawText) {
+        const text = String(rawText || "");
+        const renderedMath = [];
+        const pushMath = (expr, isDisplay) => {
+          const token = `@@MATH_${renderedMath.length}@@`;
+          renderedMath.push(`<span class="${isDisplay ? "math-display" : "math-inline"}">${renderLatexMathToHtml(expr)}</span>`);
+          return token;
+        };
+
+        let output = "";
+        let index = 0;
+        while (index < text.length) {
+          if (text.startsWith("$$", index)) {
+            const end = text.indexOf("$$", index + 2);
+            if (end > index + 2) {
+              output += pushMath(text.slice(index + 2, end), true);
+              index = end + 2;
+              continue;
+            }
+          }
+          if (text.startsWith("\\[", index)) {
+            const end = text.indexOf("\\]", index + 2);
+            if (end > index + 2) {
+              output += pushMath(text.slice(index + 2, end), true);
+              index = end + 2;
+              continue;
+            }
+          }
+          if (text.startsWith("\\(", index)) {
+            const end = text.indexOf("\\)", index + 2);
+            if (end > index + 2) {
+              output += pushMath(text.slice(index + 2, end), false);
+              index = end + 2;
+              continue;
+            }
+          }
+          if (text[index] === "$" && !(index > 0 && text[index - 1] === "\\") && !text.startsWith("$$", index)) {
+            let end = index + 1;
+            while (true) {
+              end = text.indexOf("$", end);
+              if (end < 0) break;
+              if (text[end - 1] !== "\\" && !text.startsWith("$$", end)) {
+                break;
+              }
+              end += 1;
+            }
+            if (end > index + 1) {
+              output += pushMath(text.slice(index + 1, end), false);
+              index = end + 1;
+              continue;
+            }
+          }
+          output += text[index];
+          index += 1;
+        }
+        return { textWithTokens: output, renderedMath };
       }
 
       function parseToKstParts(raw) {
@@ -960,7 +1173,7 @@
         const content = document.createElement("div");
         content.className = "msg-content";
         if (role === "ai") {
-          content.innerHTML = renderMarkdownToHtml(formatMathForReadability(text));
+          content.innerHTML = renderMarkdownToHtml(text);
         } else {
           content.innerHTML = `<p>${formatInlineMarkdown(text)}</p>`;
         }
@@ -970,10 +1183,18 @@
       }
 
       function formatInlineMarkdown(raw) {
-        let safe = escapeHtml(raw || "");
+        const source = String(raw || "");
+        const { textWithTokens, renderedMath } = extractMathSegments(source);
+
+        if (renderedMath.length === 0 && looksLikePlainMathLine(source)) {
+          return renderPlainMathExpression(source);
+        }
+
+        let safe = escapeHtml(textWithTokens);
         safe = safe.replace(/`([^`\n]+)`/g, "<code>$1</code>");
         safe = safe.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
         safe = safe.replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+        safe = safe.replace(/@@MATH_(\d+)@@/g, (_, idx) => renderedMath[Number(idx)] || "");
         return safe;
       }
 
@@ -1064,8 +1285,8 @@
           "너는 AI 뉴스 분석 어시스턴트다.",
           "아래 기사 정보와 일반적인 LLM 지식을 함께 사용해 한국어로 답변해라.",
           "확실하지 않은 내용은 추정이라고 명시해라.",
-          "Do not output LaTeX or markdown math delimiters ($, $$, \\(...\\), \\[...\\]).",
-          "Write formulas in plain text, for example: L_total = L_supervised + lambda * KL(...).",
+          "수식이 필요하면 LaTeX 표기($...$ 또는 $$...$$)를 사용해라.",
+          "기호(예: λ, ·)와 아래첨자/위첨자를 의미에 맞게 써라.",
           "",
           `기사 제목: ${article.title || "-"}`,
           `출처: ${article.source || article.source_name || "-"}`,
@@ -1112,7 +1333,7 @@
           if (!text) {
             throw new Error("LLM 응답이 비어 있습니다.");
           }
-          return formatMathForReadability(text);
+          return text;
         } finally {
           clearTimeout(timeoutId);
         }
@@ -1204,13 +1425,13 @@
         const safeLink = escapeHtml(articleLink);
         const safeSource = escapeHtml(article.source || article.source_name || "-");
         const safeTime = escapeHtml(article.published_local || "-");
-        const safeSummary = escapeHtml(formatMathForReadability(article.summary || ""));
+        const summaryHtml = formatInlineMarkdown(article.summary || "");
         const keywords = (article.keywords || []).map((k) => `<span class="kw">${escapeHtml(k)}</span>`).join("");
 
         card.innerHTML = `
           <h3 class="card-title"><a href="${safeLink}" target="_blank" rel="noopener noreferrer">${safeTitle}</a></h3>
           <div class="sub">${safeSource} | ${safeTime}</div>
-          <p class="summary">${safeSummary}</p>
+          <p class="summary">${summaryHtml}</p>
           <div class="keywords">${keywords}</div>
         `;
 
