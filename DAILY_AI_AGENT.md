@@ -72,7 +72,7 @@ schtasks /Create /SC DAILY /TN "DailyAIBrief" /TR "powershell -NoProfile -Execut
 
 1. GitHub 저장소에 푸시
 2. GitHub 저장소 `Settings > Secrets and variables > Actions`에서 `GEMINI_API_KEY` 등록
-3. `Settings > Pages`에서 배포 소스를 `Deploy from a branch` + `main` + `/docs`로 설정
+3. `Settings > Pages`에서 배포 소스를 `GitHub Actions`로 설정
 4. `Actions` 탭에서 `Publish Daily AI Brief`를 `Run workflow`로 1회 수동 실행
 
 완료 후 URL:
