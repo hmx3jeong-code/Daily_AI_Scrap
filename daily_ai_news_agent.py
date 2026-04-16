@@ -39,6 +39,12 @@ HTML_TAG_RE = re.compile(r"<[^>]+>")
 WHITESPACE_RE = re.compile(r"\s+")
 TEXT_SIG_RE = re.compile(r"[^0-9a-zA-Z가-힣]+")
 REPORT_JSON_NAME_RE = re.compile(r"^daily_ai_brief_(\d{4}-\d{2}-\d{2})\.json$")
+HTML_SCRIPT_STYLE_RE = re.compile(r"(?is)<(script|style|noscript|template)[^>]*>.*?</\1>")
+HTML_META_TAG_RE = re.compile(r"(?is)<meta\s+[^>]*>")
+HTML_ATTR_RE = re.compile(
+    r'([a-zA-Z_:][\w:.-]*)\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s"\'=<>`]+))'
+)
+HTML_P_TAG_RE = re.compile(r"(?is)<p\b[^>]*>(.*?)</p>")
 MATH_BLOCK_RE = re.compile(r"\$\$(.+?)\$\$", flags=re.DOTALL)
 MATH_INLINE_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", flags=re.DOTALL)
 MATH_PAREN_RE = re.compile(r"\\\((.+?)\\\)", flags=re.DOTALL)
@@ -125,6 +131,14 @@ TITLE_STOPWORDS = {
     "공개",
     "출시",
     "발표",
+}
+
+META_DESCRIPTION_KEYS = {
+    "description",
+    "og:description",
+    "twitter:description",
+    "dc.description",
+    "dcterms.description",
 }
 
 
@@ -480,6 +494,66 @@ def strip_html(raw_html: str) -> str:
     return normalize_whitespace(text)
 
 
+def parse_html_attributes(tag: str) -> dict[str, str]:
+    attrs: dict[str, str] = {}
+    for match in HTML_ATTR_RE.finditer(tag):
+        key = (match.group(1) or "").strip().lower()
+        value = (match.group(2) or match.group(3) or match.group(4) or "").strip()
+        if not key:
+            continue
+        attrs[key] = html.unescape(value)
+    return attrs
+
+
+def is_low_value_summary_candidate(text: str) -> bool:
+    normalized = normalize_whitespace(text)
+    if len(normalized) < 55:
+        return True
+    lowered = normalized.lower()
+    generic_prefixes = (
+        "a blog post by ",
+        "a post by ",
+        "the official blog of ",
+    )
+    if any(lowered.startswith(prefix) for prefix in generic_prefixes):
+        return True
+    return False
+
+
+def extract_summary_from_article_html(raw_html: str) -> str:
+    if not raw_html:
+        return ""
+
+    cleaned_html = HTML_SCRIPT_STYLE_RE.sub(" ", raw_html)
+    head_slice = cleaned_html[:250000]
+
+    for match in HTML_META_TAG_RE.finditer(head_slice):
+        attrs = parse_html_attributes(match.group(0))
+        name_key = (attrs.get("name") or attrs.get("property") or "").strip().lower()
+        if name_key not in META_DESCRIPTION_KEYS:
+            continue
+        content = normalize_whitespace(strip_html(attrs.get("content", "")))
+        if len(content) >= 40 and not is_low_value_summary_candidate(content):
+            return truncate_text(content, 900)
+
+    paragraphs: list[str] = []
+    for match in HTML_P_TAG_RE.finditer(cleaned_html):
+        text = normalize_whitespace(strip_html(match.group(1)))
+        if len(text) < 40 or is_low_value_summary_candidate(text):
+            continue
+        paragraphs.append(text)
+        if len(paragraphs) >= 4 or len(" ".join(paragraphs)) >= 800:
+            break
+
+    if paragraphs:
+        return truncate_text(" ".join(paragraphs), 900)
+
+    body_text = normalize_whitespace(strip_html(cleaned_html))
+    if len(body_text) >= 80 and not is_low_value_summary_candidate(body_text):
+        return truncate_text(body_text, 900)
+    return ""
+
+
 def parse_report_date(raw: str) -> dt.date:
     if not raw:
         return now_in_report_tz().date()
@@ -566,6 +640,50 @@ def fetch_feed_xml(feed_url: str, timeout_sec: int, hard_timeout_sec: int | None
     return bytes(data)
 
 
+def _fetch_article_html_once(article_url: str, timeout_sec: int) -> str:
+    request = urllib.request.Request(
+        article_url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=timeout_sec) as response:
+        raw = response.read()
+        content_type = response.headers.get("Content-Type", "")
+    match = re.search(r"charset=([a-zA-Z0-9._-]+)", content_type, flags=re.IGNORECASE)
+    if match:
+        charset = match.group(1).strip()
+        try:
+            return raw.decode(charset, errors="replace")
+        except Exception:
+            pass
+    return raw.decode("utf-8", errors="replace")
+
+
+def fetch_article_html(article_url: str, timeout_sec: int, hard_timeout_sec: int | None = None) -> str:
+    max_wait = hard_timeout_sec if hard_timeout_sec is not None else max(timeout_sec + 3, 8)
+    payload: dict[str, Any] = {"data": None, "error": None}
+
+    def _worker() -> None:
+        try:
+            payload["data"] = _fetch_article_html_once(article_url, timeout_sec)
+        except Exception as exc:
+            payload["error"] = exc
+
+    worker = threading.Thread(target=_worker, daemon=True)
+    worker.start()
+    worker.join(max_wait)
+    if worker.is_alive():
+        raise TimeoutError(f"Timeout while fetching {article_url} (>{max_wait}s)")
+    if payload["error"] is not None:
+        raise payload["error"]
+    data = payload.get("data")
+    if not isinstance(data, str):
+        raise RuntimeError(f"Invalid response payload for {article_url}")
+    return data
+
+
 def fetch_with_fallback(source: Source, timeout_sec: int) -> tuple[str, bytes]:
     candidates = [source.feed_url, *source.fallback_feed_urls]
     seen: set[str] = set()
@@ -583,6 +701,25 @@ def fetch_with_fallback(source: Source, timeout_sec: int) -> tuple[str, bytes]:
     if last_error is None:
         raise RuntimeError(f"No fetchable URL candidates for source: {source.name}")
     raise last_error
+
+
+def enrich_missing_summaries(articles: list[Article], timeout_sec: int) -> tuple[int, int]:
+    attempted = 0
+    recovered = 0
+    per_article_timeout = max(5, min(timeout_sec, 10))
+    for article in articles:
+        if normalize_whitespace(article.summary):
+            continue
+        attempted += 1
+        try:
+            raw_html = fetch_article_html(article.link, per_article_timeout)
+            extracted = extract_summary_from_article_html(raw_html)
+            if extracted:
+                article.summary = extracted
+                recovered += 1
+        except Exception:
+            continue
+    return attempted, recovered
 
 
 def parse_feed_datetime(raw: str) -> dt.datetime | None:
@@ -616,16 +753,36 @@ def parse_feed_datetime(raw: str) -> dt.datetime | None:
 
 
 def rss_text(elem: ET.Element, tag: str) -> str:
+    wanted = tag.split(":")[-1].strip().lower()
     found = elem.find(tag)
-    if found is not None and found.text:
-        return found.text
+    if found is not None:
+        text = normalize_whitespace("".join(found.itertext()))
+        if text:
+            return text
+    for child in list(elem):
+        child_tag = child.tag.split("}")[-1].split(":")[-1].strip().lower()
+        if child_tag != wanted:
+            continue
+        text = normalize_whitespace("".join(child.itertext()))
+        if text:
+            return text
     return ""
 
 
 def atom_text(elem: ET.Element, namespace: str, tag: str) -> str:
+    wanted = tag.split(":")[-1].strip().lower()
     found = elem.find(f"{namespace}{tag}")
-    if found is not None and found.text:
-        return found.text
+    if found is not None:
+        text = normalize_whitespace("".join(found.itertext()))
+        if text:
+            return text
+    for child in list(elem):
+        child_tag = child.tag.split("}")[-1].split(":")[-1].strip().lower()
+        if child_tag != wanted:
+            continue
+        text = normalize_whitespace("".join(child.itertext()))
+        if text:
+            return text
     return ""
 
 
@@ -1281,6 +1438,14 @@ def run() -> int:
     all_articles = sort_articles_desc(dedupe_articles(all_articles))
     if len(all_articles) > max_total_articles:
         all_articles = all_articles[:max_total_articles]
+
+    if all_articles:
+        attempted, recovered = enrich_missing_summaries(all_articles, args.timeout_sec)
+        if attempted > 0:
+            print(
+                "[INFO] Missing summary recovery: "
+                f"attempted={attempted} recovered={recovered}"
+            )
 
     for article in all_articles:
         classify_keywords(article, topic_rules, issue_rules)
