@@ -1,8 +1,8 @@
 {
   "report_date": "2026-04-27",
   "report_date_kst": "2026-04-27",
-  "generated_at": "2026-04-26T23:59:15.838670+00:00",
-  "generated_at_kst": "2026-04-27T08:59:15.838670+09:00",
+  "generated_at": "2026-04-27T04:35:52.407679+00:00",
+  "generated_at_kst": "2026-04-27T13:35:52.407679+09:00",
   "article_count": 10,
   "issues_top": [
     [
@@ -39,12 +39,12 @@
     "Apple Machine Learning Research": 4
   },
   "llm_stats": {
-    "attempted": 6,
-    "success_json": 0,
+    "attempted": 7,
+    "success_json": 1,
     "success_freeform": 0,
     "fallback": 6,
     "enabled_after_run": false,
-    "last_error": "Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite\\nPlease retry in 44.191187229s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}]",
+    "last_error": "Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite\\nPlease retry in 7.608893769s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}]",
     "init_error": "LLM quota/rate limit reached. The rest of this run will use fallback summaries."
   },
   "articles": [
@@ -124,7 +124,7 @@
     {
       "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "DeepSeek-V4: a million-token context that agents can actually use",
+      "title": "DeepSeek-V4: 에이전트가 실질적으로 활용 가능한 100만 토큰 컨텍스트",
       "title_original": "DeepSeek-V4: a million-token context that agents can actually use",
       "link": "https://huggingface.co/blog/deepseekv4",
       "published_raw": "Fri, 24 Apr 2026 00:00:00 GMT",
@@ -138,16 +138,18 @@
         "에이전트 워크플로 확장"
       ],
       "keywords": [
-        "agent",
-        "open source",
-        "에이전트 워크플로 확장"
+        "DeepSeek-V4",
+        "AI 에이전트",
+        "100만 토큰",
+        "컨텍스트 윈도우",
+        "오픈 소스"
       ],
       "keywords_original": [
         "agent",
         "open source",
         "에이전트 워크플로 확장"
       ],
-      "summary": "이 기사는 'DeepSeek-V4: a million-token context that agents can actually use' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary": "허깅페이스 블로그는 오픈 소스와 오픈 사이언스를 통해 인공지능 기술을 발전시키고 대중화하려는 여정을 공유했다. 이번에 공개된 DeepSeek-V4는 100만 토큰에 달하는 방대한 컨텍스트 윈도우를 지원하는 것이 핵심이다. 단순히 긴 문맥을 처리하는 것을 넘어, AI 에이전트가 실질적인 워크플로에서 이를 효과적으로 활용할 수 있도록 설계되었다. 이는 복잡한 문서 분석이나 긴 대화 맥락 유지가 필요한 작업에서 성능을 크게 향상시킨다. DeepSeek는 모델의 접근성을 높여 개발자들이 고성능 AI를 더 쉽게 구축하도록 돕는다. 이번 발표는 AI 에이전트의 자율성과 문제 해결 능력을 한 단계 끌어올리는 계기가 될 전망이다. 특히 대규모 데이터 처리가 필수적인 기업 환경에서 실무적인 활용도가 높을 것으로 기대된다. 모델의 효율적인 아키텍처는 연산 자원 최적화에도 기여한다. 오픈 소스 생태계 내에서 이러한 기술적 진보는 AI 기술의 민주화를 가속화한다. 개발자들은 이제 더 긴 문맥을 바탕으로 정교한 에이전트 시스템을 설계할 수 있게 되었다. 향후 DeepSeek-V4가 실제 산업 현장에서 어떤 혁신을 이끌어낼지 주목된다.",
       "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
     },
     {
