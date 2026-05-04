@@ -1,6 +1,12 @@
 {
-  "latest_date": "2026-05-01",
+  "latest_date": "2026-05-04",
   "reports": [
+    {
+      "date": "2026-05-04",
+      "json": "daily_ai_brief_2026-05-04.json",
+      "md": "daily_ai_brief_2026-05-04.md",
+      "article_count": 10
+    },
     {
       "date": "2026-05-01",
       "json": "daily_ai_brief_2026-05-01.json",
