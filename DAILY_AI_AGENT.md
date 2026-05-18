@@ -36,7 +36,7 @@ python daily_ai_news_agent.py --dry-run
 
 - `"llm.enabled": true`
 - `"llm.provider": "gemini"`
-- `"llm.model": "gemini-3.1-flash-lite-preview"`
+- `"llm.model": "gemma-4-31b-it"`
 
 필수 환경 변수:
 

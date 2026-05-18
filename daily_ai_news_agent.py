@@ -173,7 +173,7 @@ class LlmSummarizer:
     def __init__(self, llm_config: dict[str, Any]) -> None:
         self.enabled = bool(llm_config.get("enabled", False))
         self.provider = "gemini"
-        self.model = "gemini-3.1-flash-lite-preview"
+        self.model = "gemma-4-31b-it"
         self.temperature = float(llm_config.get("temperature", 0.1))
         self.max_articles_per_run = int(llm_config.get("max_articles_per_run", 20))
         self.client: Any | None = None
