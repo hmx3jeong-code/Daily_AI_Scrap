@@ -49,8 +49,8 @@
   "llm_stats": {
     "attempted": 10,
     "success_json": 1,
-    "success_freeform": 4,
-    "fallback": 5,
+    "success_freeform": 0,
+    "fallback": 9,
     "enabled_after_run": true,
     "last_error": "Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]",
     "init_error": ""
@@ -152,7 +152,7 @@
         "model",
         "안전/리스크 논의"
       ],
-      "summary": "<thought>* Role: Fact-based AI News Editor. * Task: Translate/Summarize AI article information into Korean. * Output Format: JSON only (no code blocks). * JSON Keys: `title_ko`, `summary_ko`, `keywords_ko`. * Hard Rules: * No LaTeX/markdown math delimiters. * `title_ko`: Natural Korean translation. * `summary_ko`: 10-12 detailed sentences, 450-550 characters. * `summary_ko` content: Key announcements, features/numbers/schedules, background/context, practical impact. * `keywords_ko`: 5-7 Korean keywords. * No exaggeration/speculation, preserve numbers/orgs/model names. * Title: Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation. * Source: Hugging Face Blog. * Content: * NVIDIA Cosmos Predict 2.5: Large-scale world model for physically plausible video generation…",
+      "summary": "이 기사는 'Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 NVIDIA Cosmos Predict 2.5 is a large-scale world model capable of generating physically plausible videos conditioned on text, images, or video clips. To adapt it to a specific domain, such as robot manipulation or a particular camera viewpoint, teams still need targeted fine-tuning. Training robot … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
       "summary_original": "NVIDIA Cosmos Predict 2.5 is a large-scale world model capable of generating physically plausible videos conditioned on text, images, or video clips. To adapt it to a specific domain, such as robot manipulation or a particular camera viewpoint, teams still need targeted fine-tuning. Training robot policies requires demonstration data, but collecting real-robot trajectories is slow and expensive. Generating synthetic trajectories with a fine-tuned video world model offers a scalable alternative. However, full fine-tuning of a 2B-parameter model is expensive and risks catastrophic forgetting of general knowledge. LoRA and DoRA inject small trainable adapter modules into the frozen base model, reducing memory requirements while keeping the adapter files small and portable. This makes it practical to fine-tune on a single GPU and flexibly swap adapters for different domains at inference."
     },
     {
@@ -221,7 +221,7 @@
         "launch",
         "신규 모델/제품 발표"
       ],
-      "summary": "<thought>Fact-based AI News Editor. Translate/Summarize AI article information into Korean. JSON only, no code blocks. `{\"title_ko\":\"...\", \"summary_ko\":\"...\", \"keywords_ko\":[\"...\", \"...\"]}`. * No LaTeX/markdown math delimiters. * Plain text for formulas. * `title_ko`: Natural Korean translation. * `summary_ko`: 10-12 detailed sentences, 450-550 characters. * `summary_ko` content: Key announcement, features/metrics/schedule, background/context, practical impact. * `keywords_ko`: 5-7 Korean keywords. * No exaggeration/speculation, preserve numbers/orgs/model names. * *Title:* The Open Agent Leaderboard * *Source:* Hugging Face Blog (IBM Research collaboration implied by link) * *Content:* * Goal: Measure the generality of AI agents. * Problem: Most AI evals focus on model scores on specific…",
+      "summary": "이 기사는 'The Open Agent Leaderboard' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Can we measure generality? What we built How to read the leaderboard What we're already learning What's public today What we want from the community What's next Closing Related reading How good are general purpose AI agents? We built an open evaluation framework to find out. Most evaluations in AI … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
       "summary_original": "Can we measure generality? What we built How to read the leaderboard What we're already learning What's public today What we want from the community What's next Closing Related reading How good are general purpose AI agents? We built an open evaluation framework to find out. Most evaluations in AI report a simple result: what score each model got on which benchmarking task. When you deploy an agent, you're not just choosing a model. You're choosing a full system: what tools the agent can use, how it plans its steps, what it remembers between actions, how it recovers when something goes wrong. Change any of those and the same model can produce very different results at very different costs. How well an AI agent works depends on how it's built, not just the model inside it. Today we're launching the Open Agent Leaderboard, an open benchmark for comparing full agent systems, not just the m…"
     },
     {
@@ -255,7 +255,7 @@
         "에이전트 워크플로 확장",
         "기업 파트너십/투자"
       ],
-      "summary": "<thought>* Role: Fact-centric AI News Editor. * Task: Translate/Summarize AI news into Korean. * Input: Title, Source, Summary, Keywords, Link. * Output Format: JSON only (no code blocks). * JSON Keys: `title_ko`, `summary_ko`, `keywords_ko`. * Hard Rules: * No LaTeX/markdown math delimiters. * `title_ko`: Natural Korean translation. * `summary_ko`: 10-12 detailed sentences, 450-550 characters. * `summary_ko` content: Core announcement, features/metrics/schedule, background/context, practical impact. * `keywords_ko`: 5-7 Korean keywords. * No exaggeration/speculation, preserve numbers/org names/model names. * Title: OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments. * Source: OpenAI News. * Summary: OpenAI and Dell partner to bring Codex to hybrid and…",
+      "summary": "이 기사는 'OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 OpenAI and Dell partner to bring Codex to hybrid and on-premise environments, helping enterprises deploy AI coding agents securely across data and workflows. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
       "summary_original": "OpenAI and Dell partner to bring Codex to hybrid and on-premise environments, helping enterprises deploy AI coding agents securely across data and workflows."
     },
     {
@@ -284,7 +284,7 @@
         "partnership",
         "기업 파트너십/투자"
       ],
-      "summary": "<thought>Fact-based AI News Editor. Translate/Summarize AI article information into Korean. JSON only, no code blocks. `{\"title_ko\":\"...\", \"summary_ko\":\"...\", \"keywords_ko\":[\"...\", \"...\"]}`. * No LaTeX/markdown math delimiters. * Plain text for formulas. * `title_ko`: Natural Korean translation. * `summary_ko`: 10-12 detailed sentences, 450-550 characters. * `summary_ko` content: Key announcements, features/metrics/dates, background/context, practical impact. * `keywords_ko`: 5-7 Korean keywords. * No exaggeration/speculation, preserve numbers/orgs/model names. * Title: Catalyzing scientific impact through global partnerships and open resources. * Source: Google Research Blog. * Content Summary: Data Mining & Modeling. * Existing Keywords: model, partnership, corporate partnership/investm…",
+      "summary": "이 기사는 'Catalyzing scientific impact through global partnerships and open resources' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Data Mining & Modeling 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
       "summary_original": "Data Mining & Modeling"
     },
     {
