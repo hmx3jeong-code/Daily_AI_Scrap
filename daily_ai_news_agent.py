@@ -45,6 +45,13 @@ HTML_ATTR_RE = re.compile(
     r'([a-zA-Z_:][\w:.-]*)\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s"\'=<>`]+))'
 )
 HTML_P_TAG_RE = re.compile(r"(?is)<p\b[^>]*>(.*?)</p>")
+LLM_REASONING_BLOCK_RE = re.compile(
+    r"(?is)<(?:thought|think|analysis|reasoning)\b[^>]*>.*?</(?:thought|think|analysis|reasoning)>"
+)
+LLM_UNCLOSED_REASONING_RE = re.compile(
+    r"(?is)<(?:thought|think|analysis|reasoning)\b[^>]*>.*$"
+)
+HANGUL_RE = re.compile(r"[가-힣]")
 MATH_BLOCK_RE = re.compile(r"\$\$(.+?)\$\$", flags=re.DOTALL)
 MATH_INLINE_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", flags=re.DOTALL)
 MATH_PAREN_RE = re.compile(r"\\\((.+?)\\\)", flags=re.DOTALL)
@@ -141,6 +148,21 @@ META_DESCRIPTION_KEYS = {
     "dcterms.description",
 }
 
+LLM_PROMPT_LEAK_HINTS = (
+    "<thought",
+    "<think",
+    "fact-based ai news editor",
+    "json only",
+    "출력 형식",
+    "hard rule",
+    "do not use latex",
+    "title_ko:",
+    "summary_ko:",
+    "keywords_ko:",
+    "기존키워드:",
+    "본문요약:",
+)
+
 
 @dataclass
 class Source:
@@ -235,23 +257,64 @@ class LlmSummarizer:
         }
 
     @staticmethod
-    def _extract_json_dict(raw_text: str) -> dict[str, Any]:
+    def _strip_code_fence(raw_text: str) -> str:
         text = (raw_text or "").strip()
-        if not text:
-            return {}
         if text.startswith("```"):
             text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
             text = re.sub(r"\s*```$", "", text)
-        start = text.find("{")
-        end = text.rfind("}")
-        if start < 0 or end <= start:
+        return text.strip()
+
+    @staticmethod
+    def _strip_reasoning_blocks(raw_text: str) -> str:
+        text = LlmSummarizer._strip_code_fence(raw_text)
+        text = LLM_REASONING_BLOCK_RE.sub("", text)
+        text = LLM_UNCLOSED_REASONING_RE.sub("", text)
+        return text.strip()
+
+    @staticmethod
+    def _looks_like_prompt_leak(text: str) -> bool:
+        lowered = (text or "").lower()
+        return any(hint in lowered for hint in LLM_PROMPT_LEAK_HINTS)
+
+    @staticmethod
+    def _valid_localization_payload(parsed: dict[str, Any]) -> bool:
+        title = str(parsed.get("title_ko", "")).strip()
+        summary = str(parsed.get("summary_ko", "")).strip()
+        keywords = parsed.get("keywords_ko", [])
+        if not title or not summary or not isinstance(keywords, list):
+            return False
+        if title in {"...", "…"} or summary in {"...", "…"}:
+            return False
+        if len(summary) < 40 or not HANGUL_RE.search(summary):
+            return False
+        if LlmSummarizer._looks_like_prompt_leak(title):
+            return False
+        if LlmSummarizer._looks_like_prompt_leak(summary):
+            return False
+        return True
+
+    @staticmethod
+    def _extract_json_dict(raw_text: str) -> dict[str, Any]:
+        text = LlmSummarizer._strip_code_fence(raw_text)
+        if not text:
             return {}
-        text = text[start : end + 1]
-        try:
-            parsed = json.loads(text)
-        except Exception:
-            return {}
-        return parsed if isinstance(parsed, dict) else {}
+        decoder = json.JSONDecoder()
+        candidates: list[dict[str, Any]] = []
+        for match in re.finditer(r"\{", text):
+            try:
+                parsed, _ = decoder.raw_decode(text[match.start() :])
+            except Exception:
+                continue
+            if isinstance(parsed, dict) and LlmSummarizer._valid_localization_payload(parsed):
+                candidates.append(parsed)
+        return candidates[-1] if candidates else {}
+
+    @staticmethod
+    def _is_safe_freeform_summary(text: str) -> bool:
+        cleaned = normalize_whitespace(text)
+        if len(cleaned) < 40 or not HANGUL_RE.search(cleaned):
+            return False
+        return not LlmSummarizer._looks_like_prompt_leak(cleaned)
 
     def localize_article(self, article: Article) -> dict[str, Any]:
         default_summary = fallback_summary(article)
@@ -271,6 +334,7 @@ class LlmSummarizer:
             "출력 형식:\n"
             '{"title_ko":"...", "summary_ko":"...", "keywords_ko":["...", "..."]}\n\n'
             "Hard rule:\n"
+            "- Return ONLY the final JSON object. Do NOT include <thought>, <think>, reasoning, analysis, or restated instructions.\n"
             "- Do NOT use LaTeX or markdown math delimiters ($, $$, \\(...\\), \\[...\\]).\n"
             "- Write every formula in plain text, e.g. L_total = L_supervised + lambda * KL(...).\n\n"
             "규칙:\n"
@@ -291,7 +355,13 @@ class LlmSummarizer:
                 model=self.model,
                 temperature=self.temperature,
                 messages=[
-                    {"role": "system", "content": "당신은 사실 중심의 AI 뉴스 에디터다."},
+                    {
+                        "role": "system",
+                        "content": (
+                            "당신은 사실 중심의 AI 뉴스 에디터다. "
+                            "최종 JSON만 출력하고 내부 추론, <thought>, <think>, 지시문 재진술은 절대 출력하지 마라."
+                        ),
+                    },
                     {"role": "user", "content": prompt},
                 ],
             )
@@ -302,8 +372,10 @@ class LlmSummarizer:
             )
             parsed = self._extract_json_dict(content)
             if not parsed:
-                guessed_summary = format_math_for_readability(content)
-                if guessed_summary:
+                guessed_summary = format_math_for_readability(
+                    self._strip_reasoning_blocks(content)
+                )
+                if guessed_summary and self._is_safe_freeform_summary(guessed_summary):
                     self.calls_success_freeform += 1
                     return {
                         "title_ko": format_math_for_readability(article.title),
@@ -313,6 +385,9 @@ class LlmSummarizer:
                             for keyword in article.keywords[:5]
                         ],
                     }
+                self.last_error = "LLM response did not contain valid JSON."
+                self.calls_fallback += 1
+                return default_payload
             title_ko = format_math_for_readability(str(parsed.get("title_ko", "")))
             summary_ko = format_math_for_readability(str(parsed.get("summary_ko", "")))
             keywords_raw = parsed.get("keywords_ko", [])
