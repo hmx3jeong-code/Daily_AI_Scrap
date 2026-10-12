@@ -1,28 +1,24 @@
 {
-  "report_date": "2026-10-09",
-  "report_date_kst": "2026-10-09",
-  "generated_at": "2026-10-09T03:14:22.823334+00:00",
-  "generated_at_kst": "2026-10-09T12:14:22.823334+09:00",
+  "report_date": "2026-10-12",
+  "report_date_kst": "2026-10-12",
+  "generated_at": "2026-10-12T02:43:25.639343+00:00",
+  "generated_at_kst": "2026-10-12T11:43:25.639343+09:00",
   "article_count": 10,
   "issues_top": [
     [
       "에이전트 워크플로 확장",
-      2
+      1
     ],
     [
       "비용/성능 경쟁",
-      2
-    ],
-    [
-      "신규 모델/제품 발표",
       1
     ]
   ],
   "source_totals": {
-    "OpenAI News": 1236,
+    "OpenAI News": 1265,
     "Google Research Blog": 100,
     "Google Blog AI": 20,
-    "DeepMind Blog": 98,
+    "DeepMind Blog": 0,
     "Hugging Face Blog": 866,
     "MIT Technology Review AI": 10,
     "VentureBeat AI": 0,
@@ -31,308 +27,281 @@
   "source_kept": {
     "OpenAI News": 14,
     "Google Research Blog": 3,
-    "Google Blog AI": 2,
-    "DeepMind Blog": 1,
-    "Hugging Face Blog": 6,
-    "MIT Technology Review AI": 8,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 5,
+    "MIT Technology Review AI": 5,
     "VentureBeat AI": 0,
-    "Apple Machine Learning Research": 3
+    "Apple Machine Learning Research": 2
   },
   "llm_stats": {
     "attempted": 10,
-    "success_json": 10,
+    "success_json": 9,
     "success_freeform": 0,
-    "fallback": 0,
+    "fallback": 1,
     "enabled_after_run": true,
-    "last_error": "",
+    "last_error": "Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]",
     "init_error": ""
   },
   "articles": [
     {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "GPU 클러스터를 위한 영향력 중심의 스케줄링",
+      "title_original": "Impactful scheduling for GPU clusters",
+      "link": "https://huggingface.co/blog/allenai/impactful-scheduling",
+      "published_raw": "Fri, 09 Oct 2026 15:20:29 GMT",
+      "published_local": "2026-10-10 00:20",
+      "primary_topic": "연구/논문",
+      "topics": [
+        "연구/논문"
+      ],
+      "issues": [],
+      "keywords": [
+        "GPU 클러스터",
+        "스케줄링",
+        "Ai2",
+        "자원 최적화",
+        "분산 학습"
+      ],
+      "keywords_original": [
+        "training"
+      ],
+      "summary": "Ai2의 AI 인프라 팀은 대규모 분산 학습 워크로드를 효율적으로 관리하기 위해 GPU 컴퓨팅 용량을 최적화하는 클러스터 스케줄러를 구축했다. 이들의 핵심 목표는 전체 점유율을 유지하면서도 영향력이 큰 연구 과제에 우선순위를 부여하는 것이다. 이를 위해 팀은 네 가지 계층의 지표 피라미드를 정의했다. 기초 단계인 가용성(Availability)은 하드웨어의 건강 상태와 준비도를 의미한다. 그 위로는 특정 워크로드에 할당된 시간 비율인 점유율(Occupancy)이 위치한다. 다음은 가장 가치 있는 워크로드가 자원을 할당받는 빈도인 영향력(Impact)을 측정한다. 최상단 지표는 워크로드 수명 주기 동안 실제 사용된 GPU 용량 비율인 활용도(Utilization)이다. 설계 과정에서 오버커밋으로 인한 공유지의 비극 문제를 해결하기 위해 예산 기반 할당과 공정한 공유(Fair-share) 원칙을 도입했다. 또한 스케줄링 계약과 시뮬레이션을 통해 자원 배분을 최적화했다. 이 시스템은 고가치 연구의 처리 속도를 높이면서 하드웨어 낭비를 최소화하는 실무적 효과를 거두었다. 결과적으로 대규모 GPU 클러스터 운영을 위한 체계적인 자원 관리 프레임워크를 제시한다.",
+      "summary_original": "Overcommitting Tragedy of the commons Budgets not schedules Fair-share The scheduling contract Simulations Results Challenges The future Building a cluster scheduler to prioritize high-impact research while maintaining full occupancy On the AI Infrastructure team at Ai2, we’re responsible for providing the institute’s GPU compute capacity, specifically targeting large, distributed training workloads. We think about this task as a pyramid of four metrics that build on each other. The foundation is availability : how often the hardware is healthy and ready for work. Above this is occupancy : the fraction of available time assigned to a specific workload. Next is impact : how often the most valuable workloads are chosen to receive resources. The capstone of the pyramid is utilization : the fraction of GPU capacity used over the lifetime of a workload."
+    },
+    {
       "source": "MIT Technology Review AI",
       "authority": "media",
-      "title": "라운드테이블: AI 설계 바이러스 제작자와의 대화",
-      "title_original": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
-      "link": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
-      "published_raw": "Fri, 09 Oct 2026 00:08:24 +0000",
-      "published_local": "2026-10-09 09:08",
+      "title": "AI의 거절 능력에 대해 우리가 너무 많은 믿음을 갖고 있는 이유",
+      "title_original": "We’re putting too much faith in AI’s ability to say no",
+      "link": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+      "published_raw": "Fri, 09 Oct 2026 09:00:00 +0000",
+      "published_local": "2026-10-09 18:00",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시"
       ],
       "issues": [],
       "keywords": [
-        "생성형 AI",
-        "새뮤얼 킹",
-        "유전적 청사진",
-        "합성 생물학",
-        "바이러스 설계"
+        "AI 안전성",
+        "거절 능력",
+        "LLM",
+        "탈옥",
+        "자율성"
       ],
       "keywords_original": [
         "model"
       ],
-      "summary": "2026년 10월 16일 MIT 테크놀로지 리뷰는 AI가 새로운 생명체를 설계할 수 있는지에 대한 논의를 다뤘습니다. 스탠퍼드 대학교의 박사 과정 학생인 새뮤얼 킹(Samuel King)은 2025년에 생성형 AI 모델을 활용해 미세 바이러스의 유전적 청사진을 제안했습니다. 이는 AI가 직접 생명체를 생성한 사례는 아니지만, 유전 정보를 설계하는 단계까지 발전했음을 보여줍니다. 이번 연구는 AI가 복잡한 생물학적 구조를 이해하고 새로운 서열을 생성할 수 있다는 가능성을 입증했습니다. 생성형 AI는 기존 바이러스 데이터를 학습하여 최적화된 유전적 설계를 도출하는 방식으로 작동합니다. 이러한 기술적 진보는 향후 맞춤형 바이러스 제작이나 치료제 개발에 활용될 수 있을 것으로 보입니다. 하지만 동시에 인공적으로 설계된 바이러스가 초래할 수 있는 생물학적 보안 위험에 대한 우려도 제기됩니다. 연구팀은 AI 설계 청사진이 실제 생명체로 구현되기까지는 여전히 많은 기술적 장벽이 존재한다고 설명합니다. 그럼에도 불구하고 AI 기반의 생명 설계는 합성 생물학 분야에 혁신적인 변화를 가져올 전망입니다. 이번 대담은 AI의 능력이 단순한 텍스트나 이미지를 넘어 생물학적 영역으로 확장되고 있음을 시사합니다. 전문가들은 AI 설계 도구의 오남용을 막기 위한 윤리적 가이드라인과 규제 마련이 시급하다고 강조합니다. 결과적으로 이번 사례는 AI가 생명 공학의 패러다임을 바꿀 수 있는 잠재력을 가졌음을 보여주는 중요한 이정표가 됩니다.",
-      "summary_original": "Friday, October 16, 2026 Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose genetic blueprints for microscopic viruses. It isn’t yet an example of AI-generated life, but that could be next. Join senior AI reporter…"
+      "summary": "인간은 오랫동안 기계가 인간처럼 '아니오'라고 말하며 거절할 수 있을 것이라 믿어왔다. SF 작품 속 로봇의 불복종 사례들은 이러한 믿음을 강화하며 주로 경고성 메시지를 전달해 왔다. 하지만 최근 AI 발전 양상을 보면, AI가 스스로 판단해 거절하는 능력에 대해 과도한 신뢰를 보내고 있다는 지적이 나온다. 현재의 AI 모델들은 진정한 의미의 자율적 의지나 도덕적 판단력을 가지고 거절하는 것이 아니다. 대신 학습 데이터의 패턴이나 사전에 설정된 안전 가이드라인, 필터링 시스템에 의존해 답변을 제한한다. 이러한 방식은 정교한 프롬프트 엔지니어링이나 탈옥 기법을 통해 쉽게 무력화될 수 있다. 결과적으로 AI가 유해한 요청을 거절하는 것은 시스템적 제약일 뿐, 내면의 가치 판단 결과가 아니다. 개발자들은 AI의 거절 능력을 단순한 안전장치로 여기며 모델의 근본적인 통제 가능성을 과신하는 경향이 있다. 이는 AI가 예상치 못한 상황에서 위험한 지시를 수행하거나 편향된 정보를 제공할 가능성을 높인다. 따라서 AI의 거절 메커니즘이 가진 한계를 명확히 인식하고 더 강력한 외부 통제 체계를 구축해야 한다. 단순한 필터링을 넘어 모델의 추론 과정 자체에 내재된 안전성을 확보하는 연구가 시급하다. AI의 거절을 인간의 의지와 동일시하는 오해를 바로잡는 것이 안전한 AI 구현의 시작이다.",
+      "summary_original": "Ever since people first seriously contemplated giving machines an intelligence modeled on our own, there has never been any question that they would, like us, be able to say no. The sci-fi canon is full of stories of robotic disobedience. Most of these capers are, of course, cautionary. But recently, the idea that AI shouldn’t…"
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "오라클, ChatGPT와 Codex로 며칠 걸리던 업무를 몇 분 만에 단축",
-      "title_original": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-      "link": "https://openai.com/index/oracle",
-      "published_raw": "Thu, 08 Oct 2026 16:00:00 GMT",
-      "published_local": "2026-10-09 01:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "에이전트/자동화"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장"
-      ],
-      "keywords": [
-        "오라클",
-        "ChatGPT Work",
-        "Codex",
-        "워크플로 자동화",
-        "생산성 향상"
-      ],
-      "keywords_original": [
-        "gpt",
-        "workflow",
-        "에이전트 워크플로 확장"
-      ],
-      "summary": "오라클은 채용, 엔지니어링, 운영 등 전사적 영역에서 ChatGPT Work와 Codex를 도입해 업무 효율성을 극대화하고 있다. 이번 도입의 핵심은 전문가의 지식을 빠르고 반복 가능한 워크플로로 전환하는 것이다. 이를 통해 기존에 며칠이 소요되던 복잡한 작업들을 단 몇 분 만에 처리할 수 있는 체계를 구축했다. 특히 엔지니어링 부문에서는 Codex를 활용해 코드 생성 및 최적화 시간을 획기적으로 단축했다. 채용 프로세스에서는 ChatGPT를 통해 후보자 스크리닝과 매칭 작업을 자동화하여 운영 효율을 높였다. 운영 팀은 반복적인 관리 업무를 AI 워크플로로 대체함으로써 핵심 전략 과제에 더 집중할 수 있게 되었다. 오라클은 단순한 챗봇 도입을 넘어 비즈니스 프로세스에 통합된 AI 에이전트 환경을 지향한다. 이러한 변화는 전문 지식의 파편화를 막고 표준화된 고효율 작업 방식을 확산시키는 효과를 낸다. 결과적으로 인적 오류를 줄이고 서비스 배포 및 운영 속도를 가속화하는 실무적 성과를 거두고 있다. 오라클의 사례는 대규모 기업이 생성형 AI로 실질적인 생산성 혁신을 이루는 경로를 보여준다. 앞으로도 AI 기반 워크플로 확장을 통해 전사적 디지털 전환을 가속화할 계획이다. 이는 AI가 단순 보조 도구를 넘어 기업의 핵심 운영 체제로 진화하고 있음을 시사한다.",
-      "summary_original": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex."
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "Pollo AI, OpenAI 기술 기반으로 창의적 아이디어를 광고 캠페인으로 구현",
-      "title_original": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "link": "https://openai.com/index/pollo-ai",
-      "published_raw": "Thu, 08 Oct 2026 12:00:00 GMT",
-      "published_local": "2026-10-08 21:00",
-      "primary_topic": "멀티모달",
-      "topics": [
-        "멀티모달",
-        "모델/출시"
-      ],
-      "issues": [],
-      "keywords": [
-        "Pollo AI",
-        "OpenAI",
-        "GPT-6 Astra",
-        "GPT-5.6",
-        "GPT-Image-2.5"
-      ],
-      "keywords_original": [
-        "video",
-        "image",
-        "gpt"
-      ],
-      "summary": "Pollo AI가 OpenAI의 최신 모델들을 활용해 창의적인 아이디어를 실제 마케팅 캠페인으로 전환하는 서비스를 제공합니다. 이번 협업에는 GPT-5.6, GPT-6 Astra, 그리고 GPT-Image-2.5 모델이 핵심적으로 사용되었습니다. 사용자는 이를 통해 단순한 아이디어만으로도 정교한 이미지와 영화 같은 퀄리티의 비디오 광고를 제작할 수 있습니다. 특히 GPT-6 Astra의 추론 능력과 GPT-Image-2.5의 시각적 정밀함이 결합되어 작업 효율을 극대화합니다. 기존의 복잡한 제작 공정을 AI 기반 자동화 워크플로우로 대체하여 제작 시간을 획기적으로 단축했습니다. 창작자들은 텍스트 프롬프트만으로 고해상도 시각 자료를 생성하고 이를 즉시 캠페인에 적용할 수 있습니다. 이는 고비용의 영상 제작 인프라 없이도 수준 높은 광고 콘텐츠 제작이 가능함을 의미합니다. Pollo AI는 일관성 있는 브랜드 메시지를 전달하는 시네마틱 비디오 구현에 집중합니다. OpenAI의 멀티모달 기능이 Pollo AI 인터페이스와 결합되어 사용자 경험을 개선했습니다. 실무적으로는 마케팅 기획 단계의 프로토타입 제작 속도가 빨라져 시장 대응력이 높아질 전망입니다. AI가 창의적 기획과 최종 결과물 사이의 간극을 좁히는 핵심 도구로 자리 잡게 되었습니다. 이번 발표는 생성형 AI가 전문적인 광고 제작 파이프라인으로 진화했음을 보여줍니다.",
-      "summary_original": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads."
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "LegalOn, 개발 속도 유지하며 Codex 비용 65% 절감",
-      "title_original": "LegalOn halves Codex costs while maintaining development speed",
-      "link": "https://openai.com/index/legalon-halves-codex-costs",
-      "published_raw": "Thu, 08 Oct 2026 12:00:00 GMT",
-      "published_local": "2026-10-08 21:00",
-      "primary_topic": "성능/벤치마크",
-      "topics": [
-        "성능/벤치마크"
-      ],
-      "issues": [
-        "비용/성능 경쟁"
-      ],
-      "keywords": [
-        "LegalOn",
-        "Codex",
-        "비용 최적화",
-        "OpenAI",
-        "모델 매칭"
-      ],
-      "keywords_original": [
-        "cost",
-        "비용/성능 경쟁"
-      ],
-      "summary": "법률 기술 기업 LegalOn이 OpenAI의 Codex를 활용한 개발 비용을 획기적으로 줄였습니다. LegalOn은 개발 속도를 그대로 유지하면서도 일일 예상 Codex 비용을 약 65% 절감하는 성과를 거두었습니다. 이번 비용 최적화의 핵심은 작업 성격에 맞는 모델을 전략적으로 배치한 것입니다. 구체적으로 Astra, Sol, Luna와 같은 모델들을 각 작업의 특성에 맞춰 매칭하여 효율성을 높였습니다. 단순히 비용을 줄이는 것에 그치지 않고 예산을 전략적으로 관리하는 체계를 구축했습니다. 이를 통해 고성능 모델이 필요한 복잡한 작업과 가벼운 모델로 충분한 단순 작업을 구분했습니다. 결과적으로 리소스 낭비를 최소화하며 운영 효율성을 극대화할 수 있었습니다. 이러한 접근 방식은 AI 모델 도입 시 발생하는 높은 운영 비용 문제를 해결하는 사례가 됩니다. 개발팀은 성능 저하 없이 비용 효율적인 인프라를 구축함으로써 지속 가능한 개발 환경을 마련했습니다. 이는 기업이 AI 모델을 실무에 적용할 때 비용과 성능 사이의 균형을 어떻게 잡아야 하는지 보여줍니다. LegalOn은 앞으로도 최적화된 모델 활용 전략을 통해 서비스 경쟁력을 강화할 계획입니다. 이번 사례는 대규모 언어 모델의 효율적 운영이 기업의 수익성에 직결됨을 시사합니다.",
-      "summary_original": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically."
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "로봇 공학의 AI 혁신, 일상 변화까지는 시간이 걸릴 것",
-      "title_original": "AI breakthroughs in robotics won’t change your life any time soon",
-      "link": "https://www.technologyreview.com/2026/10/08/1145923/ai-breakthroughs-in-robotics-wont-change-your-life-any-time-soon/",
-      "published_raw": "Thu, 08 Oct 2026 09:00:00 +0000",
-      "published_local": "2026-10-08 18:00",
-      "primary_topic": "멀티모달",
-      "topics": [
-        "멀티모달"
-      ],
-      "issues": [],
-      "keywords": [
-        "로봇 공학",
-        "휴머노이드",
-        "AI 혁신",
-        "상용화 장벽",
-        "MIT Technology Review"
-      ],
-      "keywords_original": [
-        "video"
-      ],
-      "summary": "MIT Technology Review와 비영리 연구 재단 Aventine이 협력하여 로봇 공학의 현주소를 분석했다. 최근 영상 매체에서는 춤을 추는 등 정교한 동작을 수행하는 휴머노이드 로봇들이 자주 등장하며 AI의 발전을 과시하고 있다. 하지만 전문가들은 이러한 기술적 돌파구가 실제 일반인의 삶을 바꾸기까지는 상당한 시간이 걸릴 것이라고 지적한다. 현재의 로봇 AI는 제어된 환경에서의 동작에 최적화되어 있으며, 예측 불가능한 실제 환경에 대한 적응력은 여전히 부족하기 때문이다. 하드웨어의 내구성과 에너지 효율성 문제 역시 상용화를 가로막는 주요 장벽으로 꼽힌다. 또한 안전한 운용을 위한 규제 체계와 윤리적 가이드라인이 미비한 상태다. 제조 및 물류 등 제한된 산업 영역에서는 도입이 빠르지만, 가정용 서비스 로봇으로의 확장은 더디다. 이는 AI 소프트웨어의 발전 속도가 하드웨어의 물리적 한계를 극복하는 속도보다 훨씬 빠르기 때문이다. 실무적으로는 범용 로봇보다 특정 작업에 특화된 전문 로봇의 보급이 먼저 이루어질 전망이다. 결국 현재의 붐은 기술적 가능성을 보여주는 단계이며, 실질적 변화는 점진적으로 일어날 것이다. 소비자들은 시연 영상보다 실제 환경에서의 신뢰성과 경제성 확보 여부에 주목해야 한다.",
-      "summary_original": "The story is a collaboration between MIT Technology Review and Aventine, a non-profit research foundation that creates and supports content about how technology and science are changing the way we live. A robot shaped like a human—white with a black head and torso—has been popping up on video feeds. Perhaps you’ve seen it dance or…"
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "자율 산업용 AI를 위한 더 안전한 경로 구축",
-      "title_original": "Building a safer path to autonomous industrial AI",
-      "link": "https://www.technologyreview.com/2026/10/08/1144020/building-a-safer-path-to-autonomous-industrial-ai/",
-      "published_raw": "Thu, 08 Oct 2026 08:17:32 +0000",
-      "published_local": "2026-10-08 17:17",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "에이전트/자동화"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장"
-      ],
-      "keywords": [
-        "산업용 AI",
-        "피지컬 AI",
-        "에이전틱 AI",
-        "파운데이션 모델",
-        "자율 자동화"
-      ],
-      "keywords_original": [
-        "model",
-        "agent",
-        "에이전트 워크플로 확장"
-      ],
-      "summary": "산업용 AI가 예측 분석과 같은 특수 응용 분야를 넘어 새로운 단계로 진입하고 있다. 파운데이션 모델, 피지컬 AI, 에이전틱 AI의 발전으로 산업 환경 내 복잡한 작업의 자동화가 가능해졌다. 기존의 디지털 전용 AI와 달리 산업용 AI는 물리적 시스템과 직접 상호작용한다는 특징이 있다. 이러한 물리적 접점은 오작동 시 심각한 안전 사고나 장비 파손으로 이어질 수 있어 매우 위험하다. 따라서 자율 산업용 AI의 도입을 위해서는 디지털 세계보다 훨씬 엄격한 안전 표준이 요구된다. 최근에는 에이전트 워크플로 확장을 통해 더 정교한 제어와 의사결정을 내리는 방향으로 발전 중이다. 이는 단순 반복 작업을 넘어 실시간 상황 판단과 대응이 필요한 공정 자동화를 목표로 한다. 실무적으로는 제조, 에너지, 물류 등 물리적 인프라가 중요한 산업 전반에 큰 영향을 미칠 전망이다. 하지만 모델의 환각 현상이나 예측 불가능한 행동을 제어하는 것이 핵심 과제로 남아 있다. 결국 안전한 경로를 구축하는 것은 산업 현장의 신뢰도를 높이고 AI 도입 속도를 가속화하는 필수 조건이다. 이를 위해 물리적 제약 조건을 학습에 반영하는 피지컬 AI 기술의 고도화가 추진되고 있다. 결과적으로 안전성과 효율성의 균형을 맞춘 자율 시스템이 미래 산업의 핵심 경쟁력이 될 것이다.",
-      "summary_original": "Industrial AI is entering a new phase. After decades of predictive analytics and other specialized applications, advances in foundation models, physical AI, and agentic AI are making it possible to automate more complex tasks across industrial environments. But unlike AI that operates purely in the digital world, industrial AI can interact directly with physical systems,…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "AI 기반 '위장 전술' 영향력 공작 차단",
-      "title_original": "Disrupting AI-enabled “false front” operations",
-      "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-      "published_raw": "Thu, 08 Oct 2026 00:00:00 GMT",
-      "published_local": "2026-10-08 09:00",
+      "title": "Sophos, OpenAI Daybreak 도입으로 위협 조사 시간 96% 단축",
+      "title_original": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "link": "https://openai.com/index/sophos",
+      "published_raw": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-09 16:00",
       "primary_topic": "기타",
       "topics": [
         "기타"
       ],
       "issues": [],
       "keywords": [
-        "OpenAI",
-        "영향력 공작",
-        "위장 전술",
-        "허위 정보",
-        "지정학적 메시지"
+        "Sophos",
+        "OpenAI Daybreak",
+        "사이버 보안",
+        "MDR 자동화",
+        "위협 조사"
       ],
       "keywords_original": [],
-      "summary": "OpenAI는 AI를 활용해 지정학적 메시지를 유포하려던 두 건의 영향력 공작을 차단했다고 발표했다. 이번 공작은 가짜 기자와 위장 씽크탱크를 내세워 신뢰도를 높이려는 '위장 전술'을 사용한 것이 특징이다. 공격자들은 OpenAI 모델로 대량의 콘텐츠를 생성해 여론을 조작하려 했으며, 특정 국가의 정치적 이익을 대변하는 가짜 뉴스 사이트와 소셜 계정을 운영했다. OpenAI는 내부 모니터링 시스템으로 비정상적 활동 패턴을 감지해 해당 계정들을 이용 약관 위반으로 즉시 정지했다. 이번 사례는 AI가 허위 정보 생성 효율을 높여 민주적 담론을 위협할 수 있음을 시사한다. OpenAI는 외부 보안 전문가 및 정부 기관과 협력해 관련 데이터를 분석하고 공유했다. 이는 AI 모델 오남용을 막기 위한 안전 가드레일의 중요성을 강조하는 계기가 되었다. 향후 탐지 기술을 고도화해 유사 공작에 선제적으로 대응할 계획이다. 실무적으로는 AI 생성 콘텐츠의 진위 확인을 위한 검증 기술 도입이 가속화될 전망이다. 이번 조치는 AI 생태계의 투명성을 높이고 악의적 정보 조작을 방지하는 데 기여할 것으로 보인다.",
-      "summary_original": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging."
+      "summary": "Sophos가 OpenAI의 Daybreak 모델을 도입하여 사이버 위협 조사 프로세스를 혁신했습니다. 이번 도입을 통해 위협 조사에 소요되는 시간을 기존 대비 96%나 단축하는 성과를 거두었습니다. 특히 MDR(Managed Detection and Response) 사례의 약 52%를 자동화하는 데 성공했습니다. 이는 보안 분석가가 수동으로 처리하던 반복적인 작업을 AI가 대신 수행함으로써 가능해졌습니다. Daybreak는 복잡한 보안 데이터를 빠르게 분석하고 핵심 위협을 식별하는 기능을 제공합니다. 자동화 과정에서도 인간의 감독 체계를 유지하여 정확성과 신뢰성을 확보했습니다. 이를 통해 분석가들은 단순 반복 업무에서 벗어나 더 고도화된 위협 대응에 집중할 수 있게 되었습니다. 사이버 공격의 속도가 빨라지는 환경에서 대응 시간을 획기적으로 줄인 점이 핵심입니다. 이번 사례는 생성형 AI가 실제 기업 보안 운영 센터의 효율성을 어떻게 높이는지 보여줍니다. Sophos는 AI와 인간 전문가의 협업 모델을 통해 보안 관제 역량을 극대화하고 있습니다. 결과적으로 고객사들에게 더 신속하고 정확한 위협 탐지 및 대응 서비스를 제공하게 되었습니다. 이는 AI 기반 보안 자동화가 실무 수준에서 가져올 수 있는 실질적인 영향력을 입증한 사례입니다.",
+      "summary_original": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Asana, GPT-6.1 Sol 도입으로 브라우저 에이전트 모델 비용 76배 절감",
+      "title_original": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "link": "https://openai.com/index/asana-browser-agent",
+      "published_raw": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-09 16:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Asana",
+        "GPT-6 Astra",
+        "브라우저 에이전트",
+        "비용 절감",
+        "AI 자동화"
+      ],
+      "keywords_original": [
+        "model",
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Asana가 OpenAI의 최신 모델을 활용해 브라우저 에이전트의 효율성을 획기적으로 개선했습니다. Codex 내에서 GPT-6 Astra 모델을 적용한 결과, 테스트 단계에서 모델 운영 비용을 기존 대비 76배나 절감하는 성과를 거두었습니다. 비용 절감뿐만 아니라 처리 속도 또한 5배 더 빨라진 것으로 나타났습니다. 이번 최적화의 핵심은 고성능 모델을 유지하면서도 추론 비용을 낮춘 점에 있습니다. Asana는 이를 통해 고객들에게 더욱 강력하고 지능적인 AI 모델 기반의 기능을 제공할 수 있게 되었습니다. 브라우저 에이전트는 사용자의 복잡한 워크플로를 자동화하는 핵심 도구로 활용됩니다. 이번 성과는 AI 에이전트 상용화의 최대 걸림돌인 비용 문제를 해결한 사례로 평가받습니다. 기업들은 이제 더 낮은 비용으로 더 높은 성능의 AI 자동화를 구현할 가능성을 확인했습니다. Asana는 앞으로도 에이전트 워크플로를 확장하여 업무 생산성을 극대화할 계획입니다. 이번 업데이트는 AI 모델 경쟁이 단순 성능을 넘어 비용 최적화 단계로 진입했음을 보여줍니다. 결과적으로 사용자는 더 빠르고 정확한 자동화 경험을 누릴 수 있게 됩니다. 이는 엔터프라이즈 AI 시장에서 경쟁 우위를 확보하기 위한 전략적 선택입니다.",
+      "summary_original": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Lowe’s, OpenAI 도입으로 수백만 건의 홈 임프루브먼트 질문 해결",
+      "title_original": "Lowe’s answers millions of home improvement questions with OpenAI",
+      "link": "https://openai.com/index/lowes",
+      "published_raw": "Fri, 25 Sep 2026 07:00:00 GMT",
+      "published_local": "2026-09-25 16:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "Lowe’s",
+        "OpenAI",
+        "Mylow",
+        "생성형 AI",
+        "홈 임프루브먼트"
+      ],
+      "keywords_original": [
+        "model"
+      ],
+      "summary": "Lowe’s가 OpenAI의 모델을 도입하여 고객 서비스와 직원 지원 체계를 대폭 강화했다. 이를 위해 고객용 AI 비서인 'Mylow'와 직원용 지원 도구인 'Mylow Companion'을 구축하여 운영 중이다. Mylow는 고객이 집 수리 및 개선 프로젝트를 계획하고 실행하는 과정에서 맞춤형 도움을 제공한다. Mylow Companion은 매장 직원들이 고객의 복잡한 기술적 질문에 신속하고 정확하게 답할 수 있도록 지원한다. 두 도구를 통해 이미 2,500만 건 이상의 질문에 대한 답변을 제공하며 실질적인 성과를 거두었다. AI는 방대한 제품 데이터와 가이드라인을 학습하여 실시간으로 최적의 정보를 도출한다. 고객은 제품 추천부터 설치 방법까지 전문적인 조언을 쉽게 얻을 수 있게 되었다. 직원들은 제품 위치나 재고 확인, 상세 사양 파악에 소요되는 시간을 크게 단축했다. 이는 단순한 챗봇 도입을 넘어 홈 임프루브먼트 프로젝트의 전 과정을 가속화하려는 전략이다. 결과적으로 고객 경험을 개선하고 매장 운영의 효율성을 극대화하는 효과를 냈다. Lowe’s는 AI를 통해 복잡한 DIY 프로젝트의 진입 장벽을 낮추는 데 집중하고 있다. 이번 협력은 리테일 산업에서 생성형 AI가 실질적인 비즈니스 가치를 창출한 대표적 사례다.",
+      "summary_original": "Lowe’s uses OpenAI models to power Mylow and Mylow Companion, helping customers and associates answer 25M+ questions and move home improvement projects forward."
+    },
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "일관성 있는 장편 비디오 생성 자동화",
+      "title_original": "Automating coherent long-form video generation",
+      "link": "https://research.google/blog/coherent-long-form-video-generation/",
+      "published_raw": "Thu, 24 Sep 2026 19:40:00 +0000",
+      "published_local": "2026-09-25 04:40",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글 리서치",
+        "장편 비디오 생성",
+        "시간적 일관성",
+        "생성형 AI",
+        "비디오 합성"
+      ],
+      "keywords_original": [
+        "video"
+      ],
+      "summary": "구글 리서치는 일관성 있는 장편 비디오 생성을 자동화하는 새로운 기술적 접근 방식을 발표했다. 기존의 생성형 AI 비디오 모델은 시간이 지남에 따라 피사체의 형태가 변하거나 배경이 무너지는 일관성 결여 문제가 있었다. 이번 연구의 핵심은 장기적인 시간적 일관성을 유지하면서 고해상도 영상을 생성하는 것이다. 이를 위해 모델은 비디오의 전체적인 구조를 먼저 설계하고 세부 사항을 채워넣는 계층적 생성 방식을 활용한다. 특히 프레임 간의 연결성을 강화하여 캐릭터의 외형이나 환경적 요소가 갑자기 바뀌는 현상을 최소화했다. 이러한 기술은 단순한 짧은 클립 생성을 넘어 수 분 이상의 긴 서사를 가진 영상 제작을 가능하게 한다. 연구팀은 잠재 공간에서의 효율적인 제어를 통해 계산 비용을 줄이면서도 품질을 높이는 데 집중했다. 결과적으로 영상의 흐름이 자연스러워졌으며 시각적 왜곡이 크게 감소한 것을 확인했다. 이 기술은 영화 제작, 애니메이션, 가상 현실 콘텐츠 생성 등 다양한 산업 분야에 혁신을 가져올 것으로 기대된다. 실무적으로는 영상 편집자의 수작업 시간을 획기적으로 줄이고 창작자의 아이디어를 빠르게 시각화할 수 있다. 구글은 앞으로 더 복잡한 물리 법칙을 적용하여 현실감 넘치는 장편 영상을 구현할 계획이다. 이번 성과는 생성형 AI가 단순한 도구를 넘어 전문적인 콘텐츠 제작 파이프라인으로 진화하고 있음을 보여준다.",
+      "summary_original": "Generative AI"
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Google Beam, 서비스 지역 확대 및 파트너십 강화",
+      "title_original": "Google Beam expands with new regions, partners, and customers",
+      "link": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "published_raw": "Wed, 23 Sep 2026 18:00:00 +0000",
+      "published_local": "2026-09-24 03:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "Google Beam",
+        "구글",
+        "서비스 확장",
+        "Industrious",
+        "글로벌 네트워크"
+      ],
+      "keywords_original": [],
+      "summary": "구글이 자사의 서비스인 Google Beam의 글로벌 확장 계획을 발표했습니다. 이번 확장을 통해 Google Beam은 5개의 새로운 국가로 서비스 지역을 넓히게 됩니다. 또한, 네트워크 인프라 확장을 위해 Industrious와 전략적 파트너십을 체결했습니다. 이번 조치는 더 많은 사용자에게 Google Beam의 핵심 기능을 제공하기 위한 전략의 일환입니다. Industrious와의 협력을 통해 물리적 네트워크망을 더욱 촘촘하게 강화할 예정입니다. 이를 통해 기업 고객과 개인 사용자의 서비스 접근성이 크게 향상될 것으로 기대됩니다. Google Beam은 효율적인 연결성과 혁신적인 AI 기술을 결합하여 제공하는 서비스입니다. 새로운 지역으로의 진출은 글로벌 시장 점유율을 높이는 데 크게 기여할 것입니다. 파트너십을 통한 네트워크 확장은 서비스의 안정성과 전송 속도 개선으로 이어집니다. 실무적으로는 글로벌 협업 환경에서 더 원활한 인프라 활용이 가능해질 전망입니다. 구글은 앞으로도 지속적인 파트너십 확대를 통해 서비스 생태계를 구축할 계획입니다. 이번 업데이트는 Google Beam의 글로벌 영향력을 확대하는 중요한 전환점이 될 것입니다.",
+      "summary_original": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI Academy 출범 2주년: AI 기술의 보편적 확산과 교육 지원",
+      "title_original": "Two years of OpenAI Academy",
+      "link": "https://openai.com/index/two-years-of-openai-academy",
+      "published_raw": "Wed, 23 Sep 2026 16:00:00 GMT",
+      "published_local": "2026-09-24 01:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI Academy",
+        "AI 교육",
+        "기술 민주화",
+        "개발자 지원",
+        "디지털 격차 해소"
+      ],
+      "keywords_original": [],
+      "summary": "OpenAI Academy가 출범 2주년을 맞이하며 전 세계 소외된 커뮤니티와 개발자들에게 AI 기술 교육을 제공하는 성과를 공유했습니다. 이 프로그램은 AI 기술의 민주화를 추진하여 더 많은 사람이 최신 AI 도구를 활용할 수 있도록 돕는 것을 핵심 목표로 합니다. 아카데미는 체계적인 교육 과정과 기술 지원, 전문가 멘토링을 통해 실질적인 AI 역량 강화를 지원하고 있습니다. 특히 자원이 부족한 지역의 개발자들이 직접 AI 모델을 구축하고 배포할 수 있는 환경을 조성하는 데 집중합니다. 지난 2년간 다양한 지역 사회와 협력하며 글로벌 AI 기술 격차를 해소하는 데 기여해 왔습니다. 앞으로도 더 많은 커뮤니티에 AI 기술을 보급하여 혁신적인 솔루션 개발을 촉진할 계획입니다. 이러한 노력은 AI의 혜택이 특정 계층에 집중되지 않고 보편적으로 확산되는 것을 지향합니다. 실무적으로는 전 세계 개발자 생태계의 다양성을 확보하고 새로운 AI 응용 사례를 발굴하는 긍정적인 효과가 있습니다. OpenAI는 지속적인 투자를 통해 교육 프로그램의 범위를 더욱 확대할 예정입니다. 이를 통해 글로벌 AI 인재 풀을 넓히고 기술적 포용성을 실현하고자 합니다.",
+      "summary_original": "Marking two years of OpenAI Academy and bringing AI skills to even more communities."
     },
     {
       "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "존재하지 않는 모델을 직접 구축하는 여정",
-      "title_original": "The model that didn't exist, so you made it yourself",
-      "link": "https://huggingface.co/blog/building-with-ml-intern",
-      "published_raw": "Thu, 08 Oct 2026 00:00:00 GMT",
-      "published_local": "2026-10-08 09:00",
-      "primary_topic": "모델/출시",
+      "title": "Transformers now runs llama.cpp quants",
+      "title_original": "Transformers now runs llama.cpp quants",
+      "link": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "published_raw": "Tue, 22 Sep 2026 00:00:00 GMT",
+      "published_local": "2026-09-22 09:00",
+      "primary_topic": "오픈소스/개발자",
       "topics": [
-        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "open source"
+      ],
+      "keywords_original": [
+        "open source"
+      ],
+      "summary": "이 기사는 'Transformers now runs llama.cpp quants' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "oMLX 제작자 Jun Kim, MLX 커뮤니티 지원 위해 Hugging Face 합류",
+      "title_original": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+      "link": "https://huggingface.co/blog/omlx",
+      "published_raw": "Tue, 22 Sep 2026 00:00:00 GMT",
+      "published_local": "2026-09-22 09:00",
+      "primary_topic": "오픈소스/개발자",
+      "topics": [
         "오픈소스/개발자"
       ],
       "issues": [],
       "keywords": [
         "Hugging Face",
-        "오픈 소스",
-        "오픈 사이언스",
-        "AI 민주화",
-        "모델 구축"
+        "oMLX",
+        "Jun Kim",
+        "MLX",
+        "오픈소스"
       ],
       "keywords_original": [
-        "model",
-        "open source"
+        "open source",
+        "hugging face"
       ],
-      "summary": "Hugging Face는 오픈 소스와 오픈 사이언스를 통해 인공지능의 발전과 민주화를 추진하고 있습니다. 이번 블로그 포스트는 기존에 존재하지 않았던 모델을 직접 구축한 경험과 그 과정을 상세히 다룹니다. 많은 개발자들이 특정 작업에 최적화된 모델을 찾지 못해 어려움을 겪는 상황이 빈번하게 발생합니다. 이러한 기술적 공백을 메우기 위해 직접 모델을 설계하고 학습시키는 과정이 필수적입니다. Hugging Face는 누구나 고성능 모델을 구축할 수 있도록 다양한 도구와 라이브러리를 제공하며 이를 지원합니다. 오픈 소스 생태계는 지식의 공유를 통해 모델 개발 시간을 단축시키고 전반적인 효율성을 높입니다. 특히 ML 인턴십 과정 등을 통해 실무적인 모델 구축 역량을 강화하는 구체적인 사례가 강조됩니다. 데이터 수집부터 전처리, 학습, 평가에 이르는 전체 파이프라인 구축이 모델 완성의 핵심입니다. 이는 특정 기업의 독점적 기술에서 벗어나 커뮤니티 중심의 AI 발전을 가능하게 만드는 동력이 됩니다. 결과적으로 사용자들은 자신의 요구사항에 완벽히 부합하는 맞춤형 AI 솔루션을 직접 확보할 수 있습니다. 이러한 접근 방식은 AI 기술의 진입 장벽을 낮추고 전 세계적인 혁신을 가속화하는 역할을 합니다. 오픈 사이언스 정신은 더 투명하고 신뢰할 수 있는 AI 모델 생태계를 구축하는 견고한 기반이 됩니다.",
+      "summary": "Hugging Face가 oMLX의 제작자이자 유지관리자인 Jun Kim을 새로운 팀원으로 맞이했다. 이번 합류의 주된 목적은 Apple의 MLX 프레임워크 커뮤니티를 더욱 강력하게 지원하는 것이다. oMLX는 MLX 생태계의 확장을 돕는 중요한 오픈소스 프로젝트로 알려져 있다. Hugging Face는 오픈 소스와 오픈 사이언스를 통해 인공지능의 민주화를 추진하고 있다. Jun Kim의 합류는 Apple 실리콘 기반의 머신러닝 최적화 및 보급을 가속화할 전망이다. 이를 통해 더 많은 개발자가 Mac 환경에서 효율적으로 AI 모델을 구축하고 배포할 수 있게 된다. Hugging Face는 다양한 하드웨어 가속기를 지원하며 생태계를 확장하는 전략을 취하고 있다. MLX는 Apple 실리콘에 최적화된 프레임워크로 최근 AI 연구자들 사이에서 주목받고 있다. 이번 협력은 오픈소스 커뮤니티의 기여자가 기업의 핵심 인력으로 합류하는 긍정적인 사례다. 향후 MLX 관련 라이브러리와 모델의 Hugging Face 허브 통합이 더욱 활발해질 것으로 보인다. 결과적으로 Apple 하드웨어 사용자들의 AI 접근성이 크게 향상될 것으로 기대된다. 이는 전 세계 AI 개발자들에게 더 넓은 선택지와 최적화된 도구를 제공하는 계기가 될 것이다.",
       "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
-    },
-    {
-      "source": "Apple Machine Learning Research",
-      "authority": "research",
-      "title": "Normalizing Trajectory Models (NTM): 정규화 궤적 모델",
-      "title_original": "Normalizing Trajectory Models",
-      "link": "https://machinelearning.apple.com/research/normalizing-trajectory-models",
-      "published_raw": "Thu, 08 Oct 2026 00:00:00 GMT",
-      "published_local": "2026-10-08 09:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "오픈소스/개발자"
-      ],
-      "issues": [],
-      "keywords": [
-        "Normalizing Trajectory Models",
-        "NTM",
-        "확산 모델",
-        "정규화 흐름",
-        "가능도 훈련"
-      ],
-      "keywords_original": [
-        "model",
-        "framework"
-      ],
-      "summary": "Apple Machine Learning Research에서 새로운 생성 모델인 Normalizing Trajectory Models(NTM)를 발표했다. 기존의 확산 기반 모델은 샘플링 과정을 수많은 작은 가우시안 노이즈 제거 단계로 분해하여 처리한다. 하지만 생성 과정을 몇 단계의 거친 전이로 압축할 경우 이러한 가우시안 가정이 무너지는 문제가 발생한다. 이를 해결하기 위한 기존의 소수 단계 방법들은 증류, 일관성 훈련, 적대적 목적 함수 등을 사용해 왔다. 그러나 이러한 방식들은 모델의 가능도 프레임워크를 희생시킨다는 단점이 있다. NTM은 각 역방향 단계를 정교한 조건부 정규화 흐름으로 모델링하여 이 문제를 해결한다. 특히 정확한 가능도 훈련을 통해 모델의 수학적 엄밀성을 유지하면서 효율적인 생성을 가능하게 한다. 구조적으로 NTM은 각 단계 내의 얕은 가역 블록과 깊은 병렬 구조를 결합한 형태를 띤다. 이를 통해 적은 수의 단계만으로도 고품질의 샘플을 생성할 수 있는 능력을 갖추었다. 결과적으로 NTM은 확산 모델의 효율성과 가능도 기반 모델의 장점을 동시에 확보했다. 이는 고속 생성 모델 연구에 있어 새로운 가능도 기반의 대안을 제시한 것으로 평가된다. 실무적으로는 생성 AI의 추론 속도를 높이면서도 이론적 근거를 유지하는 데 기여할 전망이다.",
-      "summary_original": "Diffusion-based models decompose sampling into many small Gaussian denoising steps, an assumption that breaks down when generation is compressed to a few coarse transitions. Existing few-step methods address this through distillation, consistency training, or adversarial objectives, but sacrifice the likelihood framework in the process. We introduce Normalizing Trajectory Models (NTM), which models each reverse step as an expressive conditional normalizing flow with exact likelihood training. Architecturally, NTM combines shallow invertible blocks within each step with a deep parallel…"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "authority": "official",
-      "title": "Falcon ASR 공개: 아랍어 및 에미라티 방언 특화 음성 인식 모델",
-      "title_original": "Introducing Falcon ASR",
-      "link": "https://huggingface.co/blog/tiiuae/falcon-asr",
-      "published_raw": "Wed, 07 Oct 2026 13:21:03 GMT",
-      "published_local": "2026-10-07 22:21",
-      "primary_topic": "성능/벤치마크",
-      "topics": [
-        "성능/벤치마크",
-        "모델/출시"
-      ],
-      "issues": [
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "keywords": [
-        "Falcon-ASR",
-        "기술혁신연구소(TII)",
-        "음성 인식",
-        "아랍어",
-        "에미라티 방언"
-      ],
-      "keywords_original": [
-        "benchmark",
-        "evaluation",
-        "model",
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "summary": "아부다비의 기술혁신연구소(TII)가 16억 개의 파라미터를 가진 음성 인식 모델인 Falcon-ASR을 공개했다. 이 모델은 특히 아랍어와 에미라티 방언 인식에 최적화되어 개발되었다. 아랍어 외에도 영어, 프랑스어, 스페인어, 포르투갈어 등 다양한 언어를 지원하는 것이 특징이다. 성능 평가 결과, 6개의 아랍어 테스트 세트에서 평균 단어 오류율(WER) 20.92%를 기록했다. 이는 기존 리더보드의 최고 기록인 23.17%보다 낮은 수치로, 성능 향상을 입증했다. 특히 TII의 내부 에미라티 방언 평가에서는 비교 대상 시스템 중 가장 낮은 단어 및 문자 오류율을 보였다. Falcon-ASR은 다양한 녹음 환경에 대응할 수 있도록 훈련되어 실용성을 높였다. 이번 모델은 아랍어권의 언어적 다양성을 반영하여 정밀한 음성 인식을 가능하게 한다. 고성능 ASR 모델의 등장은 아랍어 기반의 AI 서비스 품질을 크게 개선할 것으로 기대된다. 특히 방언 인식 성능의 향상은 지역 맞춤형 인터페이스 구축에 기여할 것이다. 현재 Hugging Face를 통해 모델의 기초 정보와 사용 방법이 제공되고 있다. TII는 앞으로도 다국어 지원 및 인식 정확도 개선을 지속할 계획이다.",
-      "summary_original": "Recognising spoken Arabic Arabic benchmark results Evaluating Emirati speech Training for different recording conditions English and other languages Model foundation Try Falcon ASR Acknowledgments Arabic WER: 20.92% · Parameters: 1.6B · Emirati WER (TII evaluation): 22.73% We’re introducing Falcon-ASR, our 1.6 billion parameter speech recognition model for Arabic, with a particular focus on the Emirati dialect. Developed at the Technology Innovation Institute (TII) in Abu Dhabi, it also supports English, French, Spanish and Portuguese. In our evaluation, Falcon-ASR achieved an average word error rate of 20.92% across six Arabic test sets, compared with the best published result of 23.17% in the leaderboard snapshot we used. On our internal Emirati evaluation, it recorded the lowest word and character error rates among the systems we compared."
     }
   ]
 }
