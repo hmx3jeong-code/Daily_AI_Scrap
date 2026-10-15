@@ -1,17 +1,13 @@
 {
-  "report_date": "2026-10-14",
-  "report_date_kst": "2026-10-14",
-  "generated_at": "2026-10-14T02:09:01.420303+00:00",
-  "generated_at_kst": "2026-10-14T11:09:01.420303+09:00",
+  "report_date": "2026-10-15",
+  "report_date_kst": "2026-10-15",
+  "generated_at": "2026-10-15T01:46:01.380380+00:00",
+  "generated_at_kst": "2026-10-15T10:46:01.380380+09:00",
   "article_count": 10,
   "issues_top": [
     [
-      "안전/리스크 논의",
-      2
-    ],
-    [
       "에이전트 워크플로 확장",
-      2
+      4
     ],
     [
       "비용/성능 경쟁",
@@ -22,13 +18,13 @@
       1
     ],
     [
-      "신규 모델/제품 발표",
+      "정책/규제 변화",
       1
     ]
   ],
   "source_totals": {
-    "OpenAI News": 1266,
-    "Google Research Blog": 100,
+    "OpenAI News": 1271,
+    "Google Research Blog": 0,
     "Google Blog AI": 20,
     "DeepMind Blog": 98,
     "Hugging Face Blog": 866,
@@ -37,14 +33,14 @@
     "Apple Machine Learning Research": 10
   },
   "source_kept": {
-    "OpenAI News": 7,
-    "Google Research Blog": 1,
+    "OpenAI News": 9,
+    "Google Research Blog": 0,
     "Google Blog AI": 1,
-    "DeepMind Blog": 3,
-    "Hugging Face Blog": 3,
-    "MIT Technology Review AI": 6,
+    "DeepMind Blog": 4,
+    "Hugging Face Blog": 2,
+    "MIT Technology Review AI": 4,
     "VentureBeat AI": 0,
-    "Apple Machine Learning Research": 5
+    "Apple Machine Learning Research": 6
   },
   "llm_stats": {
     "attempted": 10,
@@ -57,305 +53,303 @@
   },
   "articles": [
     {
-      "source": "DeepMind Blog",
-      "authority": "official",
-      "title": "Gemini 4 Argon의 책임감 있고 안전한 개발 방향",
-      "title_original": "Developing Gemini 4 Argon responsibly and safely",
-      "link": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-      "published_raw": "Tue, 13 Oct 2026 19:43:07 +0000",
-      "published_local": "2026-10-14 04:43",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "정책/규제/안전"
-      ],
-      "issues": [
-        "안전/리스크 논의"
-      ],
-      "keywords": [
-        "Gemini 4 Argon",
-        "구글 딥마인드",
-        "AI 안전성",
-        "책임감 있는 AI",
-        "레드팀"
-      ],
-      "keywords_original": [
-        "gemini",
-        "safety",
-        "안전/리스크 논의"
-      ],
-      "summary": "구글 딥마인드가 새로운 모델인 Gemini 4 Argon의 안전성과 보안을 위한 접근 방식을 공개했다. 이번 발표는 AI 모델의 잠재적 리스크를 최소화하고 책임감 있는 개발 체계를 구축하는 데 중점을 둔다. 딥마인드는 모델 설계 단계부터 안전 가이드라인을 적용하여 유해한 콘텐츠 생성을 방지하고자 한다. 특히 레드팀 테스트를 통해 모델의 취약점을 사전에 파악하고 이를 보완하는 과정을 거쳤다. 데이터 필터링과 정교한 정렬 기술을 사용하여 모델의 신뢰성을 높이는 전략을 채택했다. 보안 프레임워크를 강화하여 외부 공격이나 악용 가능성에 대비한 방어 체계를 구축했다. 다양한 시나리오 기반의 안전 평가를 실시하여 실제 배포 시 발생할 수 있는 위험을 측정했다. 이러한 접근 방식은 AI 윤리 원칙을 준수하며 사용자에게 안전한 경험을 제공하는 것을 목표로 한다. 실무적으로는 개발자와 기업이 모델을 도입할 때 참고할 수 있는 안전 표준을 제시한다. 지속적인 모니터링과 피드백 루프를 통해 모델 출시 후에도 안전성을 계속 업데이트할 계획이다. 이는 고성능 AI 모델의 사회적 영향력을 고려한 선제적인 리스크 관리 전략의 일환이다. 결과적으로 Gemini 4 Argon은 성능 향상과 안전성 확보라는 두 가지 목표를 동시에 추구한다.",
-      "summary_original": "Learn more about our approach to safety and security for Gemini 4 Argon."
-    },
-    {
       "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "LFM2.5-24B-A2B: 온디바이스용 고속 프라이빗 추론 에이전트 모델 출시",
-      "title_original": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-      "link": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-      "published_raw": "Tue, 13 Oct 2026 17:05:48 GMT",
-      "published_local": "2026-10-14 02:05",
+      "title": "HiRO-ACEv2: 비용을 획기적으로 낮춘 3km 해상도 극한 기상 시뮬레이션",
+      "title_original": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+      "link": "https://huggingface.co/blog/allenai/hiro-acev2",
+      "published_raw": "Wed, 14 Oct 2026 16:12:42 GMT",
+      "published_local": "2026-10-15 01:12",
       "primary_topic": "성능/벤치마크",
       "topics": [
         "성능/벤치마크",
         "모델/출시"
       ],
       "issues": [
-        "에이전트 워크플로 확장",
         "비용/성능 경쟁"
       ],
       "keywords": [
-        "LFM2.5-24B-A2B",
-        "온디바이스 AI",
-        "추론 모델",
-        "MoE",
-        "액티브 파라미터"
+        "HiRO-ACEv2",
+        "기후 시뮬레이션",
+        "다운스케일링",
+        "극한 기상",
+        "고해상도 데이터"
       ],
       "keywords_original": [
-        "benchmark",
-        "reasoning",
+        "cost",
+        "accuracy",
         "model",
-        "에이전트 워크플로 확장",
         "비용/성능 경쟁"
       ],
-      "summary": "Liquid AI가 온디바이스 환경에서 빠르고 프라이빗한 에이전트 구현을 위한 LFM2.5-24B-A2B 모델을 공개했다. 이 모델은 전체 24B 파라미터 중 토큰당 2B의 활성 파라미터만 사용하는 MoE 구조를 채택해 추론 비용을 획기적으로 낮췄다. 답변 전 스스로 생각하는 추론 능력을 갖췄으며, 도구 호출 및 다단계 작업 수행이 가능해 다양한 에이전트 하네스에서 작동한다. 아키텍처는 40개 레이어와 MoE 블록당 64개 전문가, top-4 라우팅 방식을 유지하며 게이트 단거리 컨볼루션과 GQA 하이브리드 구조를 사용한다. 특히 컨텍스트 윈도우가 기존 32K에서 131K 토큰으로 크게 확장되었으며, 토크나이저 확장을 통해 어휘 사전 크기를 65K에서 128K로 두 배 늘려 비영어권 언어 처리 능력을 개선했다. 이를 통해 사용자는 자체 하드웨어에서 지속적으로 에이전트를 구동할 수 있으며, CPU와 GPU 모두에서 빠른 추론 속도를 경험할 수 있다. 실무적으로는 데이터 프라이버시를 유지하면서도 고성능 추론 에이전트를 로컬 기기에 배포할 수 있는 환경을 제공한다.",
-      "summary_original": "How we built a reasoning agent with 2B active parameters Benchmark results Inference speed on CPU and GPU How to use LFM2.5-24B-A2B Use it in your agent harness Get Started with LFM2.5-24B-A2B Citation LFM2.5-24B-A2B is a 24B-parameter reasoning model with just 2B active parameters, built for fast, private agents on-device. It thinks before it answers, calls tools, and works through multi-step tasks inside popular agent harnesses. Because only 2B parameters are active per token, each reasoning token is cheap, so you can run agents continuously on your own hardware. LFM2.5-24B-A2B builds on LFM2-24B-A2B and keeps its architecture: 40 layers, 64 experts per MoE block with top-4 routing, and the same hybrid of gated short convolutions and GQA. The context window grows from 32K to 131K tokens, and an in-place tokenizer expansion doubles the vocabulary from 65K to 128K tokens for better non-…"
-    },
-    {
-      "source": "DeepMind Blog",
-      "authority": "official",
-      "title": "로보틱스를 위한 Gemini 4 Argon 공개",
-      "title_original": "Gemini 4 Argon for Robotics",
-      "link": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-      "published_raw": "Tue, 13 Oct 2026 16:01:58 +0000",
-      "published_local": "2026-10-14 01:01",
-      "primary_topic": "에이전트/자동화",
-      "topics": [
-        "에이전트/자동화",
-        "성능/벤치마크"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장",
-        "비용/성능 경쟁"
-      ],
-      "keywords": [
-        "Gemini 4 Argon",
-        "로보틱스",
-        "ERQA 벤치마크",
-        "물리적 추론",
-        "제로샷 컨트롤"
-      ],
-      "keywords_original": [
-        "agent",
-        "workflow",
-        "benchmark",
-        "reasoning",
-        "에이전트 워크플로 확장",
-        "비용/성능 경쟁"
-      ],
-      "summary": "구글 딥마인드가 로보틱스 특화 모델인 Gemini 4 Argon을 발표했다. 이 모델은 물리적 추론 능력을 바탕으로 ERQA 벤치마크에서 선두를 기록했다. 특히 별도의 추가 학습 없이 제어하는 제로샷 컨트롤 기능을 제공한다. 실제 환경의 데이터를 시뮬레이션으로 옮기는 Real2Sim 기술이 적용되었다. 에이전트 기반의 워크플로를 통해 복잡한 로봇 작업을 효율적으로 수행한다. 물리적 세계에 대한 깊은 이해를 통해 로봇의 판단 정확도를 높였다. 이는 기존 로봇 제어 모델의 한계를 극복하고 범용성을 확장한 결과다. 비용 효율성과 성능 경쟁력을 동시에 확보하여 실무 적용 가능성을 높였다. 다양한 산업 현장에서 로봇의 자율성을 극대화하는 데 기여할 전망이다. 복잡한 명령어를 물리적 동작으로 변환하는 능력이 크게 향상되었다. 결과적으로 로봇 공학의 지능형 에이전트 생태계를 가속화할 것으로 보인다. 딥마인드는 이를 통해 물리적 AI의 새로운 기준을 제시하고자 한다.",
-      "summary_original": "Discover Gemini 4 Argon for robotics: leading the ERQA benchmark with physical reasoning, zero-shot control, Real2Sim, and agentic workflows."
-    },
-    {
-      "source": "Google Blog AI",
-      "authority": "official",
-      "title": "Gemini 4 Argon: 가장 까다로운 문제 해결을 위해 설계된 모델",
-      "title_original": "Gemini 4 Argon: Built to solve your hardest problems",
-      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "published_raw": "Tue, 13 Oct 2026 16:00:00 +0000",
-      "published_local": "2026-10-14 01:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "기업/투자"
-      ],
-      "issues": [
-        "기업 파트너십/투자"
-      ],
-      "keywords": [
-        "Gemini 4 Argon",
-        "구글",
-        "프런티어 모델",
-        "엔터프라이즈 AI",
-        "문제 해결"
-      ],
-      "keywords_original": [
-        "model",
-        "gemini",
-        "enterprise",
-        "기업 파트너십/투자"
-      ],
-      "summary": "구글이 최신 프런티어 모델인 Gemini 4 Argon을 공개하며 개발자와 기업, 과학자 및 일반 소비자에게 제공한다. 이번 모델은 사용자가 직면한 가장 복잡하고 어려운 문제들을 해결하기 위해 특별히 설계되었다. Gemini 4 Argon은 고도의 추론 능력과 문제 해결 역량을 갖춘 최첨단 AI 모델이다. 구글은 이를 통해 다양한 산업 분야에서 혁신적인 솔루션을 구축할 수 있도록 지원할 계획이다. 특히 기업 파트너십과 투자를 통해 엔터프라이즈 환경에서의 실질적인 활용도를 높이는 데 집중하고 있다. 과학 연구 분야에서는 복잡한 데이터 분석과 가설 검증 과정을 가속화하는 도구로 활용될 전망이다. 개발자들은 더 강력한 API 기능을 통해 고성능 AI 애플리케이션을 효율적으로 개발할 수 있게 된다. 일반 소비자 또한 일상적인 과업부터 전문적인 작업까지 폭넓은 지원을 받을 수 있다. 이번 발표는 구글의 AI 생태계를 확장하고 모델의 범용성을 극대화하려는 전략의 일환이다. Gemini 4 Argon은 기존 모델보다 향상된 성능을 바탕으로 실무 생산성을 획기적으로 개선할 것으로 기대된다. 구글은 지속적인 업데이트를 통해 모델의 안정성과 정확도를 더욱 높여갈 예정이다. 이를 통해 AI 기술이 실제 산업 현장의 난제를 해결하는 핵심 동력이 될 것으로 보인다.",
-      "summary_original": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model."
+      "summary": "Hugging Face와 AllenAI가 고해상도 출력 Ai2 기후 에뮬레이터 시스템의 최신 업데이트 버전인 HiRO-ACEv2를 공개했다. 이 시스템은 매우 드물게 발생하는 강우, 강풍, 기압 이벤트까지 높은 정확도로 재현할 수 있는 것이 특징이다. 특히 전 지구 3km 해상도의 기후 데이터를 생성하는 비용이 기존 X-SHiELD 모델의 약 300분의 1 수준으로 낮아졌다. X-SHiELD는 폭풍 등 소규모 기상 현상을 명시적으로 시뮬레이션하는 고해상도 전 지구 대기 모델이다. HiRO-ACE 시스템은 100km 해상도에서 작동하는 AI 모델인 ACE와 이를 3km 정밀 데이터로 변환하는 HiRO 모델로 구성된다. 이번 v2 업데이트의 핵심은 새로운 다운스케일링 모델인 HiROv2의 도입이다. HiROv2는 기존의 강우량 예측을 넘어 여러 고해상도 필드를 동시에 예측함으로써 더 광범위한 극한 기상 현상을 포착할 수 있다. 결과적으로 고비용의 전통적 시뮬레이션을 대체하여 기후 연구의 효율성을 극대화할 것으로 기대된다. 연구자들은 이제 훨씬 적은 자원으로도 정밀한 기상 예측 데이터를 확보할 수 있게 되었다. 해당 모델의 가중치와 튜토리얼, 데모는 Hugging Face를 통해 제공된다.",
+      "summary_original": "Visualizing and using HiRO outputs 🤗 Models | 📄 Paper | 📓 Tutorial notebooks | 🌎 Demo We introduce HiRO-ACEv2 , the newest update to our High Resolution Output Ai2 Climate Emulator (HiRO-ACE) system. HiROv2 can reproduce even extremely rare rain, wind, and pressure events with high accuracy, while the full system can generate global 3 km climate data at about 1/300th the cost of X-SHiELD, a high-resolution global atmospheric model that explicitly simulates storms and other small-scale weather. HiRO-ACE, introduced earlier in 2026 , has two parts: ACE, an AI model that operates at a coarser 100 km resolution, and HiRO, a model that sharpens those coarse outputs into fine 3 km detail. The biggest change in HiRO-ACEv2 is the new downscaling model, HiROv2, which can now 1) predict several high-resolution fields at once instead of just rainfall, so it can capture a much wider range of extrem…"
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "Higgsfield, AI 영상 길이를 1분에서 10분 이상으로 확대",
-      "title_original": "Higgsfield takes AI video from 1 minute to over 10",
-      "link": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "published_raw": "Tue, 13 Oct 2026 12:00:00 GMT",
-      "published_local": "2026-10-13 21:00",
-      "primary_topic": "멀티모달",
+      "title": "Amp, OpenAI 모델 활용해 코딩 너머의 AI 에이전트 영역 확장",
+      "title_original": "Amp puts AI agents to work beyond code with OpenAI models",
+      "link": "https://openai.com/index/amp-beyond-coding",
+      "published_raw": "Wed, 14 Oct 2026 12:00:00 GMT",
+      "published_local": "2026-10-14 21:00",
+      "primary_topic": "모델/출시",
       "topics": [
-        "멀티모달",
-        "모델/출시"
+        "모델/출시",
+        "에이전트/자동화"
       ],
-      "issues": [],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
       "keywords": [
-        "Higgsfield",
+        "Amp",
+        "OpenAI",
         "GPT-6 Astra",
-        "GPT-Image-2.5",
-        "GPT-Live",
-        "AI 영상 제작"
-      ],
-      "keywords_original": [
-        "video",
-        "image",
-        "gpt"
-      ],
-      "summary": "Higgsfield가 AI 영상 제작의 한계를 넓히며 영상 길이를 기존 1분에서 10분 이상으로 대폭 확장했다. 이번 업데이트의 핵심은 GPT-6 Astra 모델의 도입으로, 이를 통해 창작자들은 훨씬 더 긴 호흡의 영상을 제작할 수 있게 되었다. 또한 GPT-Image-2.5를 통해 더욱 정밀하고 세밀한 시각적 표현이 가능해졌다. GPT-Live 기능은 음성 기반의 영화 제작이라는 새로운 경로를 제시하며 제작 공정을 혁신한다. 이러한 기술적 진보는 단순한 클립 생성을 넘어 본격적인 스토리텔링이 가능한 수준으로 발전했음을 의미한다. 특히 고해상도 이미지 생성과 긴 영상 유지 능력이 결합되어 영상의 일관성이 크게 향상되었다. 실무적으로는 광고, 단편 영화, 교육 콘텐츠 제작 분야에서 작업 시간이 획기적으로 단축될 전망이다. 창작자들은 이제 복잡한 프롬프트 없이도 정교한 시각 효과를 구현할 수 있다. OpenAI의 이번 발표는 AI 비디오 생성 도구가 전문 제작 도구로 진화하고 있음을 보여준다. 향후 GPT-Live의 통합은 오디오와 비디오의 실시간 동기화를 더욱 가속화할 것으로 보인다. 결과적으로 Higgsfield는 AI 영상 제작의 진입 장벽을 낮추고 표현의 자유도를 높였다. 이는 생성형 AI가 단순 보조 도구를 넘어 주도적인 제작 수단이 되는 전환점이 될 것이다.",
-      "summary_original": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live."
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "오픈 모델의 실질적 이점, 리스크보다 더 클까?",
-      "title_original": "Open models have real benefits. Do they outweigh the risks?",
-      "link": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
-      "published_raw": "Tue, 13 Oct 2026 10:00:00 +0000",
-      "published_local": "2026-10-13 19:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "정책/규제/안전"
-      ],
-      "issues": [
-        "신규 모델/제품 발표",
-        "안전/리스크 논의"
-      ],
-      "keywords": [
-        "오픈 모델",
-        "앤스로픽",
-        "GLM-5.3",
-        "사이버 보안",
-        "AI 리스크"
+        "AI 에이전트",
+        "워크플로 확장"
       ],
       "keywords_original": [
         "model",
-        "release",
-        "risk",
-        "신규 모델/제품 발표",
-        "안전/리스크 논의"
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장"
       ],
-      "summary": "MIT 테크놀로지 리뷰는 오픈 소스 AI 모델의 이점과 그에 따른 위험성 사이의 갈등을 분석했다. 최근 앤스로픽(Anthropic)은 GLM-5.3 모델이 심각한 사이버 공격 위험을 초래할 수 있다는 보고서를 발표했다. 보고서의 핵심은 모델 가중치가 공개될 경우 악의적 사용자가 이를 공격 도구로 악용할 수 있다는 점이다. 반면 오픈 모델은 투명성을 높이고 연구자들이 모델 작동 방식을 깊이 이해하도록 돕는 이점이 있다. 또한 특정 기업의 독점을 막고 중소 개발자가 AI 기술에 접근할 기회를 제공한다. 하지만 안전 장치를 제거하는 탈옥이나 미세 조정을 통한 위험 기능 활성화가 우려된다. 특히 사이버 보안 분야에서 취약점 분석이나 악성 코드 생성에 AI가 활용될 가능성이 크다. 이에 따라 업계에서는 모델 공개 범위와 수준에 대한 새로운 표준 설정이 필요하다는 목소리가 나온다. 일부 전문가는 완전 공개보다 제한적 접근 권한을 부여하는 하이브리드 방식을 제안한다. 결국 오픈 모델의 확산은 혁신 가속화와 보안 위협이라는 양날의 검과 같다. 실무적으로는 AI 모델 도입 시 보안 가이드라인 준수와 지속적인 모니터링이 필수적이다. 향후 규제 기관과 개발사 간의 협력을 통한 안전한 생태계 구축이 핵심 과제가 될 전망이다.",
-      "summary_original": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic released a report arguing that the model GLM-5.3 poses a major cyberattack risk. The report’s core concern is that the…"
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "AI 연구소들, 모델 학습 위해 폐업 스타트업 데이터 매입",
-      "title_original": "AI labs are buying data from dead startups to train their models",
-      "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
-      "published_raw": "Tue, 13 Oct 2026 09:00:00 +0000",
-      "published_local": "2026-10-13 18:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "기업/투자"
-      ],
-      "issues": [],
-      "keywords": [
-        "AI 모델 학습",
-        "데이터 매입",
-        "폐업 스타트업",
-        "고품질 데이터",
-        "데이터 고갈"
-      ],
-      "keywords_original": [
-        "model",
-        "startup"
-      ],
-      "summary": "AI 연구소들이 모델 성능 향상을 위해 폐업하거나 사업을 정리하는 스타트업의 데이터를 구매하는 추세다. 최근 암호화폐 스타트업을 운영했던 킬런 미스켈(Keelan Miskell)은 회사를 정리하며 디지털 아카이브를 판매해 수익을 올렸다. 그는 코드베이스 판매로 약 25,000달러를 확보했으며, 추가적인 데이터 판매 금액도 협상 중인 것으로 알려졌다. 이러한 현상은 AI 기업들이 인터넷상의 공개 데이터가 고갈됨에 따라 고품질의 특수 데이터를 찾고 있기 때문에 발생한다. 특히 특정 산업 분야의 전문 지식이 담긴 코드나 사용자 상호작용 데이터는 모델의 추론 능력을 높이는 데 유용하다. 과거에는 가치가 없다고 여겨졌던 폐업 기업의 데이터가 이제는 AI 학습을 위한 핵심 자산으로 재평가받고 있다. AI 기업들은 저작권 분쟁을 피하기 위해 정당한 대가를 지불하고 데이터를 합법적으로 확보하려는 전략을 취하고 있다. 이는 데이터 시장의 새로운 생태계를 형성하며, 실패한 창업자들에게는 예상치 못한 회수 기회를 제공한다. 하지만 익명 사용자 데이터의 판매 과정에서 개인정보 보호 및 윤리적 문제가 제기될 가능성이 있다. 결과적으로 AI 모델의 경쟁력은 이제 얼마나 희소하고 정제된 데이터를 확보하느냐에 달려 있다. 이러한 데이터 매입 전략은 향후 전문 영역 AI 모델 개발의 가속화를 이끌 것으로 보인다. 데이터의 상업적 가치가 상승함에 따라 기업들의 데이터 관리 방식에도 변화가 예상된다.",
-      "summary_original": "When Keelan Miskell began winding down his crypto startup this year, he didn’t think its data was worth much: the users were anonymous, the company just a few years old. But he’s since turned the firm’s digital archives into real money. He’s netted roughly $25,000 for his code base and a still-pending amount (likely around…"
-    },
-    {
-      "source": "Apple Machine Learning Research",
-      "authority": "research",
-      "title": "튜닝보다 믹싱: 데이터 제한 환경에서 이중 언어 사전 학습의 우수성",
-      "title_original": "Mix, Don't Tune: Bilingual Pre-Training Outperforms Hyperparameter Search in Data-Constrained Settings",
-      "link": "https://machinelearning.apple.com/research/mix-dont-tune",
-      "published_raw": "Tue, 13 Oct 2026 00:00:00 GMT",
-      "published_local": "2026-10-13 09:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "연구/논문"
-      ],
-      "issues": [],
-      "keywords": [
-        "이중 언어 사전 학습",
-        "데이터 제한 환경",
-        "하이퍼파라미터 튜닝",
-        "일반화 성능",
-        "보조 언어 믹싱"
-      ],
-      "keywords_original": [
-        "model",
-        "training"
-      ],
-      "summary": "Apple Machine Learning Research는 데이터가 부족한 언어 환경에서 모델의 일반화 성능을 높이는 연구 결과를 발표했다. 대부분의 언어는 사전 학습 시 데이터 부족으로 동일 데이터를 반복 학습하게 되며, 이는 일반화 성능 저하를 초래한다. 이를 해결하기 위해 높은 가중치 감쇠와 같은 공격적인 하이퍼파라미터 튜닝이 주로 사용되어 왔다. 또 다른 대안은 고자원 보조 언어의 데이터를 혼합하여 저자원 대상 언어의 학습을 돕는 이중 언어 사전 학습이다. 하이퍼파라미터 튜닝은 가중치를 축소해 네트워크 용량을 제한함으로써 모델을 정규화하는 방식이다. 반면 보조 데이터 믹싱은 조정 가능한 혼합 비율을 통해 학습 분포를 확장하고 학습 신호를 다양화한다. 연구 결과, 데이터 제한 설정에서는 하이퍼파라미터 탐색보다 이중 언어 사전 학습이 더 뛰어난 성능을 보였다. 이는 모델 용량을 제한하는 것보다 데이터 분포를 넓히는 것이 일반화에 더 효과적임을 시사한다. 특히 저자원 언어 모델 구축 시 보조 언어의 선택과 혼합 비율 설정이 핵심적인 역할을 한다. 본 연구는 데이터 수집이 어려운 언어의 모델 성능을 최적화하는 실무적 가이드라인을 제공한다. 결과적으로 튜닝 비용을 들이는 것보다 고품질 보조 데이터를 확보해 믹싱하는 전략이 더 효율적이다. 이는 향후 다국어 모델 및 희귀 언어 지원 모델의 효율적인 학습 방향을 제시한다.",
-      "summary_original": "For most languages of the world, language model pre-training operates in a data-constrained regime where models must repeat their training data many times, degrading generalization. Two remedies exist: aggressive hyperparameter tuning such as high weight decay, and mixing in data from a high-resource auxiliary language to directly aid the low-resource target. While hyperparameter tuning regularizes the model by shrinking weights to restrict network capacity, auxiliary data mixing uses a tunable mixing ratio to expand the training distribution and diversify the training signal with new…"
+      "summary": "Amp가 OpenAI의 최신 모델들을 활용해 AI 에이전트의 활용 범위를 코딩 영역 너머로 확장한다고 발표했습니다. 이번 업데이트에는 GPT-6 Astra, Ultrafast, GPT-Live-1 등 고성능 모델들이 도입되었습니다. 특히 'Sign in with ChatGPT' 기능을 통해 사용자 경험과 에이전트의 접근성을 크게 개선했습니다. 기존 AI 에이전트가 주로 코드 작성과 디버깅에 집중했다면, 이제는 더 복잡한 비즈니스 워크플로를 처리할 수 있게 되었습니다. GPT-6 Astra는 향상된 추론 능력을 바탕으로 다단계 작업 수행 능력을 극대화합니다. Ultrafast 모델은 응답 속도를 획기적으로 줄여 실시간 상호작용 환경에 최적화되었습니다. GPT-Live-1은 실시간 음성 및 데이터 처리를 통해 에이전트의 반응성을 높였습니다. 이러한 진보는 기업들이 단순 자동화를 넘어 자율적인 업무 수행 에이전트를 구축하는 기반이 됩니다. 실무적으로는 마케팅, 고객 지원, 데이터 분석 등 다양한 비정형 업무에 AI 에이전트를 즉시 투입할 수 있습니다. Amp는 이를 통해 워크플로 효율성을 극대화하고 운영 비용을 절감하는 것을 목표로 합니다. 이번 협력은 OpenAI 모델의 범용성이 산업 현장의 복잡한 요구사항을 어떻게 해결하는지 보여줍니다. 앞으로 AI 에이전트는 단순 도구를 넘어 독립적인 업무 수행 주체로 진화할 전망입니다.",
+      "summary_original": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT."
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "OpenAI, 호주 정부 웹사이트 관련 사고 사과 및 사이버 보안 강화 방안 발표",
-      "title_original": "How we will do better for Australia",
-      "link": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "published_raw": "Mon, 28 Sep 2026 19:00:00 GMT",
-      "published_local": "2026-09-29 04:00",
+      "title": "SentinelOne, OpenAI Daybreak 도입으로 악성코드 분석 시간 '주 단위에서 시간 단위'로 단축",
+      "title_original": "SentinelOne cuts malware analysis from weeks to hours",
+      "link": "https://openai.com/index/sentinelone",
+      "published_raw": "Wed, 14 Oct 2026 12:00:00 GMT",
+      "published_local": "2026-10-14 21:00",
       "primary_topic": "기타",
       "topics": [
         "기타"
       ],
       "issues": [],
       "keywords": [
-        "OpenAI",
-        "호주 정부",
+        "SentinelOne",
+        "OpenAI Daybreak",
+        "악성코드 분석",
         "사이버 보안",
-        "안전장치",
-        "AI 보안"
+        "AI 자동화"
       ],
       "keywords_original": [],
-      "summary": "OpenAI가 최근 호주 정부 웹사이트와 관련된 일련의 사고에 대해 공식적으로 사과했습니다. 이번 발표는 호주의 사이버 방어 체계를 강화하기 위한 보다 강력한 안전장치와 지원책을 마련하는 데 중점을 두고 있습니다. OpenAI는 자사 AI 모델이 정부 인프라에 미칠 수 있는 잠재적 영향을 깊이 인식하고 있습니다. 이에 따라 호주 정부와의 협력을 통해 보안 취약점을 개선하고 대응 프로세스를 최적화할 계획입니다. 구체적으로는 AI 기반의 위협 탐지 능력을 향상시키고 실시간 모니터링 시스템을 강화하는 방안이 포함되었습니다. 또한 호주 내 사이버 보안 전문가들과의 파트너십을 통해 최신 위협 정보 공유 체계를 구축하고자 합니다. 이러한 조치는 AI 기술의 급격한 확산으로 인해 발생하는 새로운 보안 리스크를 관리하기 위한 것입니다. OpenAI는 호주 정부의 디지털 전환 과정에서 안전한 AI 활용 환경을 조성하는 것을 목표로 합니다. 이번 대응책은 단순한 사과를 넘어 실질적인 기술적 지원과 정책적 협력을 포괄하고 있습니다. 실무적으로는 정부 기관의 AI 도입 시 보안 가이드라인이 더욱 엄격하게 적용될 것으로 보입니다. 결과적으로 호주의 국가 사이버 보안 회복력이 한층 강화될 것으로 기대됩니다. OpenAI는 앞으로도 투명한 소통을 통해 유사 사례의 재발을 방지하겠다고 약속했습니다.",
-      "summary_original": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences."
+      "summary": "SentinelOne이 OpenAI의 Daybreak를 도입하여 보안 분석 프로세스를 혁신했습니다. 기존에 수주가 소요되던 복잡한 악성코드 분석 시간을 단 몇 시간 수준으로 획기적으로 단축했습니다. 이번 도입의 핵심은 AI를 활용해 위협 분석의 효율성을 극대화한 점에 있습니다. 이를 통해 보안 분석가들은 반복적인 수동 작업에서 벗어나 더 고도화된 위협 조사에 집중할 수 있게 되었습니다. 분석 시간의 단축은 곧 더 많은 위협을 동시에 조사할 수 있는 운영 역량의 확대로 이어집니다. 사이버 공격이 정교해지는 상황에서 신속한 대응 체계를 구축한 것이 이번 협력의 주요 성과입니다. OpenAI Daybreak는 대규모 데이터 처리와 정밀한 분석 능력을 제공하여 분석가의 의사결정을 돕습니다. 결과적으로 SentinelOne은 위협 탐지부터 대응까지의 전체 라이프사이클을 가속화했습니다. 이는 기업 보안 팀의 업무 부하를 줄이고 대응 속도를 높이는 실무적 효과를 가져옵니다. AI 기반의 자동화된 분석 체계는 미래 보안 운영의 표준이 될 것으로 보입니다. 이번 사례는 생성형 AI가 실제 사이버 보안 실무에 어떻게 적용되어 가치를 창출하는지 보여줍니다. SentinelOne은 앞으로도 AI 기술을 통해 보안 위협 대응 능력을 지속적으로 강화할 계획입니다.",
+      "summary_original": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats."
     },
     {
-      "source": "Google Blog AI",
+      "source": "OpenAI News",
       "authority": "official",
-      "title": "Future Vision XPRIZE 우승작 'The Gifted' 트레일러 공개",
-      "title_original": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "link": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "published_raw": "Mon, 28 Sep 2026 19:00:00 +0000",
-      "published_local": "2026-09-29 04:00",
+      "title": "Third Moment Research, 10,000개 에이전트를 36시간 이상 구동하는 방법",
+      "title_original": "How Third Moment Research runs 10,000 agents for 36+ hours",
+      "link": "https://openai.com/index/third-moment-research",
+      "published_raw": "Wed, 14 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-14 16:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "GPT-6 Astra",
+        "GPT-6.1 Sol",
+        "AI 에이전트",
+        "Third Moment Research",
+        "사이버 보안"
+      ],
+      "keywords_original": [
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Third Moment Research가 10,000개의 AI 에이전트를 36시간 이상 지속적으로 구동하는 기술적 성과를 공개했다. 이번 프로젝트에는 GPT-6 Astra와 GPT-6.1 Sol 모델이 핵심적으로 활용되었다. 또한 코드 생성 및 최적화를 위한 Codex와 사이버 보안 특화 모델인 Daybreak가 함께 사용되었다. 이 시스템의 핵심은 에이전트가 단기적인 작업에 그치지 않고 며칠 동안 특정 목표에 집중할 수 있도록 설계된 점이다. 특히 에이전트들이 반복적인 사용과 피드백을 통해 스스로 성능을 개선하는 학습 메커니즘을 갖추고 있다. 대규모 에이전트 워크플로를 확장함으로써 복잡한 문제 해결 능력을 극대화했다. 사이버 보안 분야에서는 Daybreak 모델을 통해 고도화된 위협 탐지와 대응이 가능해졌다. 이는 단순한 챗봇 수준을 넘어 자율적으로 판단하고 실행하는 에이전트 생태계의 가능성을 보여준다. 실무적으로는 대규모 병렬 처리와 장기 기억 유지 기술이 적용되어 운영 효율성을 높였다. 이러한 접근 방식은 소프트웨어 개발 및 보안 관제 등 전문 영역의 자동화를 가속화할 전망이다. 결과적으로 AI 에이전트의 지속성과 확장성이 비약적으로 향상되었음을 입증했다. 향후 더 복잡한 다단계 추론이 필요한 산업 현장에 적용될 것으로 기대된다.",
+      "summary_original": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Block, OpenAI 기술 기반의 AI 보안 시스템 구축",
+      "title_original": "How Block is building AI-powered security with OpenAI technology",
+      "link": "https://openai.com/index/block-ai-powered-security",
+      "published_raw": "Wed, 14 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-14 16:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Block",
+        "OpenAI",
+        "AI 보안",
+        "위협 조사",
+        "보안 패치"
+      ],
+      "keywords_original": [
+        "비용/성능 경쟁"
+      ],
+      "summary": "Block이 OpenAI의 기술을 활용하여 AI 기반의 보안 시스템을 구축하고 있습니다. 이번 협력의 핵심은 보안 팀의 위협 조사 속도를 획기적으로 높이는 것입니다. AI를 통해 보안 위협을 분석함으로써 기존보다 훨씬 빠르게 대응할 수 있게 되었습니다. 특히 보안 패치 제안 시간을 단 몇 분 수준으로 단축한 것이 주요 성과입니다. 이는 복잡한 보안 취약점을 식별하고 해결하는 과정을 자동화한 결과입니다. Block은 이를 통해 사이버 공격에 대한 방어 체계를 더욱 공고히 하고 있습니다. 대규모 데이터 처리와 실시간 분석이 필요한 보안 영역에 LLM을 적용한 사례입니다. 보안 전문가들은 반복적인 분석 작업에서 벗어나 더 고도화된 전략 수립에 집중할 수 있습니다. 결과적으로 전체적인 보안 운영 효율성이 크게 향상되었습니다. 이러한 변화는 핀테크 기업의 보안 표준을 높이는 계기가 될 것으로 보입니다. AI 기반 보안은 앞으로 더 정교한 위협 탐지 기능을 제공할 예정입니다. Block은 OpenAI와의 파트너십을 통해 안전한 금융 생태계 구축을 가속화하고 있습니다.",
+      "summary_original": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "구글 딥마인드와 싱가포르 정부, 스캠 탐지용 미세 조정 AI 모델 구축 협력",
+      "title_original": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+      "link": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "published_raw": "Wed, 14 Oct 2026 02:00:14 +0000",
+      "published_local": "2026-10-14 11:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글 딥마인드",
+        "싱가포르 정부",
+        "Gemma",
+        "온디바이스 AI",
+        "스캠 탐지"
+      ],
+      "keywords_original": [
+        "model"
+      ],
+      "summary": "구글 딥마인드와 싱가포르 정부 기술청(GovTech)이 협력하여 대화형 스캠을 탐지하는 AI 모델을 개발했다. 이번 프로젝트의 핵심은 구글의 경량 모델인 Gemma를 활용해 온디바이스 환경에서 작동하도록 구현한 것이다. 이 모델은 개인 채팅 내에서 발생하는 사기성 대화를 실시간으로 가로채어 사용자에게 경고를 보낸다. 특히 클라우드로 데이터를 전송하지 않는 제로 데이터 유출 방식을 채택하여 보안성을 높였다. 이를 통해 사용자의 개인정보와 대화 내용을 안전하게 보호하면서도 강력한 탐지 기능을 제공한다. 온디바이스 AI 기술을 적용함으로써 네트워크 연결 없이도 빠른 탐지가 가능하며 지연 시간을 최소화했다. 싱가포르 정부는 갈수록 정교해지는 디지털 사기 범죄에 대응하기 위해 이번 기술 도입을 추진했다. Gemma 모델을 특정 스캠 패턴에 맞게 미세 조정하여 탐지 정확도를 극대화한 것이 특징이다. 이 시스템은 피싱 메시지나 사회 공학적 공격을 식별하여 시민들의 금전적 피해를 예방하는 데 목적이 있다. 실무적으로는 모바일 기기 자체에서 보안 필터링이 이루어져 프라이버시 침해 우려를 획기적으로 줄였다. 이번 협력은 공공 안전을 위해 최신 생성형 AI 기술을 실제 서비스에 적용한 선도적인 사례다. 향후 다양한 언어와 최신 사기 수법을 학습시켜 모델 성능을 지속적으로 고도화할 계획이다.",
+      "summary_original": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "EU AI의 다음 장은 '에이전트형 AI'가 될 것",
+      "title_original": "The EU’s next chapter in AI is agentic",
+      "link": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "기업/투자"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "에이전트형 AI",
+        "EU 기업",
+        "워크플로 자동화",
+        "OpenAI",
+        "디지털 전환"
+      ],
+      "keywords_original": [
+        "agent",
+        "enterprise",
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "summary": "OpenAI는 유럽 연합(EU) 내 기업과 소규모 사업체들의 에이전트형 AI 도입 현황에 대한 새로운 분석 결과를 발표했다. 이번 분석은 단순한 챗봇 활용을 넘어 스스로 목표를 설정하고 작업을 수행하는 에이전트 AI의 확산 추세를 다룬다. 현재 EU 기업들은 반복적인 업무 자동화와 데이터 분석 영역에서 에이전트 AI를 적극적으로 도입하고 있다. 특히 중소기업에서도 운영 효율성을 높이기 위해 AI 에이전트 워크플로를 구축하는 사례가 증가하는 추세다. 분석에 따르면 AI를 단순 도구가 아닌 자율적 에이전트로 활용할 때 더 높은 비즈니스 가치를 창출할 수 있다. 에이전트형 AI는 복잡한 다단계 작업을 독립적으로 처리함으로써 인적 자원의 효율적 배치를 가능하게 한다. EU 시장의 특성상 데이터 프라이버시와 규제 준수가 중요하며 이에 맞춘 에이전트 설계가 핵심이다. 기업들은 고객 서비스 자동화부터 공급망 최적화까지 광범위한 영역에서 에이전트 AI의 가능성을 확인하고 있다. OpenAI는 파트너십과 투자를 통해 EU 기업들이 에이전트 워크플로를 더 깊게 통합하도록 지원할 계획이다. 이러한 변화는 단순 생산성 향상을 넘어 기업의 운영 모델 자체를 재정의하는 계기가 될 것으로 보인다. 결과적으로 에이전트 AI의 심화 활용은 EU 경제의 디지털 경쟁력을 강화하는 핵심 동력이 될 전망이다. 향후 더 많은 기업이 맞춤형 AI 에이전트를 도입하며 실무 프로세스의 전면적인 혁신이 가속화될 것으로 예상된다.",
+      "summary_original": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "Tri-Modal Masked Diffusion Models의 설계 공간 분석",
+      "title_original": "The Design Space of Tri-Modal Masked Diffusion Models",
+      "link": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
       "primary_topic": "멀티모달",
       "topics": [
+        "멀티모달",
+        "모델/출시"
+      ],
+      "issues": [
+        "정책/규제 변화"
+      ],
+      "keywords": [
+        "트리모달",
+        "마스크 확산 모델",
+        "멀티모달 스케일링",
+        "Apple ML Research",
+        "이산 확산 모델"
+      ],
+      "keywords_original": [
+        "multimodal",
+        "audio",
+        "image",
+        "model",
+        "정책/규제 변화"
+      ],
+      "summary": "Apple Machine Learning Research는 텍스트, 이미지-텍스트, 오디오-텍스트 데이터를 활용해 처음부터 사전 학습된 최초의 트리모달 마스크 확산 모델(MDM)을 공개했다. 기존의 이모달 생성 방식이 단일 모달 모델을 초기화하고 미세 조정했던 것과 달리, 본 연구는 세 가지 모달리티를 동시에 학습시키는 방식을 채택했다. 연구진은 멀티모달 스케일링 법칙, 모달리티 혼합 비율, 노이즈 스케줄 및 배치 크기 효과를 체계적으로 분석했다. 특히 배치 크기 분석을 통해 새로운 확률 미분 방정식(SDE) 기반의 접근법을 도출해냈다. 또한 최적화된 추론 샘플링 기본값을 제공하여 모델의 효율성을 높였다. 이 모델은 서로 다른 데이터 형식 간의 유기적인 결합을 통해 생성 품질을 극대화했다. 이는 기존의 자기회귀 언어 모델을 대체할 수 있는 강력한 대안으로 이산 확산 모델의 가능성을 제시한다. 본 연구는 텍스트, 이미지, 오디오를 통합 처리하는 설계 공간을 정의함으로써 멀티모달 AI의 성능 향상에 기여한다. 실무적으로는 다양한 데이터 유형을 동시에 처리하는 생성형 AI의 최적화 경로를 제시했다는 점에서 의미가 크다. 이를 통해 더 정교한 멀티모달 콘텐츠 생성이 가능해질 전망이다. 결과적으로 본 연구는 차세대 멀티모달 생성 모델의 기술적 토대를 마련했다.",
+      "summary_original": "Discrete diffusion models have emerged as strong alternatives to autoregressive language models, with recent work initializing and finetuning a base unimodal model for bi-modal generation. Diverging from previous approaches, we introduce the first tri-modal Masked Diffusion Models (MDM) pretrained from scratch on text, image-text, and audio-text data. We systematically analyze multimodal scaling laws, modality mixing ratios, noise schedules, batch-size effects and provide optimized inference sampling defaults. Our batch-size analysis yields a novel stochastic differential equation (SDE) based…"
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "음성 파운데이션 모델의 언어 선택적 차원을 활용한 코드 스위칭 탐지",
+      "title_original": "Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models",
+      "link": "https://machinelearning.apple.com/research/code-switching-detection",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
         "멀티모달"
       ],
       "issues": [],
       "keywords": [
-        "Future Vision XPRIZE",
-        "The Gifted",
-        "구글 AI",
-        "포용적 기술",
-        "인간 잠재력"
+        "코드 스위칭",
+        "음성 파운데이션 모델",
+        "다국어 음성 인식",
+        "언어 선택적 차원",
+        "데이터 필터링"
       ],
       "keywords_original": [
-        "vision"
+        "model",
+        "speech"
       ],
-      "summary": "Google Blog는 Future Vision XPRIZE의 우승작인 'The Gifted'의 트레일러 영상을 공개했다. Future Vision XPRIZE는 기술이 인류의 미래를 어떻게 긍정적으로 변화시킬 수 있는지 탐구하는 글로벌 공모전이다. 우승작 'The Gifted'는 AI와 첨단 기술이 인간의 잠재력을 극대화하는 미래상을 시각적으로 구현했다. 특히 신체적 제약을 극복하고 누구나 재능을 발휘할 수 있는 포용적 기술의 가능성을 강조한다. 영상은 AI가 단순한 도구를 넘어 인간의 능력을 확장하는 파트너로 진화한 모습을 보여준다. 이는 구글이 추구하는 '모두를 위한 AI'라는 비전과 궤를 같이한다. 이번 프로젝트는 기술적 성취뿐 아니라 윤리적 고려와 인간 중심 설계의 중요성을 시사한다. 시청자들은 트레일러를 통해 AI가 교육, 의료, 예술 등 다양한 분야에서 가져올 혁신을 엿볼 수 있다. 구글은 이러한 창의적 비전이 실제 기술 개발의 이정표가 되기를 기대한다. 이번 수상작은 기술이 소외 계층에게 새로운 기회를 제공하는 '선물'이 될 수 있음을 증명했다. 앞으로 AI는 인간의 창의성과 결합해 더 나은 사회를 만드는 데 기여할 전망이다. 해당 영상은 구글 블로그에서 시청 가능하다.",
-      "summary_original": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted."
+      "summary": "코드 스위칭(CS)은 한 발화 내에서 여러 언어를 교차 사용하는 현상으로 다국어 음성에서 흔히 나타나지만, 기존 사전 학습 코퍼스에서는 비중이 매우 낮습니다. 학습 데이터의 CS 커버리지를 높이려면 대규모 음성 데이터셋에서 관련 발화를 효율적으로 찾아내야 합니다. 기존에는 음성을 텍스트로 전사한 후 언어 교체를 탐지했으나, 이는 전사 정확도에 크게 의존한다는 한계가 있었습니다. 이에 애플 머신러닝 연구팀은 음성에서 직접 CS를 탐지하는 경량화된 방법을 제안했습니다. 이 방식은 사전 학습된 음성 파운데이션 모델의 프레임 수준 언어 정보를 활용합니다. 모델 내 언어 선택적 차원을 분석함으로써 텍스트 전사 과정 없이도 언어 전환 지점을 식별할 수 있습니다. 이를 통해 대규모 데이터셋에서 코드 스위칭 사례를 빠르게 필터링하고 수집하는 것이 가능해졌습니다. 결과적으로 고품질의 다국어 학습 데이터를 확보하여 모델의 전반적인 성능을 향상시킬 수 있습니다. 이 기술은 다국어 사용자 환경의 음성 인식 및 처리 시스템의 정확도를 높이는 데 기여할 것입니다. 실무적으로는 데이터 구축 비용을 절감하고 모델의 언어 유연성을 강화하는 효과를 제공합니다.",
+      "summary_original": "Code-switching (CS), the alternation between languages within an utterance, is common in multilingual speech but underrepresented in pretraining corpora. Increasing CS coverage requires finding relevant utterances in large speech collections so that they can be included in training data. One way to find such utterances is to transcribe the speech and detect language alternation in the text, but this depends on obtaining accurate multilingual transcriptions. We propose a lightweight method that detects CS directly from speech. It uses frame-level language information in pretrained speech…"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "사실을 넘어 출처까지: MCP 에이전트를 위한 출처 인식 검증 ProvenanceGuard",
+      "title_original": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "link": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "published_raw": "Tue, 29 Sep 2026 13:07:00 GMT",
+      "published_local": "2026-09-29 22:07",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "MCP",
+        "ProvenanceGuard",
+        "LLM 에이전트",
+        "출처 인식 검증",
+        "사실성 검증"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "최근 LLM 에이전트는 Model Context Protocol(MCP)을 통해 검색 도구, 데이터베이스, 기록 등 다양한 소스에서 정보를 수집해 답변을 생성한다. 하지만 RAGAS, MiniCheck 등 기존 검증 시스템은 수집된 전체 증거 내에서 사실 여부만 확인할 뿐, 어떤 특정 도구가 해당 주장을 뒷받침하는지는 구분하지 못한다. 단순히 '어딘가에 정보가 있다'는 것과 '올바른 출처에 있다'는 것은 다르며, 이는 복잡한 워크플로에서 오류를 야기한다. 이를 해결하기 위해 Multiverse Computing은 출처 인식 검증 시스템인 ProvenanceGuard를 제안했다. ProvenanceGuard는 각 주장이 어떤 MCP 도구 출력에 의해 뒷받침되는지 정밀하게 추적한다. 특히 유사한 소스가 많을 때 잘못된 참조를 식별하고, 오류로 인해 차단된 답변을 수정하는 기능을 제공한다. 이는 의료나 금융처럼 출처의 정확성이 치명적인 실무 환경에서 매우 중요하다. 결과적으로 에이전트가 신뢰할 수 있는 특정 소스에 기반해 답변하도록 강제하여 신뢰성을 높인다. 이번 접근법은 단순 사실 확인을 넘어 데이터 기원을 관리하는 새로운 검증 표준을 제시하며, 기업용 AI의 환각을 줄이고 투명한 근거 제시를 가능하게 한다.",
+      "summary_original": "The problem: supported somewhere is not the same as supported by the right source What ProvenanceGuard does Results Checking claims when sources look similar Repairing blocked answers Why this fits Multiverse Computing Tool-using LLM agents no longer read from a single retrieved passage. Through the Model Context Protocol (MCP) , an agent can call a search tool, inspect a structured patient or account record, query a database, and pull metadata, then weave all of it into one answer. That m aakes the usual question of factuality more subtle than it looks. Most of the systems built to check LLM answers, from RAGAS faithfulness to fine-grained checkers like MiniCheck, AlignScore, and SummaC, ask whether a claim is supported by the available evidence once that evidence has been pooled together. In their usual form, they do not tell us which MCP tool output supports each claim, or whether th…"
     }
   ]
 }

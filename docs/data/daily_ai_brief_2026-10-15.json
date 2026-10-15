@@ -1,0 +1,355 @@
+{
+  "report_date": "2026-10-15",
+  "report_date_kst": "2026-10-15",
+  "generated_at": "2026-10-15T01:46:01.380380+00:00",
+  "generated_at_kst": "2026-10-15T10:46:01.380380+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      4
+    ],
+    [
+      "비용/성능 경쟁",
+      2
+    ],
+    [
+      "기업 파트너십/투자",
+      1
+    ],
+    [
+      "정책/규제 변화",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1271,
+    "Google Research Blog": 0,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 98,
+    "Hugging Face Blog": 866,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 9,
+    "Google Research Blog": 0,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 4,
+    "Hugging Face Blog": 2,
+    "MIT Technology Review AI": 4,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 6
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 10,
+    "success_freeform": 0,
+    "fallback": 0,
+    "enabled_after_run": true,
+    "last_error": "",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "HiRO-ACEv2: 비용을 획기적으로 낮춘 3km 해상도 극한 기상 시뮬레이션",
+      "title_original": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+      "link": "https://huggingface.co/blog/allenai/hiro-acev2",
+      "published_raw": "Wed, 14 Oct 2026 16:12:42 GMT",
+      "published_local": "2026-10-15 01:12",
+      "primary_topic": "성능/벤치마크",
+      "topics": [
+        "성능/벤치마크",
+        "모델/출시"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "HiRO-ACEv2",
+        "기후 시뮬레이션",
+        "다운스케일링",
+        "극한 기상",
+        "고해상도 데이터"
+      ],
+      "keywords_original": [
+        "cost",
+        "accuracy",
+        "model",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Hugging Face와 AllenAI가 고해상도 출력 Ai2 기후 에뮬레이터 시스템의 최신 업데이트 버전인 HiRO-ACEv2를 공개했다. 이 시스템은 매우 드물게 발생하는 강우, 강풍, 기압 이벤트까지 높은 정확도로 재현할 수 있는 것이 특징이다. 특히 전 지구 3km 해상도의 기후 데이터를 생성하는 비용이 기존 X-SHiELD 모델의 약 300분의 1 수준으로 낮아졌다. X-SHiELD는 폭풍 등 소규모 기상 현상을 명시적으로 시뮬레이션하는 고해상도 전 지구 대기 모델이다. HiRO-ACE 시스템은 100km 해상도에서 작동하는 AI 모델인 ACE와 이를 3km 정밀 데이터로 변환하는 HiRO 모델로 구성된다. 이번 v2 업데이트의 핵심은 새로운 다운스케일링 모델인 HiROv2의 도입이다. HiROv2는 기존의 강우량 예측을 넘어 여러 고해상도 필드를 동시에 예측함으로써 더 광범위한 극한 기상 현상을 포착할 수 있다. 결과적으로 고비용의 전통적 시뮬레이션을 대체하여 기후 연구의 효율성을 극대화할 것으로 기대된다. 연구자들은 이제 훨씬 적은 자원으로도 정밀한 기상 예측 데이터를 확보할 수 있게 되었다. 해당 모델의 가중치와 튜토리얼, 데모는 Hugging Face를 통해 제공된다.",
+      "summary_original": "Visualizing and using HiRO outputs 🤗 Models | 📄 Paper | 📓 Tutorial notebooks | 🌎 Demo We introduce HiRO-ACEv2 , the newest update to our High Resolution Output Ai2 Climate Emulator (HiRO-ACE) system. HiROv2 can reproduce even extremely rare rain, wind, and pressure events with high accuracy, while the full system can generate global 3 km climate data at about 1/300th the cost of X-SHiELD, a high-resolution global atmospheric model that explicitly simulates storms and other small-scale weather. HiRO-ACE, introduced earlier in 2026 , has two parts: ACE, an AI model that operates at a coarser 100 km resolution, and HiRO, a model that sharpens those coarse outputs into fine 3 km detail. The biggest change in HiRO-ACEv2 is the new downscaling model, HiROv2, which can now 1) predict several high-resolution fields at once instead of just rainfall, so it can capture a much wider range of extrem…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Amp, OpenAI 모델 활용해 코딩 너머의 AI 에이전트 영역 확장",
+      "title_original": "Amp puts AI agents to work beyond code with OpenAI models",
+      "link": "https://openai.com/index/amp-beyond-coding",
+      "published_raw": "Wed, 14 Oct 2026 12:00:00 GMT",
+      "published_local": "2026-10-14 21:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Amp",
+        "OpenAI",
+        "GPT-6 Astra",
+        "AI 에이전트",
+        "워크플로 확장"
+      ],
+      "keywords_original": [
+        "model",
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Amp가 OpenAI의 최신 모델들을 활용해 AI 에이전트의 활용 범위를 코딩 영역 너머로 확장한다고 발표했습니다. 이번 업데이트에는 GPT-6 Astra, Ultrafast, GPT-Live-1 등 고성능 모델들이 도입되었습니다. 특히 'Sign in with ChatGPT' 기능을 통해 사용자 경험과 에이전트의 접근성을 크게 개선했습니다. 기존 AI 에이전트가 주로 코드 작성과 디버깅에 집중했다면, 이제는 더 복잡한 비즈니스 워크플로를 처리할 수 있게 되었습니다. GPT-6 Astra는 향상된 추론 능력을 바탕으로 다단계 작업 수행 능력을 극대화합니다. Ultrafast 모델은 응답 속도를 획기적으로 줄여 실시간 상호작용 환경에 최적화되었습니다. GPT-Live-1은 실시간 음성 및 데이터 처리를 통해 에이전트의 반응성을 높였습니다. 이러한 진보는 기업들이 단순 자동화를 넘어 자율적인 업무 수행 에이전트를 구축하는 기반이 됩니다. 실무적으로는 마케팅, 고객 지원, 데이터 분석 등 다양한 비정형 업무에 AI 에이전트를 즉시 투입할 수 있습니다. Amp는 이를 통해 워크플로 효율성을 극대화하고 운영 비용을 절감하는 것을 목표로 합니다. 이번 협력은 OpenAI 모델의 범용성이 산업 현장의 복잡한 요구사항을 어떻게 해결하는지 보여줍니다. 앞으로 AI 에이전트는 단순 도구를 넘어 독립적인 업무 수행 주체로 진화할 전망입니다.",
+      "summary_original": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "SentinelOne, OpenAI Daybreak 도입으로 악성코드 분석 시간 '주 단위에서 시간 단위'로 단축",
+      "title_original": "SentinelOne cuts malware analysis from weeks to hours",
+      "link": "https://openai.com/index/sentinelone",
+      "published_raw": "Wed, 14 Oct 2026 12:00:00 GMT",
+      "published_local": "2026-10-14 21:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "SentinelOne",
+        "OpenAI Daybreak",
+        "악성코드 분석",
+        "사이버 보안",
+        "AI 자동화"
+      ],
+      "keywords_original": [],
+      "summary": "SentinelOne이 OpenAI의 Daybreak를 도입하여 보안 분석 프로세스를 혁신했습니다. 기존에 수주가 소요되던 복잡한 악성코드 분석 시간을 단 몇 시간 수준으로 획기적으로 단축했습니다. 이번 도입의 핵심은 AI를 활용해 위협 분석의 효율성을 극대화한 점에 있습니다. 이를 통해 보안 분석가들은 반복적인 수동 작업에서 벗어나 더 고도화된 위협 조사에 집중할 수 있게 되었습니다. 분석 시간의 단축은 곧 더 많은 위협을 동시에 조사할 수 있는 운영 역량의 확대로 이어집니다. 사이버 공격이 정교해지는 상황에서 신속한 대응 체계를 구축한 것이 이번 협력의 주요 성과입니다. OpenAI Daybreak는 대규모 데이터 처리와 정밀한 분석 능력을 제공하여 분석가의 의사결정을 돕습니다. 결과적으로 SentinelOne은 위협 탐지부터 대응까지의 전체 라이프사이클을 가속화했습니다. 이는 기업 보안 팀의 업무 부하를 줄이고 대응 속도를 높이는 실무적 효과를 가져옵니다. AI 기반의 자동화된 분석 체계는 미래 보안 운영의 표준이 될 것으로 보입니다. 이번 사례는 생성형 AI가 실제 사이버 보안 실무에 어떻게 적용되어 가치를 창출하는지 보여줍니다. SentinelOne은 앞으로도 AI 기술을 통해 보안 위협 대응 능력을 지속적으로 강화할 계획입니다.",
+      "summary_original": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Third Moment Research, 10,000개 에이전트를 36시간 이상 구동하는 방법",
+      "title_original": "How Third Moment Research runs 10,000 agents for 36+ hours",
+      "link": "https://openai.com/index/third-moment-research",
+      "published_raw": "Wed, 14 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-14 16:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "GPT-6 Astra",
+        "GPT-6.1 Sol",
+        "AI 에이전트",
+        "Third Moment Research",
+        "사이버 보안"
+      ],
+      "keywords_original": [
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Third Moment Research가 10,000개의 AI 에이전트를 36시간 이상 지속적으로 구동하는 기술적 성과를 공개했다. 이번 프로젝트에는 GPT-6 Astra와 GPT-6.1 Sol 모델이 핵심적으로 활용되었다. 또한 코드 생성 및 최적화를 위한 Codex와 사이버 보안 특화 모델인 Daybreak가 함께 사용되었다. 이 시스템의 핵심은 에이전트가 단기적인 작업에 그치지 않고 며칠 동안 특정 목표에 집중할 수 있도록 설계된 점이다. 특히 에이전트들이 반복적인 사용과 피드백을 통해 스스로 성능을 개선하는 학습 메커니즘을 갖추고 있다. 대규모 에이전트 워크플로를 확장함으로써 복잡한 문제 해결 능력을 극대화했다. 사이버 보안 분야에서는 Daybreak 모델을 통해 고도화된 위협 탐지와 대응이 가능해졌다. 이는 단순한 챗봇 수준을 넘어 자율적으로 판단하고 실행하는 에이전트 생태계의 가능성을 보여준다. 실무적으로는 대규모 병렬 처리와 장기 기억 유지 기술이 적용되어 운영 효율성을 높였다. 이러한 접근 방식은 소프트웨어 개발 및 보안 관제 등 전문 영역의 자동화를 가속화할 전망이다. 결과적으로 AI 에이전트의 지속성과 확장성이 비약적으로 향상되었음을 입증했다. 향후 더 복잡한 다단계 추론이 필요한 산업 현장에 적용될 것으로 기대된다.",
+      "summary_original": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Block, OpenAI 기술 기반의 AI 보안 시스템 구축",
+      "title_original": "How Block is building AI-powered security with OpenAI technology",
+      "link": "https://openai.com/index/block-ai-powered-security",
+      "published_raw": "Wed, 14 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-14 16:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Block",
+        "OpenAI",
+        "AI 보안",
+        "위협 조사",
+        "보안 패치"
+      ],
+      "keywords_original": [
+        "비용/성능 경쟁"
+      ],
+      "summary": "Block이 OpenAI의 기술을 활용하여 AI 기반의 보안 시스템을 구축하고 있습니다. 이번 협력의 핵심은 보안 팀의 위협 조사 속도를 획기적으로 높이는 것입니다. AI를 통해 보안 위협을 분석함으로써 기존보다 훨씬 빠르게 대응할 수 있게 되었습니다. 특히 보안 패치 제안 시간을 단 몇 분 수준으로 단축한 것이 주요 성과입니다. 이는 복잡한 보안 취약점을 식별하고 해결하는 과정을 자동화한 결과입니다. Block은 이를 통해 사이버 공격에 대한 방어 체계를 더욱 공고히 하고 있습니다. 대규모 데이터 처리와 실시간 분석이 필요한 보안 영역에 LLM을 적용한 사례입니다. 보안 전문가들은 반복적인 분석 작업에서 벗어나 더 고도화된 전략 수립에 집중할 수 있습니다. 결과적으로 전체적인 보안 운영 효율성이 크게 향상되었습니다. 이러한 변화는 핀테크 기업의 보안 표준을 높이는 계기가 될 것으로 보입니다. AI 기반 보안은 앞으로 더 정교한 위협 탐지 기능을 제공할 예정입니다. Block은 OpenAI와의 파트너십을 통해 안전한 금융 생태계 구축을 가속화하고 있습니다.",
+      "summary_original": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "구글 딥마인드와 싱가포르 정부, 스캠 탐지용 미세 조정 AI 모델 구축 협력",
+      "title_original": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+      "link": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "published_raw": "Wed, 14 Oct 2026 02:00:14 +0000",
+      "published_local": "2026-10-14 11:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글 딥마인드",
+        "싱가포르 정부",
+        "Gemma",
+        "온디바이스 AI",
+        "스캠 탐지"
+      ],
+      "keywords_original": [
+        "model"
+      ],
+      "summary": "구글 딥마인드와 싱가포르 정부 기술청(GovTech)이 협력하여 대화형 스캠을 탐지하는 AI 모델을 개발했다. 이번 프로젝트의 핵심은 구글의 경량 모델인 Gemma를 활용해 온디바이스 환경에서 작동하도록 구현한 것이다. 이 모델은 개인 채팅 내에서 발생하는 사기성 대화를 실시간으로 가로채어 사용자에게 경고를 보낸다. 특히 클라우드로 데이터를 전송하지 않는 제로 데이터 유출 방식을 채택하여 보안성을 높였다. 이를 통해 사용자의 개인정보와 대화 내용을 안전하게 보호하면서도 강력한 탐지 기능을 제공한다. 온디바이스 AI 기술을 적용함으로써 네트워크 연결 없이도 빠른 탐지가 가능하며 지연 시간을 최소화했다. 싱가포르 정부는 갈수록 정교해지는 디지털 사기 범죄에 대응하기 위해 이번 기술 도입을 추진했다. Gemma 모델을 특정 스캠 패턴에 맞게 미세 조정하여 탐지 정확도를 극대화한 것이 특징이다. 이 시스템은 피싱 메시지나 사회 공학적 공격을 식별하여 시민들의 금전적 피해를 예방하는 데 목적이 있다. 실무적으로는 모바일 기기 자체에서 보안 필터링이 이루어져 프라이버시 침해 우려를 획기적으로 줄였다. 이번 협력은 공공 안전을 위해 최신 생성형 AI 기술을 실제 서비스에 적용한 선도적인 사례다. 향후 다양한 언어와 최신 사기 수법을 학습시켜 모델 성능을 지속적으로 고도화할 계획이다.",
+      "summary_original": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "EU AI의 다음 장은 '에이전트형 AI'가 될 것",
+      "title_original": "The EU’s next chapter in AI is agentic",
+      "link": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "기업/투자"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "에이전트형 AI",
+        "EU 기업",
+        "워크플로 자동화",
+        "OpenAI",
+        "디지털 전환"
+      ],
+      "keywords_original": [
+        "agent",
+        "enterprise",
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "summary": "OpenAI는 유럽 연합(EU) 내 기업과 소규모 사업체들의 에이전트형 AI 도입 현황에 대한 새로운 분석 결과를 발표했다. 이번 분석은 단순한 챗봇 활용을 넘어 스스로 목표를 설정하고 작업을 수행하는 에이전트 AI의 확산 추세를 다룬다. 현재 EU 기업들은 반복적인 업무 자동화와 데이터 분석 영역에서 에이전트 AI를 적극적으로 도입하고 있다. 특히 중소기업에서도 운영 효율성을 높이기 위해 AI 에이전트 워크플로를 구축하는 사례가 증가하는 추세다. 분석에 따르면 AI를 단순 도구가 아닌 자율적 에이전트로 활용할 때 더 높은 비즈니스 가치를 창출할 수 있다. 에이전트형 AI는 복잡한 다단계 작업을 독립적으로 처리함으로써 인적 자원의 효율적 배치를 가능하게 한다. EU 시장의 특성상 데이터 프라이버시와 규제 준수가 중요하며 이에 맞춘 에이전트 설계가 핵심이다. 기업들은 고객 서비스 자동화부터 공급망 최적화까지 광범위한 영역에서 에이전트 AI의 가능성을 확인하고 있다. OpenAI는 파트너십과 투자를 통해 EU 기업들이 에이전트 워크플로를 더 깊게 통합하도록 지원할 계획이다. 이러한 변화는 단순 생산성 향상을 넘어 기업의 운영 모델 자체를 재정의하는 계기가 될 것으로 보인다. 결과적으로 에이전트 AI의 심화 활용은 EU 경제의 디지털 경쟁력을 강화하는 핵심 동력이 될 전망이다. 향후 더 많은 기업이 맞춤형 AI 에이전트를 도입하며 실무 프로세스의 전면적인 혁신이 가속화될 것으로 예상된다.",
+      "summary_original": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "Tri-Modal Masked Diffusion Models의 설계 공간 분석",
+      "title_original": "The Design Space of Tri-Modal Masked Diffusion Models",
+      "link": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "모델/출시"
+      ],
+      "issues": [
+        "정책/규제 변화"
+      ],
+      "keywords": [
+        "트리모달",
+        "마스크 확산 모델",
+        "멀티모달 스케일링",
+        "Apple ML Research",
+        "이산 확산 모델"
+      ],
+      "keywords_original": [
+        "multimodal",
+        "audio",
+        "image",
+        "model",
+        "정책/규제 변화"
+      ],
+      "summary": "Apple Machine Learning Research는 텍스트, 이미지-텍스트, 오디오-텍스트 데이터를 활용해 처음부터 사전 학습된 최초의 트리모달 마스크 확산 모델(MDM)을 공개했다. 기존의 이모달 생성 방식이 단일 모달 모델을 초기화하고 미세 조정했던 것과 달리, 본 연구는 세 가지 모달리티를 동시에 학습시키는 방식을 채택했다. 연구진은 멀티모달 스케일링 법칙, 모달리티 혼합 비율, 노이즈 스케줄 및 배치 크기 효과를 체계적으로 분석했다. 특히 배치 크기 분석을 통해 새로운 확률 미분 방정식(SDE) 기반의 접근법을 도출해냈다. 또한 최적화된 추론 샘플링 기본값을 제공하여 모델의 효율성을 높였다. 이 모델은 서로 다른 데이터 형식 간의 유기적인 결합을 통해 생성 품질을 극대화했다. 이는 기존의 자기회귀 언어 모델을 대체할 수 있는 강력한 대안으로 이산 확산 모델의 가능성을 제시한다. 본 연구는 텍스트, 이미지, 오디오를 통합 처리하는 설계 공간을 정의함으로써 멀티모달 AI의 성능 향상에 기여한다. 실무적으로는 다양한 데이터 유형을 동시에 처리하는 생성형 AI의 최적화 경로를 제시했다는 점에서 의미가 크다. 이를 통해 더 정교한 멀티모달 콘텐츠 생성이 가능해질 전망이다. 결과적으로 본 연구는 차세대 멀티모달 생성 모델의 기술적 토대를 마련했다.",
+      "summary_original": "Discrete diffusion models have emerged as strong alternatives to autoregressive language models, with recent work initializing and finetuning a base unimodal model for bi-modal generation. Diverging from previous approaches, we introduce the first tri-modal Masked Diffusion Models (MDM) pretrained from scratch on text, image-text, and audio-text data. We systematically analyze multimodal scaling laws, modality mixing ratios, noise schedules, batch-size effects and provide optimized inference sampling defaults. Our batch-size analysis yields a novel stochastic differential equation (SDE) based…"
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "음성 파운데이션 모델의 언어 선택적 차원을 활용한 코드 스위칭 탐지",
+      "title_original": "Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models",
+      "link": "https://machinelearning.apple.com/research/code-switching-detection",
+      "published_raw": "Wed, 14 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-14 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "코드 스위칭",
+        "음성 파운데이션 모델",
+        "다국어 음성 인식",
+        "언어 선택적 차원",
+        "데이터 필터링"
+      ],
+      "keywords_original": [
+        "model",
+        "speech"
+      ],
+      "summary": "코드 스위칭(CS)은 한 발화 내에서 여러 언어를 교차 사용하는 현상으로 다국어 음성에서 흔히 나타나지만, 기존 사전 학습 코퍼스에서는 비중이 매우 낮습니다. 학습 데이터의 CS 커버리지를 높이려면 대규모 음성 데이터셋에서 관련 발화를 효율적으로 찾아내야 합니다. 기존에는 음성을 텍스트로 전사한 후 언어 교체를 탐지했으나, 이는 전사 정확도에 크게 의존한다는 한계가 있었습니다. 이에 애플 머신러닝 연구팀은 음성에서 직접 CS를 탐지하는 경량화된 방법을 제안했습니다. 이 방식은 사전 학습된 음성 파운데이션 모델의 프레임 수준 언어 정보를 활용합니다. 모델 내 언어 선택적 차원을 분석함으로써 텍스트 전사 과정 없이도 언어 전환 지점을 식별할 수 있습니다. 이를 통해 대규모 데이터셋에서 코드 스위칭 사례를 빠르게 필터링하고 수집하는 것이 가능해졌습니다. 결과적으로 고품질의 다국어 학습 데이터를 확보하여 모델의 전반적인 성능을 향상시킬 수 있습니다. 이 기술은 다국어 사용자 환경의 음성 인식 및 처리 시스템의 정확도를 높이는 데 기여할 것입니다. 실무적으로는 데이터 구축 비용을 절감하고 모델의 언어 유연성을 강화하는 효과를 제공합니다.",
+      "summary_original": "Code-switching (CS), the alternation between languages within an utterance, is common in multilingual speech but underrepresented in pretraining corpora. Increasing CS coverage requires finding relevant utterances in large speech collections so that they can be included in training data. One way to find such utterances is to transcribe the speech and detect language alternation in the text, but this depends on obtaining accurate multilingual transcriptions. We propose a lightweight method that detects CS directly from speech. It uses frame-level language information in pretrained speech…"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "사실을 넘어 출처까지: MCP 에이전트를 위한 출처 인식 검증 ProvenanceGuard",
+      "title_original": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "link": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "published_raw": "Tue, 29 Sep 2026 13:07:00 GMT",
+      "published_local": "2026-09-29 22:07",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "MCP",
+        "ProvenanceGuard",
+        "LLM 에이전트",
+        "출처 인식 검증",
+        "사실성 검증"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "최근 LLM 에이전트는 Model Context Protocol(MCP)을 통해 검색 도구, 데이터베이스, 기록 등 다양한 소스에서 정보를 수집해 답변을 생성한다. 하지만 RAGAS, MiniCheck 등 기존 검증 시스템은 수집된 전체 증거 내에서 사실 여부만 확인할 뿐, 어떤 특정 도구가 해당 주장을 뒷받침하는지는 구분하지 못한다. 단순히 '어딘가에 정보가 있다'는 것과 '올바른 출처에 있다'는 것은 다르며, 이는 복잡한 워크플로에서 오류를 야기한다. 이를 해결하기 위해 Multiverse Computing은 출처 인식 검증 시스템인 ProvenanceGuard를 제안했다. ProvenanceGuard는 각 주장이 어떤 MCP 도구 출력에 의해 뒷받침되는지 정밀하게 추적한다. 특히 유사한 소스가 많을 때 잘못된 참조를 식별하고, 오류로 인해 차단된 답변을 수정하는 기능을 제공한다. 이는 의료나 금융처럼 출처의 정확성이 치명적인 실무 환경에서 매우 중요하다. 결과적으로 에이전트가 신뢰할 수 있는 특정 소스에 기반해 답변하도록 강제하여 신뢰성을 높인다. 이번 접근법은 단순 사실 확인을 넘어 데이터 기원을 관리하는 새로운 검증 표준을 제시하며, 기업용 AI의 환각을 줄이고 투명한 근거 제시를 가능하게 한다.",
+      "summary_original": "The problem: supported somewhere is not the same as supported by the right source What ProvenanceGuard does Results Checking claims when sources look similar Repairing blocked answers Why this fits Multiverse Computing Tool-using LLM agents no longer read from a single retrieved passage. Through the Model Context Protocol (MCP) , an agent can call a search tool, inspect a structured patient or account record, query a database, and pull metadata, then weave all of it into one answer. That m aakes the usual question of factuality more subtle than it looks. Most of the systems built to check LLM answers, from RAGAS faithfulness to fine-grained checkers like MiniCheck, AlignScore, and SummaC, ask whether a claim is supported by the available evidence once that evidence has been pooled together. In their usual form, they do not tell us which MCP tool output supports each claim, or whether th…"
+    }
+  ]
+}
