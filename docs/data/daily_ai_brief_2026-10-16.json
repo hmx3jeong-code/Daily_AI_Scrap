@@ -1,0 +1,338 @@
+{
+  "report_date": "2026-10-16",
+  "report_date_kst": "2026-10-16",
+  "generated_at": "2026-10-16T01:48:14.979247+00:00",
+  "generated_at_kst": "2026-10-16T10:48:14.979247+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      3
+    ],
+    [
+      "신규 모델/제품 발표",
+      1
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1274,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 869,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 9,
+    "Google Research Blog": 3,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 5,
+    "MIT Technology Review AI": 2,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 9
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 10,
+    "success_freeform": 0,
+    "fallback": 0,
+    "enabled_after_run": true,
+    "last_error": "",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Granite Switch 4.1: 단일 엔드포인트로 채팅, 의사결정, 음성 인식 구현",
+      "title_original": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+      "link": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "published_raw": "Thu, 15 Oct 2026 20:34:01 GMT",
+      "published_local": "2026-10-16 05:34",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Granite Switch 4.1",
+        "모듈형 AI",
+        "ASR",
+        "Activated LoRA",
+        "VRAM 최적화"
+      ],
+      "keywords_original": [
+        "model",
+        "speech"
+      ],
+      "summary": "IBM이 모듈형 모델 개발 방식인 Granite Switch 4.1 모델을 공개했다. 이번 버전은 Granite-Switch-4.1-8B와 30B 모델로 구성되어 제공된다. 이 모델들은 단일 호스팅 엔드포인트에서 자연어 응답, 일반 및 전문 의사결정, 음성-텍스트 변환 작업을 효율적으로 수행한다. 특히 Decision 어댑터와 OpenASR 리더보드에서 가장 빠른 ASR 모델이 탑재된 것이 특징이다. 세 가지 핵심 기술이 기본 모델과 하나로 결합되어 통합적인 기능을 제공한다. 기술적으로는 캐시 효율적인 Activated LoRA 방식으로 스위치 어댑터를 구축했다. 이를 통해 GPU 상의 VRAM 점유율을 기본 모델 단독 사용 시와 거의 동일한 수준으로 유지한다. 결과적으로 더 적은 수의 GPU로도 더 많은 기능을 구현할 수 있는 고효율 구조를 갖췄다. KV 캐시 최적화를 통해 추론 효율성을 극대화한 점이 돋보인다. 개발자는 이를 통해 복잡한 파이프라인 없이 하나의 모델로 다중 작업을 처리할 수 있다. 이는 모델 배포 비용을 낮추고 운영 복잡성을 획기적으로 줄이는 실무적 이점을 제공한다. 모듈형 설계를 통해 향후 모델 확장성과 유연성 또한 확보했다.",
+      "summary_original": "Granite Libraries: The OG Decision Models Compose and Extend Your Own Granite Switch Model Resources for Getting Started Introduced last spring, the Granite Switch project enables a modular approach to model development. Now Granite Switch 4.1 models, armed with a Decision adapter and the fastest ASR model on the OpenASR leaderboard, can move efficiently between natural-language responses, general and specialized decisions, and speech-to-text tasks—all from one hosted endpoint. Specifically, Granite-Switch-4.1-8B and -30B models are configured to include: All three of these technologies (along with the underlying base model) are composed into one model, taking up approximately the same amount of VRAM on a GPU as the base model would by itself. That means more capabilities with fewer GPUs. And because the Switch adapters were built as cache-efficient Activated LoRAs , the KV cache create…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, 생명과학 연구 지원을 위한 'GPT-Rosalind 학술 플랜' 출시",
+      "title_original": "Bringing GPT-Rosalind to academic research labs",
+      "link": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+      "published_raw": "Thu, 15 Oct 2026 19:00:00 GMT",
+      "published_local": "2026-10-16 04:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [
+        "신규 모델/제품 발표"
+      ],
+      "keywords": [
+        "GPT-Rosalind",
+        "Rosalind 학술 플랜",
+        "OpenAI",
+        "생명과학",
+        "AI for Science"
+      ],
+      "keywords_original": [
+        "gpt",
+        "신규 모델/제품 발표"
+      ],
+      "summary": "OpenAI가 생명과학 연구 발전을 위해 'Rosalind 학술 플랜'을 새롭게 도입했다. 이 플랜은 자격을 갖춘 학술 연구소에 GPT-Rosalind 및 관련 도구에 대한 후원 기반 접근 권한을 제공한다. GPT-Rosalind는 생명과학 분야의 복잡한 데이터를 분석하고 연구 효율성을 높이기 위해 설계된 특화 모델이다. 이번 조치는 AI 기술을 학계에 보급하여 신약 개발 및 유전체 분석 등 기초 과학 연구를 가속화하려는 목적이다. 선정된 연구소는 고성능 AI 도구를 활용해 방대한 생물학적 데이터를 더 빠르게 처리할 수 있게 된다. 특히 연구자들이 가설 설정부터 데이터 해석까지의 과정을 효율적으로 수행하도록 돕는 기능이 포함되었다. OpenAI는 이를 통해 학계와 산업계 간의 기술 격차를 줄이고 개방적인 연구 생태계를 구축하고자 한다. 신청 자격을 갖춘 연구소는 정해진 절차에 따라 후원 신청을 진행할 수 있다. 이번 플랜은 단순한 도구 제공을 넘어 AI 기반의 과학적 발견 시대를 앞당기는 계기가 될 전망이다. 실무적으로는 연구 시간 단축과 분석 정확도 향상을 통해 연구 성과 도출 속도가 빨라질 것으로 기대된다. 생명과학 연구자들은 이제 최신 LLM 기술을 실제 실험 데이터 분석에 직접 적용할 수 있다. OpenAI는 앞으로도 전문 분야에 최적화된 AI 모델을 학계에 지속적으로 제공할 계획이다.",
+      "summary_original": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "질문을 통해 생각하고 배우는 법: OpenAI, 교육자용 AI 및 스터디 모드 공개",
+      "title_original": "Teaching students to think and learn through questions",
+      "link": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+      "published_raw": "Thu, 15 Oct 2026 13:00:00 GMT",
+      "published_local": "2026-10-15 22:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "스터디 모드",
+        "AI 교육",
+        "능동적 학습",
+        "브라질 포르투갈어"
+      ],
+      "keywords_original": [],
+      "summary": "OpenAI가 브라질 스승의 날을 기념하여 교육자를 위한 AI 기능을 브라질 포르투갈어로 제공합니다. 이번 발표의 핵심은 학생들이 스스로 생각하고 학습하도록 돕는 '스터디 모드(Study Mode)'의 도입입니다. 스터디 모드는 정답을 즉시 제공하는 대신, 적절한 질문을 통해 단계별 학습을 유도하는 방식입니다. 이를 통해 교사는 학생들이 능동적으로 문제 해결 과정에 참여하도록 효과적으로 지원할 수 있습니다. AI가 튜터 역할을 수행하며 학생의 사고 과정을 자극하는 힌트를 제공하는 것이 주요 특징입니다. 이러한 접근법은 단순 암기보다 비판적 사고와 논리적 추론 능력을 키우는 데 중점을 둡니다. 교육 현장에서는 AI를 단순한 도구가 아닌 학습 보조자로 활용하는 새로운 패러다임을 제시합니다. 브라질 포르투갈어 지원을 통해 더 많은 지역의 교육자가 AI 혜택을 누릴 수 있게 되었습니다. 교사는 학생 개개인의 수준에 맞춘 맞춤형 질문 설계를 통해 학습 효율을 극대화할 수 있습니다. 이는 디지털 교육 격차를 해소하고 공교육의 질을 높이는 데 기여할 것으로 기대됩니다. OpenAI는 앞으로도 교육 현장의 피드백을 반영해 기능을 지속적으로 고도화할 계획입니다. 결과적으로 AI는 교사의 업무 부담을 줄이면서 학생의 자기주도 학습 능력을 강화합니다.",
+      "summary_original": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Sullivan & Cromwell, OpenAI와 협력해 계약서 검토 AI 'Agreement Analyzer' 개발",
+      "title_original": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "link": "https://openai.com/index/sullivan-cromwell",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "Sullivan & Cromwell",
+        "OpenAI",
+        "Agreement Analyzer",
+        "계약서 분석",
+        "법률 AI"
+      ],
+      "keywords_original": [],
+      "summary": "글로벌 법무법인 Sullivan & Cromwell이 OpenAI와 협력하여 AI 기반의 계약서 분석 도구인 'Agreement Analyzer'를 개발했다. 이 도구는 초안 단계의 계약서에서 잠재적인 문제점이나 리스크를 식별하는 데 특화되어 있다. 법률 전문가들의 전문 지식을 AI 모델에 결합하여 검토의 정확성과 효율성을 높인 것이 핵심이다. Agreement Analyzer는 복잡한 법률 문서를 빠르게 분석하여 변호사가 놓칠 수 있는 세부 조항을 찾아낸다. 이를 통해 법무팀은 단순 반복적인 검토 시간을 줄이고 더 전략적인 법률 자문에 집중할 수 있게 되었다. OpenAI의 최신 언어 모델을 활용하여 법률 용어의 맥락을 정확하게 파악하도록 설계되었다. 기존의 수동 검토 방식보다 처리 속도가 획기적으로 향상되었으며 일관된 기준의 검토가 가능하다. 이 협력은 전문 영역인 법률 분야에 생성형 AI가 어떻게 실질적으로 적용될 수 있는지를 보여주는 사례다. 보안과 기밀 유지가 중요한 법률 업무 특성에 맞춰 데이터 처리 프로세스가 최적화되었다. 앞으로 이 도구는 대규모 계약서 검토 작업의 표준을 바꾸는 역할을 할 것으로 기대된다. 실무적으로는 계약 체결 기간을 단축시키고 법적 리스크를 사전에 최소화하는 효과를 가져온다. Sullivan & Cromwell은 AI 기술을 통해 법률 서비스의 디지털 전환을 가속화하고 있다.",
+      "summary_original": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Meta, 오픈 웨이트 프런티어 멀티모달 MoE 모델 'Muse Spark Open' 공개",
+      "title_original": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "link": "https://huggingface.co/blog/meta-muse-spark-open",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Meta",
+        "Muse Spark Open",
+        "멀티모달",
+        "MoE",
+        "오픈 웨이트"
+      ],
+      "keywords_original": [
+        "model",
+        "multimodal"
+      ],
+      "summary": "Meta가 새로운 오픈 웨이트 모델인 Muse Spark Open을 공개했다. 이 모델은 최첨단 성능을 지향하는 멀티모달 모델로, 효율적인 연산을 위해 Mixture-of-Experts(MoE) 구조를 채택한 것이 특징이다. Meta는 오픈 소스와 오픈 사이언스를 통해 인공지능의 민주화를 추진하고 있으며, 이번 공개가 그 일환이다. Muse Spark Open은 텍스트를 포함한 다양한 모달리티를 처리할 수 있는 능력을 갖췄다. 오픈 웨이트 방식으로 배포되어 연구자와 개발자가 모델 가중치에 직접 접근할 수 있다. 이는 AI 커뮤니티가 모델을 최적화하고 새로운 응용 사례를 발굴하는 데 크게 기여할 것이다. MoE 구조는 추론 시 필요한 파라미터만 활성화하여 연산 효율성을 극대화한다. 이번 공개는 고성능 멀티모달 AI의 진입 장벽을 낮추려는 전략적 움직임으로 풀이된다. Hugging Face 플랫폼을 통해 제공되어 전 세계적인 접근성을 확보했다. 실무적으로는 기업들이 자체 데이터로 모델을 미세 조정하여 특화된 서비스를 구축할 수 있다. 결과적으로 AI 생태계의 투명성과 협력적 발전을 가속화할 것으로 기대된다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Diffusers 라이브러리에 FLUX.3 Image Klein 모델 통합",
+      "title_original": "Welcome FLUX.3 Image Klein in Diffusers",
+      "link": "https://huggingface.co/blog/flux-3",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "FLUX.3 Image Klein",
+        "Hugging Face",
+        "Diffusers",
+        "오픈 소스",
+        "이미지 생성 AI"
+      ],
+      "keywords_original": [
+        "image",
+        "open source"
+      ],
+      "summary": "Hugging Face가 Diffusers 라이브러리에 FLUX.3 Image Klein 모델을 공식적으로 통합했다고 발표했습니다. 이번 조치는 오픈 소스와 오픈 사이언스를 통해 인공지능 기술을 민주화하려는 Hugging Face의 핵심 비전과 맞닿아 있습니다. FLUX.3 Image Klein은 고해상도 이미지 생성에 최적화된 최신 확산 모델로, 정교한 디테일 구현과 정확한 프롬프트 해석 능력이 특징입니다. 개발자들은 이제 Diffusers의 표준화된 파이프라인을 통해 해당 모델을 더욱 쉽고 효율적으로 구현하고 최적화할 수 있게 되었습니다. 이는 고성능 이미지 생성 AI의 진입 장벽을 낮추어 개인 개발자와 기업의 창의적 도구 활용도를 크게 높일 것으로 보입니다. 또한 오픈 소스 생태계 내의 통합으로 인해 커뮤니티 기반의 빠른 피드백과 모델 개선이 가능해졌습니다. 사용자는 간단한 코드 몇 줄만으로 최신 SOTA 모델의 성능을 자신의 프로젝트에 즉시 적용할 수 있습니다. Hugging Face는 앞으로도 최신 모델들을 빠르게 라이브러리에 추가하여 AI 생태계 확장을 지속할 계획입니다. 이번 통합은 이미지 생성 AI 워크플로우의 표준화를 가속화하며 연구자와 아티스트에게 더 정밀한 제어 환경을 제공합니다. 결과적으로 AI 이미지 생성 기술의 접근성과 효율성이 동시에 향상되는 실무적 효과를 가져올 전망입니다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "Mac Studio에서 MLX와 RDMA를 활용한 로컬 및 분산 대규모 LLM 추론",
+      "title_original": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "link": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "MLX",
+        "Apple 실리콘",
+        "분산 추론",
+        "RDMA",
+        "Mac Studio"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "framework",
+        "developer"
+      ],
+      "summary": "Apple Machine Learning Research는 Mac Studio에서 MLX와 RDMA를 활용한 로컬 및 분산 대규모 언어 모델(LLM) 추론 방식을 공개했다. MLX는 Apple 실리콘 기반의 Mac에서 AI 연구자와 개발자가 최신 모델과 방법론을 프라이빗한 환경에서 실험할 수 있도록 돕는다. 이 오픈소스 배열 프레임워크는 Apple 실리콘의 통합 메모리 아키텍처를 최대한 활용하도록 설계되었다. 이를 통해 사용자는 외부 서버 없이 자신의 하드웨어에서 직접 새로운 추론 및 미세 조정 기법을 실행할 수 있다. 특히 Mac Studio 환경에서 RDMA를 적용하여 여러 대의 기기를 연결한 분산 추론 성능을 최적화했다. 이는 대규모 모델 구동 시 발생하는 메모리 제약을 극복하고 처리 속도를 높이는 데 기여한다. 이전 발표에서 강조된 M5 아키텍처와 GPU 뉴럴 액셀러레이터의 이점이 이번 구현의 기반이 되었다. 개발자들은 이를 통해 다양한 AI 기술을 탐색하고 모델의 효율성을 로컬 수준에서 검증할 수 있다. 데이터 보안이 중요한 프로젝트에서 클라우드 의존도를 낮추고 프라이버시를 강화하는 실무적 이점을 제공한다. 결과적으로 Apple 실리콘 생태계 내에서 고성능 AI 워크플로우 구축이 가능해졌다. 이는 하드웨어와 소프트웨어의 최적화된 결합을 통해 LLM 연구의 진입 장벽을 낮추는 효과가 있다. 향후 더 큰 규모의 모델을 효율적으로 다루기 위한 분산 컴퓨팅의 가능성을 제시했다.",
+      "summary_original": "MLX on Mac with Apple silicon lets AI researchers and developers experiment locally with the latest models and methods in a private environment. The open-source array framework leverages the unified memory architecture of Apple silicon, enabling anyone to run new inference and fine-tuning methods on their own hardware and explore other AI techniques. In a previous post, we highlighted the advantages of the M5 architecture and its GPU Neural Accelerators."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "선택 기반 구조화된 추론: 효율적인 멀티모달 검색 에이전트를 향하여",
+      "title_original": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "link": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "성능/벤치마크",
+      "topics": [
+        "성능/벤치마크",
+        "모델/출시"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "SSR",
+        "멀티모달 에이전트",
+        "구조화된 추론",
+        "추론 비용 절감",
+        "소형 모델"
+      ],
+      "keywords_original": [
+        "reasoning",
+        "cost",
+        "model",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Apple Machine Learning Research는 효율적인 멀티모달 검색 에이전트를 위한 '선택 기반 구조화된 추론(SSR)' 프레임워크를 제안했다. 기존 멀티모달 에이전트는 행동을 수행하기 전 자유 형식의 추론 과정을 거치는 것이 일반적이다. 하지만 소형 모델의 경우, 모델 용량의 한계로 인해 행동 생성에 도움이 되지 않는 긴 추론을 생성하는 경향이 있다. 이는 결과적으로 불필요한 추론 비용을 발생시키며 전체적인 시스템 효율성을 저하시킨다. SSR은 이러한 문제를 해결하기 위해 추론 방식을 개방형 생성에서 선택 방식으로 재정의했다. 이 프레임워크는 반복적으로 발생하는 고수준 추론을 미리 정의된 재사용 가능한 자연어 후보군으로 표현한다. 모델은 매 단계에서 주어진 후보군 중 가장 적절한 추론 내용을 선택하여 다음 행동을 결정한다. 이를 통해 불필요한 텍스트 생성을 억제함으로써 추론 비용을 획기적으로 낮출 수 있다. 동시에 구조화된 추론을 통해 소형 모델에서도 일관성 있는 행동 지침을 제공하는 것이 가능하다. 결과적으로 모델 용량 제한으로 인한 성능 저하 문제를 완화하고 운영 효율성을 극대화했다. 이 방식은 특히 자원이 제한된 환경에서 작동하는 멀티모달 에이전트의 실무 적용 가능성을 높인다. 이는 향후 온디바이스 AI 에이전트의 추론 효율성을 높이는 핵심적인 기술적 토대가 될 전망이다.",
+      "summary_original": "Multimodal agents commonly generate freeform reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from the reasoning candidates based on their…"
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "계획이 먼저인가, 검색이 먼저인가? 도구 발견 아키텍처의 규모 연구",
+      "title_original": "Plan or Retrieve First? A Scale Study of Tool Discovery Architectures",
+      "link": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "LLM 에이전트",
+        "도구 발견",
+        "API 검색",
+        "Retrieve-then-Plan",
+        "Plan-then-Retrieve"
+      ],
+      "keywords_original": [
+        "llm",
+        "api",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Apple Machine Learning Research는 대규모 API 레지스트리에서 적절한 도구를 찾는 LLM 에이전트의 효율적인 아키텍처를 연구했다. 기존의 '검색 후 계획(Retrieve-then-Plan, RtP)' 방식은 사용자 쿼리를 임베딩하여 유사한 도구를 먼저 검색한 뒤 실행 계획을 세운다. 하지만 컨텍스트 윈도우의 제한으로 인해 모든 도구 정의를 프롬프트에 넣을 수 없다는 한계가 있다. 이에 대한 대안으로 '계획 후 검색(Plan-then-Retrieve, PtR)' 패러다임을 제안했다. PtR 방식은 LLM이 먼저 필요한 기능에 대한 가상의 함수 서명인 '추상 도구 스텁(Abstract Tool Stubs)'을 생성한다. 이후 생성된 스텁을 쿼리로 사용하여 레지스트리에서 실제 도구를 검색하는 구조다. 연구팀은 두 방식의 성능을 대규모 환경에서 비교 분석하여 도구 발견의 효율성을 평가했다. PtR 방식은 LLM이 필요한 도구의 구체적인 능력을 먼저 정의함으로써 검색 정확도를 높일 수 있다. 이는 특히 도구의 수가 매우 많은 대규모 레지스트리 환경에서 유효한 전략이 된다. 결과적으로 에이전트가 복잡한 작업을 수행할 때 더 정밀한 도구 선택이 가능해진다. 본 연구는 LLM 에이전트의 워크플로 설계 시 검색 시점의 중요성을 시사한다. 실무적으로는 API 검색 비용을 줄이고 에이전트의 작업 성공률을 높이는 데 기여할 수 있다.",
+      "summary_original": "Tool-augmented LLM agents discover relevant APIs from large registries before planning execution, yet finite context windows prohibit injecting all tool definitions into a single prompt. The dominant approach, which we term Retrieve-then-Plan (RtP), embeds the user query and retrieves similar tools via approximate nearest-neighbor search. We study an alternative Plan-then-Retrieve (PtR) paradigm in which the LLM first generates Abstract Tool Stubs (hypothesized function signatures describing needed capabilities) which then serve as retrieval queries against the registry. Evaluating on…"
+    },
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "지구를 위한 AI의 실전 배치: 지구의 거대 과제 해결을 위한 지리공간 에이전트",
+      "title_original": "Putting Earth AI to work: Geospatial agents for our planet's biggest challenges",
+      "link": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+      "published_raw": "Wed, 14 Oct 2026 16:14:00 +0000",
+      "published_local": "2026-10-15 01:14",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Earth AI",
+        "지리공간 에이전트",
+        "구글 어스 엔진",
+        "위성 이미지 분석",
+        "환경 모니터링"
+      ],
+      "keywords_original": [
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "구글 리서치는 지구의 환경적 난제를 해결하기 위해 지리공간 에이전트 프레임워크인 'Earth AI'를 공개했다. Earth AI는 단순한 정보 제공을 넘어 복잡한 지리공간 분석 작업을 스스로 수행하는 에이전트 기반 워크플로를 지향한다. 이 시스템은 구글 어스 엔진(Google Earth Engine)과 같은 강력한 도구를 활용해 위성 이미지 분석과 데이터 처리를 자동화한다. 기존의 수동 분석 방식과 달리, 에이전트는 목표 설정부터 도구 선택, 실행 및 결과 검증까지의 과정을 자율적으로 관리한다. 이를 통해 산림 파괴 모니터링, 홍수 피해 분석, 농작물 수확량 예측 등 광범위한 환경 감시가 가능하다. 특히 다단계 추론 능력을 갖춰 전문가가 수행하던 복잡한 분석 파이프라인을 효율적으로 대체할 수 있다. Earth AI는 대규모 지리 데이터를 실시간으로 처리하여 기후 변화 대응 속도를 획기적으로 높이는 것을 목표로 한다. 실무적으로는 데이터 과학자의 반복적인 코딩 작업을 줄여 분석의 진입 장벽을 낮추는 효과가 있다. 또한 다양한 외부 API 및 데이터셋과 결합하여 맞춤형 환경 솔루션을 빠르게 구축할 수 있게 한다. 구글은 이를 통해 지구 규모의 지속 가능성 문제를 해결하는 AI의 실질적인 적용 사례를 확장하고자 한다. 결과적으로 지리공간 데이터의 민주화를 통해 전 세계 연구자와 정책 입안자에게 정밀한 통찰력을 제공한다. 이는 AI 에이전트가 실제 물리적 세계의 문제를 해결하는 중요한 전환점이 될 것으로 보인다.",
+      "summary_original": "Earth AI"
+    }
+  ]
+}
