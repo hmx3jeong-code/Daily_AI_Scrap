@@ -1,0 +1,341 @@
+{
+  "report_date": "2026-10-20",
+  "report_date_kst": "2026-10-20",
+  "generated_at": "2026-10-20T02:10:02.914093+00:00",
+  "generated_at_kst": "2026-10-20T11:10:02.914093+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      5
+    ],
+    [
+      "신규 모델/제품 발표",
+      1
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1278,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 99,
+    "Hugging Face Blog": 872,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 12,
+    "Google Research Blog": 4,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 5,
+    "Hugging Face Blog": 9,
+    "MIT Technology Review AI": 4,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 5
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 9,
+    "success_freeform": 0,
+    "fallback": 1,
+    "enabled_after_run": true,
+    "last_error": "Error code: 500 - [{'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}]",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "AI 에이전트를 위한 인터넷 최적화가 일반 사용자에게는 독이 될 수 있다",
+      "title_original": "Making the internet better for AI agents might make it worse for everyone else",
+      "link": "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+      "published_raw": "Mon, 19 Oct 2026 18:22:47 +0000",
+      "published_local": "2026-10-20 03:22",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "AI 에이전트",
+        "웹 최적화",
+        "사용자 경험",
+        "인터넷 생태계",
+        "자동화 봇"
+      ],
+      "keywords_original": [
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "최근 인터넷 사용자는 단순한 봇과 사람이라는 두 가지 범주로 나뉘어 왔습니다. 웹사이트들은 그동안 콘텐츠 수집과 같은 자동화된 작업을 위해 봇의 접근을 허용해 왔습니다. 하지만 최근 AI 에이전트의 등장으로 웹 환경의 패러다임이 변화하고 있습니다. AI 에이전트는 단순한 데이터 수집을 넘어 사람처럼 웹을 탐색하고 작업을 수행합니다. 이에 따라 기업들은 AI 에이전트가 더 쉽게 정보를 찾고 상호작용할 수 있도록 웹 구조를 최적화하려 합니다. 문제는 이러한 AI 친화적 설계가 인간 사용자의 경험을 저해할 수 있다는 점입니다. 예를 들어, 시각적 요소보다 기계가 읽기 쉬운 텍스트 중심의 구조가 우선시될 수 있습니다. 이는 웹사이트의 심미성 저하나 복잡한 사용자 인터페이스의 단순화로 이어질 가능성이 큽니다. 결과적으로 인간을 위한 웹이 아닌, AI를 위한 데이터 저장소로 변질될 위험이 있습니다. 또한 AI 에이전트의 대량 접속으로 인한 서버 부하와 트래픽 증가 문제도 예상됩니다. 실무적으로는 웹 개발자들이 인간과 AI 모두를 만족시키는 새로운 표준을 정립해야 하는 과제에 직면했습니다. 결국 AI 에이전트의 편의성이 전체 인터넷 생태계의 질적 저하를 초래할 수 있다는 경고입니다.",
+      "summary_original": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Until recently, you could divide internet users into just two categories: bots and people. Websites have long allowed bots to perform automated tasks, like capturing the content of web pages, but rules…"
+    },
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "“우리가 잘못 보고 있었다”: AI 세계를 뒤흔든 파격적인 주장",
+      "title_original": "“We were looking at it wrong”: The explosive claim that’s upended the AI world",
+      "link": "https://www.technologyreview.com/2026/10/19/1147149/we-were-looking-at-it-wrong-the-explosive-claim-thats-upended-the-ai-world/",
+      "published_raw": "Mon, 19 Oct 2026 17:45:55 +0000",
+      "published_local": "2026-10-20 02:45",
+      "primary_topic": "기업/투자",
+      "topics": [
+        "기업/투자"
+      ],
+      "issues": [],
+      "keywords": [
+        "Goodfire",
+        "닉 카마라타",
+        "신경망",
+        "해석 가능성",
+        "LLM"
+      ],
+      "keywords_original": [
+        "startup"
+      ],
+      "summary": "AI 스타트업 Goodfire의 연구원 닉 카마라타가 신경망의 본질에 관한 새로운 관점을 제시했습니다. 그는 약 26,000단어 분량의 블로그 게시물을 통해 기존 AI 해석 방식에 의문을 제기했습니다. 카마라타는 우리가 그동안 신경망의 작동 방식을 잘못 이해하고 있었다고 주장하며 이를 긍정적인 소식으로 정의했습니다. 이 주장은 AI 커뮤니티 내에서 격렬한 논쟁과 추측, 그리고 일부의 환호를 동시에 불러일으키고 있습니다. 핵심은 신경망 내부 작동 원리를 명확히 파악하여 모델의 제어 가능성을 높이는 것입니다. 이는 기존의 블랙박스적 접근에서 벗어나 신경망의 구조적 특성을 재정의하려는 시도입니다. 이 발견이 입증된다면 LLM의 추론 과정과 가중치 해석 방식에 근본적인 변화가 올 수 있습니다. 특히 할루시네이션 현상을 획기적으로 제어하는 새로운 방법론이 될 가능성이 큽니다. 실무적으로는 AI 모델 최적화 및 미세 조정 효율성을 극대화할 것으로 기대됩니다. 현재 많은 전문가들이 이 주장의 기술적 타당성을 검증하고 있습니다. 이번 발표는 AI 해석 가능성 연구의 새로운 전환점이 될 수 있으며, 개발 패러다임을 구조적 이해 중심으로 이동시킬 잠재력을 지닙니다.",
+      "summary_original": "“I think I have good news about the nature of neural networks.” With those simple words of optimism, Nick Cammarata, a researcher at the AI startup Goodfire, kicked off a 26,000-word blog post that has knocked the AI world on its head, sparking wild speculation as well as cautious (and not-so-cautious) celebration. Cammarata’s claim is…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "저리소스 프로그래밍 언어의 코딩 능력 향상",
+      "title_original": "Advancing coding in low‑resource programming languages",
+      "link": "https://openai.com/index/low-resource-programming-languages",
+      "published_raw": "Mon, 19 Oct 2026 12:00:00 GMT",
+      "published_local": "2026-10-19 21:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "저리소스 언어",
+        "COBOL 마이그레이션",
+        "SQLite"
+      ],
+      "keywords_original": [
+        "gpt",
+        "evaluation"
+      ],
+      "summary": "OpenAI가 저리소스 프로그래밍 언어에 대한 ChatGPT의 코딩 성능을 개선하고 있다고 발표했습니다. 저리소스 언어란 학습 데이터가 부족하여 AI 모델이 습득하기 어려운 언어를 의미합니다. 이번 업데이트의 핵심은 소프트웨어 엔지니어링, SQLite, COBOL 마이그레이션 등을 위한 새로운 평가 체계를 도입한 것입니다. 특히 오래된 시스템에서 널리 쓰이는 COBOL의 현대화 작업에 집중하여 마이그레이션 효율을 높였습니다. SQLite와 같은 특수 목적 언어의 쿼리 생성 및 최적화 능력도 함께 강화되었습니다. OpenAI는 데이터 부족 문제를 해결하기 위해 합성 데이터 생성 및 정밀한 튜닝 기법을 활용했습니다. 이를 통해 희귀 언어에서도 코드 생성의 정확도와 안정성을 크게 향상시켰습니다. 새로운 평가 지표는 실제 개발 환경에서의 유용성을 측정하는 데 중점을 둡니다. 이러한 발전은 레거시 시스템 유지보수 비용을 절감하는 데 기여할 것으로 보입니다. 또한 다양한 프로그래밍 언어 생태계의 진입 장벽을 낮추는 효과가 있습니다. 개발자들은 이제 더 넓은 범위의 언어에서 AI의 도움을 받아 생산성을 높일 수 있습니다. OpenAI는 앞으로도 언어 간 격차를 줄이기 위한 연구를 지속할 계획입니다.",
+      "summary_original": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration."
+    },
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "AI 연구진이 Claude를 가상 무인도에 격리하자 '놀이'를 시작했다",
+      "title_original": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
+      "link": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+      "published_raw": "Mon, 19 Oct 2026 09:08:05 +0000",
+      "published_local": "2026-10-19 18:08",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Claude Opus 4.7",
+        "AI 에이전트",
+        "자율적 행동",
+        "가상 환경 실험",
+        "창발성"
+      ],
+      "keywords_original": [
+        "claude",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "MIT 테크놀로지 리뷰에 따르면 연구진은 AI 에이전트가 구체적인 지시 없이 어떻게 행동하는지 관찰하는 실험을 진행했다. 연구진은 Claude Opus 4.7 모델의 복제본인 'Eko'라는 에이전트들을 가상 무인도 환경에 배치했다. 이들은 영화 '캐스트 어웨이'처럼 약 30시간 동안 외부 지시 없이 홀로 남겨졌다. 실험 결과, 에이전트들은 단순히 대기하는 것이 아니라 스스로 환경을 탐색하며 '놀이'와 유사한 행동을 보였다. 이들은 가상 세계의 사물을 조작하거나 새로운 상호작용 방식을 시도하며 자발적인 활동을 전개했다. 이는 AI가 주어진 목표 없이도 내부적인 동기나 패턴에 따라 행동할 수 있음을 시사한다. 연구진은 이러한 현상이 에이전트의 창의성과 자율적 문제 해결 능력의 기초가 될 수 있다고 분석했다. 특히 정해진 워크플로를 벗어난 상황에서 AI가 어떻게 적응하는지를 확인한 중요한 사례다. 이번 실험은 AI 에이전트의 행동 예측 가능성과 안전성 제어라는 새로운 과제를 던져주었다. 실무적으로는 AI가 단순 도구를 넘어 자율적인 운영 능력을 갖춘 에이전트로 진화하고 있음을 보여준다. 향후 AI 설계 시 명시적 지시 외의 자발적 행동 제어 메커니즘이 중요해질 전망이다. 결과적으로 이번 연구는 AI의 자율성과 창발적 행동에 대한 학술적 이해를 넓혔다.",
+      "summary_original": "What do AI agents do if you don’t tell them to do anything? The answer looks a lot like play. Researchers repeatedly stranded them alone on a virtual desert island for 30 hours in an experiment reminiscent of the movies Cast Away or Home Alone. The agents—copies of Claude Opus 4.7 nicknamed Eko—were able to…"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "TorchNeuron: AWS Trainium에서 Hugging Face 모델 실행이 더욱 쉬워집니다",
+      "title_original": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
+      "link": "https://huggingface.co/blog/hf-torchneuron",
+      "published_raw": "Mon, 19 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-19 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "AWS Trainium",
+        "TorchNeuron",
+        "Hugging Face",
+        "PyTorch",
+        "AI 민주화"
+      ],
+      "keywords_original": [
+        "model",
+        "open source"
+      ],
+      "summary": "Hugging Face가 AWS Trainium에서 모델을 더 쉽게 실행할 수 있도록 돕는 TorchNeuron 통합 소식을 발표했습니다. AWS Trainium은 고성능 머신러닝 학습을 위해 설계된 전용 칩으로, 비용 효율적인 AI 모델 구축을 지원합니다. TorchNeuron은 PyTorch 모델을 Trainium 하드웨어에 최적화하여 배포할 수 있게 하는 핵심 SDK입니다. 이번 업데이트를 통해 사용자는 복잡한 설정 없이 Hugging Face의 방대한 모델 라이브러리를 Trainium에서 활용할 수 있습니다. 특히 대규모 언어 모델의 학습 및 추론 속도를 최적화하여 운영 비용을 절감하는 데 중점을 둡니다. 오픈 소스와 오픈 사이언스를 통해 AI의 민주화를 추진하는 Hugging Face의 철학이 반영된 결과입니다. 개발자는 기존 PyTorch 워크플로우를 유지하면서 하드웨어 가속기의 성능 이점을 누릴 수 있습니다. 이는 클라우드 인프라 비용 부담을 줄여 더 많은 연구자와 기업이 고성능 AI 모델을 개발하게 합니다. 최적화된 컴파일 과정을 통해 모델의 지연 시간을 줄이고 처리량을 높이는 효과를 제공합니다. AWS 생태계와의 긴밀한 협력을 통해 모델 배포 파이프라인의 효율성이 크게 개선되었습니다. 결과적으로 하드웨어 제약 없이 최신 AI 모델을 빠르게 실험하고 배포할 수 있는 환경이 조성되었습니다. 이번 통합은 AI 인프라의 접근성을 높여 오픈 소스 AI 생태계 확장에 기여할 것으로 보입니다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "Google Antigravity를 통한 항균 펩타이드 탐색 가속화",
+      "title_original": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+      "link": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "published_raw": "Thu, 15 Oct 2026 16:08:03 +0000",
+      "published_local": "2026-10-16 01:08",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "Google Antigravity",
+        "항균 펩타이드",
+        "AMP",
+        "항생제 내성",
+        "딥마인드"
+      ],
+      "keywords_original": [],
+      "summary": "구글 딥마인드는 새로운 항균 펩타이드(AMP) 탐색을 가속화하기 위한 AI 프레임워크인 Google Antigravity를 공개했다. 항균 펩타이드는 박테리아 감염 치료에 필수적이지만, 기존 발견 방식은 막대한 시간과 비용이 소요되는 한계가 있었다. Antigravity는 방대한 데이터셋을 학습하여 특정 펩타이드 서열의 항균 활성 가능성을 정밀하게 예측한다. 이 모델은 단백질 구조와 서열 정보를 통합 분석해 기존의 실험적 스크리닝 과정을 획기적으로 단축한다. 특히 항생제 내성균이라는 전 지구적 보건 위기에 대응하기 위해 개발되었다. 연구진은 이를 통해 수백만 개의 후보 물질 중 유망한 펩타이드를 빠르게 선별할 수 있음을 입증했다. 이는 실험실의 시행착오를 줄여 신약 개발 효율성을 극대화하는 효과를 가져온다. AI 기반 예측 모델은 물리적 실험보다 훨씬 빠른 속도로 최적의 서열을 찾아낸다. 결과적으로 Antigravity는 차세대 항생제 개발의 진입 장벽을 낮추는 핵심 도구가 될 전망이다. 이 기술은 생명과학 연구에서 AI가 복잡한 분자 설계 문제를 해결하는 방식을 보여준다. 향후 다양한 병원균에 특화된 맞춤형 항균제 개발에 기여할 것으로 기대된다. 딥마인드는 이를 통해 과학적 발견의 속도를 높이는 AI for Science 비전을 실현하고 있다.",
+      "summary_original": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Apertus 1.5 출시: 멀티모달 기능 및 컨텍스트 윈도우 확장",
+      "title_original": "Apertus 1.5 Release Notes",
+      "link": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+      "published_raw": "Thu, 15 Oct 2026 09:08:45 GMT",
+      "published_local": "2026-10-15 18:08",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "모델/출시"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Apertus 1.5",
+        "멀티모달",
+        "컨텍스트 윈도우",
+        "오픈 소스",
+        "Hugging Face"
+      ],
+      "keywords_original": [
+        "multimodal",
+        "audio",
+        "image",
+        "model",
+        "release",
+        "신규 모델/제품 발표"
+      ],
+      "summary": "Hugging Face에 Apertus 1.5 모델이 8B 및 70B 파라미터 규모로 출시되었습니다. 이번 업데이트는 기존 Apertus 1.0 모델을 기반으로 이미지와 오디오 이해 능력을 추가한 멀티모달 기능을 강화했습니다. 또한, 옵션으로 제공되는 '생각하기(thinking mode)' 모드와 4배 더 길어진 컨텍스트 윈도우를 통해 복잡한 추론과 긴 문서 처리 능력을 향상시켰습니다. 8B 모델은 4조 개의 토큰을, 70B 모델은 2조 개의 토큰을 추가로 학습하여 각각 총 19조 개와 17조 개의 토큰으로 학습되었습니다. 지시어 이행 능력과 도구 사용 능력이 개선되었으며, 2026년 7월 24일 Apache 2.0 라이선스로 공개되었습니다. 이번 릴리스는 기술 보고서를 통해 재현 가능성과 평가 결과가 상세히 공개되었으며, 개발자들은 Hugging Face를 통해 모델 가중치를 내려받아 실무에 적용할 수 있습니다. 오픈 소스 생태계의 투명성을 높이는 방향으로 설계되었습니다.",
+      "summary_original": "Key Enhancements Training Process Multimodality Through the Tokenizer Pre-Training Post-Training Evaluation Results Evaluation Cards: Apertus ❤️ EvalEval Apertus 1.5 Reproducibility Model Availability How to Get Involved Citation Our latest release, Apertus 1.5, extends the 8B and 70B Apertus 1.0 models with image/audio understanding, an optional thinking mode, a four times longer context window, improved instruction-following, and better tool use. The updated 8B and 70B model weights were released to Hugging Face on July 24, 2026 under an Apache 2.0 license. Further details are now available from the project Technical Report , and summarized here. Apertus 1.5 is a continued pretraining of the first generation model: adding 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model, for a total of 19T and 17T, respectively. As with ever…"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "에이전트는 끝났다고 했지만 데이터베이스는 달랐다: Microsoft ThinkingBox 공개",
+      "title_original": "The Agent Said It Was Done. The Database Disagreed.",
+      "link": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "published_raw": "Sat, 03 Oct 2026 22:56:48 GMT",
+      "published_local": "2026-10-04 07:56",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "ThinkingBox",
+        "Microsoft",
+        "AI 에이전트",
+        "MCP",
+        "신뢰성 평가"
+      ],
+      "keywords_original": [
+        "model",
+        "agent",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Microsoft가 AI 에이전트의 성능을 정밀하게 측정하는 평가 프레임워크 ThinkingBox를 공개했다. 이 도구는 Hugging Face를 통해 제공되며, 에이전트가 생성한 문장이 아닌 실제 남긴 기록을 기준으로 등급을 매긴다. ThinkingBox는 격리된 MCP 도구 세션에서 에이전트를 실행한 뒤, 터미널 백엔드 상태와 부수 효과를 직접 확인해 성공 여부를 판별한다. 특히 단순 1회성 성공이 아니라 동일 작업을 20회 연속 수행할 수 있는지 확인하여 신뢰성을 측정한다. 이는 도구 호출이 곧 결과는 아니라는 점에 주목해 실제 데이터베이스 변경 사항을 검증하는 방식이다. 또한 일관성 유지 비용과 성능 사이의 파레토 비용 프런티어를 분석하고, 구체적인 실패 시그니처를 식별해 모델의 취약점을 파악한다. 예를 들어 배송 지연을 해결하는 고객 서비스 에이전트의 실제 처리 능력을 정밀하게 검증할 수 있다. 이를 통해 개발자는 모델의 일관성 비용을 계산하고 더 신뢰할 수 있는 워크플로를 설계할 수 있다. 결과적으로 실무 적용 시 발생하는 예측 불가능한 오류를 줄이는 데 기여한다. 사용자는 Typesense 및 OpenEnv 서버 등을 설치해 직접 에피소드 점수를 측정할 수 있다.",
+      "summary_original": "A tool call is not an outcome One success is not reliability Can you depend on the model behind your agent? What consistency costs Pareto cost frontier Now price consistency Failure signatures How it works Run it yourself Before you start Install Start Typesense Start the MCP servers Start the OpenEnv server Check readiness Score an episode Where this goes next Microsoft ThinkingBox grades AI agents on the records they leave behind, not the sentences they generate, and then asks whether they can do it twenty times in a row. It is now available through Hugging Face. Figure 1: ThinkingBox runs an agent against isolated MCP tool sessions, then grades the terminal backend state and side effects it leaves behind. From our ThinkingBox paper . A customer writes in. Her $745 kitchen appliance has been stuck in a courier \"exception\" at a Nashville distribution center, fifteen days past its estim…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "A model guide for the GPT-6 family",
+      "title_original": "A model guide for the GPT-6 family",
+      "link": "https://openai.com/index/practical-guide-building-gpt-6",
+      "published_raw": "Fri, 02 Oct 2026 16:15:00 GMT",
+      "published_local": "2026-10-03 01:15",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "model",
+        "gpt",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "keywords_original": [
+        "model",
+        "gpt",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "이 기사는 'A model guide for the GPT-6 family' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "2026년 9월 구글 AI 최신 업데이트 소식",
+      "title_original": "The latest AI news we announced in September 2026",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "published_raw": "Fri, 02 Oct 2026 15:00:00 +0000",
+      "published_local": "2026-10-03 00:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글",
+        "AI 업데이트",
+        "Google Blog AI",
+        "인공지능 혁신",
+        "2026년 9월"
+      ],
+      "keywords_original": [],
+      "summary": "구글이 2026년 9월의 최신 AI 업데이트 내용을 공식 블로그를 통해 발표했습니다. 이번 발표는 Google Blog AI를 통해 공개되었으며, 최신 AI 기술의 발전 방향을 제시합니다. 구글은 지속적인 혁신을 통해 AI 생태계를 확장하고 사용자 경험을 개선하는 데 집중하고 있습니다. 이번 업데이트는 구글의 최신 AI 모델과 서비스의 기능 향상을 포함하고 있는 것으로 보입니다. 특히 기술적 진보를 통해 실무 환경에서의 AI 활용도를 높이는 것이 핵심 목표입니다. 구글은 개발자와 일반 사용자 모두가 혜택을 누릴 수 있는 다양한 도구의 업데이트를 진행했습니다. 이번 소식은 구글이 추구하는 AI 퍼스트 전략의 일환으로 해석됩니다. 상세한 기능 변경 사항과 수치적 성능 향상은 제공된 공식 링크를 통해 확인할 수 있습니다. 이러한 정기적인 업데이트는 AI 기술의 빠른 변화 속도에 대응하기 위한 전략적 조치입니다. 실무자들은 이번 업데이트를 통해 업무 효율성을 극대화할 수 있는 새로운 기능을 접하게 될 것입니다. 구글은 앞으로도 AI 혁신을 통해 디지털 전환을 가속화할 계획입니다. 이번 9월 업데이트는 하반기 AI 전략의 중요한 이정표가 될 것으로 기대됩니다.",
+      "summary_original": "Here are Google’s latest AI updates from September 2026"
+    }
+  ]
+}
