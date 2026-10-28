@@ -1,8 +1,8 @@
 {
-  "report_date": "2026-10-27",
-  "report_date_kst": "2026-10-27",
-  "generated_at": "2026-10-27T02:21:07.171329+00:00",
-  "generated_at_kst": "2026-10-27T11:21:07.171329+09:00",
+  "report_date": "2026-10-28",
+  "report_date_kst": "2026-10-28",
+  "generated_at": "2026-10-28T02:35:39.127766+00:00",
+  "generated_at_kst": "2026-10-28T11:35:39.127766+09:00",
   "article_count": 10,
   "issues_top": [
     [
@@ -10,37 +10,29 @@
       3
     ],
     [
-      "안전/리스크 논의",
+      "비용/성능 경쟁",
       3
     ],
     [
-      "정책/규제 변화",
-      1
-    ],
-    [
-      "비용/성능 경쟁",
-      1
-    ],
-    [
-      "신규 모델/제품 발표",
+      "기업 파트너십/투자",
       1
     ]
   ],
   "source_totals": {
-    "OpenAI News": 1303,
+    "OpenAI News": 1308,
     "Google Research Blog": 100,
     "Google Blog AI": 20,
     "DeepMind Blog": 99,
-    "Hugging Face Blog": 880,
+    "Hugging Face Blog": 881,
     "MIT Technology Review AI": 10,
     "VentureBeat AI": 0,
     "Apple Machine Learning Research": 10
   },
   "source_kept": {
-    "OpenAI News": 20,
-    "Google Research Blog": 2,
-    "Google Blog AI": 2,
-    "DeepMind Blog": 1,
+    "OpenAI News": 19,
+    "Google Research Blog": 3,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 2,
     "Hugging Face Blog": 8,
     "MIT Technology Review AI": 7,
     "VentureBeat AI": 0,
@@ -48,121 +40,138 @@
   },
   "llm_stats": {
     "attempted": 10,
-    "success_json": 5,
+    "success_json": 3,
     "success_freeform": 0,
-    "fallback": 5,
+    "fallback": 7,
     "enabled_after_run": true,
-    "last_error": "Error code: 503",
+    "last_error": "Error code: 500",
     "init_error": ""
   },
   "articles": [
     {
-      "source": "OpenAI News",
+      "source": "Google Research Blog",
       "authority": "official",
-      "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
-      "title_original": "Greptile takes bug detection beyond code review with GPT-6 Astra",
-      "link": "https://openai.com/index/greptile-code-review-codex-astra",
-      "published_raw": "Mon, 26 Oct 2026 22:00:00 GMT",
-      "published_local": "2026-10-27 07:00",
+      "title": "LLM의 지속적 학습을 위한 새로운 지식 유지 방법: Sleep 프레임워크",
+      "title_original": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "link": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+      "published_raw": "Tue, 27 Oct 2026 17:35:00 +0000",
+      "published_local": "2026-10-28 02:35",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시",
-        "에이전트/자동화"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장"
-      ],
-      "keywords": [
-        "gpt",
-        "workflow",
-        "에이전트 워크플로 확장"
-      ],
-      "keywords_original": [
-        "gpt",
-        "workflow",
-        "에이전트 워크플로 확장"
-      ],
-      "summary": "이 기사는 'Greptile takes bug detection beyond code review with GPT-6 Astra' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework."
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "Will the real Anthropic please stand up",
-      "title_original": "Will the real Anthropic please stand up",
-      "link": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
-      "published_raw": "Mon, 26 Oct 2026 17:45:43 +0000",
-      "published_local": "2026-10-27 02:45",
-      "primary_topic": "정책/규제/안전",
-      "topics": [
-        "정책/규제/안전"
-      ],
-      "issues": [
-        "안전/리스크 논의"
-      ],
-      "keywords": [
-        "risk",
-        "안전/리스크 논의"
-      ],
-      "keywords_original": [
-        "risk",
-        "안전/리스크 논의"
-      ],
-      "summary": "이 기사는 'Will the real Anthropic please stand up' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. After weeks of frenzied speculation, Anthropic has filed its IPO prospectus. The 335-page document (100 pages or so are focused on risks) lays out the company’s … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. After weeks of frenzied speculation, Anthropic has filed its IPO prospectus. The 335-page document (100 pages or so are focused on risks) lays out the company’s unique view of the technology it…"
-    },
-    {
-      "source": "Google Blog AI",
-      "authority": "official",
-      "title": "Our newest AI Quest: Mapping the human brain",
-      "title_original": "Our newest AI Quest: Mapping the human brain",
-      "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
-      "published_raw": "Mon, 26 Oct 2026 16:00:00 +0000",
-      "published_local": "2026-10-27 01:00",
-      "primary_topic": "기타",
-      "topics": [
-        "기타"
+        "오픈소스/개발자"
       ],
       "issues": [],
-      "keywords": [],
-      "keywords_original": [],
-      "summary": "이 기사는 'Our newest AI Quest: Mapping the human brain' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.” 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”"
+      "keywords": [
+        "Sleep 프레임워크",
+        "LLM",
+        "지속적 학습",
+        "치명적 망각",
+        "지식 공고화"
+      ],
+      "keywords_original": [
+        "llm",
+        "framework"
+      ],
+      "summary": "구글 리서치는 LLM이 새로운 정보를 학습할 때 기존 지식을 잊어버리는 '치명적 망각' 문제를 해결하기 위한 'Sleep 프레임워크'를 제안했다. 이 프레임워크는 인간이 수면 중에 기억을 정리하고 공고히 하는 생물학적 과정에서 영감을 받았다. 핵심은 학습 과정을 '깨어 있는 상태'와 '잠자는 상태'로 나누는 것이다. 깨어 있는 상태에서는 새로운 데이터를 학습하며 모델의 가중치를 업데이트한다. 잠자는 상태에서는 과거에 학습한 데이터나 생성된 가상 데이터를 다시 복습하며 지식을 공고히 하는 '공고화' 과정을 거친다. 이를 통해 모델은 새로운 지식을 습득하면서도 이전의 성능을 유지하는 균형을 잡을 수 있다. 실험 결과, Sleep 프레임워크를 적용한 모델은 일반적인 지속적 학습 방식보다 지식 유지 능력이 크게 향상되었다. 특히 데이터 효율성이 높아져 전체 재학습 없이도 모델을 지속적으로 업데이트할 수 있는 가능성을 열었다. 이는 실무적으로 LLM의 유지보수 비용을 낮추고 최신 정보를 빠르게 반영하는 데 기여할 수 있다. 또한 교육 혁신 분야에서 개인화된 학습 경로를 지속적으로 업데이트하는 AI 튜터 구현에 활용될 수 있다. 결과적으로 이 연구는 AI가 인간처럼 효율적으로 평생 학습을 수행할 수 있는 구조적 토대를 제공한다. 구글은 이 메커니즘이 향후 더 거대한 모델의 효율적인 지식 관리에 핵심적인 역할을 할 것으로 기대하고 있다.",
+      "summary_original": "Education Innovation"
     },
     {
-      "source": "OpenAI News",
+      "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "학술 커뮤니티와의 협력을 통한 과학적 이해 증진",
-      "title_original": "Working with academic communities to build scientific understanding",
-      "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-      "published_raw": "Mon, 26 Oct 2026 14:30:00 GMT",
-      "published_local": "2026-10-26 23:30",
+      "title": "Build specialized multimodal models with LFM3",
+      "title_original": "Build specialized multimodal models with LFM3",
+      "link": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "published_raw": "Tue, 27 Oct 2026 17:16:52 GMT",
+      "published_local": "2026-10-28 02:16",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "모델/출시"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "multimodal",
+        "vision",
+        "audio",
+        "model",
+        "에이전트 워크플로 확장"
+      ],
+      "keywords_original": [
+        "multimodal",
+        "vision",
+        "audio",
+        "model",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "이 기사는 'Build specialized multimodal models with LFM3' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 LFM3 is our new generation of Liquid Foundation Models (LFMs), built to be the starting point for specialized intelligence. It brings text, vision, audio, omni, and decision models onto one shared backbone, all in the 2B parameter range. This means you can pick the model for your modality, fine-tun… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "LFM3 is our new generation of Liquid Foundation Models (LFMs), built to be the starting point for specialized intelligence. It brings text, vision, audio, omni, and decision models onto one shared backbone, all in the 2B parameter range. This means you can pick the model for your modality, fine-tune it on your own data on a single GPU, and deploy it where your application runs. LFM3 brings four main changes compared to our previous LFM2 family: LFM2 showed that a hybrid of short convolutions and attention can run fast on-device without sacrificing quality. For LFM3, we used our hardware-in-the-loop architecture search to redesign that architecture for agentic use cases, which need more capability per parameter and fast inference over long contexts. The search now covers 14 device and backend combinations, from phones and a Raspberry Pi 5 to laptops, cloud CPUs, GPUs, and the Qualcomm He…"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "title_original": "Can we trust LLMs to judge whether a research idea is novel?",
+      "link": "https://huggingface.co/blog/allenai/novelty-bench",
+      "published_raw": "Tue, 27 Oct 2026 16:12:42 GMT",
+      "published_local": "2026-10-28 01:12",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "model",
+        "llm",
+        "benchmark",
+        "evaluation",
+        "비용/성능 경쟁"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "benchmark",
+        "evaluation",
+        "비용/성능 경쟁"
+      ],
+      "summary": "이 기사는 'Can we trust LLMs to judge whether a research idea is novel?' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Today we’re releasing Old Ideas, Novel Problems , a new study of how reliably large language models can evaluate the novelty of scientific research ideas. Alongside the paper, we’re publishing a benchmark, data, and code for testing novelty judges, plus an automated pipeline researchers can use to … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Today we’re releasing Old Ideas, Novel Problems , a new study of how reliably large language models can evaluate the novelty of scientific research ideas. Alongside the paper, we’re publishing a benchmark, data, and code for testing novelty judges, plus an automated pipeline researchers can use to build new evaluation sets. At Ai2, we’ve been developing AI systems that support different parts of scientific discovery. DataVoyager helps researchers explore and analyze structured data, AutoDiscovery generates and tests hypotheses, and Theorizer synthesizes evidence across large bodies of literature into candidate scientific theories. Together with Asta , these projects point toward systems that can help researchers move from understanding prior work to proposing, testing, and refining new ideas."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "Genie 4: A new generation of world simulation",
+      "title_original": "Genie 4: A new generation of world simulation",
+      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "published_raw": "Tue, 27 Oct 2026 16:01:38 +0000",
+      "published_local": "2026-10-28 01:01",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시"
       ],
       "issues": [],
       "keywords": [
-        "OpenAI",
-        "과학적 이해",
-        "카케야 추측",
-        "지수 시간 가설",
-        "양자 색역학"
+        "model"
       ],
       "keywords_original": [
         "model"
       ],
-      "summary": "OpenAI는 학술 커뮤니티와 협력하여 과학적 이해를 높이기 위한 모델 연구 결과를 공개했다. 이번 발표에서는 카케야 추측, 지수 시간 가설, 양자 색역학 등 복잡한 과학적 난제에 대한 모델의 성과를 다룬다. OpenAI는 AI 모델이 고도의 수학적 추론과 물리적 이론 분석에 어떻게 기여할 수 있는지를 보여주고자 한다. 특히 연구자들이 모델의 결과를 직접 검증하고 이를 바탕으로 후속 연구를 진행할 수 있는 방법을 제시했다. 이는 AI가 단순한 도구를 넘어 과학적 발견의 파트너로서 작동할 수 있음을 시사한다. 모델의 추론 과정과 결과물을 투명하게 공유함으로써 학계의 피드백을 수용하고 신뢰성을 높이려는 전략이다. 이러한 접근은 복잡한 이론적 증명 과정에서 AI의 통찰력이 실제 과학적 진보로 이어지는 경로를 구축한다. 연구자들은 공개된 데이터를 통해 AI의 가설 생성 능력을 평가하고 이론을 정교화할 수 있다. 이는 AI 기반 과학 연구의 새로운 표준을 제시하며 학제 간 협력을 가속화한다. 결과적으로 OpenAI는 AI 모델의 과학적 활용 가능성을 확장하고 학술적 검증 체계를 강화하는 데 집중하고 있다. 이번 협력은 AI가 전문 지식 영역에서 실질적 가치를 창출하는 사례가 된다.",
-      "summary_original": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them."
+      "summary": "이 기사는 'Genie 4: A new generation of world simulation' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Genie 4: our new world model unlocking unprecedented realism in real-time simulation. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation."
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-      "title_original": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-      "link": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "published_raw": "Mon, 26 Oct 2026 13:45:00 GMT",
-      "published_local": "2026-10-26 22:45",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "title_original": "Retell uses OpenAI models to help power 100M monthly calls",
+      "link": "https://openai.com/index/retell-ai",
+      "published_raw": "Tue, 27 Oct 2026 15:00:00 GMT",
+      "published_local": "2026-10-28 00:00",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시",
@@ -170,163 +179,154 @@
       ],
       "issues": [
         "에이전트 워크플로 확장",
-        "안전/리스크 논의"
+        "비용/성능 경쟁"
       ],
       "keywords": [
+        "model",
         "gpt",
         "agent",
         "에이전트 워크플로 확장",
-        "안전/리스크 논의"
+        "비용/성능 경쟁"
       ],
       "keywords_original": [
+        "model",
         "gpt",
         "agent",
         "에이전트 워크플로 확장",
-        "안전/리스크 논의"
+        "비용/성능 경쟁"
       ],
-      "summary": "이 기사는 'GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes."
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "ChatGPT의 확장되는 업무 활용 범위",
-      "title_original": "ChatGPT’s expanding world of work",
-      "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
-      "published_raw": "Mon, 26 Oct 2026 10:00:00 GMT",
-      "published_local": "2026-10-26 19:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시"
-      ],
-      "issues": [],
-      "keywords": [
-        "ChatGPT",
-        "OpenAI Signals",
-        "업무 생산성",
-        "AI 활용 사례",
-        "워크플로우 자동화"
-      ],
-      "keywords_original": [
-        "gpt"
-      ],
-      "summary": "OpenAI는 전 세계 약 100개국에서 165가지 업무 활동을 분석한 'OpenAI Signals' 데이터를 공개했다. 이번 데이터는 사용자들이 실제 업무 환경에서 ChatGPT를 어떻게 활용하고 있는지에 대한 구체적인 양상을 보여준다. 분석 결과, ChatGPT는 단순한 텍스트 생성을 넘어 다양한 전문 영역의 업무 프로세스에 깊숙이 통합되고 있다. 특히 데이터 분석, 코드 작성, 문서 요약 및 이메일 작성 등 효율성 증대가 필요한 영역에서 활용도가 높게 나타났다. 국가별, 직무별로 활용 패턴에 차이가 있으며 시간이 지남에 따라 사용 방식이 더욱 정교해지는 추세다. 초기에는 단순 질의응답 중심이었으나, 현재는 복잡한 워크플로우의 자동화와 아이디어 브레인스토밍 단계까지 확장되었다. 이러한 변화는 AI가 단순한 도구를 넘어 협업 파트너로서의 역할을 수행하고 있음을 시사한다. OpenAI는 이 데이터를 통해 AI 도입이 실제 생산성 향상에 미치는 영향을 정량적으로 파악하고자 한다. 실무자들은 반복적인 행정 업무 시간을 줄이고 더 창의적이고 전략적인 과업에 집중할 수 있게 되었다. 기업들은 AI 활용 능력이 핵심 경쟁력이 되는 AI 리터러시의 중요성을 더욱 체감하고 있다. 이번 발표는 AI 기술의 확산 속도와 실제 적용 사례를 입증하는 중요한 지표가 될 전망이다. 결과적으로 ChatGPT는 전 세계 노동 시장의 업무 수행 방식을 근본적으로 재편하고 있다.",
-      "summary_original": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time."
+      "summary": "이 기사는 'Retell uses OpenAI models to help power 100M monthly calls' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee."
     },
     {
       "source": "MIT Technology Review AI",
       "authority": "media",
-      "title": "The focus on AI safety disasters ignores everyday harms",
-      "title_original": "The focus on AI safety disasters ignores everyday harms",
-      "link": "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/",
-      "published_raw": "Mon, 26 Oct 2026 09:01:00 +0000",
-      "published_local": "2026-10-26 18:01",
-      "primary_topic": "정책/규제/안전",
-      "topics": [
-        "정책/규제/안전"
-      ],
-      "issues": [
-        "정책/규제 변화",
-        "안전/리스크 논의"
-      ],
-      "keywords": [
-        "policy",
-        "safety",
-        "정책/규제 변화",
-        "안전/리스크 논의"
-      ],
-      "keywords_original": [
-        "policy",
-        "safety",
-        "정책/규제 변화",
-        "안전/리스크 논의"
-      ],
-      "summary": "이 기사는 'The focus on AI safety disasters ignores everyday harms' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are important protections, and they should have existed all along. But companies can clear t… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are important protections, and they should have existed all along. But companies can clear these low bars while continuing to make products…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "Fanatics와 OpenAI, AI 기반 'Shop the Look'으로 팬 경험 최적화",
-      "title_original": "How Fanatics and OpenAI streamline the fan experience",
-      "link": "https://openai.com/index/fanatics-streamline-fan-experience",
-      "published_raw": "Mon, 26 Oct 2026 07:00:00 GMT",
-      "published_local": "2026-10-26 16:00",
+      "title": "산업 지능(Industrial Intelligence): 제조업의 차세대 성장 기회",
+      "title_original": "Industrial Intelligence: The next growth opportunity for manufacturing",
+      "link": "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/",
+      "published_raw": "Tue, 27 Oct 2026 11:19:18 +0000",
+      "published_local": "2026-10-27 20:19",
       "primary_topic": "기타",
       "topics": [
         "기타"
       ],
       "issues": [],
       "keywords": [
-        "Fanatics",
-        "OpenAI",
-        "Shop the Look",
-        "MLB",
-        "AI 추천"
+        "산업 지능",
+        "제조업",
+        "암묵적 지식",
+        "생성형 AI",
+        "스마트 팩토리"
       ],
       "keywords_original": [],
-      "summary": "Fanatics가 OpenAI의 기술을 도입하여 팬들의 쇼핑 경험을 혁신하고 있습니다. 이번 협력의 핵심은 'Shop the Look'이라는 새로운 기능의 도입입니다. 이 기능은 팬들이 경기 당일 착용할 최적의 의상을 완성할 수 있도록 돕습니다. AI가 사용자의 취향과 제품 특성을 분석해 어울리는 아이템을 추천하는 방식입니다. Fanatics는 약 30,000개의 MLB 제품을 대상으로 테스트를 진행했습니다. 테스트 결과, 기존 방식보다 사용자 참여도가 10% 더 높게 나타났습니다. 이는 AI 기반의 개인화 추천이 실제 구매 전환과 관심도 향상에 기여함을 보여줍니다. 스포츠 굿즈 시장의 방대한 제품군을 효율적으로 큐레이션하려는 전략의 일환입니다. 팬들은 이제 복잡한 검색 과정 없이도 스타일리시한 코디를 제안받을 수 있습니다. OpenAI의 LLM 기술이 커머스 영역의 사용자 경험을 구체적으로 개선한 사례입니다. 향후 더 많은 스포츠 리그와 제품군으로 확대 적용될 가능성이 큽니다. 결과적으로 기술과 스포츠 커머스의 결합이 새로운 비즈니스 가치를 창출하고 있습니다.",
-      "summary_original": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement."
+      "summary": "제조업의 새로운 성장 동력으로 '산업 지능(Industrial Intelligence)'이 주목받고 있다. 산업 지능은 문서화된 데이터뿐만 아니라 숙련된 작업자의 경험적 지식을 모두 포함하는 개념이다. 예를 들어, 라인 재가동 시 기계 설정값 외에도 재료의 특성이나 이전 교대 근무의 상황을 파악하는 능력이 이에 해당한다. 그동안 이러한 암묵적 지식은 개인의 경험에 의존해 전수되었으며, 체계적으로 관리되지 못했다. 최근 AI 기술의 발전은 이러한 파편화된 지식을 디지털화하고 표준화할 수 있는 가능성을 열어주었다. 특히 생성형 AI와 LLM은 비정형 데이터와 작업자의 노하우를 학습하여 지식 베이스로 구축하는 데 기여한다. 이를 통해 기업은 숙련공의 은퇴로 인한 기술 단절 문제를 해결하고 운영 효율성을 높일 수 있다. 실무적으로는 실시간 공정 최적화와 예측 유지보수의 정확도를 획기적으로 향상시킬 수 있다. 또한 신입 작업자의 교육 기간을 단축하고 전사적인 품질 상향 평준화를 가능하게 한다. 결과적으로 산업 지능의 확보는 단순한 자동화를 넘어 제조 경쟁력의 핵심 요소가 될 전망이다. 기업들은 이제 데이터 수집을 넘어 지능의 체계적 자산화를 고민해야 하는 시점에 도달했다. 이는 스마트 팩토리의 진화 단계에서 데이터 중심 경영의 완성형 모델로 평가받는다.",
+      "summary_original": "Every manufacturer has its own industrial intelligence. Some is documented, and some resides in the knowledge of experienced workers. Consider an experienced operator preparing to restart a line after a changeover. The machine settings matter, but so does knowing how a particular material behaves, what happened during the previous shift, and when an apparently minor…"
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "OpenAI, 'Ultrafast' 도입으로 장애 조사 시간을 시간 단위에서 분 단위로 단축",
-      "title_original": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
-      "link": "https://openai.com/index/openai-cut-incident-investigation",
-      "published_raw": "Mon, 26 Oct 2026 07:00:00 GMT",
-      "published_local": "2026-10-26 16:00",
-      "primary_topic": "에이전트/자동화",
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "title_original": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "link": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "published_raw": "Tue, 27 Oct 2026 07:00:00 GMT",
+      "published_local": "2026-10-27 16:00",
+      "primary_topic": "모델/출시",
       "topics": [
+        "모델/출시",
         "에이전트/자동화"
       ],
       "issues": [
         "에이전트 워크플로 확장",
-        "비용/성능 경쟁"
+        "기업 파트너십/투자"
       ],
       "keywords": [
-        "Codex Ultrafast",
-        "OpenAI",
-        "장애 조사",
-        "워크플로 최적화",
-        "보안 분석"
+        "gpt",
+        "agent",
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
       ],
       "keywords_original": [
-        "workflow",
+        "gpt",
+        "agent",
         "에이전트 워크플로 확장",
-        "비용/성능 경쟁"
+        "기업 파트너십/투자"
       ],
-      "summary": "OpenAI 엔지니어들이 내부 도구인 Codex Ultrafast를 활용해 시스템 장애 조사 방식을 혁신했다. 기존에는 장애 원인을 파악하고 해결하는 데 수 시간이 소요되었으나, 이제는 단 몇 분 만에 조사가 가능하다. 이 도구는 코드 분석 및 보안 분석 속도를 획기적으로 높여 엔지니어의 업무 효율성을 극대화한다. 특히 복잡한 코드 리팩토링 과정과 일상적인 개발 워크플로에 통합되어 실시간으로 적용되고 있다. Codex Ultrafast는 대규모 코드베이스를 빠르게 탐색하고 문제 지점을 정확히 짚어내는 능력을 갖췄다. 이를 통해 보안 취약점 분석 시간이 단축되었으며, 잠재적 위협에 대한 대응 속도가 빨라졌다. 엔지니어들은 반복적인 수동 분석 작업에서 벗어나 더 고차원적인 설계 작업에 집중할 수 있게 되었다. 이는 AI 에이전트 기반의 워크플로 확장이 실제 운영 환경에서 얼마나 강력한 성능을 발휘하는지 보여준다. 비용 효율성과 성능 최적화를 통해 내부 운영 프로세스를 최적화했다. 결과적으로 서비스 안정성이 향상되었으며, 장애 복구 시간을 획기적으로 줄이는 성과를 거두었다. OpenAI는 이러한 내부 성공 사례를 바탕으로 AI 도구의 실무 적용 범위를 계속 넓혀갈 계획이다. 이번 사례는 AI가 전문 엔지니어링 영역의 핵심 도구로 진화했음을 시사한다.",
-      "summary_original": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows."
+      "summary": "이 기사는 'OpenAI expands partnership with Oracle to bring its apps to ChatGPT' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings."
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "GPT-6.1 Terra 공개: 모두를 위한 빠르고 강력한 컴퓨터 제어 기능",
-      "title_original": "Introducing GPT-6.1 Terra",
-      "link": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "title": "Check Point, Daybreak를 통해 취약점 연구 가속화",
+      "title_original": "How Check Point accelerates vulnerability research with Daybreak",
+      "link": "https://openai.com/index/check-point-daybreak",
+      "published_raw": "Tue, 27 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-27 09:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Check Point",
+        "OpenAI Daybreak",
+        "취약점 연구",
+        "사이버 보안",
+        "위협 인텔리전스"
+      ],
+      "keywords_original": [
+        "비용/성능 경쟁"
+      ],
+      "summary": "Check Point가 OpenAI의 Daybreak를 도입하여 새로운 보안 보호 조치를 위한 연구 속도를 높이고 있습니다. 이번 협력의 핵심은 취약점 인텔리전스를 실제 고객 방어 체계로 전환하는 시간을 단축하는 것입니다. Daybreak는 보안 분석가들이 복잡한 취약점 데이터를 더 빠르게 분석하고 처리할 수 있도록 지원합니다. 이를 통해 분석가들은 수동으로 수행하던 반복적인 작업 시간을 줄이고 고도의 연구에 집중할 수 있게 되었습니다. 결과적으로 새로운 위협에 대응하는 패치 및 방어 규칙 생성 주기가 획기적으로 빨라졌습니다. 사이버 공격의 정교함이 증가하는 상황에서 신속한 대응 능력은 기업 보안의 핵심 요소입니다. Daybreak는 대규모 데이터셋에서 패턴을 식별하고 잠재적인 취약점을 찾는 과정을 최적화합니다. 이는 Check Point의 기존 보안 인프라와 결합되어 더욱 강력한 위협 탐지 능력을 제공합니다. 실무적으로는 분석가의 업무 효율성이 증대되어 더 많은 취약점을 짧은 시간 내에 처리할 수 있습니다. 고객들은 최신 위협으로부터 더 빠르게 보호받을 수 있는 실질적인 혜택을 누리게 됩니다. 이번 사례는 생성형 AI가 사이버 보안 연구의 실무 프로세스를 어떻게 혁신하는지 보여줍니다. Check Point는 앞으로도 AI 기술을 활용해 보안 대응 체계를 지속적으로 고도화할 계획입니다.",
+      "summary_original": "With OpenAI Daybreak, Check Point speeds up the research behind new security protections, enabling its analysts to turn vulnerability intelligence into customer defenses faster."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
+      "title_original": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
+      "link": "https://machinelearning.apple.com/research/gharp-head-animation",
       "published_raw": "Mon, 26 Oct 2026 00:00:00 GMT",
       "published_local": "2026-10-26 09:00",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "image"
+      ],
+      "keywords_original": [
+        "image"
+      ],
+      "summary": "이 기사는 'GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We present GHARP (Real-time Gaussian Head Animation from Large-scale Reconstruction Prior), a method that animates 3D human heads in real time from a few input images of a subject and a driving expression signal. We decouple the problem into an identity stage that builds a representation of the sub… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "We present GHARP (Real-time Gaussian Head Animation from Large-scale Reconstruction Prior), a method that animates 3D human heads in real time from a few input images of a subject and a driving expression signal. We decouple the problem into an identity stage that builds a representation of the subject’s geometry and appearance offline, and an animation stage that predicts expression-dependent residuals on top of it at runtime. This separation offers a favorable trade-off with respect to fidelity, quality and runtime: the identity stage can be expensive while the animation stage runs a…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
+      "title_original": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
+      "link": "https://openai.com/index/anima",
+      "published_raw": "Fri, 23 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-23 09:00",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시"
       ],
-      "issues": [
-        "신규 모델/제품 발표"
-      ],
+      "issues": [],
       "keywords": [
-        "GPT-6.1 Terra",
-        "OpenAI",
-        "컴퓨터 사용",
-        "AI 에이전트",
-        "업무 자동화"
+        "model",
+        "gpt"
       ],
       "keywords_original": [
-        "gpt",
-        "신규 모델/제품 발표"
+        "model",
+        "gpt"
       ],
-      "summary": "OpenAI가 새로운 AI 모델인 GPT-6.1 Terra를 공식 발표했습니다. 이번 모델의 핵심은 사용자가 컴퓨터를 직접 제어할 수 있는 '컴퓨터 사용(Computer Use)' 기능의 대중화입니다. GPT-6.1 Terra는 기존 모델보다 훨씬 빠른 반응 속도와 정밀한 조작 능력을 갖추었습니다. 이를 통해 AI가 화면을 인식하고 마우스 클릭, 키보드 입력 등을 수행하며 복잡한 작업을 처리합니다. 특히 다양한 운영체제와 소프트웨어 환경에서 범용적으로 작동하도록 설계되었습니다. 개발자들은 API를 통해 자신의 애플리케이션에 이 기능을 통합하여 자동화 워크플로우를 구축할 수 있습니다. 일반 사용자들은 반복적인 디지털 업무를 AI에게 맡겨 생산성을 획기적으로 높일 수 있을 전망입니다. OpenAI는 보안과 개인정보 보호를 위해 엄격한 권한 제어 시스템을 함께 도입했습니다. 이번 업데이트는 AI가 단순한 텍스트 생성을 넘어 실제 실행 도구로 진화하는 중요한 단계입니다. 현재 일부 사용자부터 순차적으로 배포될 예정이며, 구체적인 일정은 공식 홈페이지를 통해 안내됩니다. 실무적으로는 데이터 입력, 소프트웨어 테스트, 복잡한 웹 서핑 등의 작업 시간이 크게 단축될 것입니다. GPT-6.1 Terra는 AI 에이전트 시대의 본격적인 시작을 알리는 모델로 평가받습니다.",
-      "summary_original": "Bringing fast and capable computer use to everyone"
+      "summary": "이 기사는 'Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Anima expands what care teams can do with OpenAI models, giving them more capacity to respond to patients. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Anima expands what care teams can do with OpenAI models, giving them more capacity to respond to patients."
     }
   ]
 }
