@@ -1,6 +1,12 @@
 {
-  "latest_date": "2026-10-30",
+  "latest_date": "2026-11-02",
   "reports": [
+    {
+      "date": "2026-11-02",
+      "json": "daily_ai_brief_2026-11-02.json",
+      "md": "daily_ai_brief_2026-11-02.md",
+      "article_count": 10
+    },
     {
       "date": "2026-10-30",
       "json": "daily_ai_brief_2026-10-30.json",

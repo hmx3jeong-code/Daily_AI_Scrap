@@ -1,0 +1,354 @@
+{
+  "report_date": "2026-11-02",
+  "report_date_kst": "2026-11-02",
+  "generated_at": "2026-11-02T02:51:20.678739+00:00",
+  "generated_at_kst": "2026-11-02T11:51:20.678739+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      3
+    ],
+    [
+      "안전/리스크 논의",
+      1
+    ],
+    [
+      "기업 파트너십/투자",
+      1
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1318,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 99,
+    "Hugging Face Blog": 884,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 14,
+    "Google Research Blog": 1,
+    "Google Blog AI": 1,
+    "DeepMind Blog": 2,
+    "Hugging Face Blog": 7,
+    "MIT Technology Review AI": 5,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 0
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 10,
+    "success_freeform": 0,
+    "fallback": 0,
+    "enabled_after_run": true,
+    "last_error": "",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "NVIDIA Nemotron 기반의 인터랙티브 할로윈 프로젝트 'MonsterHouse' 공개",
+      "title_original": "nemotron-halloween",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "published_raw": "Fri, 30 Oct 2026 17:57:24 GMT",
+      "published_local": "2026-10-31 02:57",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "NVIDIA Nemotron",
+        "MonsterHouse",
+        "AI 에이전트",
+        "음성 인식",
+        "Audio2Face"
+      ],
+      "keywords_original": [
+        "audio",
+        "speech",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Hugging Face 블로그를 통해 NVIDIA Nemotron 기술을 활용한 인터랙티브 프로젝션 프로젝트 'MonsterHouse'가 소개되었습니다. 이 프로젝트는 할로윈 방문객들과 상호작용하며 사탕을 나눠주는 심술궂은 오래된 해적선 컨셉의 집을 구현한 것입니다. MonsterHouse는 방문객의 말을 듣고 반응하며, 특히 예의 바르게 행동할 때 태도가 부드러워지는 특징을 가집니다. 기술적으로는 NVIDIA Nemotron Voice Agent가 대화의 기초를 제공하며 전체 시스템을 제어합니다. 음성 인식에는 NVIDIA Nemotron ASR이 사용되었으며, 두뇌 역할은 Nemotron 3.5 Bolt E4B 4GB 모델이 담당합니다. 음성 출력은 Magpie TTS Zeroshot을 통해 구현되었고, 시각적인 입 모양 구현에는 Audio2Face-3D가 활용되었습니다. 이 모든 복잡한 시스템은 단일 워크스테이션에서 구동되어 효율적인 리소스 활용을 보여줍니다. 제작자는 차고 문에 입 모양을 입혀 건물이 직접 불평하는 독특한 사용자 경험을 설계했습니다. 이는 최신 AI 에이전트 기술이 실제 물리적 공간과 결합했을 때 얼마나 창의적으로 활용될 수 있는지를 증명합니다. 특히 실시간 음성 인식과 생성, 3D 애니메이션의 결합으로 몰입감 넘치는 인터랙션을 제공합니다. 결과적으로 Nemotron 생태계의 다양한 모델들이 유기적으로 연결되어 하나의 완성된 에이전트 워크플로를 형성했습니다. 이번 사례는 AI 에이전트가 단순한 챗봇을 넘어 엔터테인먼트 및 설치 예술 분야로 확장될 가능성을 제시합니다.",
+      "summary_original": "TL;DR: MonsterHouse is an interactive projection I created for Halloween. He listens to trick-or-treaters, answers in the voice of a grumpy old pirate ship and softens when visitors remember their manners. He is built on the NVIDIA Nemotron Voice Agent with NVIDIA Nemotron ASR , Nemotron 3.5 Bolt E4B 4GB , Magpie TTS Zeroshot and Audio2Face-3D , and he runs on a single workstation. I wanted the kids visiting my house at Halloween to interact in a fun and unique way. The house was going to be in charge and giving out the treats, but more grumpy than scary. Somehow, my solution was to give the garage door a mouth and teach him to complain. That became MonsterHouse: a grumpy old building with pirate stories, a fiery grin and a suspicious weakness for “please.” NVIDIA Nemotron Voice Agent supplies the conversation foundation. Nemotron Speech does the listening, Bolt E4B is the brain, NVIDIA…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, 웹사이트 AI 학습 제어 위한 robots.txt 신호 지원",
+      "title_original": "Making it easier for websites to express AI training preferences",
+      "link": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "published_raw": "Fri, 30 Oct 2026 09:30:00 GMT",
+      "published_local": "2026-10-30 18:30",
+      "primary_topic": "연구/논문",
+      "topics": [
+        "연구/논문"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "robots.txt",
+        "AI 학습",
+        "데이터 제어",
+        "웹사이트 운영"
+      ],
+      "keywords_original": [
+        "training"
+      ],
+      "summary": "OpenAI는 웹사이트 운영자가 AI 학습 선호도를 효율적으로 전달할 수 있도록 공유 robots.txt 신호를 준수하겠다고 발표했다. 이는 웹사이트 소유자가 자신의 콘텐츠가 AI 모델 학습에 사용되는지 여부를 더 쉽게 제어할 수 있도록 돕기 위한 조치다. 기존의 robots.txt 표준을 활용해 AI 제공업체들이 공통된 신호를 인식하게 함으로써 설정 과정을 단순화한다. 이를 통해 운영자는 개별 AI 기업마다 다른 요청 방식을 사용할 필요 없이 하나의 설정으로 의사를 표현할 수 있다. 이번 결정은 데이터 수집 과정의 투명성을 높이고 웹 생태계의 자율성을 존중하려는 OpenAI의 의지가 반영된 것이다. 특히 저작권 및 데이터 권리 논의가 활발한 상황에서 실질적인 기술적 해결책을 제시했다. 참여 업체들이 이 표준 신호를 함께 준수한다면 업계 전반의 데이터 수집 표준이 확립될 가능성이 크다. 실무적으로 웹마스터는 robots.txt 파일에 특정 구문을 추가하는 것만으로 학습 제외 요청을 처리할 수 있다. 이는 복잡한 절차 없이 기술적 수준에서 빠르게 제어가 가능하다는 장점이 있다. OpenAI는 웹 생태계와 AI 개발자 간의 상생을 위한 도구를 지속적으로 개선할 계획이다. 이번 조치는 데이터 확보와 콘텐츠 보호 사이의 균형을 맞추는 중요한 단계가 될 것이다. 결과적으로 운영자의 권한이 강화되어 예측 가능한 데이터 관리 환경이 조성될 전망이다.",
+      "summary_original": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "커뮤니티 안전 보고서 및 청소년을 위한 새로운 보호 조치",
+      "title_original": "Community safety report and new protections for teens",
+      "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "published_raw": "Fri, 30 Oct 2026 09:00:00 GMT",
+      "published_local": "2026-10-30 18:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "커뮤니티 안전",
+        "청소년 보호",
+        "폭력 예방"
+      ],
+      "keywords_original": [
+        "gpt",
+        "safety",
+        "안전/리스크 논의"
+      ],
+      "summary": "OpenAI가 ChatGPT의 폭력 예방 기능을 강화하고 새로운 안전 조치를 도입했습니다. 이번 업데이트의 핵심은 확장된 안전 가드레일과 조기 개입 시스템의 구축입니다. 특히 청소년 사용자를 보호하기 위한 맞춤형 안전 장치를 강화하는 데 집중했습니다. OpenAI는 공공 안전 보고에 대한 새로운 약속을 통해 투명성을 높이기로 했습니다. 유해 콘텐츠 생성 가능성을 낮추기 위해 모델의 필터링 시스템을 고도화했습니다. 위험 징후가 포착될 경우 더 빠르게 대응하는 조기 경보 체계를 마련했습니다. 이는 AI 모델이 사회적 위해를 가할 가능성을 최소화하려는 전략의 일환입니다. 안전 보고서를 통해 실제 위협 사례와 대응 결과를 정기적으로 공개할 예정입니다. 실무적으로는 개발자와 사용자가 더 안전한 환경에서 AI를 활용할 수 있게 됩니다. 청소년들이 부적절한 정보에 노출될 위험이 크게 줄어들 것으로 기대됩니다. OpenAI는 외부 전문가 및 규제 기관과 협력하여 안전 기준을 지속적으로 업데이트합니다. 이번 조치는 책임감 있는 AI 개발이라는 기업 철학을 반영한 결과입니다.",
+      "summary_original": "OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "공정 이용(Fair Use)은 모두에게 이익이 됩니다",
+      "title_original": "Fair use benefits everyone",
+      "link": "https://openai.com/index/fair-use-benefits-everyone",
+      "published_raw": "Fri, 30 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-30 09:00",
+      "primary_topic": "연구/논문",
+      "topics": [
+        "연구/논문"
+      ],
+      "issues": [],
+      "keywords": [
+        "공정 이용",
+        "OpenAI",
+        "AI 학습",
+        "저작권법",
+        "변형적 이용"
+      ],
+      "keywords_original": [
+        "training"
+      ],
+      "summary": "OpenAI는 AI 학습과 혁신을 지원하는 '공정 이용(Fair Use)' 원칙의 중요성을 강조하는 법원 제출 서면의 발췌본을 공개했습니다. 이번 자료에는 창작자, 학계, 접근성 옹호자, 법률 전문가 등 다양한 이해관계자들의 의견이 포함되었습니다. 이들은 AI 모델 학습에 데이터를 사용하는 것이 저작권법상 공정 이용 범위에 해당한다고 주장합니다. 특히 공정 이용이 보장되지 않으면 AI 기술 발전 속도가 크게 저하될 수 있다는 우려를 표명했습니다. 학계는 방대한 데이터 학습이 새로운 지식 창출과 학문적 진보에 필수적임을 강조했습니다. 접근성 옹호자들은 AI가 장애인 보조 도구로 발전하기 위해 광범위한 학습이 필요하다고 설명했습니다. 창작자들 또한 AI가 새로운 창작 도구로서 영감을 주는 긍정적 측면을 언급했습니다. 법률 전문가들은 AI 학습의 변형적 이용 성격을 분석하며 법적 정당성을 뒷받침했습니다. 이러한 논의는 현재 진행 중인 AI 저작권 소송의 핵심 쟁점과 직결됩니다. OpenAI는 공정 이용이 사회 전체의 기술적 혜택으로 이어진다고 주장합니다. 이는 AI 학습 데이터에 대한 유연한 법적 해석이 혁신 서비스의 기반이 됨을 시사합니다. 이번 발표는 법적 불확실성을 해소해 AI 산업의 지속 가능한 성장을 도모하려는 취지입니다.",
+      "summary_original": "OpenAI shares excerpts from court briefs by creators, academics, accessibility advocates, and legal experts, among others, on how fair use supports AI training and innovation."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "크레딧 세종, ChatGPT Enterprise 파일럿 통해 954%의 ROI 달성",
+      "title_original": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+      "link": "https://openai.com/index/credit-saison",
+      "published_raw": "Thu, 29 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-29 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "기업/투자"
+      ],
+      "issues": [
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "크레딧 세종",
+        "ChatGPT Enterprise",
+        "ROI",
+        "생성형 AI",
+        "디지털 전환"
+      ],
+      "keywords_original": [
+        "gpt",
+        "enterprise",
+        "기업 파트너십/투자"
+      ],
+      "summary": "일본의 금융 서비스 기업 크레딧 세종(Credit Saison)이 OpenAI의 ChatGPT Enterprise 파일럿 프로그램을 통해 954%라는 매우 높은 투자 대비 수익률(ROI)을 기록했습니다. 이번 성과는 기업 내 다양한 업무 프로세스에 생성형 AI를 도입하여 운영 효율성을 극대화한 결과입니다. 특히 경영진과 일반 직원들이 긴밀히 협력하여 AI 도구를 실무에 최적화한 과정이 결정적인 역할을 했습니다. 직원들은 반복적인 업무를 자동화하고 데이터 분석 시간을 단축함으로써 실질적인 생산성 향상을 경험했습니다. 이러한 수치적 성과는 단순한 실험을 넘어 전사적인 AI 도입으로 이어지는 강력한 근거가 되었습니다. 크레딧 세종은 파일럿 단계에서 검증된 효율성을 바탕으로 현재 ChatGPT Enterprise를 회사 전체로 확대 적용하고 있습니다. 이는 금융 산업에서 생성형 AI가 구체적인 비즈니스 가치를 창출할 수 있음을 입증한 사례입니다. AI 도입 과정에서 조직 문화의 변화와 구성원들의 적극적인 참여가 성과 창출의 핵심 요소로 분석됩니다. 이번 사례는 기업의 AI 도입 시 구체적인 ROI 측정과 단계적 확산 전략의 중요성을 시사합니다. 결과적으로 크레딧 세종은 AI 기반의 디지털 전환을 통해 기업 경쟁력을 강화하고 업무 환경을 혁신하고 있습니다. 향후 생성형 AI를 활용한 서비스 고도화와 내부 운영 최적화를 지속적으로 추진할 계획입니다.",
+      "summary_original": "Credit Saison’s ChatGPT Enterprise pilot delivered 954% ROI. See how leaders and employees helped turn the results into companywide adoption."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Meta의 오픈 웨이트 프런티어 멀티모달 MoE 모델, Muse Spark Open 공개",
+      "title_original": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "link": "https://huggingface.co/blog/meta-muse-spark-open",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Meta",
+        "Muse Spark Open",
+        "멀티모달",
+        "MoE",
+        "오픈 웨이트"
+      ],
+      "keywords_original": [
+        "model",
+        "multimodal"
+      ],
+      "summary": "Meta가 새로운 오픈 웨이트 모델인 Muse Spark Open을 공개했다. 이 모델은 최첨단 성능을 지향하는 프런티어 멀티모달 모델이다. 특히 효율적인 연산을 위해 Mixture-of-Experts(MoE) 아키텍처를 채택했다. Meta는 오픈 소스와 오픈 사이언스를 통해 AI 기술의 민주화를 추진하고 있다. Muse Spark Open은 텍스트뿐만 아니라 다양한 모달리티를 동시에 처리할 수 있는 능력을 갖췄다. 오픈 웨이트 방식으로 배포되어 연구자와 개발자가 모델의 내부 가중치에 접근할 수 있다. 이는 폐쇄형 모델 중심의 시장에서 투명성과 협업 가능성을 높이는 조치다. MoE 구조 덕분에 모델의 전체 파라미터 수 대비 실제 연산 비용을 최적화했다. 개발자들은 이를 통해 고성능 멀티모달 애플리케이션을 더 효율적으로 구축할 수 있다. 이번 공개는 AI 생태계의 개방성을 확대하려는 Meta의 전략적 방향성을 보여준다. Hugging Face 블로그를 통해 상세 정보와 모델 접근 방법이 공유되었다. 향후 다양한 산업 분야에서 멀티모달 AI의 실무 적용이 가속화될 것으로 기대된다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Diffusers 라이브러리에 FLUX.3 이미지 모델 통합",
+      "title_original": "Welcome FLUX.3 Image Klein in Diffusers",
+      "link": "https://huggingface.co/blog/flux-3",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "FLUX.3",
+        "Hugging Face",
+        "Diffusers",
+        "이미지 생성 AI",
+        "오픈 소스"
+      ],
+      "keywords_original": [
+        "image",
+        "open source"
+      ],
+      "summary": "Hugging Face가 Diffusers 라이브러리에 FLUX.3 모델을 통합했다고 발표했다. FLUX.3는 Black Forest Labs에서 개발한 최신 텍스트-이미지 생성 모델로, 고성능 이미지 생성 기능을 제공한다. 이번 통합을 통해 개발자들은 오픈 소스 생태계에서 최첨단 이미지 AI를 더욱 쉽게 구현하고 활용할 수 있게 되었다. FLUX.3는 정교한 프롬프트 이해력과 뛰어난 이미지 품질을 자랑하며, 특히 이미지 내 텍스트 렌더링 능력이 크게 향상된 것이 특징이다. Hugging Face는 오픈 소스와 오픈 사이언스를 통해 인공지능의 민주화를 추진하고 있으며 이번 업데이트가 그 일환이다. Diffusers 라이브러리를 활용하면 모델 가중치를 효율적으로 로드하고 최적화하여 사용할 수 있다. 사용자는 다양한 파이프라인 설정을 통해 생성 속도와 품질 사이의 균형을 유연하게 조절 가능하다. 이는 폐쇄형 API 대신 로컬 환경이나 자체 클라우드에서 모델을 직접 운영하려는 수요를 충족시킨다. 실무적으로는 콘텐츠 제작 공정의 자동화와 맞춤형 이미지 생성 워크플로우 구축이 가능해진다. 이번 조치는 최신 생성 AI 기술의 접근성을 높이는 중요한 단계로 평가받는다. 관련 상세 구현 방법은 Hugging Face 공식 블로그와 저장소를 통해 제공된다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "Mac Studio에서 MLX와 RDMA를 활용한 로컬 및 분산 대규모 LLM 추론",
+      "title_original": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "link": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "MLX",
+        "Apple 실리콘",
+        "분산 추론",
+        "RDMA",
+        "Mac Studio"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "framework",
+        "developer"
+      ],
+      "summary": "Apple Machine Learning Research는 Mac Studio에서 MLX와 RDMA를 이용한 로컬 및 분산 LLM 추론 기술을 공개했다. MLX는 Apple 실리콘 기반의 오픈 소스 배열 프레임워크로, 연구자와 개발자가 최신 모델을 개인 환경에서 실험할 수 있게 돕는다. 이 프레임워크는 Apple 실리콘의 통합 메모리 아키텍처를 최대한 활용하도록 설계되었다. 이를 통해 사용자는 외부 서버 없이 자신의 하드웨어에서 직접 새로운 추론 및 미세 조정 방법을 실행할 수 있다. 특히 이번 발표는 Mac Studio 환경에서 RDMA를 통해 분산 추론을 구현함으로써 대규모 모델 처리 능력을 확장하는 데 중점을 둔다. 이는 데이터 프라이버시를 유지하면서도 고성능 AI 모델을 로컬에서 구동하려는 수요를 충족시킨다. 이전 연구에서 강조된 M5 아키텍처와 GPU 뉴럴 액셀러레이터의 이점이 이번 구현의 기반이 되었다. 개발자들은 이를 통해 복잡한 AI 기법을 더 효율적으로 탐색하고 최적화할 수 있다. 분산 추론 기술은 단일 기기의 메모리 한계를 넘어 더 큰 파라미터를 가진 LLM을 구동 가능하게 한다. 결과적으로 Apple 생태계 내에서 AI 모델의 배포와 실험 주기가 단축될 것으로 기대된다. 이는 하드웨어와 소프트웨어의 긴밀한 통합이 가져오는 성능 최적화의 사례를 보여준다. 실무적으로는 고가의 클라우드 인프라 의존도를 낮추고 로컬 개발 환경의 효율성을 극대화한다.",
+      "summary_original": "MLX on Mac with Apple silicon lets AI researchers and developers experiment locally with the latest models and methods in a private environment. The open-source array framework leverages the unified memory architecture of Apple silicon, enabling anyone to run new inference and fine-tuning methods on their own hardware and explore other AI techniques. In a previous post, we highlighted the advantages of the M5 architecture and its GPU Neural Accelerators."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "선택 기반 구조화된 추론: 효율적인 멀티모달 검색 에이전트를 향하여",
+      "title_original": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "link": "https://machinelearning.apple.com/research/selection-structured-reasoning",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "성능/벤치마크",
+      "topics": [
+        "성능/벤치마크",
+        "모델/출시"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "선택 기반 구조화된 추론",
+        "SSR",
+        "멀티모달 에이전트",
+        "추론 비용 절감",
+        "소형 언어 모델"
+      ],
+      "keywords_original": [
+        "reasoning",
+        "cost",
+        "model",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Apple Machine Learning Research는 효율적인 멀티모달 검색 에이전트를 위한 '선택 기반 구조화된 추론(SSR)' 프레임워크를 제안했다. 기존 멀티모달 에이전트는 행동 전 자유 형식의 추론을 생성하는데, 소형 모델의 경우 용량 제한으로 인해 비효율적인 긴 추론을 생성하는 경향이 있다. 이는 실제 행동 생성에 유용한 가이드를 제공하지 못하면서도 추론 비용만 크게 증가시키는 결과를 초래한다. SSR은 이러한 문제를 해결하기 위해 추론 과정을 개방형 생성 방식에서 선택 방식으로 재정의했다. 이 프레임워크는 반복되는 고수준 추론을 미리 정의된 재사용 가능한 자연어 후보군으로 구성한다. 에이전트는 매 단계에서 이 후보군 중 최적의 추론 내용을 선택함으로써 행동을 결정한다. 이를 통해 소형 모델에서도 추론의 일관성을 유지하며 연산 비용을 획기적으로 낮출 수 있다. 결과적으로 모델 용량의 한계를 극복하고 검색 에이전트의 전반적인 효율성을 극대화했다. 이 방식은 특히 자원이 제한된 온디바이스 AI 환경에서 매우 유용할 것으로 기대된다. 실무적으로는 추론 토큰 수를 줄여 응답 속도를 높이고 인프라 운영 비용을 절감하는 효과가 있다. 이번 연구는 멀티모달 에이전트의 추론 구조를 최적화하는 새로운 방법론을 제시했다는 점에서 의미가 크다.",
+      "summary_original": "Multimodal agents commonly generate freeform reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from the reasoning candidates based on their…"
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "계획이 먼저인가, 검색이 먼저인가? 도구 발견 아키텍처의 규모 연구",
+      "title_original": "Plan or Retrieve First? A Scale Study of Tool Discovery Architectures",
+      "link": "https://machinelearning.apple.com/research/plan-retrieve-tool-discovery",
+      "published_raw": "Thu, 15 Oct 2026 00:00:00 GMT",
+      "published_local": "2026-10-15 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "LLM 에이전트",
+        "API 검색",
+        "도구 발견",
+        "Retrieve-then-Plan",
+        "Plan-then-Retrieve"
+      ],
+      "keywords_original": [
+        "llm",
+        "api",
+        "agent",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Apple Machine Learning Research는 대규모 API 레지스트리에서 도구를 찾는 LLM 에이전트의 효율적인 아키텍처를 연구했다. 기존의 도구 증강 LLM 에이전트는 실행 계획을 세우기 전 관련 API를 먼저 발견해야 한다. 하지만 제한된 컨텍스트 윈도우로 인해 모든 도구 정의를 프롬프트에 넣는 것은 불가능하다. 현재 주류 방식인 '검색 후 계획(Retrieve-then-Plan, RtP)'은 사용자 쿼리를 임베딩하여 유사한 도구를 검색한다. 이에 대한 대안으로 '계획 후 검색(Plan-then-Retrieve, PtR)' 패러다임을 제안하고 분석했다. PtR 방식은 LLM이 먼저 필요한 기능을 설명하는 '추상 도구 스텁(Abstract Tool Stubs)'을 생성한다. 이렇게 생성된 가상의 함수 시그니처가 레지스트리 검색을 위한 쿼리로 활용된다. 연구팀은 두 방식의 성능을 대규모 환경에서 비교 평가하여 최적의 도구 발견 경로를 탐색했다. 이 연구는 에이전트가 수많은 API 중 정확한 도구를 선택하는 능력을 향상시키는 데 집중한다. 결과적으로 도구 검색 순서의 변경이 에이전트의 계획 정확도와 실행 성공률에 영향을 미침을 시사한다. 이는 복잡한 워크플로를 처리하는 AI 에이전트의 설계 최적화에 중요한 실무적 근거를 제공한다. 대규모 API 생태계를 활용하는 기업용 AI 솔루션의 효율성을 높이는 데 기여할 것으로 보인다.",
+      "summary_original": "Tool-augmented LLM agents discover relevant APIs from large registries before planning execution, yet finite context windows prohibit injecting all tool definitions into a single prompt. The dominant approach, which we term Retrieve-then-Plan (RtP), embeds the user query and retrieves similar tools via approximate nearest-neighbor search. We study an alternative Plan-then-Retrieve (PtR) paradigm in which the LLM first generates Abstract Tool Stubs (hypothesized function signatures describing needed capabilities) which then serve as retrieval queries against the registry. Evaluating on…"
+    }
+  ]
+}
