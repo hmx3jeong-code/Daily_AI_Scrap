@@ -1,62 +1,64 @@
-# Daily AI Brief - 2026-11-03
+# Daily AI Brief - 2026-11-04
 
-- Generated at: 2026-11-03 13:13:00 KST
+- Generated at: 2026-11-04 12:15:20 KST
 - Total articles: 10
 - Sources scanned: 8
 
 ## 오늘의 주요 이슈
-- 신규 모델/제품 발표: 3건
-- 에이전트 워크플로 확장: 3건
 - 비용/성능 경쟁: 2건
-- 기업 파트너십/투자: 1건
+- 에이전트 워크플로 확장: 2건
+- 기업 파트너십/투자: 2건
+- 신규 모델/제품 발표: 1건
+- 정책/규제 변화: 1건
+- 안전/리스크 논의: 1건
 
 ## 주제별 요약
-### 기타 (4)
-- [OpenAI, 보안 버그 바운티 보상 확대 및 새로운 보너스 체계 도입](https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties) | OpenAI News | 2026-11-03 03:00
-  - 요약: OpenAI가 독립 보안 연구자들을 위해 보안 버그 바운티 보상금을 인상한다고 발표했다. 이번 조치는 시스템의 취약점을 조기에 발견하고 해결하여 플랫폼의 안전성을 높이기 위한 목적이다. 새롭게 도입되는 보상 체계에는 보고서의 품질에 따른 추가 보너스가 포함된다. 또한 지속적으로 취약점을 제보하는 연구자를 위한 로열티 보너스 제도를 운영한다. 특정 보안 영역에 집중하는 우선순위 캠페인 보너스도 함께 도입되었다. 이를 통해 연구자들이 더 정교하고 영향력 있는 취약점을 찾는 데 집중하도록 유도한다. OpenAI는 AI 모델의 복잡성이 증가함에 따라 보안 위협 또한 다양해지고 있다고 판단했다. 외부 전문가들의 집단 지성을 활용해 잠재적인 보안 허점을 선제적으로 차단하려는 전략이다. 이번 보상 확대는 보안 커뮤니티와의 협력을 강화하고 생태계를 활성화하는 계기가 될 것이다. 연구자들은 이제 더 높은 금전적 보상과 함께 자신의 기여도를 인정받을 수 있다. 이는 결과적으로 OpenAI 서비스 이용자의 데이터 보호와 시스템 안정성 향상으로 이어진다. 상세한 보상 기준과 신청 방법은 공식 페이지에서 확인 가능하다.
-  - 키워드: OpenAI, 버그 바운티, 보안 취약점, 보안 연구자, 보상금 인상
-- [Preparing our next security sprint to harden OpenAI](https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai) | OpenAI News | 2026-11-03 03:00
-  - 요약: 이 기사는 'Preparing our next security sprint to harden OpenAI' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: -
-- [The latest AI news we announced in October 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/) | Google Blog AI | 2026-11-03 02:45
-  - 요약: 이 기사는 'The latest AI news we announced in October 2026' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Here are Google’s latest AI updates from October 2026 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: -
-- [OpenAI의 Git 확장: 대규모 개발을 위한 Pando 구축](https://openai.com/index/scaling-git-at-openai) | OpenAI News | 2026-11-03 00:30
-  - 요약: OpenAI는 Codex와 같은 AI 모델이 가능하게 한 대규모 개발 환경을 지원하기 위해 Git 호환 백엔드인 Pando를 구축했습니다. 기존의 Git 시스템은 AI 기반 개발로 인해 급증한 코드 변경량과 개발 규모를 처리하는 데 한계가 있었습니다. Pando는 Git의 표준 인터페이스를 유지하면서도 내부 백엔드를 최적화하여 이러한 확장성 문제를 해결하도록 설계되었습니다. 이를 통해 개발자들은 익숙한 Git 명령어를 그대로 사용하면서도 훨씬 더 큰 규모의 저장소를 효율적으로 관리할 수 있게 되었습니다. 특히 Codex가 생성하는 방대한 양의 코드 수정 사항을 빠르게 처리하고 통합하는 것이 핵심입니다. Pando의 도입으로 코드 리뷰 및 병합 과정에서의 병목 현상이 크게 줄어들었습니다. 이는 AI가 코드를 작성하는 속도에 맞춰 인프라가 함께 진화해야 함을 보여주는 사례입니다. 결과적으로 OpenAI는 더 빠른 반복 개발 주기와 높은 생산성을 확보하게 되었습니다. Pando는 대규모 모노레포 환경에서도 안정적인 성능을 제공하며 개발 워크플로우를 최적화합니다. 이러한 기술적 진보는 AI 모델의 발전이 소프트웨어 공학 도구의 변화까지 이끌어내고 있음을 시사합니다. 실무적으로는 AI 기반 자동화 도구의 도입 시 인프라 확장성의 중요성을 강조합니다.
-  - 키워드: Pando, OpenAI, Git, Codex, 확장성
+### 모델/출시 (6)
+- [StateBench: Testing how language models track state changes over long documents](https://huggingface.co/blog/allenai/statebench) | Hugging Face Blog | 2026-11-04 02:15
+  - 요약: 이 기사는 'StateBench: Testing how language models track state changes over long documents' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re introducing StateBench , a benchmark for long-context state tracking —how well language models keep track of information about entities in long documents as they evolve. State tracking underlies tasks from reading code, where variables are assigned and reassigned, to following a story as char… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: model, benchmark, 신규 모델/제품 발표, 비용/성능 경쟁
+- [Palette: 소형 모델에 기업 전용 디자인 언어를 학습시켜 슬라이드 제작하기](https://huggingface.co/blog/ibm-research/palette-deck-building) | Hugging Face Blog | 2026-11-04 01:35
+  - 요약: IBM Research는 기업의 고유한 디자인 언어를 학습하여 슬라이드 덱을 제작하는 소형 모델 'Palette'를 공개했다. 기존의 거대 모델들은 품질은 좋으나 정형화된 AI 스타일을 가지며, 특정 템플릿을 엄격하게 따르는 데 한계가 있다. 또한 기업의 기밀 데이터가 외부 시스템으로 유출될 수 있다는 보안 우려가 존재한다. 이를 해결하기 위해 자체 인프라에서 구동 가능한 오픈 웨이트 소형 모델의 필요성이 제기되었다. 하지만 일반적인 소형 모델은 텍스트 겹침이나 레이아웃 붕괴 등 슬라이드 제작 능력이 현저히 떨어진다. Palette는 합성 데이터를 활용해 소형 모델이 특정 디자인 가이드를 정확히 학습하도록 설계되었다. 이 모델은 사용자의 디자인 언어를 반영하면서도 구조적으로 안정적인 슬라이드를 생성한다. 이를 통해 기업은 브랜드 정체성을 유지하면서도 보안이 강화된 환경에서 자동화 도구를 사용할 수 있다. 특히 프롬프트 엔지니어링만으로는 해결하기 어려운 세밀한 스타일 제어가 가능하다. 결과적으로 고비용의 거대 모델 없이도 맞춤형 디자인 결과물을 얻을 수 있는 경로를 제시한다. 이는 디자인 자동화 분야에서 소형 모델의 실용성을 입증한 사례로 평가된다. 향후 기업별 맞춤형 UI/UX 생성 도구로의 확장 가능성이 높다.
+  - 키워드: Palette, IBM Research, 소형 언어 모델, 슬라이드 자동 생성, 디자인 언어
+- [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) | OpenAI News | 2026-11-03 21:00
+  - 요약: 이 기사는 'Accelerating engineering for the physical world' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: gpt, workflow, 에이전트 워크플로 확장
+- [시스코, OpenAI와 협력하여 머신 속도의 보안 방어 체계 구축](https://openai.com/index/cisco-cyber) | OpenAI News | 2026-11-03 17:00
+  - 요약: 시스코가 기업 보안 강화를 위해 자사의 네트워크 인텔리전스와 OpenAI의 모델을 결합했습니다. 이번 협력의 핵심은 사이버 위협에 더 빠르게 대응할 수 있는 적응형 방어 체계를 구축하는 것입니다. 시스코는 방대한 네트워크 데이터를 보유하고 있으며, 이를 OpenAI의 생성형 AI 기술과 통합합니다. 이를 통해 보안 분석가는 복잡한 위협 탐지 및 대응 과정을 자동화하고 효율화할 수 있습니다. AI 모델은 네트워크 트래픽 패턴을 분석하여 비정상적인 활동을 실시간으로 식별합니다. 보안 운영 센터(SOC)의 워크플로우를 개선하여 위협 분석 시간을 획기적으로 단축하는 것이 목표입니다. 기업들은 이를 통해 지능형 지속 위협(APT)과 같은 고도화된 공격에 더 유연하게 대처할 수 있습니다. 단순한 탐지를 넘어 AI가 대응 전략을 제안함으로써 보안 전문가의 의사결정을 돕습니다. 이는 네트워크 인프라 전반에 걸쳐 가시성을 확보하고 보안 공백을 메우는 전략의 일환입니다. 실무적으로는 보안 인력 부족 문제를 해결하고 운영 비용을 절감하는 효과가 기대됩니다. 시스코와 OpenAI의 파트너십은 엔터프라이즈 보안의 패러다임을 자동화 중심으로 전환합니다. 결과적으로 기업은 머신 속도의 방어 능력을 갖춰 사이버 회복력을 높일 수 있게 됩니다.
+  - 키워드: 시스코, OpenAI, 엔터프라이즈 보안, 네트워크 인텔리전스, 적응형 방어
+- [Heimstaden is changing residential real estate management with AI](https://openai.com/index/heimstaden) | OpenAI News | 2026-11-03 17:00
+  - 요약: 이 기사는 'Heimstaden is changing residential real estate management with AI' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: gpt, cost, 비용/성능 경쟁, 기업 파트너십/투자
+- [Transformers 모델 통합 계약(MIC) 도입](https://huggingface.co/blog/transformers-mic) | Hugging Face Blog | 2026-11-03 09:00
+  - 요약: Hugging Face가 Transformers 라이브러리의 모델 통합 프로세스를 표준화하기 위한 '모델 통합 계약(Model Integration Contracts, MIC)'을 도입했다. 이번 조치는 오픈 소스와 오픈 사이언스를 통해 인공지능을 민주화하려는 회사의 비전의 일환이다. MIC는 새로운 모델이 라이브러리에 추가될 때 준수해야 하는 엄격한 기술적 요구사항과 표준 가이드라인을 정의한다. 이를 통해 모델 구현의 일관성을 높이고 사용자들에게 동일한 API 경험을 제공하는 것을 목표로 한다. 주요 내용은 모델 아키텍처의 정확한 구현, 표준화된 설정 파일 사용, 철저한 테스트 케이스 통과를 포함한다. 기존에는 모델마다 통합 방식이 상이해 유지보수 비용이 높았으나, MIC 도입으로 이를 체계화할 수 있게 되었다. 개발자들은 이제 명확한 체크리스트를 통해 자신의 모델이 Transformers 생태계에 적합한지 스스로 검증할 수 있다. 이는 모델의 배포 속도를 높이는 동시에 런타임 오류를 줄여 라이브러리의 전반적인 안정성을 향상시킨다. 결과적으로 연구자와 엔지니어들이 모델 구현의 세부 사항보다 실제 응용 연구에 더 집중할 수 있는 환경을 조성한다. Hugging Face는 앞으로도 더 많은 모델이 효율적으로 통합될 수 있도록 이 계약 체계를 지속적으로 발전시킬 계획이다. 이번 표준화 작업은 AI 모델의 상호운용성을 높여 오픈 소스 커뮤니티의 협업 효율을 극대화할 것으로 기대된다. 실무적으로는 모델 마이그레이션 및 업데이트 과정에서의 리스크를 최소화하는 효과를 가져온다.
+  - 키워드: Hugging Face, Transformers, 모델 통합 계약, MIC, 오픈 소스
 
-### 에이전트/자동화 (3)
-- [에이전틱 분석의 인사이트 품질 향상 방안](https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/) | MIT Technology Review AI | 2026-11-03 02:00
-  - 요약: 생성형 AI는 최근 몇 년간 기업 분석의 패러다임을 바꾸며 조직 내 모든 사용자가 데이터 분석에 접근할 수 있게 했다. 이제는 단순한 분석을 넘어 워크플로 전체를 자동화하고 인사이트를 바탕으로 직접 행동하는 에이전틱 AI(Agentic AI)가 주목받고 있다. 하지만 현재 에이전트가 생성하는 인사이트의 품질과 신뢰성 문제는 여전히 해결해야 할 과제로 남아 있다. 에이전틱 분석은 데이터 추출부터 해석, 실행까지의 과정을 자율적으로 수행하는 것을 목표로 한다. 이를 위해서는 AI가 데이터의 맥락을 정확히 이해하고 오류 없는 결론을 도출하는 능력이 필수적이다. 특히 기업 환경에서는 잘못된 인사이트에 기반한 자동화된 행동이 심각한 비즈니스 리스크를 초래할 수 있다. 따라서 인사이트의 품질을 높이기 위한 검증 메커니즘과 피드백 루프의 구축이 매우 중요하다. 전문가들은 데이터 거버넌스와 정교한 프롬프트 엔지니어링의 결합이 해결책이 될 수 있다고 본다. 또한 인간의 개입(Human-in-the-loop)을 통해 AI의 판단을 검토하는 단계가 병행되어야 한다. 이러한 품질 향상은 에이전틱 AI가 단순한 도구를 넘어 실질적인 의사결정 파트너로 진화하는 핵심이 된다. 결과적으로 기업은 분석의 민주화를 넘어 실행의 자동화라는 새로운 단계로 진입하게 될 것이다. 이는 운영 효율성을 극대화하고 데이터 기반의 신속한 대응 체계를 구축하는 데 기여할 전망이다.
-  - 키워드: 에이전틱 AI, 기업 분석, 워크플로 자동화, 인사이트 품질, 데이터 거버넌스
-- [토큰 계산을 멈추고, 실제 결과물에 집중하라](https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/) | MIT Technology Review AI | 2026-11-02 22:10
-  - 요약: AI 에이전트가 코딩 작업을 수행할 때 단순히 한 번의 답변을 내놓는 것이 아니라 복잡한 과정을 거친다. 에이전트는 계획 수립, 코드 생성, 테스트 실행, 오류 수정을 반복하는 워크플로를 수행한다. 이러한 반복 과정으로 인해 단일 작업당 소모되는 토큰 양은 일반적인 채팅 프롬프트보다 10배에서 50배 더 많다. 에이전트의 유용성이 높아질수록 API 호출 횟수와 토큰 사용량은 더욱 증가하는 경향을 보인다. 기존의 비용 모델은 토큰 단위의 과금 방식에 의존해 왔으나, 이는 에이전트의 실제 가치를 반영하지 못한다. 개발자들은 이제 단순한 토큰 소모량이 아니라 실제로 배포된 코드의 양과 질에 주목해야 한다. 이는 AI 개발 패러다임이 입출력 비용에서 결과물 기반 가치로 전환되고 있음을 의미한다. 에이전트 기반 워크플로의 확장은 소프트웨어 개발 속도를 획기적으로 높일 수 있는 잠재력을 가진다. 하지만 토큰 비용에 매몰되면 에이전트의 자율적인 최적화 과정을 제한할 위험이 있다. 따라서 기업과 개발자는 효율적인 토큰 관리보다 최종 제품의 완성도와 배포 효율성을 우선시해야 한다. 결과적으로 AI 에이전트의 성공 지표는 토큰 효율성이 아닌 실제 릴리스된 기능의 가치로 측정되어야 한다. 이러한 관점의 변화는 AI 에이전트의 실무 도입과 확산을 가속화하는 핵심 요소가 될 것이다.
-  - 키워드: AI 에이전트, 토큰 소모, 코딩 워크플로, 소프트웨어 배포, 가치 중심 측정
-- [The agentic web is here](https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/) | MIT Technology Review AI | 2026-11-02 18:35
-  - 요약: 이 기사는 'The agentic web is here' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 In 2001, a decade after he invented the World Wide Web, Tim Berners-Lee articulated a new vision. Together with two colleagues, he published an article in the magazine Scientific American in which he outlined what he called the “Semantic Web”: an internet designed to be navigated by autonomous soft… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: agent, vision, 에이전트 워크플로 확장
+### 기타 (2)
+- [트럼프의 '초지능(Super Intelligence)' 충성심 테스트에 동참하는 이들은 누구인가](https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/) | MIT Technology Review AI | 2026-11-03 13:18
+  - 요약: 도널드 트럼프 대통령은 9월 말, 정부 기관들이 기존의 '인공지능(AI)'이라는 용어를 '초지능(Super Intelligence)'으로 변경하도록 지시하는 행정명령에 서명했다. 이 명령은 단순한 명칭 변경을 넘어 정부 내 AI 정책 방향을 재설정하려는 정치적 의도가 담겨 있다. 행정명령의 핵심은 정부 기관들이 새로운 용어를 채택함으로써 대통령의 비전에 동조함을 증명하는 일종의 충성심 테스트 성격을 띤다는 점이다. 이에 따라 여러 정부 부처와 관련 기관들이 빠르게 명칭 변경 작업에 착수하며 지침을 따르고 있다. 이러한 변화는 기술적 정의의 변경보다는 정치적 상징성과 통제권 강화에 초점이 맞춰져 있다. 전문가들은 이번 조치가 AI 거버넌스 체계에 혼란을 야기하고 과학적 용어의 정치화를 초래할 수 있다고 우려한다. 특히 초지능은 인간 지능을 훨씬 뛰어넘는 가상의 단계를 의미하므로 현재 기술 수준과 괴리가 크다. 실무적으로는 정부 문서와 보고서, 공식 웹사이트의 모든 AI 관련 용어를 수정해야 하는 행정적 부담이 발생한다. 또한 이는 향후 AI 관련 예산 배정이나 인사 결정에서 대통령 성향에 맞춘 정렬이 중요해짐을 시사한다. 결과적으로 이번 조치는 기술 발전보다 정치적 충성도가 우선시되는 환경을 조성할 가능성이 높다. MIT 테크놀로지 리뷰는 이러한 현상이 AI 생태계 전반에 미칠 심리적, 제도적 영향에 주목하고 있다. 정부 기관들의 대응은 향후 트럼프 행정부의 AI 전략과 통제 수준을 가늠하는 척도가 될 전망이다.
+  - 키워드: 트럼프 행정부, 초지능, 행정명령, AI 거버넌스, 충성심 테스트
+- [OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer](https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer) | OpenAI News | 2026-11-03 09:00
+  - 요약: 이 기사는 'OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: -
 
-### 성능/벤치마크 (2)
-- [OpenAI, 전력망 안정화를 위한 'Grid Protectors Program' 도입](https://openai.com/index/grid-protectors-program) | OpenAI News | 2026-11-03 00:00
-  - 요약: OpenAI가 전력망의 안정성을 높이고 소비자 전기 요금을 보호하기 위한 'Grid Protectors Program'을 발표했다. 이 프로그램은 향후 구축될 AI 컴퓨팅 캠퍼스가 지역 전력망에 미치는 영향을 최소화하는 것을 목표로 한다. OpenAI는 이를 위해 다양한 전력 유틸리티 기업들과 긴밀하게 협력할 계획이다. AI 모델 학습과 추론에 필요한 막대한 전력 수요가 전력망에 부담을 줄 수 있다는 우려가 배경이 되었다. 프로그램의 핵심은 컴퓨팅 캠퍼스가 전력망의 신뢰성을 지원하는 방식으로 설계되도록 돕는 것이다. 특히 전력 수요 급증 시기에 효율적인 에너지 관리를 통해 소비자들의 전기료 상승을 방지하고자 한다. 이는 AI 인프라 확장이 지역 사회의 에너지 비용 증가로 이어지지 않게 하려는 전략적 조치다. OpenAI는 에너지 효율적인 하드웨어 도입과 스마트 그리드 기술 접목을 검토하고 있다. 실무적으로는 데이터 센터 설계 단계부터 전력 회사와 협의하여 최적의 전력 공급 경로를 확보하게 된다. 이러한 협력 모델은 AI 산업의 지속 가능한 성장을 위한 필수적인 인프라 구축 사례가 될 전망이다. 결과적으로 전력망의 과부하를 막고 에너지 공급의 안정성을 확보하는 효과를 기대할 수 있다. 이번 프로그램은 기술 발전과 공공 인프라 보호 사이의 균형을 맞추려는 OpenAI의 의지를 보여준다.
-  - 키워드: OpenAI, Grid Protectors Program, 전력망 안정성, 에너지 비용, AI 인프라
-- [OpenAI, 일상 업무 수행 능력 측정 벤치마크 'LifeVal' 공개](https://openai.com/index/lifeval) | OpenAI News | 2026-11-02 18:00
-  - 요약: OpenAI가 AI의 실생활 도움 능력을 측정하는 새로운 벤치마크인 LifeVal을 공개했다. LifeVal은 사용자가 일상에서 마주하는 복잡한 과업을 AI가 얼마나 효과적으로 지원하는지 평가한다. 주요 측정 대상에는 보육 시설 찾기, 개인 재무 관리, 정부 행정 서류 처리 등이 포함된다. 기존 벤치마크들이 주로 학술적 지식이나 코딩 능력에 집중했다면, LifeVal은 실용적 유용성에 초점을 맞춘다. 이 벤치마크는 AI가 실제 환경에서 얼마나 정확하고 효율적으로 가이드를 제공하는지 수치화한다. 이를 통해 AI 모델의 실질적인 문제 해결 능력을 객관적으로 비교 분석할 수 있게 되었다. 특히 복잡한 절차가 필요한 행정 업무에서의 성공률과 정확도를 정밀하게 측정한다. LifeVal의 도입은 AI 개발 방향을 단순 지식 전달에서 실무적 대행 및 지원으로 전환시키는 계기가 될 것이다. 개발자들은 이 지표를 통해 모델의 취약점을 파악하고 실생활 최적화 성능을 개선할 수 있다. 결과적으로 일반 사용자는 더 신뢰할 수 있는 AI 비서 서비스를 경험하게 될 전망이다. 이번 발표는 AI의 성능 평가 기준을 이론에서 실제 삶의 영역으로 확장했다는 점에서 의미가 크다. OpenAI는 앞으로도 AI의 실용적 가치를 높이기 위한 다양한 평가 체계를 구축할 계획이다.
-  - 키워드: LifeVal, OpenAI, AI 벤치마크, 일상 과업, 실용성 평가
+### 정책/규제/안전 (1)
+- [How “reverse game theory” could keep AI agents in check](https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/) | MIT Technology Review AI | 2026-11-03 19:43
+  - 요약: 이 기사는 'How “reverse game theory” could keep AI agents in check' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that r… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: safety, law, model, 에이전트 워크플로 확장, 정책/규제 변화
 
 ### 오픈소스/개발자 (1)
-- [Qodo builds context into AI code review with Codex](https://openai.com/index/qodo-codex-plugin) | OpenAI News | 2026-11-02 09:00
-  - 요약: 이 기사는 'Qodo builds context into AI code review with Codex' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: developer
+- [CWE-bench v2: 더 넓은 커버리지, 품질 및 투명성 확보](https://huggingface.co/blog/cwe-bench) | Hugging Face Blog | 2026-11-03 09:00
+  - 요약: Hugging Face가 소프트웨어 취약점 수정 능력을 평가하는 벤치마크인 CWE-bench v2를 공개했다. 이 벤치마크는 LLM이 실제 코드에서 공통 취약점 열거(CWE) 항목을 얼마나 정확하게 식별하고 수정하는지 측정한다. v2 버전은 이전 버전에 비해 취약점 커버리지를 대폭 확대하여 평가의 포괄성을 높였다. 데이터셋의 품질을 개선하여 모델이 단순한 패턴 매칭이 아닌 실제 논리적 오류를 해결하도록 설계되었다. 평가 과정의 투명성을 강화하여 어떤 기준으로 정답 여부를 판단하는지 명확히 제시한다. 이는 AI 모델의 보안 코딩 능력을 객관적으로 검증하기 위한 오픈 사이언스 노력의 일환이다. 실무적으로는 개발자가 AI를 활용해 보안 패치를 자동화할 때 신뢰할 수 있는 지표를 제공한다. 다양한 모델의 성능을 비교함으로써 보안 특화 LLM 개발의 방향성을 제시한다. 특히 복잡한 취약점 시나리오를 포함해 모델의 한계를 명확히 드러낸다. 오픈 소스 생태계의 보안 수준을 높이는 데 기여할 것으로 기대된다. Hugging Face는 이를 통해 AI의 민주화와 안전한 소프트웨어 개발 환경 구축을 목표로 한다. 누구나 접근 가능한 벤치마크를 통해 보안 AI 연구의 진입 장벽을 낮춘다.
+  - 키워드: CWE-bench v2, Hugging Face, 소프트웨어 취약점, LLM 평가, 보안 코딩
 
 ## 소스 커버리지
 | Source | Collected | Included |
 |---|---:|---:|
 | Apple Machine Learning Research | 10 | 0 |
-| DeepMind Blog | 99 | 3 |
+| DeepMind Blog | 0 | 0 |
 | Google Blog AI | 20 | 1 |
-| Google Research Blog | 100 | 1 |
-| Hugging Face Blog | 884 | 7 |
-| MIT Technology Review AI | 10 | 6 |
-| OpenAI News | 1325 | 18 |
+| Google Research Blog | 100 | 0 |
+| Hugging Face Blog | 886 | 9 |
+| MIT Technology Review AI | 10 | 7 |
+| OpenAI News | 1330 | 19 |
 | VentureBeat AI | 0 | 0 |
