@@ -1,12 +1,16 @@
 {
-  "report_date": "2026-11-04",
-  "report_date_kst": "2026-11-04",
-  "generated_at": "2026-11-04T03:15:20.570462+00:00",
-  "generated_at_kst": "2026-11-04T12:15:20.570462+09:00",
+  "report_date": "2026-11-05",
+  "report_date_kst": "2026-11-05",
+  "generated_at": "2026-11-05T03:51:54.069543+00:00",
+  "generated_at_kst": "2026-11-05T12:51:54.069543+09:00",
   "article_count": 10,
   "issues_top": [
     [
       "비용/성능 경쟁",
+      3
+    ],
+    [
+      "신규 모델/제품 발표",
       2
     ],
     [
@@ -16,268 +20,46 @@
     [
       "기업 파트너십/투자",
       2
-    ],
-    [
-      "신규 모델/제품 발표",
-      1
-    ],
-    [
-      "정책/규제 변화",
-      1
-    ],
-    [
-      "안전/리스크 논의",
-      1
     ]
   ],
   "source_totals": {
-    "OpenAI News": 1330,
+    "OpenAI News": 1335,
     "Google Research Blog": 100,
     "Google Blog AI": 20,
-    "DeepMind Blog": 0,
-    "Hugging Face Blog": 886,
+    "DeepMind Blog": 99,
+    "Hugging Face Blog": 887,
     "MIT Technology Review AI": 10,
     "VentureBeat AI": 0,
     "Apple Machine Learning Research": 10
   },
   "source_kept": {
-    "OpenAI News": 19,
-    "Google Research Blog": 0,
+    "OpenAI News": 20,
+    "Google Research Blog": 1,
     "Google Blog AI": 1,
-    "DeepMind Blog": 0,
-    "Hugging Face Blog": 9,
+    "DeepMind Blog": 2,
+    "Hugging Face Blog": 6,
     "MIT Technology Review AI": 7,
     "VentureBeat AI": 0,
     "Apple Machine Learning Research": 0
   },
   "llm_stats": {
     "attempted": 10,
-    "success_json": 5,
+    "success_json": 7,
     "success_freeform": 0,
-    "fallback": 5,
+    "fallback": 3,
     "enabled_after_run": true,
     "last_error": "Error code: 500",
     "init_error": ""
   },
   "articles": [
     {
-      "source": "Hugging Face Blog",
-      "authority": "official",
-      "title": "StateBench: Testing how language models track state changes over long documents",
-      "title_original": "StateBench: Testing how language models track state changes over long documents",
-      "link": "https://huggingface.co/blog/allenai/statebench",
-      "published_raw": "Tue, 03 Nov 2026 17:15:21 GMT",
-      "published_local": "2026-11-04 02:15",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "성능/벤치마크"
-      ],
-      "issues": [
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "keywords": [
-        "model",
-        "benchmark",
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "keywords_original": [
-        "model",
-        "benchmark",
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "summary": "이 기사는 'StateBench: Testing how language models track state changes over long documents' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re introducing StateBench , a benchmark for long-context state tracking —how well language models keep track of information about entities in long documents as they evolve. State tracking underlies tasks from reading code, where variables are assigned and reassigned, to following a story as char… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "We’re introducing StateBench , a benchmark for long-context state tracking —how well language models keep track of information about entities in long documents as they evolve. State tracking underlies tasks from reading code, where variables are assigned and reassigned, to following a story as characters physically move around and objects change hands. For example, if a mystery novel states that “John gave Mary the knife” right before a murder occurs, it’s important to know that the state of each character has changed. However, not all state-tracking problems are created equal: some require only finding the latest update; harder ones require following a chain of changes, where one missed step can throw off the final answer. For example, a harder variant of our mystery state tracking would be if John gave Mary the item in his backpack, with it previously known that Edward put a knife in …"
-    },
-    {
-      "source": "Hugging Face Blog",
-      "authority": "official",
-      "title": "Palette: 소형 모델에 기업 전용 디자인 언어를 학습시켜 슬라이드 제작하기",
-      "title_original": "Palette: teaching a small model to build decks in your design language",
-      "link": "https://huggingface.co/blog/ibm-research/palette-deck-building",
-      "published_raw": "Tue, 03 Nov 2026 16:35:36 GMT",
-      "published_local": "2026-11-04 01:35",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시"
-      ],
-      "issues": [],
-      "keywords": [
-        "Palette",
-        "IBM Research",
-        "소형 언어 모델",
-        "슬라이드 자동 생성",
-        "디자인 언어"
-      ],
-      "keywords_original": [
-        "model"
-      ],
-      "summary": "IBM Research는 기업의 고유한 디자인 언어를 학습하여 슬라이드 덱을 제작하는 소형 모델 'Palette'를 공개했다. 기존의 거대 모델들은 품질은 좋으나 정형화된 AI 스타일을 가지며, 특정 템플릿을 엄격하게 따르는 데 한계가 있다. 또한 기업의 기밀 데이터가 외부 시스템으로 유출될 수 있다는 보안 우려가 존재한다. 이를 해결하기 위해 자체 인프라에서 구동 가능한 오픈 웨이트 소형 모델의 필요성이 제기되었다. 하지만 일반적인 소형 모델은 텍스트 겹침이나 레이아웃 붕괴 등 슬라이드 제작 능력이 현저히 떨어진다. Palette는 합성 데이터를 활용해 소형 모델이 특정 디자인 가이드를 정확히 학습하도록 설계되었다. 이 모델은 사용자의 디자인 언어를 반영하면서도 구조적으로 안정적인 슬라이드를 생성한다. 이를 통해 기업은 브랜드 정체성을 유지하면서도 보안이 강화된 환경에서 자동화 도구를 사용할 수 있다. 특히 프롬프트 엔지니어링만으로는 해결하기 어려운 세밀한 스타일 제어가 가능하다. 결과적으로 고비용의 거대 모델 없이도 맞춤형 디자인 결과물을 얻을 수 있는 경로를 제시한다. 이는 디자인 자동화 분야에서 소형 모델의 실용성을 입증한 사례로 평가된다. 향후 기업별 맞춤형 UI/UX 생성 도구로의 확장 가능성이 높다.",
-      "summary_original": "Ask a frontier model for a slide deck and you'll get a good one. Ask for ten and they start to look alike: the same tasteful defaults, the same house style, a faint \"AI-generated deck\" look. That's fine until you want the deck to look like your template. Frontier models have their own house style, and no amount of prompting stops them drifting back to it. And sometimes the content is confidential and can't leave your systems at all. Both of those point to a model you own: open weights, running on your own infrastructure, trained on your own design language. The catch is that small open models, the kind you'd actually self-host, are bad at this. Their decks come out broken: titles that vanish into the background, text running off the slide, shapes stacked on top of each other. Palette tests one bet: that a small open-weight model, trained on synthetic data in your design language and che…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "Accelerating engineering for the physical world",
-      "title_original": "Accelerating engineering for the physical world",
-      "link": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
-      "published_raw": "Tue, 03 Nov 2026 12:00:00 GMT",
-      "published_local": "2026-11-03 21:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "에이전트/자동화"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장"
-      ],
-      "keywords": [
-        "gpt",
-        "workflow",
-        "에이전트 워크플로 확장"
-      ],
-      "keywords_original": [
-        "gpt",
-        "workflow",
-        "에이전트 워크플로 확장"
-      ],
-      "summary": "이 기사는 'Accelerating engineering for the physical world' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world."
-    },
-    {
       "source": "MIT Technology Review AI",
       "authority": "media",
-      "title": "How “reverse game theory” could keep AI agents in check",
-      "title_original": "How “reverse game theory” could keep AI agents in check",
-      "link": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
-      "published_raw": "Tue, 03 Nov 2026 10:43:41 +0000",
-      "published_local": "2026-11-03 19:43",
-      "primary_topic": "정책/규제/안전",
-      "topics": [
-        "정책/규제/안전",
-        "모델/출시"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장",
-        "정책/규제 변화",
-        "안전/리스크 논의"
-      ],
-      "keywords": [
-        "safety",
-        "law",
-        "model",
-        "에이전트 워크플로 확장",
-        "정책/규제 변화"
-      ],
-      "keywords_original": [
-        "safety",
-        "law",
-        "model",
-        "에이전트 워크플로 확장",
-        "정책/규제 변화",
-        "안전/리스크 논의"
-      ],
-      "summary": "이 기사는 'How “reverse game theory” could keep AI agents in check' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that r… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to ensure they are “aligned” with human desires—to make sure, in other words, that rogue agents don’t break the law,…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "시스코, OpenAI와 협력하여 머신 속도의 보안 방어 체계 구축",
-      "title_original": "How Cisco defends at machine speed with OpenAI",
-      "link": "https://openai.com/index/cisco-cyber",
-      "published_raw": "Tue, 03 Nov 2026 08:00:00 GMT",
-      "published_local": "2026-11-03 17:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "기업/투자"
-      ],
-      "issues": [
-        "기업 파트너십/투자"
-      ],
-      "keywords": [
-        "시스코",
-        "OpenAI",
-        "엔터프라이즈 보안",
-        "네트워크 인텔리전스",
-        "적응형 방어"
-      ],
-      "keywords_original": [
-        "model",
-        "enterprise",
-        "기업 파트너십/투자"
-      ],
-      "summary": "시스코가 기업 보안 강화를 위해 자사의 네트워크 인텔리전스와 OpenAI의 모델을 결합했습니다. 이번 협력의 핵심은 사이버 위협에 더 빠르게 대응할 수 있는 적응형 방어 체계를 구축하는 것입니다. 시스코는 방대한 네트워크 데이터를 보유하고 있으며, 이를 OpenAI의 생성형 AI 기술과 통합합니다. 이를 통해 보안 분석가는 복잡한 위협 탐지 및 대응 과정을 자동화하고 효율화할 수 있습니다. AI 모델은 네트워크 트래픽 패턴을 분석하여 비정상적인 활동을 실시간으로 식별합니다. 보안 운영 센터(SOC)의 워크플로우를 개선하여 위협 분석 시간을 획기적으로 단축하는 것이 목표입니다. 기업들은 이를 통해 지능형 지속 위협(APT)과 같은 고도화된 공격에 더 유연하게 대처할 수 있습니다. 단순한 탐지를 넘어 AI가 대응 전략을 제안함으로써 보안 전문가의 의사결정을 돕습니다. 이는 네트워크 인프라 전반에 걸쳐 가시성을 확보하고 보안 공백을 메우는 전략의 일환입니다. 실무적으로는 보안 인력 부족 문제를 해결하고 운영 비용을 절감하는 효과가 기대됩니다. 시스코와 OpenAI의 파트너십은 엔터프라이즈 보안의 패러다임을 자동화 중심으로 전환합니다. 결과적으로 기업은 머신 속도의 방어 능력을 갖춰 사이버 회복력을 높일 수 있게 됩니다.",
-      "summary_original": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses."
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "Heimstaden is changing residential real estate management with AI",
-      "title_original": "Heimstaden is changing residential real estate management with AI",
-      "link": "https://openai.com/index/heimstaden",
-      "published_raw": "Tue, 03 Nov 2026 08:00:00 GMT",
-      "published_local": "2026-11-03 17:00",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "성능/벤치마크"
-      ],
-      "issues": [
-        "비용/성능 경쟁",
-        "기업 파트너십/투자"
-      ],
-      "keywords": [
-        "gpt",
-        "cost",
-        "비용/성능 경쟁",
-        "기업 파트너십/투자"
-      ],
-      "keywords_original": [
-        "gpt",
-        "cost",
-        "비용/성능 경쟁",
-        "기업 파트너십/투자"
-      ],
-      "summary": "이 기사는 'Heimstaden is changing residential real estate management with AI' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe."
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "트럼프의 '초지능(Super Intelligence)' 충성심 테스트에 동참하는 이들은 누구인가",
-      "title_original": "Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test",
-      "link": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
-      "published_raw": "Tue, 03 Nov 2026 04:18:47 +0000",
-      "published_local": "2026-11-03 13:18",
-      "primary_topic": "기타",
-      "topics": [
-        "기타"
-      ],
-      "issues": [],
-      "keywords": [
-        "트럼프 행정부",
-        "초지능",
-        "행정명령",
-        "AI 거버넌스",
-        "충성심 테스트"
-      ],
-      "keywords_original": [],
-      "summary": "도널드 트럼프 대통령은 9월 말, 정부 기관들이 기존의 '인공지능(AI)'이라는 용어를 '초지능(Super Intelligence)'으로 변경하도록 지시하는 행정명령에 서명했다. 이 명령은 단순한 명칭 변경을 넘어 정부 내 AI 정책 방향을 재설정하려는 정치적 의도가 담겨 있다. 행정명령의 핵심은 정부 기관들이 새로운 용어를 채택함으로써 대통령의 비전에 동조함을 증명하는 일종의 충성심 테스트 성격을 띤다는 점이다. 이에 따라 여러 정부 부처와 관련 기관들이 빠르게 명칭 변경 작업에 착수하며 지침을 따르고 있다. 이러한 변화는 기술적 정의의 변경보다는 정치적 상징성과 통제권 강화에 초점이 맞춰져 있다. 전문가들은 이번 조치가 AI 거버넌스 체계에 혼란을 야기하고 과학적 용어의 정치화를 초래할 수 있다고 우려한다. 특히 초지능은 인간 지능을 훨씬 뛰어넘는 가상의 단계를 의미하므로 현재 기술 수준과 괴리가 크다. 실무적으로는 정부 문서와 보고서, 공식 웹사이트의 모든 AI 관련 용어를 수정해야 하는 행정적 부담이 발생한다. 또한 이는 향후 AI 관련 예산 배정이나 인사 결정에서 대통령 성향에 맞춘 정렬이 중요해짐을 시사한다. 결과적으로 이번 조치는 기술 발전보다 정치적 충성도가 우선시되는 환경을 조성할 가능성이 높다. MIT 테크놀로지 리뷰는 이러한 현상이 AI 생태계 전반에 미칠 심리적, 제도적 영향에 주목하고 있다. 정부 기관들의 대응은 향후 트럼프 행정부의 AI 전략과 통제 수준을 가늠하는 척도가 될 전망이다.",
-      "summary_original": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. At the end of September, President Trump signed an executive order that contained just one directive, ordering government agencies to rebrand what they had been calling artificial intelligence as “Super Intelligence.” That…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
-      "title_original": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
-      "link": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
-      "published_raw": "Tue, 03 Nov 2026 00:00:00 GMT",
-      "published_local": "2026-11-03 09:00",
+      "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
+      "title_original": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
+      "link": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+      "published_raw": "Wed, 04 Nov 2026 18:50:55 +0000",
+      "published_local": "2026-11-05 03:50",
       "primary_topic": "기타",
       "topics": [
         "기타"
@@ -285,62 +67,275 @@
       "issues": [],
       "keywords": [],
       "keywords_original": [],
-      "summary": "이 기사는 'OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning."
+      "summary": "이 기사는 'Texas was the new epicenter of the AI data center buildout. That might be kaput.' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Texas is the fastest-growing data center market in the US and ground zero for Big Tech’s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico won the US Senate seat against Ken Paxton. Gina Hinojosa won the race for governor ag… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Texas is the fastest-growing data center market in the US and ground zero for Big Tech’s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico won the US Senate seat against Ken Paxton. Gina Hinojosa won the race for governor against the Republican incumbent,…"
     },
     {
-      "source": "Hugging Face Blog",
+      "source": "Google Research Blog",
       "authority": "official",
-      "title": "CWE-bench v2: 더 넓은 커버리지, 품질 및 투명성 확보",
-      "title_original": "CWE-bench v2: More coverage, quality, and transparency",
-      "link": "https://huggingface.co/blog/cwe-bench",
-      "published_raw": "Tue, 03 Nov 2026 00:00:00 GMT",
-      "published_local": "2026-11-03 09:00",
-      "primary_topic": "오픈소스/개발자",
+      "title": "애자일 델리베레이션: AI가 인간의 모호한 영역 정의를 돕는 방법",
+      "title_original": "Agile Deliberation: How AI helps humans define the gray areas",
+      "link": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "published_raw": "Wed, 04 Nov 2026 18:07:05 +0000",
+      "published_local": "2026-11-05 03:07",
+      "primary_topic": "모델/출시",
       "topics": [
-        "오픈소스/개발자"
+        "모델/출시"
       ],
       "issues": [],
       "keywords": [
-        "CWE-bench v2",
-        "Hugging Face",
-        "소프트웨어 취약점",
-        "LLM 평가",
-        "보안 코딩"
+        "애자일 델리베레이션",
+        "구글 리서치",
+        "가이드라인 최적화",
+        "엣지 케이스",
+        "데이터 라벨링"
       ],
       "keywords_original": [
-        "open source"
+        "model"
       ],
-      "summary": "Hugging Face가 소프트웨어 취약점 수정 능력을 평가하는 벤치마크인 CWE-bench v2를 공개했다. 이 벤치마크는 LLM이 실제 코드에서 공통 취약점 열거(CWE) 항목을 얼마나 정확하게 식별하고 수정하는지 측정한다. v2 버전은 이전 버전에 비해 취약점 커버리지를 대폭 확대하여 평가의 포괄성을 높였다. 데이터셋의 품질을 개선하여 모델이 단순한 패턴 매칭이 아닌 실제 논리적 오류를 해결하도록 설계되었다. 평가 과정의 투명성을 강화하여 어떤 기준으로 정답 여부를 판단하는지 명확히 제시한다. 이는 AI 모델의 보안 코딩 능력을 객관적으로 검증하기 위한 오픈 사이언스 노력의 일환이다. 실무적으로는 개발자가 AI를 활용해 보안 패치를 자동화할 때 신뢰할 수 있는 지표를 제공한다. 다양한 모델의 성능을 비교함으로써 보안 특화 LLM 개발의 방향성을 제시한다. 특히 복잡한 취약점 시나리오를 포함해 모델의 한계를 명확히 드러낸다. 오픈 소스 생태계의 보안 수준을 높이는 데 기여할 것으로 기대된다. Hugging Face는 이를 통해 AI의 민주화와 안전한 소프트웨어 개발 환경 구축을 목표로 한다. 누구나 접근 가능한 벤치마크를 통해 보안 AI 연구의 진입 장벽을 낮춘다.",
-      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+      "summary": "구글 리서치는 데이터 라벨링이나 정책 집행 시 발생하는 모호한 회색 영역을 정의하기 위해 AI를 활용하는 애자일 델리베레이션 프레임워크를 소개했다. 기존의 정적인 가이드라인 작성 방식은 실제 데이터 적용 과정에서 나타나는 예외 상황을 즉각 반영하기 어렵다는 한계가 있었다. 이 새로운 접근법은 AI가 데이터셋 내에서 가이드라인이 불분명한 엣지 케이스를 능동적으로 식별하여 인간에게 제시하는 방식으로 작동한다. 인간 검토자는 AI가 찾아낸 모호한 사례들을 분석하고 이를 바탕으로 가이드라인을 실시간으로 수정 및 보완한다. 이러한 반복적인 피드백 루프를 통해 가이드라인은 더욱 정교해지며 라벨러 간의 일관성이 크게 향상된다. 특히 복잡한 콘텐츠 모더레이션이나 정밀한 데이터 분류 작업에서 높은 효용성을 보였다. AI는 단순히 정답을 맞히는 도구가 아니라 인간이 판단 기준을 세우는 과정을 가속화하는 협력자 역할을 수행한다. 이를 통해 가이드라인 작성에 소요되는 시간과 비용을 절감하고 데이터 품질을 높일 수 있다. 실무적으로는 정책 결정자가 데이터의 실제 분포를 빠르게 파악하여 더 현실적인 규칙을 수립하도록 돕는다. 결과적으로 인간의 판단력과 AI의 효율적인 탐색 능력이 결합되어 의사결정의 정확도를 높인다. 이 프레임워크는 AI 모델의 정렬 및 안전성 가이드라인 수립 과정에도 적용 가능하다. 구글은 이를 통해 인간과 AI의 협업 모델을 발전시켜 보다 투명한 기준 설정을 목표로 한다.",
+      "summary_original": "Data Mining & Modeling"
     },
     {
       "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "Transformers 모델 통합 계약(MIC) 도입",
-      "title_original": "Transformers Model Integration Contracts",
-      "link": "https://huggingface.co/blog/transformers-mic",
-      "published_raw": "Tue, 03 Nov 2026 00:00:00 GMT",
-      "published_local": "2026-11-03 09:00",
+      "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+      "title_original": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+      "link": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+      "published_raw": "Wed, 04 Nov 2026 17:50:10 GMT",
+      "published_local": "2026-11-05 02:50",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시",
-        "오픈소스/개발자"
+        "성능/벤치마크"
       ],
-      "issues": [],
+      "issues": [
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
       "keywords": [
-        "Hugging Face",
-        "Transformers",
-        "모델 통합 계약",
-        "MIC",
-        "오픈 소스"
+        "model",
+        "llm",
+        "release",
+        "api",
+        "cost"
       ],
       "keywords_original": [
         "model",
-        "open source"
+        "llm",
+        "release",
+        "api",
+        "cost",
+        "신규 모델/제품 발표"
       ],
-      "summary": "Hugging Face가 Transformers 라이브러리의 모델 통합 프로세스를 표준화하기 위한 '모델 통합 계약(Model Integration Contracts, MIC)'을 도입했다. 이번 조치는 오픈 소스와 오픈 사이언스를 통해 인공지능을 민주화하려는 회사의 비전의 일환이다. MIC는 새로운 모델이 라이브러리에 추가될 때 준수해야 하는 엄격한 기술적 요구사항과 표준 가이드라인을 정의한다. 이를 통해 모델 구현의 일관성을 높이고 사용자들에게 동일한 API 경험을 제공하는 것을 목표로 한다. 주요 내용은 모델 아키텍처의 정확한 구현, 표준화된 설정 파일 사용, 철저한 테스트 케이스 통과를 포함한다. 기존에는 모델마다 통합 방식이 상이해 유지보수 비용이 높았으나, MIC 도입으로 이를 체계화할 수 있게 되었다. 개발자들은 이제 명확한 체크리스트를 통해 자신의 모델이 Transformers 생태계에 적합한지 스스로 검증할 수 있다. 이는 모델의 배포 속도를 높이는 동시에 런타임 오류를 줄여 라이브러리의 전반적인 안정성을 향상시킨다. 결과적으로 연구자와 엔지니어들이 모델 구현의 세부 사항보다 실제 응용 연구에 더 집중할 수 있는 환경을 조성한다. Hugging Face는 앞으로도 더 많은 모델이 효율적으로 통합될 수 있도록 이 계약 체계를 지속적으로 발전시킬 계획이다. 이번 표준화 작업은 AI 모델의 상호운용성을 높여 오픈 소스 커뮤니티의 협업 효율을 극대화할 것으로 기대된다. 실무적으로는 모델 마이그레이션 및 업데이트 과정에서의 리스크를 최소화하는 효과를 가져온다.",
-      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+      "summary": "이 기사는 'Dharma Field Extractor: Any Document In, Structured Fields in JSON Out' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 A 2-billion-parameter model that extracts exactly the fields you ask for, from any document type, outperforming every frontier LLM we tested, at a fraction of the cost. In April, we released DharmaOCR-LITE , a model specialized for OCR across a wide range of documents, from contracts and court fili… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "A 2-billion-parameter model that extracts exactly the fields you ask for, from any document type, outperforming every frontier LLM we tested, at a fraction of the cost. In April, we released DharmaOCR-LITE , a model specialized for OCR across a wide range of documents, from contracts and court filings to invoices, IDs and forms. The paper behind it made a narrow, well-measured case for domain specialization: a smaller model trained closer to its task beating general-purpose frontier APIs on that task. OCR gives you the text on a page, faithful to the original formatting. That's exactly what you want when the job is the whole document, like a contract you'll read end to end or a manuscript you're digitizing. However, there's a different use case: you don't want the page, you want specific fields out of it, in a shape a system downstream can consume. Every line item on an invoice, as a li…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, Pierre Computer Company 인수 통해 코딩 AI 역량 강화",
+      "title_original": "OpenAI to acquire Pierre Computer Company, Inc.",
+      "link": "https://openai.com/index/openai-to-acquire-pierre",
+      "published_raw": "Wed, 04 Nov 2026 14:30:00 GMT",
+      "published_local": "2026-11-04 23:30",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "Pierre Computer Company",
+        "Codex",
+        "코드 리뷰",
+        "소프트웨어 개발"
+      ],
+      "keywords_original": [],
+      "summary": "OpenAI가 Pierre Computer Company, Inc.를 인수한다고 공식 발표했습니다. 이번 인수는 OpenAI의 코드 생성 모델인 Codex의 기능을 대폭 확장하기 위한 전략적 결정입니다. Pierre Computer Company의 기술력을 통해 코드 구축, 이해 및 리뷰 도구를 강화할 계획입니다. 개발자들은 이를 통해 더 정교한 코드 분석과 자동화된 리뷰 시스템을 경험하게 될 것입니다. 특히 복잡한 코드베이스를 이해하고 최적화하는 능력이 크게 향상될 것으로 기대됩니다. 이번 통합은 AI 기반 소프트웨어 개발 생태계의 효율성을 높이는 데 중점을 둡니다. Codex는 이제 단순한 코드 생성을 넘어 전체 개발 라이프사이클을 지원하는 도구로 진화합니다. 이는 소프트웨어 엔지니어링의 생산성을 극대화하려는 OpenAI의 비전과 일치합니다. 실무적으로는 버그 수정 시간 단축과 코드 품질 향상이라는 직접적인 이점이 있을 것입니다. 향후 업데이트를 통해 Pierre Computer Company의 핵심 기능들이 Codex에 순차적으로 통합될 예정입니다. 이번 인수로 OpenAI는 코딩 AI 시장에서의 기술적 우위를 더욱 공고히 하게 되었습니다. 개발 환경의 혁신을 통해 더 빠른 제품 출시와 안정적인 시스템 구축이 가능해질 전망입니다.",
+      "summary_original": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code."
+    },
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "데이터 리니지를 통한 에이전트 중심 기업 환경의 보안 강화",
+      "title_original": "Securing the agentic enterprise with data lineage",
+      "link": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
+      "published_raw": "Wed, 04 Nov 2026 13:00:00 +0000",
+      "published_local": "2026-11-04 22:00",
+      "primary_topic": "기업/투자",
+      "topics": [
+        "기업/투자",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "데이터 리니지",
+        "AI 에이전트",
+        "기업 보안",
+        "데이터 거버넌스",
+        "에이전트 워크플로"
+      ],
+      "keywords_original": [
+        "enterprise",
+        "pricing",
+        "agent",
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "summary": "기업들이 AI 에이전트를 도입하며 복잡한 워크플로를 구축하고 있으나, 데이터 출처 추적(Data Lineage)의 부재가 보안 및 정확성 리스크를 초래하고 있다. 예를 들어 영업 사원이 가격 정보를 요청하면 에이전트는 제한된 시스템과 내부 통신 등 여러 소스에서 데이터를 수집한다. 이때 첫 번째 에이전트의 결과물을 두 번째 에이전트가 받아 제안서를 작성하는 과정에서 인간의 검토가 생략되곤 한다. 이러한 에이전트 간 전달 과정에서 오류가 포함되면 최종 결과물에 심각한 왜곡이 발생할 수 있다. 특히 권한 제한 데이터 접근이나 오래된 정보의 오용 위험이 크다. 데이터 리니지는 데이터의 생성, 변형, 전달 경로를 기록하는 기술적 추적 체계다. 이를 통해 기업은 AI 결정 근거를 파악하고 잘못된 데이터의 전파 경로를 추적해 수정할 수 있다. 에이전트 중심 환경에서는 결과값 확인을 넘어 데이터 흐름 전체를 가시화하는 것이 필수적이다. 이는 AI 환각을 줄이고 기업 내부 데이터 거버넌스를 강화하는 핵심 수단이 된다. 실무적으로는 감사 로그 강화와 에이전트 간 핸드오프 단계의 검증 프로세스 도입이 필요하다. 데이터 리니지 확보는 AI 자율성과 보안 신뢰성 사이의 균형을 맞추는 핵심 요소다. 기업은 워크플로 확장 시 출처 투명성을 보장하는 아키텍처를 우선 고려해야 한다.",
+      "summary_original": "A sales representative asks an AI agent for customer pricing, and the agent pulls data from multiple sources: restricted pricing systems, internal communications, and archived quotes. The output looks accurate to the agent, so a second agent uses the data to draft the proposal for the sales rep. No human checks either handoff. When it’s…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "리눅스 커널 취약점 948개를 해결한 OpenAI의 자율 보안 파이프라인",
+      "title_original": "A thousand fewer paths to root",
+      "link": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "published_raw": "Wed, 04 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-04 17:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "리눅스 커널",
+        "권한 상승 취약점",
+        "자율 파이프라인",
+        "AI 보안"
+      ],
+      "keywords_original": [],
+      "summary": "OpenAI가 리눅스 커널의 로컬 권한 상승 취약점을 자동으로 탐지하고 수정하는 자율 파이프라인을 구축했습니다. 이 시스템은 총 948개의 취약점을 발견하고 검증했으며, 이에 대한 패치까지 생성하는 성과를 거두었습니다. 리눅스 커널은 수많은 운영체제의 기반이 되므로, 이곳의 취약점은 시스템 전체의 보안 위협으로 이어집니다. 특히 로컬 권한 상승 취약점은 일반 사용자가 관리자 권한을 획득하게 하여 심각한 피해를 줄 수 있습니다. OpenAI는 LLM 기반 에이전트를 활용해 코드 분석, 취약점 탐색, 패치 생성 과정을 자동화했습니다. 이는 기존의 수동 보안 감사 방식보다 훨씬 빠르고 효율적으로 대규모 취약점을 처리할 수 있음을 증명한 사례입니다. 발견된 취약점들은 엄격한 검증 과정을 거쳐 실제 작동 여부가 확인되었습니다. 생성된 패치들은 커널의 안정성을 유지하며 보안 허점을 메우도록 설계되었습니다. 이번 성과는 AI가 복잡한 시스템의 보안 취약점을 스스로 해결하는 수준에 도달했음을 보여줍니다. 이는 향후 소프트웨어 보안 패치 주기 단축과 자동화된 유지보수 체계 구축에 기여할 전망입니다. 또한 오픈소스 커뮤니티와 협력하여 더 안전한 컴퓨팅 환경을 조성하는 계기가 될 것입니다. 결과적으로 AI 보안 도구가 전문가의 업무 효율을 극대화하는 강력한 보조 수단이 될 것임을 시사합니다.",
+      "summary_original": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Daybreak Red, AWS GovCloud (US-East)에서 제공 시작",
+      "title_original": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "link": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "published_raw": "Wed, 04 Nov 2026 07:00:00 GMT",
+      "published_local": "2026-11-04 16:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "Daybreak Red",
+        "GPT-5.6 Cyber",
+        "AWS GovCloud",
+        "Amazon Bedrock",
+        "사이버 보안"
+      ],
+      "keywords_original": [
+        "gpt"
+      ],
+      "summary": "OpenAI가 Daybreak Red를 AWS GovCloud (US-East) 지역에서 제공한다고 발표했습니다. 이번 서비스는 Amazon Bedrock 플랫폼을 통해 승인된 고객들에게 제공됩니다. 핵심 모델로는 사이버 보안에 특화된 GPT-5.6 Cyber가 탑재되었습니다. 해당 서비스는 권한을 부여받은 사이버 보안 업무 수행을 목적으로 설계되었습니다. AWS GovCloud는 미국 정부 기관 및 관련 계약업체를 위한 보안 클라우드 환경입니다. 이를 통해 공공 부문에서도 고성능 AI 모델을 안전하게 활용할 수 있게 되었습니다. GPT-5.6 Cyber는 복잡한 보안 위협 분석 및 대응 능력을 갖춘 것으로 알려져 있습니다. 엄격한 규정 준수와 데이터 보안 요구사항을 충족하는 환경에서 운영됩니다. 승인된 사용자들은 Bedrock의 관리형 환경에서 모델을 배포하고 최적화할 수 있습니다. 이번 조치는 정부 차원의 사이버 방어 역량을 강화하는 데 기여할 전망입니다. 실무적으로는 보안 관제 및 취약점 분석 업무의 효율성이 크게 향상될 것으로 보입니다. OpenAI와 AWS의 협력을 통해 공공 보안 AI 생태계가 확장되는 계기가 될 것입니다.",
+      "summary_original": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Introducing Images 2.6",
+      "title_original": "Introducing Images 2.6",
+      "link": "https://openai.com/index/introducing-images-2-6",
+      "published_raw": "Wed, 04 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-04 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "gpt",
+        "api",
+        "image",
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "keywords_original": [
+        "gpt",
+        "api",
+        "image",
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "summary": "이 기사는 'Introducing Images 2.6' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "DevRev, GPT-6.1 Sol 기반의 자율 셀프 서비스 솔루션 제공",
+      "title_original": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "link": "https://openai.com/index/devrev-enterprise-self-service",
+      "published_raw": "Wed, 04 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-04 09:00",
+      "primary_topic": "성능/벤치마크",
+      "topics": [
+        "성능/벤치마크",
+        "모델/출시"
+      ],
+      "issues": [
+        "비용/성능 경쟁",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "GPT-6.1 Sol",
+        "DevRev",
+        "자율 셀프 서비스",
+        "기업용 AI",
+        "추론 성능"
+      ],
+      "keywords_original": [
+        "reasoning",
+        "cost",
+        "gpt",
+        "비용/성능 경쟁",
+        "기업 파트너십/투자"
+      ],
+      "summary": "DevRev가 OpenAI의 최신 모델인 GPT-6.1 Sol을 도입하여 기업용 자율 셀프 서비스 기능을 강화했습니다. 이번 도입의 핵심은 'Computer'와 'Operator'라는 두 가지 주요 기능을 구동하는 것입니다. GPT-6.1 Sol은 추론 능력, 처리 속도, 그리고 운영 비용 사이의 최적의 균형을 제공하도록 설계되었습니다. 이를 통해 기업들은 고객 서비스 단계에서 더 정교한 자동화 시스템을 구축할 수 있게 되었습니다. 특히 복잡한 문제 해결을 위한 추론 성능이 향상되어 단순 챗봇 이상의 기능을 수행합니다. 운영 비용의 효율화를 통해 대규모 엔터프라이즈 환경에서도 지속 가능한 AI 적용이 가능해졌습니다. 실무적으로는 고객 지원 팀의 업무 부하를 줄이고 응답 시간을 획기적으로 단축할 것으로 기대됩니다. 사용자는 사람의 개입 없이도 고도화된 셀프 서비스 경험을 통해 문제를 빠르게 해결할 수 있습니다. 이는 AI 모델의 성능 경쟁이 단순한 파라미터 증가가 아닌 실질적인 비용 효율성으로 이동하고 있음을 보여줍니다. DevRev와 OpenAI의 파트너십은 기업용 AI 서비스의 새로운 표준을 제시하고 있습니다. 결과적으로 기업은 서비스 품질 향상과 비용 절감이라는 두 가지 목표를 동시에 달성할 수 있습니다. 향후 더 많은 기업이 이러한 자율 운영 모델을 도입하여 디지털 전환을 가속화할 전망입니다.",
+      "summary_original": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "Google Antigravity를 활용한 에이전트 기반 화학정보학",
+      "title_original": "Agentic cheminformatics with Google Antigravity",
+      "link": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "published_raw": "Tue, 03 Nov 2026 17:01:49 +0000",
+      "published_local": "2026-11-04 02:01",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Google Antigravity",
+        "화학정보학",
+        "신약 개발",
+        "AI 에이전트",
+        "거대고리 화합물"
+      ],
+      "keywords_original": [
+        "agent",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Google DeepMind가 신약 개발 워크플로를 가속화하기 위한 Google Antigravity와 화학정보학 기술(Cheminformatics Skills)을 공개했다. 이 시스템은 에이전트 기반의 화학정보학을 구현하여 복잡한 연구 과정을 자동화하고 효율성을 높이는 데 중점을 둔다. 주요 기능으로는 화합물 검색의 최적화와 새로운 강성 거대고리(rigidified macrocycles) 화합물의 제안 등이 포함된다. 기존의 수동적인 데이터 분석 방식에서 벗어나 AI 에이전트가 스스로 도구를 사용해 화학적 문제를 해결하는 구조다. 이를 통해 연구자들은 방대한 화학 공간을 더 빠르게 탐색하고 유망한 후보 물질을 효율적으로 식별할 수 있다. 특히 거대고리 화합물 설계와 같은 고난도 작업에서 AI의 제안 능력이 크게 향상되었다. 이러한 기술적 진보는 신약 개발의 초기 단계인 리드 최적화 시간을 단축시키는 효과를 가져온다. Google Antigravity는 다양한 화학정보학 도구와 API를 통합하여 유연한 워크플로 확장을 지원한다. 실무적으로는 화학자와 데이터 과학자 간의 협업 효율을 높이고 실험 횟수를 줄이는 데 기여할 것으로 보인다. 결과적으로 AI 에이전트가 전문적인 과학 도구를 능숙하게 다룸으로써 신약 발견의 패러다임을 바꿀 가능성을 제시한다. 이번 발표는 AI가 단순한 보조 도구를 넘어 자율적인 연구 파트너로 진화하고 있음을 보여준다. 향후 더 넓은 범위의 분자 설계 및 합성 경로 예측으로의 확장이 기대된다.",
+      "summary_original": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles."
     }
   ]
 }
