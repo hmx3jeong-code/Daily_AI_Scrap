@@ -1,8 +1,8 @@
 {
-  "report_date": "2026-11-05",
-  "report_date_kst": "2026-11-05",
-  "generated_at": "2026-11-05T03:51:54.069543+00:00",
-  "generated_at_kst": "2026-11-05T12:51:54.069543+09:00",
+  "report_date": "2026-11-06",
+  "report_date_kst": "2026-11-06",
+  "generated_at": "2026-11-06T03:43:31.399114+00:00",
+  "generated_at_kst": "2026-11-06T12:43:31.399114+09:00",
   "article_count": 10,
   "issues_top": [
     [
@@ -10,332 +10,345 @@
       3
     ],
     [
-      "신규 모델/제품 발표",
-      2
-    ],
-    [
       "에이전트 워크플로 확장",
       2
     ],
     [
-      "기업 파트너십/투자",
+      "안전/리스크 논의",
       2
+    ],
+    [
+      "신규 모델/제품 발표",
+      1
+    ],
+    [
+      "정책/규제 변화",
+      1
+    ],
+    [
+      "기업 파트너십/투자",
+      1
     ]
   ],
   "source_totals": {
-    "OpenAI News": 1335,
+    "OpenAI News": 1342,
     "Google Research Blog": 100,
     "Google Blog AI": 20,
     "DeepMind Blog": 99,
-    "Hugging Face Blog": 887,
+    "Hugging Face Blog": 888,
     "MIT Technology Review AI": 10,
     "VentureBeat AI": 0,
     "Apple Machine Learning Research": 10
   },
   "source_kept": {
     "OpenAI News": 20,
-    "Google Research Blog": 1,
-    "Google Blog AI": 1,
+    "Google Research Blog": 2,
+    "Google Blog AI": 2,
     "DeepMind Blog": 2,
-    "Hugging Face Blog": 6,
+    "Hugging Face Blog": 7,
     "MIT Technology Review AI": 7,
     "VentureBeat AI": 0,
-    "Apple Machine Learning Research": 0
+    "Apple Machine Learning Research": 1
   },
   "llm_stats": {
     "attempted": 10,
-    "success_json": 7,
+    "success_json": 9,
     "success_freeform": 0,
-    "fallback": 3,
+    "fallback": 1,
     "enabled_after_run": true,
     "last_error": "Error code: 500",
     "init_error": ""
   },
   "articles": [
     {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
-      "title_original": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
-      "link": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
-      "published_raw": "Wed, 04 Nov 2026 18:50:55 +0000",
-      "published_local": "2026-11-05 03:50",
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Cult.fit, Codex 도입으로 운영 효율성 및 실행력 강화",
+      "title_original": "Cult.fit builds operational muscle with Codex",
+      "link": "https://openai.com/index/cultfit-builds-with-codex",
+      "published_raw": "Thu, 05 Nov 2026 20:00:00 GMT",
+      "published_local": "2026-11-06 05:00",
       "primary_topic": "기타",
       "topics": [
         "기타"
       ],
-      "issues": [],
-      "keywords": [],
-      "keywords_original": [],
-      "summary": "이 기사는 'Texas was the new epicenter of the AI data center buildout. That might be kaput.' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Texas is the fastest-growing data center market in the US and ground zero for Big Tech’s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico won the US Senate seat against Ken Paxton. Gina Hinojosa won the race for governor ag… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Texas is the fastest-growing data center market in the US and ground zero for Big Tech’s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico won the US Senate seat against Ken Paxton. Gina Hinojosa won the race for governor against the Republican incumbent,…"
-    },
-    {
-      "source": "Google Research Blog",
-      "authority": "official",
-      "title": "애자일 델리베레이션: AI가 인간의 모호한 영역 정의를 돕는 방법",
-      "title_original": "Agile Deliberation: How AI helps humans define the gray areas",
-      "link": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
-      "published_raw": "Wed, 04 Nov 2026 18:07:05 +0000",
-      "published_local": "2026-11-05 03:07",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시"
+      "issues": [
+        "비용/성능 경쟁"
       ],
-      "issues": [],
       "keywords": [
-        "애자일 델리베레이션",
-        "구글 리서치",
-        "가이드라인 최적화",
-        "엣지 케이스",
-        "데이터 라벨링"
+        "Cult.fit",
+        "OpenAI Codex",
+        "운영 효율성",
+        "AI 코딩",
+        "디지털 전환"
       ],
       "keywords_original": [
-        "model"
+        "비용/성능 경쟁"
       ],
-      "summary": "구글 리서치는 데이터 라벨링이나 정책 집행 시 발생하는 모호한 회색 영역을 정의하기 위해 AI를 활용하는 애자일 델리베레이션 프레임워크를 소개했다. 기존의 정적인 가이드라인 작성 방식은 실제 데이터 적용 과정에서 나타나는 예외 상황을 즉각 반영하기 어렵다는 한계가 있었다. 이 새로운 접근법은 AI가 데이터셋 내에서 가이드라인이 불분명한 엣지 케이스를 능동적으로 식별하여 인간에게 제시하는 방식으로 작동한다. 인간 검토자는 AI가 찾아낸 모호한 사례들을 분석하고 이를 바탕으로 가이드라인을 실시간으로 수정 및 보완한다. 이러한 반복적인 피드백 루프를 통해 가이드라인은 더욱 정교해지며 라벨러 간의 일관성이 크게 향상된다. 특히 복잡한 콘텐츠 모더레이션이나 정밀한 데이터 분류 작업에서 높은 효용성을 보였다. AI는 단순히 정답을 맞히는 도구가 아니라 인간이 판단 기준을 세우는 과정을 가속화하는 협력자 역할을 수행한다. 이를 통해 가이드라인 작성에 소요되는 시간과 비용을 절감하고 데이터 품질을 높일 수 있다. 실무적으로는 정책 결정자가 데이터의 실제 분포를 빠르게 파악하여 더 현실적인 규칙을 수립하도록 돕는다. 결과적으로 인간의 판단력과 AI의 효율적인 탐색 능력이 결합되어 의사결정의 정확도를 높인다. 이 프레임워크는 AI 모델의 정렬 및 안전성 가이드라인 수립 과정에도 적용 가능하다. 구글은 이를 통해 인간과 AI의 협업 모델을 발전시켜 보다 투명한 기준 설정을 목표로 한다.",
-      "summary_original": "Data Mining & Modeling"
+      "summary": "Cult.fit은 OpenAI의 Codex를 도입하여 전사적인 운영 역량을 강화하고 있다. 이들은 다양한 부서의 팀들이 직접 도구를 구축할 수 있도록 Codex를 활용하고 있다. 이를 통해 개발 프로세스의 속도를 높이고 업무 처리 방식을 근본적으로 변화시키고 있다. Codex는 자연어를 코드로 변환하는 능력을 통해 비개발 직군도 기술적 솔루션을 구현하게 돕는다. 결과적으로 팀 간의 협업 효율성이 증대되고 반복적인 작업 시간이 단축되었다. 내부 툴 제작에 소요되는 리소스가 줄어들어 핵심 비즈니스 로직에 더 집중할 수 있게 되었다. 이는 단순한 자동화를 넘어 조직 전체의 디지털 전환을 가속화하는 사례로 평가받는다. 실무자들은 이제 복잡한 코딩 지식 없이도 필요한 기능을 빠르게 프로토타이핑할 수 있다. 이러한 변화는 제품 출시 주기를 단축시키는 긍정적인 영향을 미친다. Cult.fit은 AI 기반의 개발 환경을 통해 운영상의 유연성을 확보했다. 앞으로도 Codex를 활용한 도구 확장을 통해 업무 생산성을 지속적으로 높일 계획이다. 이는 AI가 기업의 운영 근육을 키우는 실질적인 도구로 활용될 수 있음을 보여준다.",
+      "summary_original": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done."
     },
     {
       "source": "Hugging Face Blog",
       "authority": "official",
-      "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
-      "title_original": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
-      "link": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
-      "published_raw": "Wed, 04 Nov 2026 17:50:10 GMT",
-      "published_local": "2026-11-05 02:50",
-      "primary_topic": "모델/출시",
-      "topics": [
-        "모델/출시",
-        "성능/벤치마크"
-      ],
-      "issues": [
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
-      ],
-      "keywords": [
-        "model",
-        "llm",
-        "release",
-        "api",
-        "cost"
-      ],
-      "keywords_original": [
-        "model",
-        "llm",
-        "release",
-        "api",
-        "cost",
-        "신규 모델/제품 발표"
-      ],
-      "summary": "이 기사는 'Dharma Field Extractor: Any Document In, Structured Fields in JSON Out' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 A 2-billion-parameter model that extracts exactly the fields you ask for, from any document type, outperforming every frontier LLM we tested, at a fraction of the cost. In April, we released DharmaOCR-LITE , a model specialized for OCR across a wide range of documents, from contracts and court fili… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "A 2-billion-parameter model that extracts exactly the fields you ask for, from any document type, outperforming every frontier LLM we tested, at a fraction of the cost. In April, we released DharmaOCR-LITE , a model specialized for OCR across a wide range of documents, from contracts and court filings to invoices, IDs and forms. The paper behind it made a narrow, well-measured case for domain specialization: a smaller model trained closer to its task beating general-purpose frontier APIs on that task. OCR gives you the text on a page, faithful to the original formatting. That's exactly what you want when the job is the whole document, like a contract you'll read end to end or a manuscript you're digitizing. However, there's a different use case: you don't want the page, you want specific fields out of it, in a shape a system downstream can consume. Every line item on an invoice, as a li…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "OpenAI, Pierre Computer Company 인수 통해 코딩 AI 역량 강화",
-      "title_original": "OpenAI to acquire Pierre Computer Company, Inc.",
-      "link": "https://openai.com/index/openai-to-acquire-pierre",
-      "published_raw": "Wed, 04 Nov 2026 14:30:00 GMT",
-      "published_local": "2026-11-04 23:30",
-      "primary_topic": "기타",
-      "topics": [
-        "기타"
-      ],
-      "issues": [],
-      "keywords": [
-        "OpenAI",
-        "Pierre Computer Company",
-        "Codex",
-        "코드 리뷰",
-        "소프트웨어 개발"
-      ],
-      "keywords_original": [],
-      "summary": "OpenAI가 Pierre Computer Company, Inc.를 인수한다고 공식 발표했습니다. 이번 인수는 OpenAI의 코드 생성 모델인 Codex의 기능을 대폭 확장하기 위한 전략적 결정입니다. Pierre Computer Company의 기술력을 통해 코드 구축, 이해 및 리뷰 도구를 강화할 계획입니다. 개발자들은 이를 통해 더 정교한 코드 분석과 자동화된 리뷰 시스템을 경험하게 될 것입니다. 특히 복잡한 코드베이스를 이해하고 최적화하는 능력이 크게 향상될 것으로 기대됩니다. 이번 통합은 AI 기반 소프트웨어 개발 생태계의 효율성을 높이는 데 중점을 둡니다. Codex는 이제 단순한 코드 생성을 넘어 전체 개발 라이프사이클을 지원하는 도구로 진화합니다. 이는 소프트웨어 엔지니어링의 생산성을 극대화하려는 OpenAI의 비전과 일치합니다. 실무적으로는 버그 수정 시간 단축과 코드 품질 향상이라는 직접적인 이점이 있을 것입니다. 향후 업데이트를 통해 Pierre Computer Company의 핵심 기능들이 Codex에 순차적으로 통합될 예정입니다. 이번 인수로 OpenAI는 코딩 AI 시장에서의 기술적 우위를 더욱 공고히 하게 되었습니다. 개발 환경의 혁신을 통해 더 빠른 제품 출시와 안정적인 시스템 구축이 가능해질 전망입니다.",
-      "summary_original": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code."
-    },
-    {
-      "source": "MIT Technology Review AI",
-      "authority": "media",
-      "title": "데이터 리니지를 통한 에이전트 중심 기업 환경의 보안 강화",
-      "title_original": "Securing the agentic enterprise with data lineage",
-      "link": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
-      "published_raw": "Wed, 04 Nov 2026 13:00:00 +0000",
-      "published_local": "2026-11-04 22:00",
-      "primary_topic": "기업/투자",
-      "topics": [
-        "기업/투자",
-        "에이전트/자동화"
-      ],
-      "issues": [
-        "에이전트 워크플로 확장",
-        "기업 파트너십/투자"
-      ],
-      "keywords": [
-        "데이터 리니지",
-        "AI 에이전트",
-        "기업 보안",
-        "데이터 거버넌스",
-        "에이전트 워크플로"
-      ],
-      "keywords_original": [
-        "enterprise",
-        "pricing",
-        "agent",
-        "에이전트 워크플로 확장",
-        "기업 파트너십/투자"
-      ],
-      "summary": "기업들이 AI 에이전트를 도입하며 복잡한 워크플로를 구축하고 있으나, 데이터 출처 추적(Data Lineage)의 부재가 보안 및 정확성 리스크를 초래하고 있다. 예를 들어 영업 사원이 가격 정보를 요청하면 에이전트는 제한된 시스템과 내부 통신 등 여러 소스에서 데이터를 수집한다. 이때 첫 번째 에이전트의 결과물을 두 번째 에이전트가 받아 제안서를 작성하는 과정에서 인간의 검토가 생략되곤 한다. 이러한 에이전트 간 전달 과정에서 오류가 포함되면 최종 결과물에 심각한 왜곡이 발생할 수 있다. 특히 권한 제한 데이터 접근이나 오래된 정보의 오용 위험이 크다. 데이터 리니지는 데이터의 생성, 변형, 전달 경로를 기록하는 기술적 추적 체계다. 이를 통해 기업은 AI 결정 근거를 파악하고 잘못된 데이터의 전파 경로를 추적해 수정할 수 있다. 에이전트 중심 환경에서는 결과값 확인을 넘어 데이터 흐름 전체를 가시화하는 것이 필수적이다. 이는 AI 환각을 줄이고 기업 내부 데이터 거버넌스를 강화하는 핵심 수단이 된다. 실무적으로는 감사 로그 강화와 에이전트 간 핸드오프 단계의 검증 프로세스 도입이 필요하다. 데이터 리니지 확보는 AI 자율성과 보안 신뢰성 사이의 균형을 맞추는 핵심 요소다. 기업은 워크플로 확장 시 출처 투명성을 보장하는 아키텍처를 우선 고려해야 한다.",
-      "summary_original": "A sales representative asks an AI agent for customer pricing, and the agent pulls data from multiple sources: restricted pricing systems, internal communications, and archived quotes. The output looks accurate to the agent, so a second agent uses the data to draft the proposal for the sales rep. No human checks either handoff. When it’s…"
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "리눅스 커널 취약점 948개를 해결한 OpenAI의 자율 보안 파이프라인",
-      "title_original": "A thousand fewer paths to root",
-      "link": "https://openai.com/index/a-thousand-fewer-paths-to-root",
-      "published_raw": "Wed, 04 Nov 2026 08:00:00 GMT",
-      "published_local": "2026-11-04 17:00",
-      "primary_topic": "기타",
-      "topics": [
-        "기타"
-      ],
-      "issues": [],
-      "keywords": [
-        "OpenAI",
-        "리눅스 커널",
-        "권한 상승 취약점",
-        "자율 파이프라인",
-        "AI 보안"
-      ],
-      "keywords_original": [],
-      "summary": "OpenAI가 리눅스 커널의 로컬 권한 상승 취약점을 자동으로 탐지하고 수정하는 자율 파이프라인을 구축했습니다. 이 시스템은 총 948개의 취약점을 발견하고 검증했으며, 이에 대한 패치까지 생성하는 성과를 거두었습니다. 리눅스 커널은 수많은 운영체제의 기반이 되므로, 이곳의 취약점은 시스템 전체의 보안 위협으로 이어집니다. 특히 로컬 권한 상승 취약점은 일반 사용자가 관리자 권한을 획득하게 하여 심각한 피해를 줄 수 있습니다. OpenAI는 LLM 기반 에이전트를 활용해 코드 분석, 취약점 탐색, 패치 생성 과정을 자동화했습니다. 이는 기존의 수동 보안 감사 방식보다 훨씬 빠르고 효율적으로 대규모 취약점을 처리할 수 있음을 증명한 사례입니다. 발견된 취약점들은 엄격한 검증 과정을 거쳐 실제 작동 여부가 확인되었습니다. 생성된 패치들은 커널의 안정성을 유지하며 보안 허점을 메우도록 설계되었습니다. 이번 성과는 AI가 복잡한 시스템의 보안 취약점을 스스로 해결하는 수준에 도달했음을 보여줍니다. 이는 향후 소프트웨어 보안 패치 주기 단축과 자동화된 유지보수 체계 구축에 기여할 전망입니다. 또한 오픈소스 커뮤니티와 협력하여 더 안전한 컴퓨팅 환경을 조성하는 계기가 될 것입니다. 결과적으로 AI 보안 도구가 전문가의 업무 효율을 극대화하는 강력한 보조 수단이 될 것임을 시사합니다.",
-      "summary_original": "OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel."
-    },
-    {
-      "source": "OpenAI News",
-      "authority": "official",
-      "title": "Daybreak Red, AWS GovCloud (US-East)에서 제공 시작",
-      "title_original": "Daybreak Red is now available in AWS GovCloud (US-East)",
-      "link": "https://openai.com/index/daybreak-red-aws-govcloud",
-      "published_raw": "Wed, 04 Nov 2026 07:00:00 GMT",
-      "published_local": "2026-11-04 16:00",
+      "title": "NVIDIA, 대화형 월드 시뮬레이션을 위한 Cosmos 3 오픈 모델 공개",
+      "title_original": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+      "link": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "published_raw": "Thu, 05 Nov 2026 19:35:16 GMT",
+      "published_local": "2026-11-06 04:35",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시"
       ],
       "issues": [],
       "keywords": [
-        "Daybreak Red",
-        "GPT-5.6 Cyber",
-        "AWS GovCloud",
-        "Amazon Bedrock",
-        "사이버 보안"
+        "NVIDIA Cosmos 3",
+        "월드 모델",
+        "대화형 시뮬레이션",
+        "로보틱스",
+        "오픈 웨이트"
       ],
       "keywords_original": [
-        "gpt"
+        "model"
       ],
-      "summary": "OpenAI가 Daybreak Red를 AWS GovCloud (US-East) 지역에서 제공한다고 발표했습니다. 이번 서비스는 Amazon Bedrock 플랫폼을 통해 승인된 고객들에게 제공됩니다. 핵심 모델로는 사이버 보안에 특화된 GPT-5.6 Cyber가 탑재되었습니다. 해당 서비스는 권한을 부여받은 사이버 보안 업무 수행을 목적으로 설계되었습니다. AWS GovCloud는 미국 정부 기관 및 관련 계약업체를 위한 보안 클라우드 환경입니다. 이를 통해 공공 부문에서도 고성능 AI 모델을 안전하게 활용할 수 있게 되었습니다. GPT-5.6 Cyber는 복잡한 보안 위협 분석 및 대응 능력을 갖춘 것으로 알려져 있습니다. 엄격한 규정 준수와 데이터 보안 요구사항을 충족하는 환경에서 운영됩니다. 승인된 사용자들은 Bedrock의 관리형 환경에서 모델을 배포하고 최적화할 수 있습니다. 이번 조치는 정부 차원의 사이버 방어 역량을 강화하는 데 기여할 전망입니다. 실무적으로는 보안 관제 및 취약점 분석 업무의 효율성이 크게 향상될 것으로 보입니다. OpenAI와 AWS의 협력을 통해 공공 보안 AI 생태계가 확장되는 계기가 될 것입니다.",
-      "summary_original": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work."
+      "summary": "NVIDIA가 대화형 월드 시뮬레이션 및 다중 센서·다중 뷰 주행 장면 생성을 위해 Cosmos 3 모델 제품군에 4개의 새로운 오픈 웨이트 체크포인트를 추가했다. 이번 모델들은 Cosmos 3 Nano를 기반으로 사후 학습되었으며, 각각 160억(16B) 개의 학습 가능한 파라미터를 보유하고 있다. 해당 모델들은 OpenMDW1.1 라이선스를 적용하여 약관에 따라 상업적 및 비상업적 용도로 모두 사용 가능하다. 로보틱스 분야에서는 변화하는 장면과 시점에서도 정확한 응답을 제공하는 환경 구축이 필수적이다. 이번 체크포인트들은 이러한 환경을 구축하기 위한 상호 보완적인 방법론을 제시한다. 구체적으로 Sim-Bimanual 모델은 특정 행동에 따른 시각적 결과를 예측하는 기능을 수행한다. 반면 Sim-Transfer 모델은 물리 시뮬레이터의 제어 입력을 생성된 관찰 데이터로 변환하는 역할을 한다. 이를 통해 개발자들은 더 정교한 가상 환경에서 로봇 학습 및 테스트를 진행할 수 있게 되었다. NVIDIA는 기술 보고서와 데모 영상을 함께 제공하여 모델의 성능과 활용법을 안내하고 있다. 이번 공개는 고성능 월드 모델의 접근성을 높여 자율 주행 및 로봇 제어 기술 발전에 기여할 것으로 보인다. 특히 다중 뷰 시뮬레이션 능력은 복잡한 실제 환경을 모사하는 데 핵심적이다. 사용자는 허깅페이스를 통해 해당 체크포인트를 다운로드하여 활용할 수 있다.",
+      "summary_original": "NVIDIA Cosmos world model development platform adds four new open-weight checkpoints to its Cosmos 3 model family for generating interactive world simulation and multi-sensor multi-view driving scenes: All four models are post-trained examples of Cosmos 3 Nano and have 16B trainable parameters. The models use OpenMDW1.1, permitting commercial and non-commercial use under its terms. Download the checkpoints · Read the technical report . Watch the demos 🦾 Robotics needs environments that can answer this across changing scenes and viewpoints. These checkpoints offer complementary ways to build them: Sim-Bimanual predicts visual consequences from actions, while Sim-Transfer turns a physics simulator’s controls into generated observations."
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "Introducing Images 2.6",
-      "title_original": "Introducing Images 2.6",
-      "link": "https://openai.com/index/introducing-images-2-6",
-      "published_raw": "Wed, 04 Nov 2026 00:00:00 GMT",
-      "published_local": "2026-11-04 09:00",
+      "title": "호주 대학들, 'AI 네이티브' 인재 양성에 박차",
+      "title_original": "Australian universities are creating AI-native graduates",
+      "link": "https://openai.com/index/australian-universities-ai-native-graduates",
+      "published_raw": "Thu, 05 Nov 2026 17:00:00 GMT",
+      "published_local": "2026-11-06 02:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "호주 대학",
+        "AI 네이티브",
+        "ChatGPT",
+        "생성형 AI",
+        "AI 리터러시"
+      ],
+      "keywords_original": [
+        "gpt"
+      ],
+      "summary": "호주 대학들이 학생들이 AI 기반의 노동 시장에 대비할 수 있도록 ChatGPT 접근성을 확대하고 교육 과정에 AI를 적극 도입하고 있습니다. 이는 단순한 도구 활용을 넘어, AI를 능숙하게 다루는 'AI 네이티브' 졸업생을 양성하려는 전략적 움직임입니다. 과거에는 AI의 부정행위 가능성으로 인해 사용을 제한하는 분위기였으나, 이제는 필수 역량으로 인식하는 패러다임의 전환이 일어났습니다. 대학들은 교수법과 학습 방식 전반에 AI를 통합하여 학생들의 비판적 사고와 문제 해결 능력을 강화하고 있습니다. 특히 ChatGPT와 같은 생성형 AI를 통해 개인 맞춤형 학습 경험을 제공하고 학습 효율성을 높이는 데 집중하고 있습니다. 이러한 변화는 산업계에서 요구하는 AI 리터러시 수준이 급격히 높아진 배경과 맞물려 있습니다. 학생들은 AI를 활용한 데이터 분석, 콘텐츠 생성, 코드 작성 등 실무적인 기술을 학업 과정에서 자연스럽게 습득하게 됩니다. 대학들은 AI 윤리와 책임감 있는 사용법에 대한 교육도 병행하여 기술 오남용 리스크를 최소화하고 있습니다. 결과적으로 졸업생들은 AI와 협업하는 능력을 갖추어 취업 시장에서 강력한 경쟁력을 확보할 것으로 기대됩니다. 이번 조치는 고등 교육 기관이 기술 변화에 어떻게 유연하게 대응해야 하는지를 보여주는 사례입니다. 앞으로 더 많은 교육 기관이 AI를 커리큘럼의 핵심으로 편입시킬 가능성이 큽니다. 이는 미래 인력의 전문성을 재정의하는 중요한 전환점이 될 것입니다.",
+      "summary_original": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Gemini Omni 1.2 Flash 출시: 더 길어진 영상 생성과 비용 효율성 강화",
+      "title_original": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "published_raw": "Thu, 05 Nov 2026 17:00:00 +0000",
+      "published_local": "2026-11-06 02:00",
       "primary_topic": "모델/출시",
       "topics": [
         "모델/출시",
         "멀티모달"
       ],
       "issues": [
-        "신규 모델/제품 발표",
         "비용/성능 경쟁"
       ],
       "keywords": [
-        "gpt",
-        "api",
-        "image",
-        "신규 모델/제품 발표",
-        "비용/성능 경쟁"
+        "Gemini Omni 1.2 Flash",
+        "비디오 생성",
+        "비용 절감",
+        "구글 AI",
+        "멀티모달"
       ],
       "keywords_original": [
-        "gpt",
-        "api",
-        "image",
-        "신규 모델/제품 발표",
+        "gemini",
+        "video",
         "비용/성능 경쟁"
       ],
-      "summary": "이 기사는 'Introducing Images 2.6' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
-      "summary_original": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API."
+      "summary": "구글이 새로운 AI 모델인 Gemini Omni 1.2 Flash를 공개했다. 이번 업데이트의 핵심은 네이티브 방식의 15초 길이 비디오 생성 및 편집 기능의 도입이다. 기존 모델보다 영상의 일관성이 크게 향상되어 더욱 자연스러운 결과물을 제공한다. 특히 비용 효율성을 극대화하여 이전 버전 대비 가격을 30% 낮췄다. 이는 개발자들이 더 적은 비용으로 고성능 비디오 AI 기능을 구현할 수 있게 한다. Gemini Omni 1.2 Flash는 빠른 처리 속도와 비용 절감을 동시에 달성하는 데 집중했다. 영상 생성 분야에서 경쟁력을 높이기 위해 더 긴 클립 생성 능력을 확보한 것이 특징이다. 실무적으로는 마케팅 영상 제작이나 짧은 콘텐츠 생성 자동화에 즉각 활용 가능하다. 구글은 이를 통해 멀티모달 AI의 접근성을 높이고 생태계를 확장하려 한다. 고품질의 일관된 영상 편집 기능은 전문 크리에이터들에게 유용한 도구가 될 전망이다. 이번 모델은 성능 최적화를 통해 응답 시간을 단축하고 처리 효율을 높였다. 결과적으로 기업들은 운영 비용을 줄이면서도 서비스 품질을 개선할 수 있게 되었다.",
+      "summary_original": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing."
+    },
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "웨어러블 센서를 활용한 고혈압 징후 탐지 기술",
+      "title_original": "Detecting signs of hypertension using wearable sensors",
+      "link": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+      "published_raw": "Thu, 05 Nov 2026 16:01:08 +0000",
+      "published_local": "2026-11-06 01:01",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "고혈압 탐지",
+        "웨어러블 센서",
+        "Google Research",
+        "광혈류측정(PPG)",
+        "머신러닝"
+      ],
+      "keywords_original": [],
+      "summary": "Google Research는 웨어러블 센서를 통해 고혈압 징후를 탐지하는 새로운 연구 결과를 발표했다. 고혈압은 뚜렷한 증상이 없어 '침묵의 살인자'로 불리며, 조기 발견이 매우 중요하다. 기존의 혈압 측정 방식은 커프형 측정기가 필요해 일상적인 연속 모니터링에 한계가 있었다. 연구팀은 스마트워치 등에 탑재된 광혈류측정(PPG) 센서와 같은 웨어러블 데이터를 활용했다. 이 기술은 맥파의 형태와 패턴을 분석하여 고혈압 가능성을 예측하는 머신러닝 모델을 기반으로 한다. 사용자의 생체 신호를 실시간으로 분석해 혈압 상승 징후가 보일 때 알림을 제공하는 것이 핵심이다. 이는 의료진의 진단을 대체하는 것이 아니라, 병원 방문이 필요한 시점을 알려주는 스크리닝 도구로 설계되었다. 연구 결과, 웨어러블 기기를 통한 비침습적 방식이 고혈압 위험군을 식별하는 데 유효함을 확인했다. 이를 통해 사용자는 일상생활 속에서 자신의 혈압 상태를 더 쉽게 관리할 수 있게 된다. 향후 더 다양한 인구 통계학적 데이터를 학습시켜 모델의 정확도와 범용성을 높일 계획이다. 이 기술이 상용화되면 심혈관 질환의 예방 및 조기 관리에 획기적인 변화를 가져올 것으로 기대된다. 결과적으로 디지털 헬스케어의 접근성을 높여 공중 보건 향상에 기여하는 것을 목표로 한다.",
+      "summary_original": "Health & Bioscience"
     },
     {
       "source": "OpenAI News",
       "authority": "official",
-      "title": "DevRev, GPT-6.1 Sol 기반의 자율 셀프 서비스 솔루션 제공",
-      "title_original": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
-      "link": "https://openai.com/index/devrev-enterprise-self-service",
-      "published_raw": "Wed, 04 Nov 2026 00:00:00 GMT",
-      "published_local": "2026-11-04 09:00",
-      "primary_topic": "성능/벤치마크",
+      "title": "GPT-6 Cyber: 정렬된 사이버 보안 에이전트의 새로운 지평",
+      "title_original": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "link": "https://openai.com/index/introducing-gpt-6-cyber",
+      "published_raw": "Thu, 05 Nov 2026 09:00:00 GMT",
+      "published_local": "2026-11-05 18:00",
+      "primary_topic": "모델/출시",
       "topics": [
-        "성능/벤치마크",
-        "모델/출시"
-      ],
-      "issues": [
-        "비용/성능 경쟁",
-        "기업 파트너십/투자"
-      ],
-      "keywords": [
-        "GPT-6.1 Sol",
-        "DevRev",
-        "자율 셀프 서비스",
-        "기업용 AI",
-        "추론 성능"
-      ],
-      "keywords_original": [
-        "reasoning",
-        "cost",
-        "gpt",
-        "비용/성능 경쟁",
-        "기업 파트너십/투자"
-      ],
-      "summary": "DevRev가 OpenAI의 최신 모델인 GPT-6.1 Sol을 도입하여 기업용 자율 셀프 서비스 기능을 강화했습니다. 이번 도입의 핵심은 'Computer'와 'Operator'라는 두 가지 주요 기능을 구동하는 것입니다. GPT-6.1 Sol은 추론 능력, 처리 속도, 그리고 운영 비용 사이의 최적의 균형을 제공하도록 설계되었습니다. 이를 통해 기업들은 고객 서비스 단계에서 더 정교한 자동화 시스템을 구축할 수 있게 되었습니다. 특히 복잡한 문제 해결을 위한 추론 성능이 향상되어 단순 챗봇 이상의 기능을 수행합니다. 운영 비용의 효율화를 통해 대규모 엔터프라이즈 환경에서도 지속 가능한 AI 적용이 가능해졌습니다. 실무적으로는 고객 지원 팀의 업무 부하를 줄이고 응답 시간을 획기적으로 단축할 것으로 기대됩니다. 사용자는 사람의 개입 없이도 고도화된 셀프 서비스 경험을 통해 문제를 빠르게 해결할 수 있습니다. 이는 AI 모델의 성능 경쟁이 단순한 파라미터 증가가 아닌 실질적인 비용 효율성으로 이동하고 있음을 보여줍니다. DevRev와 OpenAI의 파트너십은 기업용 AI 서비스의 새로운 표준을 제시하고 있습니다. 결과적으로 기업은 서비스 품질 향상과 비용 절감이라는 두 가지 목표를 동시에 달성할 수 있습니다. 향후 더 많은 기업이 이러한 자율 운영 모델을 도입하여 디지털 전환을 가속화할 전망입니다.",
-      "summary_original": "DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service."
-    },
-    {
-      "source": "DeepMind Blog",
-      "authority": "official",
-      "title": "Google Antigravity를 활용한 에이전트 기반 화학정보학",
-      "title_original": "Agentic cheminformatics with Google Antigravity",
-      "link": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-      "published_raw": "Tue, 03 Nov 2026 17:01:49 +0000",
-      "published_local": "2026-11-04 02:01",
-      "primary_topic": "에이전트/자동화",
-      "topics": [
+        "모델/출시",
         "에이전트/자동화"
       ],
       "issues": [
+        "신규 모델/제품 발표",
         "에이전트 워크플로 확장"
       ],
       "keywords": [
-        "Google Antigravity",
-        "화학정보학",
-        "신약 개발",
+        "GPT-6 Cyber",
+        "OpenAI",
+        "사이버 보안",
         "AI 에이전트",
-        "거대고리 화합물"
+        "취약점 탐지"
       ],
       "keywords_original": [
+        "model",
+        "gpt",
         "agent",
-        "workflow",
+        "신규 모델/제품 발표",
         "에이전트 워크플로 확장"
       ],
-      "summary": "Google DeepMind가 신약 개발 워크플로를 가속화하기 위한 Google Antigravity와 화학정보학 기술(Cheminformatics Skills)을 공개했다. 이 시스템은 에이전트 기반의 화학정보학을 구현하여 복잡한 연구 과정을 자동화하고 효율성을 높이는 데 중점을 둔다. 주요 기능으로는 화합물 검색의 최적화와 새로운 강성 거대고리(rigidified macrocycles) 화합물의 제안 등이 포함된다. 기존의 수동적인 데이터 분석 방식에서 벗어나 AI 에이전트가 스스로 도구를 사용해 화학적 문제를 해결하는 구조다. 이를 통해 연구자들은 방대한 화학 공간을 더 빠르게 탐색하고 유망한 후보 물질을 효율적으로 식별할 수 있다. 특히 거대고리 화합물 설계와 같은 고난도 작업에서 AI의 제안 능력이 크게 향상되었다. 이러한 기술적 진보는 신약 개발의 초기 단계인 리드 최적화 시간을 단축시키는 효과를 가져온다. Google Antigravity는 다양한 화학정보학 도구와 API를 통합하여 유연한 워크플로 확장을 지원한다. 실무적으로는 화학자와 데이터 과학자 간의 협업 효율을 높이고 실험 횟수를 줄이는 데 기여할 것으로 보인다. 결과적으로 AI 에이전트가 전문적인 과학 도구를 능숙하게 다룸으로써 신약 발견의 패러다임을 바꿀 가능성을 제시한다. 이번 발표는 AI가 단순한 보조 도구를 넘어 자율적인 연구 파트너로 진화하고 있음을 보여준다. 향후 더 넓은 범위의 분자 설계 및 합성 경로 예측으로의 확장이 기대된다.",
-      "summary_original": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles."
+      "summary": "OpenAI가 사이버 보안 전문 모델인 GPT-6 Cyber를 공개했다. 이 모델은 시스템 내의 실행 가능한 취약점을 찾아내고 이를 해결하기 위한 수정 방안을 개발하는 데 특화되었다. 특히 권한이 부여된 범위 내에서만 작동하도록 훈련되어 안전성을 높였다. 이는 AI 에이전트의 워크플로를 사이버 보안 영역으로 확장하려는 전략의 일환이다. GPT-6 Cyber는 복잡한 코드 분석을 통해 잠재적 위협을 식별하는 능력을 갖췄다. 단순한 탐지를 넘어 실제 패치 코드를 생성함으로써 대응 시간을 단축시킨다. 보안 전문가들은 이 모델을 통해 반복적인 취약점 분석 업무를 자동화할 수 있다. 모델의 정렬 기술은 악용 가능성을 최소화하고 윤리적 가이드라인을 준수하게 한다. 이는 기업의 보안 인프라를 강화하고 제로데이 공격에 빠르게 대응하는 데 기여할 전망이다. OpenAI는 이번 발표를 통해 AI가 보안 방어 체계의 핵심 도구가 될 것임을 시사했다. 향후 다양한 보안 도구와의 통합을 통해 실무 적용 범위를 넓힐 계획이다. 결과적으로 사이버 보안 생태계의 효율성과 안전성을 동시에 끌어올릴 것으로 기대된다.",
+      "summary_original": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Merge, OpenAI 기술 기반의 제품 및 비즈니스 도구 구축",
+      "title_original": "Merge builds product and business tools with OpenAI technology",
+      "link": "https://openai.com/index/merge-builds-with-openai",
+      "published_raw": "Thu, 05 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-05 17:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "Merge",
+        "OpenAI",
+        "GPT-6 Astra",
+        "ChatGPT",
+        "Codex"
+      ],
+      "keywords_original": [
+        "gpt"
+      ],
+      "summary": "Merge가 OpenAI의 최신 기술을 활용해 제품 개발과 비즈니스 운영 효율성을 높이는 도구들을 구축하고 있습니다. 이들은 GPT-6 Astra, ChatGPT, Codex 등 다양한 모델을 실무 프로세스에 통합했습니다. 특히 제품 코드 리뷰 단계에 AI를 도입하여 코드의 품질을 높이고 오류를 빠르게 수정하고 있습니다. 마케팅 팀은 AI를 활용해 콘텐츠 제작 및 캠페인 전략 수립을 지원받고 있습니다. 비즈니스 운영 측면에서도 AI의 활용도가 높게 나타나고 있습니다. 경영진을 위한 만찬 계획과 같은 세부적인 일정 관리 업무에 AI를 사용합니다. 영업 팀은 최신 판매 업데이트 보고서를 준비하는 과정에서 AI의 도움을 받습니다. 이러한 통합은 단순한 자동화를 넘어 전사적인 업무 생산성 향상을 목표로 합니다. 기술적 검토부터 행정 업무까지 AI가 광범위하게 적용된 사례입니다. Merge는 이를 통해 운영 비용을 절감하고 시장 대응 속도를 높이고 있습니다. OpenAI 기술의 유연성이 기업의 다양한 부서에서 어떻게 활용될 수 있는지 보여줍니다. 결과적으로 AI 기반의 워크플로우 최적화가 기업 경쟁력의 핵심이 되고 있습니다.",
+      "summary_original": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Setting a new standard for responsible AI infrastructure",
+      "title_original": "Setting a new standard for responsible AI infrastructure",
+      "link": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "published_raw": "Thu, 05 Nov 2026 02:00:00 GMT",
+      "published_local": "2026-11-05 11:00",
+      "primary_topic": "정책/규제/안전",
+      "topics": [
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "정책/규제 변화",
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "policy",
+        "정책/규제 변화",
+        "안전/리스크 논의"
+      ],
+      "keywords_original": [
+        "policy",
+        "정책/규제 변화",
+        "안전/리스크 논의"
+      ],
+      "summary": "이 기사는 'Setting a new standard for responsible AI infrastructure' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Flipsnack, 전환 최적화를 통해 제품 가입자 수 확대",
+      "title_original": "Flipsnack grows product signups with conversion optimization",
+      "link": "https://openai.com/ads/customers/flipsnack",
+      "published_raw": "Thu, 05 Nov 2026 00:45:15 GMT",
+      "published_local": "2026-11-05 09:45",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Flipsnack",
+        "ChatGPT 광고",
+        "전환 최적화",
+        "가입자 증대",
+        "고객 획득 비용"
+      ],
+      "keywords_original": [
+        "gpt",
+        "cost",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Flipsnack은 제품 가입자 수를 늘리기 위해 ChatGPT 광고 캠페인을 전략적으로 활용했다. 이번 캠페인의 핵심 목표는 사용자들이 Flipsnack 제품을 직접 체험하도록 유도하는 것이었다. 이를 위해 전환 최적화 전략을 도입하여 광고 효율을 극대화했다. 그 결과, 신규 가입자 등록 수가 눈에 띄게 증가하는 성과를 거두었다. 동시에 가입자 1인당 획득 비용을 낮추는 데 성공했다. 이는 AI 기반 광고 도구가 정밀한 타겟팅과 메시지 최적화를 가능하게 했음을 시사한다. Flipsnack은 단순한 노출보다는 실제 제품 사용으로 이어지는 전환율에 집중했다. 이러한 접근 방식은 마케팅 예산의 효율성을 높이는 실질적인 결과로 이어졌다. AI 광고 솔루션을 통해 고객 획득 비용을 절감하면서도 성장세를 유지할 수 있었다. 이번 사례는 AI를 활용한 퍼포먼스 마케팅의 효과적인 적용 모델을 제시한다. 기업들은 이를 통해 데이터 기반의 최적화된 사용자 유입 경로를 설계할 수 있다. 결과적으로 Flipsnack은 AI 기술을 통해 비즈니스 성장과 비용 절감이라는 두 가지 목표를 동시에 달성했다.",
+      "summary_original": "Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while lowering the cost per signup."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "프랭클린 템플턴, 투자 리서치 지원을 위해 OpenAI 도입",
+      "title_original": "Franklin Templeton uses OpenAI to support investment research",
+      "link": "https://openai.com/index/franklin-templeton",
+      "published_raw": "Thu, 05 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-05 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "안전/리스크 논의",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "프랭클린 템플턴",
+        "OpenAI",
+        "투자 리서치",
+        "AI 워크플로",
+        "리스크 관리"
+      ],
+      "keywords_original": [
+        "workflow",
+        "risk",
+        "에이전트 워크플로 확장",
+        "안전/리스크 논의",
+        "기업 파트너십/투자"
+      ],
+      "summary": "글로벌 자산운용사인 프랭클린 템플턴이 투자 리서치 역량 강화를 위해 OpenAI의 기술을 도입했다. 이번 협력의 핵심은 포트폴리오 매니저들이 더 효율적으로 의사결정을 내릴 수 있도록 돕는 AI 워크플로 개발에 있다. 우선적으로 주식 리서치 분야에 AI를 적용하여 다양한 리서치 관점을 비교 분석하는 기능을 구현한다. 이를 통해 매니저들은 방대한 양의 데이터를 빠르게 처리하고 투자 리스크를 정밀하게 검토할 수 있게 된다. AI 에이전트 기반의 워크플로 확장은 단순한 자동화를 넘어 복잡한 분석 프로세스를 최적화하는 것을 목표로 한다. 특히 투자 리스크 관리와 안전성 논의를 통해 AI 도입에 따른 잠재적 위험을 최소화하는 전략을 병행한다. 이번 파트너십은 금융 산업 내에서 생성형 AI가 실무 수준의 분석 도구로 진화하고 있음을 보여준다. 프랭클린 템플턴은 AI를 통해 리서치 효율성을 높이고 운용 성과를 극대화하려는 전략적 움직임을 보이고 있다. 실무적으로는 데이터 수집 및 분석 시간이 단축되어 매니저들이 고차원적인 전략 수립에 더 집중할 수 있다. 이는 기업 파트너십을 통한 AI 기술의 실제 금융 적용 사례로서 중요한 의미를 갖는다. 향후 주식 외 다른 자산군으로의 AI 워크플로 확대 적용 가능성도 열려 있다. 결과적으로 AI는 투자 리서치의 정밀도를 높이고 리스크 대응 능력을 강화하는 핵심 도구가 될 전망이다.",
+      "summary_original": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks."
     }
   ]
 }
