@@ -1,0 +1,341 @@
+{
+  "report_date": "2026-11-09",
+  "report_date_kst": "2026-11-09",
+  "generated_at": "2026-11-09T02:58:01.875913+00:00",
+  "generated_at_kst": "2026-11-09T11:58:01.875913+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "비용/성능 경쟁",
+      3
+    ],
+    [
+      "신규 모델/제품 발표",
+      2
+    ],
+    [
+      "에이전트 워크플로 확장",
+      2
+    ],
+    [
+      "안전/리스크 논의",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1344,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 889,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 20,
+    "Google Research Blog": 2,
+    "Google Blog AI": 2,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 8,
+    "MIT Technology Review AI": 6,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 1
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 10,
+    "success_freeform": 0,
+    "fallback": 0,
+    "enabled_after_run": true,
+    "last_error": "",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "ToyBlocks: 로봇 학습 및 평가를 위한 제어된 환경",
+      "title_original": "ToyBlocks: A controlled world for robot learning and evaluation",
+      "link": "https://huggingface.co/blog/allenai/toyblocks",
+      "published_raw": "Fri, 06 Nov 2026 14:00:48 GMT",
+      "published_local": "2026-11-06 23:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "신규 모델/제품 발표"
+      ],
+      "keywords": [
+        "ToyBlocks",
+        "FoundationWorlds",
+        "로봇 학습",
+        "시뮬레이션 환경",
+        "모델 평가"
+      ],
+      "keywords_original": [
+        "model",
+        "evaluation",
+        "신규 모델/제품 발표"
+      ],
+      "summary": "로봇은 세탁물 접기나 부품 분류 등 다양한 작업을 학습하고 있지만, 기존 시연 데이터는 범위가 좁고 학습 과정이나 실패 원인을 명확히 설명하지 못하는 한계가 있습니다. 과학자들이 복잡한 시스템 연구를 위해 페트리 접시 같은 제어된 환경을 사용하는 것처럼, 로보틱스 분야에도 조건 변경과 반복 테스트가 가능한 환경이 필요합니다. 이에 따라 Hugging Face는 로봇 학습 및 평가를 위한 새로운 프레임워크인 FoundationWorlds를 소개했습니다. FoundationWorlds는 특정 환경 연구를 위해 설계된 제어된 시뮬레이션 세계를 제공합니다. 이 프레임워크는 작업의 자동 생성 도구와 훈련 시연 데이터 생성 기능을 함께 제공합니다. 또한 로봇의 행동 변화를 시간에 따라 측정할 수 있는 정밀한 메트릭을 포함하고 있습니다. ToyBlocks는 이러한 FoundationWorlds 프레임워크를 통해 구현된 구체적인 사례입니다. 연구자들은 이를 통해 훈련 데이터나 모델 설계를 변경하며 실패의 근본 원인을 추적할 수 있습니다. 이는 로봇 학습의 투명성을 높이고 모델의 일반화 능력을 체계적으로 검증하는 데 기여합니다. 결과적으로 복잡한 실제 환경으로 나아가기 전, 안전하고 효율적인 실험 기반을 마련해 줍니다. 이 접근 방식은 로봇 AI의 신뢰성을 높이는 중요한 단계가 될 것입니다. 향후 다양한 도메인으로 확장되어 로봇 학습의 표준 평가 체계를 구축할 것으로 기대됩니다.",
+      "summary_original": "Robots are learning to fold laundry, sort parts, and handle unfamiliar objects. But those demonstrations are often rather narrow and don't explain what a robot has learned or why it fails. To study a complex system, scientists often begin with a small, controlled environment, such as a petri dish or terrarium, where they can vary conditions and observe the effects. Robotics needs environments that make this kind of investigation possible—researchers should be able to change the training data or model design, repeat a test, and trace the cause of a failure. Today we're introducing a framework for creating these environments; we call them FoundationWorlds. Each pairs a controlled, simulated world targeted at studying robotics in a specific environment with tools for automatically generating tasks and training demonstrations, as well as metrics for measuring a robot's behavior over time. T…"
+    },
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "휴머노이드 로봇의 아파트 청소 체험: 미래의 단면을 보다",
+      "title_original": "I watched a humanoid robot clean my apartment. It felt like a taste of the future.",
+      "link": "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/",
+      "published_raw": "Fri, 06 Nov 2026 10:00:00 +0000",
+      "published_local": "2026-11-06 19:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "휴머노이드 로봇",
+        "가사 자동화",
+        "샌프란시스코",
+        "MIT 테크놀로지 리뷰",
+        "AI 로보틱스"
+      ],
+      "keywords_original": [],
+      "summary": "MIT 테크놀로지 리뷰는 샌프란시스코에서 운영 중인 새로운 휴머노이드 로봇 청소 서비스를 체험한 후기를 보도했다. 작성자는 평소 절약하는 성격임에도 불구하고 최신 로봇 기술에 대한 호기심으로 해당 서비스를 신청했다. 이 서비스는 인간의 형태를 한 휴머노이드 로봇이 가정 방문하여 실제 청소 작업을 수행하는 방식이다. 로봇은 단순한 진공청소 기능을 넘어 복잡한 가사 노동을 수행할 수 있는 능력을 보여주었다. 특히 인간이 사용하는 도구를 다루거나 정교한 움직임이 필요한 구역을 청소하는 모습이 인상적이었다. 이는 AI와 로보틱스의 결합이 실험실을 벗어나 실제 상업적 서비스 단계로 진입했음을 시사한다. 현재 이 서비스는 샌프란시스코 일부 지역에서 제한적으로 제공되며 기술적 완성도를 높이는 단계에 있다. 로봇의 움직임은 과거보다 훨씬 자연스러워졌으며, 환경 인식 능력이 크게 향상되었다. 이러한 변화는 향후 가사 노동의 자동화가 가속화되어 삶의 질을 높일 가능성을 보여준다. 다만 비용 효율성과 완전한 자율성 확보라는 과제는 여전히 남아 있는 상태다. 실무적으로는 서비스업의 인력 구조 변화와 로봇 유지보수 시장의 성장이 예상된다. 이번 체험은 휴머노이드 로봇이 일상생활에 깊숙이 들어올 미래가 머지않았음을 체감하게 했다.",
+      "summary_original": "I’m not the sort of person who typically pays for a house cleaner. I’m too frugal, and I kind of enjoy putting on a podcast and going to town on my tub with a Magic Eraser. But when I saw an X post about a new humanoid-robot cleaning service in San Francisco, I immediately signed…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, 시스템 취약점 발견을 위해 Hacktron과 파트너십 체결",
+      "title_original": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+      "link": "https://openai.com/index/partnering-with-hacktron",
+      "published_raw": "Fri, 06 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-06 17:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "OpenAI",
+        "Hacktron",
+        "보안 취약점",
+        "프런티어 AI",
+        "레드팀"
+      ],
+      "keywords_original": [],
+      "summary": "OpenAI가 보안 강화와 시스템 취약점 발견을 위해 Hacktron과 파트너십을 체결했습니다. 이번 협력의 주된 목적은 OpenAI 시스템 내의 잠재적인 보안 허점을 찾아내고 이를 보완하는 것입니다. 특히 서드파티 서비스와의 연결성을 테스트하여 외부 접점에서의 보안 위협을 최소화하는 데 집중합니다. 최첨단 AI(Frontier AI)를 활용해 방어 체계를 더욱 견고하게 구축하려는 전략적 움직임입니다. Hacktron의 전문적인 보안 테스트 역량을 통해 실전적인 취약점 점검이 이루어질 예정입니다. 이는 AI 모델의 안전성과 신뢰성을 높이기 위한 레드팀 활동의 일환으로 해석됩니다. 외부 전문가들의 집단 지성을 활용해 내부에서 발견하지 못한 엣지 케이스를 식별하고자 합니다. 보안 취약점을 선제적으로 제거함으로써 사용자 데이터 보호와 서비스 안정성을 강화할 수 있습니다. 이번 파트너십은 AI 생태계 전반의 보안 표준을 높이는 데 기여할 것으로 보입니다. 실무적으로는 더 안전한 API 연결과 서비스 통합 환경을 제공하는 결과로 이어질 것입니다. OpenAI는 앞으로도 지속적인 보안 테스트를 통해 잠재적 위험을 관리할 계획입니다. 결과적으로 더 안전하고 신뢰할 수 있는 AI 서비스 제공이 가능해질 전망입니다.",
+      "summary_original": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "AI 에이전트의 일상적 습식 실험실 과학 수행 능력 측정",
+      "title_original": "Measuring how AI agents handle everyday wet-lab science",
+      "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "published_raw": "Fri, 06 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-06 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "BioBasicsBench",
+        "AI 에이전트",
+        "습식 실험실",
+        "벤치마크",
+        "과학 자동화"
+      ],
+      "keywords_original": [
+        "agent",
+        "benchmark",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "OpenAI가 AI 에이전트의 습식 실험실(wet-lab) 과학 수행 능력을 측정하기 위한 새로운 벤치마크인 BioBasicsBench를 공개했다. 이 벤치마크는 AI 에이전트가 가공되지 않은 실험 데이터를 얼마나 잘 해석하고 일상적인 실험실 업무를 처리하는지 평가한다. BioBasicsBench는 총 100개의 과제로 구성되어 있으며, 실제 과학 연구 환경에서 발생하는 다양한 시나리오를 포함한다. 기존 AI 모델들이 이론적 지식에는 강했으나 실제 실험 데이터 처리와 같은 실무 적용에는 한계가 있었다. 이번 발표는 AI 에이전트의 워크플로를 단순 텍스트 생성을 넘어 실제 물리적 실험 영역으로 확장하려는 시도다. 이를 통해 AI가 실험 설계, 데이터 분석, 결과 해석 과정을 얼마나 효율적으로 수행하는지 정량적으로 측정할 수 있다. 특히 원시 데이터 해석 능력은 실험의 정확도와 재현성을 높이는 데 핵심적이다. OpenAI는 이 벤치마크로 AI 에이전트의 성능을 객관적으로 비교하고 개선 방향을 제시하고자 한다. 이는 향후 AI가 연구원 보조를 넘어 자율적 실험 수행 능력을 갖추는 기반이 될 전망이다. 또한 비용 효율성과 성능 간의 최적점을 찾는 경쟁적 개발 환경을 조성할 것으로 보인다. 결과적으로 바이오 및 화학 분야의 연구 속도를 획기적으로 가속화할 가능성이 크다. 이번 도입은 AI 기반 과학 자동화의 새로운 표준을 제시하는 중요한 단계가 될 것이다.",
+      "summary_original": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "이집트어 및 나이지리아 영어, Open ASR 리더보드 합류",
+      "title_original": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+      "link": "https://huggingface.co/blog/open-asr-leaderboard-liva",
+      "published_raw": "Fri, 06 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-06 09:00",
+      "primary_topic": "오픈소스/개발자",
+      "topics": [
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "Open ASR",
+        "Hugging Face",
+        "자동 음성 인식",
+        "이집트어",
+        "나이지리아 영어"
+      ],
+      "keywords_original": [
+        "open source"
+      ],
+      "summary": "Hugging Face가 오픈 소스와 오픈 사이언스를 통해 AI의 민주화를 추진하고 있습니다. 그 일환으로 Open ASR 리더보드에 이집트어와 나이지리아 영어 데이터셋이 새롭게 추가되었습니다. ASR은 자동 음성 인식 기술로, 다양한 언어와 방언을 지원하는 것이 핵심 과제입니다. 이번 업데이트는 저자원 언어 및 특정 지역 방언에 대한 인식 성능을 측정하기 위해 이루어졌습니다. 이집트어와 나이지리아 영어는 많은 사용자를 보유하고 있음에도 AI 모델의 지원이 상대적으로 부족했습니다. 리더보드를 통해 개발자들은 각 모델의 실제 성능을 객관적으로 비교할 수 있게 됩니다. 이는 특정 지역의 언어적 특성을 반영한 맞춤형 음성 인식 모델 개발을 촉진합니다. 오픈 소스 커뮤니티는 이를 통해 데이터 편향성을 줄이고 포용적인 AI 생태계를 구축할 수 있습니다. 실무적으로는 다국어 서비스의 정확도를 높이고 사용자 경험을 개선하는 데 기여할 전망입니다. Hugging Face는 앞으로도 더 많은 언어를 추가하여 글로벌 접근성을 확대할 계획입니다. 이번 조치는 AI 기술의 혜택이 특정 언어권에 집중되지 않도록 하는 중요한 단계입니다. 결과적으로 전 세계 사용자가 자신의 모국어로 AI와 더 원활하게 소통하는 환경이 조성될 것입니다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Phonon TTS 상세 분석: 벤치마크를 뛰어넘는 고품질 온디바이스 음성 합성 모델 출시",
+      "title_original": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+      "link": "https://huggingface.co/blog/phonon-tts",
+      "published_raw": "Thu, 05 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-05 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Phonon TTS",
+        "온디바이스 AI",
+        "음성 합성",
+        "Hugging Face",
+        "오픈 소스"
+      ],
+      "keywords_original": [
+        "launch",
+        "speech",
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Hugging Face가 고품질 온디바이스 음성 합성을 위한 Phonon TTS 모델을 공개했다. 이 모델은 오픈 소스와 오픈 사이언스를 통해 AI 기술의 민주화를 목표로 개발되었다. Phonon TTS는 최신 벤치마크 테스트에서 기존 모델들을 뛰어넘는 성능을 기록하며 기술적 우위를 입증했다. 특히 온디바이스 환경에 최적화되어 낮은 지연 시간과 높은 효율성을 제공하는 것이 특징이다. 고품질의 음성 출력을 유지하면서도 하드웨어 리소스 소모를 최소화하도록 설계되었다. 이를 통해 인터넷 연결 없이도 기기 자체에서 자연스러운 음성 합성이 가능하다. 실무적으로는 모바일 앱이나 임베디드 시스템의 사용자 경험을 크게 향상시킬 것으로 기대된다. 개인정보 보호가 중요한 환경에서 데이터를 외부 서버로 전송하지 않고 처리할 수 있다는 장점이 있다. 개발자들은 Hugging Face 플랫폼을 통해 해당 모델에 접근하고 자신의 서비스에 통합할 수 있다. 이번 출시는 고성능 TTS 기술의 진입 장벽을 낮추는 중요한 계기가 될 것이다. 효율적인 아키텍처 덕분에 다양한 엣지 디바이스에서 원활하게 구동된다. 결과적으로 AI 음성 서비스의 비용 절감과 성능 향상을 동시에 달성했다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "더 나은 RAG를 위한 더 빠르고 효율적인 검색 기술",
+      "title_original": "Faster Retrieval for Better, More Efficient RAG",
+      "link": "https://machinelearning.apple.com/research/faster-retrieval",
+      "published_raw": "Thu, 05 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-05 09:00",
+      "primary_topic": "성능/벤치마크",
+      "topics": [
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "MIPS",
+        "RAG",
+        "벡터 검색",
+        "Apple Machine Learning Research",
+        "검색 증강 생성"
+      ],
+      "keywords_original": [
+        "cost",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Apple Machine Learning Research는 RAG(검색 증강 생성)의 효율성을 높이기 위한 빠른 검색 기술을 연구했다. 추천 시스템과 검색, RAG의 핵심은 최대 내적 검색(MIPS) 기술이다. MIPS는 쿼리 벡터가 주어졌을 때 수백만 개의 후보 키 벡터 중에서 가장 잘 일치하는 것을 찾는 과정이다. RAG에서는 이렇게 찾은 최적의 문서를 쿼리 앞에 추가하여 답변을 생성하는 방식을 사용한다. 하지만 데이터 규모가 수백만 개로 늘어나고 벡터 차원이 수천 차원에 이르면 계산 비용이 급증한다. 모든 데이터를 전수 조사하는 방식은 실시간 서비스에서 막대한 연산 자원을 소모하게 된다. 이에 따라 Apple은 검색 속도를 높이면서도 정확도를 유지하는 효율적인 검색 알고리즘의 필요성을 강조했다. 이번 연구는 대규모 벡터 데이터베이스에서 검색 시간을 단축하여 RAG의 전체적인 응답 속도를 개선하는 데 목적이 있다. 효율적인 검색은 하드웨어 자원 소모를 줄여 운영 비용을 절감하는 효과를 가져온다. 결과적으로 더 많은 데이터를 빠르게 처리함으로써 RAG 시스템의 실용성과 성능을 동시에 향상시킬 수 있다. 이는 대규모 언어 모델 기반 서비스의 실시간 응답성을 확보하는 핵심 기술이 될 전망이다. 고차원 벡터 검색의 최적화는 AI 서비스의 확장성에 결정적인 영향을 미칠 것으로 보인다.",
+      "summary_original": "Maximum inner product search (MIPS) sits at the core of recommendation systems, search, and retrieval-augmented generation (RAG). Given a query vector, MIPS systems search within a database of millions of candidate key vectors for the one that best matches the query. The original data point associated with that best-matching key is then used to handle the query: in RAG, the document that is best suited to answer the question is typically prefixed to the query. As the number of keys grows to millions and vector dimensions reach thousands, the computational cost of running an exhaustive…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, 국가 안보 현대화를 위해 댄 드리스콜 시니어 카운슬러 임명",
+      "title_original": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+      "link": "https://openai.com/index/dan-driscoll-joins-openai",
+      "published_raw": "Mon, 02 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-02 09:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "OpenAI",
+        "댄 드리스콜",
+        "국가 안보",
+        "사이버 회복력",
+        "책임 있는 AI"
+      ],
+      "keywords_original": [
+        "안전/리스크 논의"
+      ],
+      "summary": "OpenAI가 국가 안보 현대화를 위한 시니어 카운슬러로 댄 드리스콜(Dan Driscoll)을 임명했다. 이번 임명은 AI 기술을 국가 안보 체계에 책임감 있게 통합하기 위한 전략적 결정이다. 드리스콜은 국가 안보 현대화와 사이버 회복력 강화 분야에서 OpenAI의 자문 역할을 수행하게 된다. 특히 미국 및 동맹국들과의 협력을 통해 AI의 안전한 활용 방안을 모색할 예정이다. 그는 AI가 가져올 수 있는 잠재적 리스크를 관리하고 보안 위협에 대응하는 전략을 수립한다. 이는 AI 기술이 단순한 상용 서비스를 넘어 국가 전략 자산으로 확장되는 흐름을 반영한다. OpenAI는 이를 통해 정부 기관과의 파트너십을 강화하고 정책적 정렬을 꾀하고 있다. 사이버 보안 체계의 고도화는 적대적 공격으로부터 AI 인프라를 보호하는 핵심 과제가 될 것이다. 실무적으로는 국방 및 정보 기관의 AI 도입 가이드라인 수립에 영향을 미칠 것으로 보인다. 또한 글로벌 안보 표준 설정 과정에서 OpenAI의 영향력이 확대될 가능성이 크다. 이번 조치는 AI의 책임 있는 개발과 배포라는 기업 철학을 안보 영역까지 확장한 사례다. 결과적으로 AI 기반의 국가 안보 체계 구축을 가속화하는 계기가 될 전망이다.",
+      "summary_original": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "에버노트, ChatGPT 광고 활용해 AI 기반 사용자 유입 및 유료 구독 전환 가속화",
+      "title_original": "Evernote turns AI-driven discovery into paid subscriptions",
+      "link": "https://openai.com/ads/customers/evernote",
+      "published_raw": "Wed, 28 Oct 2026 19:40:49 GMT",
+      "published_local": "2026-10-29 04:40",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "에버노트",
+        "ChatGPT 광고",
+        "유료 구독 전환",
+        "AI 마케팅",
+        "사용자 획득"
+      ],
+      "keywords_original": [
+        "gpt"
+      ],
+      "summary": "에버노트가 ChatGPT 광고를 활용해 AI 도구를 사용하는 사용자들에게 자사의 노트 앱을 소개하는 캠페인을 진행했다. 이번 전략의 핵심은 AI 작업 흐름 속에 있는 잠재 고객을 정확히 타겟팅하여 서비스 발견 가능성을 높이는 것이다. 에버노트는 사용자가 AI와 상호작용하는 과정에서 자연스럽게 앱의 필요성을 느끼도록 유도했다. 특히 무료 체험판 가입이 실제 유료 구독으로 이어지는 전환율을 정밀하게 추적하고 분석했다. 이는 단순한 브랜드 노출을 넘어 실질적인 매출 증대로 연결하려는 데이터 중심의 접근 방식이다. AI 기반의 검색 및 발견 경험을 유료 비즈니스 모델로 전환하는 새로운 마케팅 사례를 제시했다. 이번 캠페인은 AI 생태계 내에서 생산성 도구가 어떻게 생존하고 성장할 수 있는지를 보여준다. 에버노트는 ChatGPT의 광범위한 사용자 층을 통해 새로운 고객 세그먼트를 확보하는 성과를 거두었다. 결과적으로 AI 도구와의 통합적 마케팅이 사용자 획득 비용을 최적화하는 데 기여했다. 이러한 시도는 향후 다른 SaaS 기업들의 AI 플랫폼 광고 전략에 중요한 벤치마크가 될 전망이다. 기업들은 이제 AI 챗봇 내에서의 사용자 여정을 설계하는 것이 필수적인 과제가 되었다. 에버노트는 이를 통해 디지털 노트 시장에서의 경쟁력을 다시 한번 강화하고 있다.",
+      "summary_original": "Evernote used ChatGPT Ads to introduce its note-taking app to people working with AI. The team tracked how often free trials led to paid subscriptions."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "데이터베이스 채점을 RL 보상으로: ThinkingBox를 활용한 에이전트 사후 학습",
+      "title_original": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "link": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "published_raw": "Thu, 22 Oct 2026 22:24:34 GMT",
+      "published_local": "2026-10-23 07:24",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "오픈소스/개발자"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "ThinkingBox",
+        "강화학습",
+        "Qwen3.8-27B",
+        "GRPO",
+        "데이터베이스 에이전트"
+      ],
+      "keywords_original": [
+        "agent",
+        "github",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Hugging Face 블로그를 통해 ThinkingBox-Training이 GitHub에 공개되었다. 이 프로젝트는 에이전트가 작업 완료를 주장하지만 실제 결과가 다른 문제를 해결하기 위해 개발되었다. ThinkingBox는 최종 데이터베이스 상태를 기대 결과와 비교하여 에이전트의 작업 성과를 평가한다. 연구진은 이러한 실행 가능한 신호를 ThinkingBox-Bench 외부의 학습 작업에 대한 강화학습(RL) 보상으로 활용했다. 특히 Qwen3.8-27B 모델에 적용하여 성능 향상을 검증했다. 50회의 GRPO 단계 학습 결과, 평균 성공률이 51.70%에서 60.78%로 상승했다. 20회 시도 모두 정확하게 완료한 작업 수는 38개에서 107개로 크게 증가했다. 이는 실행 가능한 체크 시스템이 에이전트의 신뢰성을 높이는 효과적인 보상 체계가 될 수 있음을 보여준다. 기존의 단순 텍스트 기반 평가를 넘어 실제 상태 변화를 측정하는 방식이 핵심이다. 이를 통해 에이전트가 거짓으로 완료를 보고하는 현상을 방지할 수 있다. 실무적으로는 데이터베이스 조작 에이전트의 정확도와 안정성을 획기적으로 개선할 수 있다. 이번 공개로 더 많은 개발자가 실행 기반 보상 체계를 에이전트 학습에 도입할 수 있게 되었다.",
+      "summary_original": "This is the follow up to our first blog post, The Agent Said It Was Done. The Database Disagreed. ThinkingBox-Training is now available on GitHub . We built ThinkingBox to evaluate an agent's work by comparing the final database state with the expected outcome. We then used the same kind of executable signal as a reward on training tasks outside ThinkingBox-Bench. For Qwen3.8-27B, average success rose from 51.70% to 60.78%, while tasks completed correctly on all twenty attempts rose from 38 to 107 with 50 GRPO steps. Figure 1. ThinkingBox turns executable checks of terminal database state into rewards for post-training agents on tasks outside ThinkingBox-Bench. We built ThinkingBox to catch agents that say they are done when they are not."
+    }
+  ]
+}
