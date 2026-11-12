@@ -1,0 +1,337 @@
+{
+  "report_date": "2026-11-12",
+  "report_date_kst": "2026-11-12",
+  "generated_at": "2026-11-12T04:07:29.772152+00:00",
+  "generated_at_kst": "2026-11-12T13:07:29.772152+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "안전/리스크 논의",
+      2
+    ],
+    [
+      "에이전트 워크플로 확장",
+      2
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ],
+    [
+      "기업 파트너십/투자",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1357,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 894,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 17,
+    "Google Research Blog": 3,
+    "Google Blog AI": 7,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 8,
+    "MIT Technology Review AI": 4,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 3
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 10,
+    "success_freeform": 0,
+    "fallback": 0,
+    "enabled_after_run": true,
+    "last_error": "",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "웨어러블 기기를 활용한 심혈관-신장-대사(CKM) 위험 프로파일링 및 개인 맞춤형 코칭",
+      "title_original": "Using wearables to enable cardiovascular-kidney-metabolic (CKM) risk profiling for personalized coaching",
+      "link": "https://research.google/blog/using-wearables-to-enable-cardiovascular-kidney-metabolic-ckm-risk-profiling-for-personalized-coaching/",
+      "published_raw": "Wed, 11 Nov 2026 19:54:00 +0000",
+      "published_local": "2026-11-12 04:54",
+      "primary_topic": "정책/규제/안전",
+      "topics": [
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "웨어러블 기기",
+        "CKM 증후군",
+        "위험 프로파일링",
+        "개인 맞춤형 코칭",
+        "예방 의학"
+      ],
+      "keywords_original": [
+        "risk",
+        "안전/리스크 논의"
+      ],
+      "summary": "구글 리서치는 웨어러블 기기를 통해 심혈관-신장-대사(CKM) 증후군의 위험도를 프로파일링하고 개인 맞춤형 건강 코칭을 제공하는 연구를 진행하고 있다. CKM 증후군은 심장 질환, 신장 질환, 당뇨병, 비만 등 밀접하게 연관된 대사성 질환들이 복합적으로 나타나는 상태를 의미한다. 기존 진단 방식은 간헐적인 병원 방문 데이터에 의존했으나, 웨어러블 기기는 일상 속 연속적인 데이터 수집이 가능하다. 연구팀은 심박수, 활동량, 수면 패턴 등 생체 지표를 임상 데이터와 결합하여 분석한다. 이를 통해 개별 사용자의 CKM 위험 수준을 정밀하게 파악하는 위험 프로파일링 모델을 구축하고자 한다. 구축된 프로파일을 바탕으로 사용자 상태에 최적화된 맞춤형 건강 관리 가이드를 제공하는 것이 핵심이다. 이는 단순 수치 제공을 넘어 구체적인 행동 변화를 유도하는 개인화된 코칭 시스템으로 발전할 전망이다. 조기 위험 감지로 심혈관 사건 발생 가능성을 낮추고 만성 질환 진행을 늦추는 예방 의학적 접근을 지향한다. 특히 고위험군이 자신의 상태를 실시간 인지하고 적절한 의료 조치를 빠르게 받도록 돕는다. 이러한 진보는 의료진에게 풍부한 데이터를 제공하며 환자의 자기 주도적 건강 관리를 가능하게 한다. 결과적으로 CKM 관련 질환의 사회적 비용을 절감하고 공중 보건 수준을 향상시킬 것으로 기대된다. 구글은 향후 더 다양한 생체 지표를 통합해 프로파일링 정확도를 높일 계획이다.",
+      "summary_original": "Health & Bioscience"
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Gemini Decisions API: 빠르고 정밀한 멀티모달 의사결정 지원",
+      "title_original": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "published_raw": "Wed, 11 Nov 2026 18:00:00 +0000",
+      "published_local": "2026-11-12 03:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Gemini Decisions API",
+        "멀티모달",
+        "의사결정 AI",
+        "구글 AI",
+        "모델 보정"
+      ],
+      "keywords_original": [
+        "model",
+        "gemini",
+        "api",
+        "multimodal"
+      ],
+      "summary": "구글이 최신 Gemini Decision 모델을 기반으로 한 Gemini Decisions API를 공개했습니다. 이 API는 빠르고 정밀하게 보정된 멀티모달 의사결정을 지원하는 것이 핵심입니다. 멀티모달 기능을 통해 텍스트뿐만 아니라 다양한 형태의 데이터를 동시에 처리하여 최적의 판단을 내립니다. 특히 '보정된(calibrated)' 의사결정을 통해 AI가 내린 판단의 신뢰도를 정밀하게 측정할 수 있습니다. 이는 개발자가 복잡한 추론 과정 없이도 신속하게 실행 가능한 결론을 도출하도록 돕습니다. 기존 LLM의 느린 응답 속도를 개선하여 실시간성이 중요한 서비스에 적용 가능합니다. 시각적 정보와 텍스트 정보를 결합한 고속 판단이 가능해져 업무 자동화 효율이 높아집니다. 단순한 콘텐츠 생성을 넘어 실제 비즈니스 로직에 적용 가능한 의사결정 도구를 제공합니다. 이를 통해 기업은 고도의 판단이 필요한 워크플로우를 더 효율적으로 구축할 수 있습니다. 결과적으로 AI의 판단 근거를 명확히 하고 운영 비용을 절감하는 효과를 기대할 수 있습니다. 개발자들은 이제 구글의 최신 모델을 통해 고성능 의사결정 시스템을 구현할 수 있게 되었습니다.",
+      "summary_original": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Tabletop 체험하기: 그룹의 계획과 협업을 위한 맞춤형 공동 작업 공간",
+      "title_original": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+      "published_raw": "Wed, 11 Nov 2026 16:00:00 +0000",
+      "published_local": "2026-11-12 01:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글 랩스",
+        "Tabletop",
+        "그룹 협업",
+        "인터랙티브 일정",
+        "공동 작업 공간"
+      ],
+      "keywords_original": [],
+      "summary": "구글 랩스(Google Labs)가 그룹 협업을 위한 새로운 실험적 프로젝트인 'Tabletop'을 공개했다. Tabletop은 여러 사용자가 함께 계획을 세우고 활동할 수 있는 맞춤형 공동 작업 공간을 제공한다. 이 도구의 핵심은 팀원들과 함께 상호작용 가능한 다양한 콘텐츠를 구축하는 것이다. 사용자는 인터랙티브한 여행 일정표를 만들거나 실시간 투표 기능을 활용할 수 있다. 또한 토너먼트 방식의 브래킷을 생성하여 그룹 내 의사결정이나 게임을 진행할 수 있다. 이는 단순한 문서 공유를 넘어 시각적이고 역동적인 협업 환경을 구축하려는 시도다. Tabletop은 그룹이 함께 무언가를 계획하고 실행하는 과정을 더 쉽고 재미있게 만드는 데 집중한다. 현재 이 서비스는 구글 랩스의 실험 단계에 있으며, 관심 있는 사용자는 대기 명단에 등록해 이용할 수 있다. 실무적으로는 팀 프로젝트의 아이디어 구상이나 소규모 그룹의 이벤트 기획 시 유용하게 활용될 전망이다. 구글은 AI 기술을 접목해 협업 툴의 사용자 경험을 혁신하려는 전략을 지속하고 있다. 이번 실험을 통해 사용자 피드백을 수집하고 기능을 고도화할 것으로 보인다. 협업의 효율성을 높이려는 개인과 팀에게 새로운 대안이 될 것으로 기대된다.",
+      "summary_original": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "에스더 말랑구 박사의 예술과 유산을 경험하세요",
+      "title_original": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "link": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+      "published_raw": "Wed, 11 Nov 2026 09:00:00 +0000",
+      "published_local": "2026-11-11 18:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "에스더 말랑구",
+        "구글 아트 앤 컬처",
+        "은데벨레 예술",
+        "디지털 아카이브",
+        "문화유산 보존"
+      ],
+      "keywords_original": [],
+      "summary": "구글은 구글 아트 앤 컬처(Google Arts & Culture)를 통해 세계적인 예술가 에스더 말랑구(Esther Mahlangu) 박사의 삶과 예술을 담은 새로운 온라인 아카이브를 공개했습니다. 이번 프로젝트는 남아프리카 공화국의 은데벨레(Ndebele) 전통 예술을 전 세계에 알리고 보존하기 위해 기획되었습니다. 아카이브에는 말랑구 박사의 독특한 기하학적 패턴과 화려한 색채가 돋보이는 작품들이 디지털 형태로 저장되어 있습니다. 사용자는 그녀의 예술적 여정과 생애 전반에 걸친 기록을 상세히 살펴볼 수 있습니다. 특히 전통적인 벽화 작업에서 시작해 현대 미술과 상업적 협업으로 확장된 그녀의 예술적 진화를 보여줍니다. 이번 디지털 전시를 통해 지리적 제약 없이 누구나 그녀의 유산을 경험할 수 있게 되었습니다. 이는 문화유산의 디지털 전환을 통해 예술적 가치를 영구적으로 보존하는 사례가 됩니다. 교육적 관점에서도 은데벨레 문화의 정체성과 역사적 맥락을 학습하는 중요한 자료로 활용될 전망입니다. 구글은 기술을 활용해 소외된 문화적 가치를 조명하고 예술적 접근성을 높이는 데 집중하고 있습니다. 말랑구 박사의 작품 세계는 단순한 장식을 넘어 아프리카의 정체성과 여성의 역할을 상징합니다. 이번 아카이브 구축은 예술가와 기술의 결합이 어떻게 문화적 영향력을 확대하는지 보여줍니다. 전 세계 방문객들은 이제 온라인에서 그녀의 예술적 성취를 직접 확인하고 탐구할 수 있습니다.",
+      "summary_original": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "제대 군인 및 현역 군인을 위한 ChatGPT Plus 지원",
+      "title_original": "ChatGPT Plus for veterans and servicemembers",
+      "link": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "published_raw": "Wed, 11 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-11 17:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "ChatGPT Plus",
+        "OpenAI",
+        "제대 군인",
+        "경력 전환",
+        "AI 취업 지원"
+      ],
+      "keywords_original": [
+        "gpt"
+      ],
+      "summary": "OpenAI가 제대 군인과 전역 예정 군인들을 대상으로 ChatGPT Plus 1년 무료 이용 혜택을 제공했습니다. 현재까지 20,000명 이상의 대상자가 이 혜택을 신청하여 이용 중입니다. 이번 지원의 핵심 목적은 군 복무 후 사회로 복귀하는 이들의 원활한 민간 경력 전환을 돕는 것입니다. 사용자들은 ChatGPT Plus의 고급 기능을 활용해 이력서 작성 및 자기소개서 최적화에 도움을 받고 있습니다. 또한 자신의 군 경력을 민간 기업이 이해하기 쉬운 직무 역량으로 변환하는 작업에 AI를 활용합니다. 면접 준비를 위해 가상 인터뷰 시뮬레이션을 수행하며 실전 감각을 익히고 있습니다. 새로운 산업 분야의 기술적 지식을 빠르게 습득하기 위해 학습 도구로 사용하기도 합니다. 이는 AI 기술이 단순한 생산성 도구를 넘어 경력 재설계의 파트너가 될 수 있음을 보여줍니다. 특히 복잡한 군 용어를 일반 비즈니스 언어로 바꾸는 과정에서 AI의 효율성이 극대화됩니다. OpenAI는 이러한 사회 공헌 활동을 통해 AI의 긍정적인 사회적 영향력을 확대하고자 합니다. 이번 프로그램은 기술 격차를 해소하고 취업 경쟁력을 높이는 실질적인 지원책으로 평가받습니다. 앞으로도 더 많은 전역 군인들이 AI를 통해 성공적인 사회 진출을 이룰 것으로 기대됩니다.",
+      "summary_original": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "BotPsy: 10억 개 미만 파라미터의 에이전트 언어 모델 기반 온디바이스 개인 비서",
+      "title_original": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "link": "https://huggingface.co/blog/qvac/botpsy",
+      "published_raw": "Wed, 11 Nov 2026 05:01:16 GMT",
+      "published_local": "2026-11-11 14:01",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁",
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "BotPsy",
+        "온디바이스 AI",
+        "소형 언어 모델",
+        "함수 호출",
+        "개인정보 보호"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "api",
+        "agent",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "Tether AI Research가 0.8B 파라미터 규모의 온디바이스 개인 비서 모델인 BotPsy를 공개했다. 기존의 거대 클라우드 LLM은 운영 비용이 높고 제공업체의 정책 변경에 따라 접근성이 제한될 수 있는 취약점이 있다. 또한 폐쇄형 모델은 특정 워크플로에 대한 맞춤 설정이 어렵고 개인정보 보호 및 데이터 제어 측면에서 리스크가 존재한다. 모든 작업에 최첨단 수준의 지능이 필요한 것은 아니며, 단순 반복 작업은 소형 전문 에이전트로도 충분히 수행 가능하다. BotPsy는 파라미터당 지능 효율을 극대화하여 저비용으로 효율적인 온디바이스 처리를 가능하게 한다. 이 모델은 특히 함수 호출 기능에 최적화되어 설계되었다. 이를 통해 사용자는 외부 서버 의존 없이 기기 자체에서 개인화된 비서 기능을 사용할 수 있다. 데이터가 기기 외부로 유출되지 않아 프라이버시와 투명성이 크게 향상된다. 실무적으로는 특정 도메인에 특화된 경량 에이전트를 구축하여 운영 비용을 획기적으로 낮출 수 있다. 이는 고성능이면서도 프라이버시 중심의 자체 호스팅 모델로 전환하는 흐름을 반영한다. 결과적으로 BotPsy는 온디바이스 AI의 실용성을 높이는 중요한 단계가 될 것이다. 소규모 모델의 성능 향상은 향후 다양한 엣지 디바이스로의 AI 확산을 가속화할 전망이다.",
+      "summary_original": "Frontier cloud LLMs carry high operational costs that can fluctuate unexpectedly, and relying on such third-party models introduces vulnerabilities, as providers can modify, deny, or deprecate access at any time. Furthermore, proprietary models offer limited customization for specific workflows, while posing risks to privacy, data control, and transparency. Besides, not every task demands frontier-level intelligence: small, specialized agents can be equally capable on specific tasks and significantly cheaper to run, since many routine or smaller workloads can be processed efficiently on-device. As intelligence per parameter continues to improve rapidly, we aim to stand at the forefront of this shift toward performant, privacy-focused, self-hosted models. Tether AI Research introduces BotPsy , a 0.8B-parameter model introduce BotPsy , a 0.8B-parameter model designed for function calling …"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "JioStar 수석 아키텍트가 밝히는 5억 명 규모의 AI 적용 경험",
+      "title_original": "JioStar’s chief architect on AI discovery at 500M-user scale",
+      "link": "https://openai.com/index/jiostar-vijay-seshadri",
+      "published_raw": "Wed, 11 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-11 09:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "JioStar",
+        "비제이 세샤드리",
+        "AI 프로덕션",
+        "가드레일",
+        "AI 평가"
+      ],
+      "keywords_original": [],
+      "summary": "JioStar의 수석 아키텍트 비제이 세샤드리(Vijay Seshadri)가 5억 명의 사용자 규모에서 AI를 발견하고 적용한 실무 경험을 공유했습니다. 이번 발표의 핵심은 대규모 사용자 환경에서 AI 모델을 실제 서비스로 전환할 때 발생하는 도전 과제와 해결책입니다. 특히 AI 모델의 성능을 정확하게 측정하기 위한 평가 체계(evals) 구축의 중요성을 강조했습니다. 대규모 서비스에서는 단순한 벤치마크보다 실제 사용자 데이터 기반의 정밀한 평가가 필수적입니다. 또한 안전한 서비스 제공을 위해 AI의 답변 범위를 제한하고 위험을 방지하는 가드레일(guardrails) 설정 방법을 다루었습니다. 가드레일은 모델의 환각 현상을 줄이고 기업 정책을 준수하게 만드는 핵심 장치로 작용합니다. AI 모델을 실험 단계에서 실제 프로덕션 환경으로 옮기는 과정에서의 최적화 전략도 상세히 설명했습니다. 5억 명이라는 거대한 트래픽을 처리하기 위해 인프라 효율성과 응답 속도 개선이 필수적이었습니다. 세샤드리는 이론적인 모델 성능보다 실제 운영 환경에서의 안정성과 신뢰성이 더 중요함을 역설했습니다. 이번 사례는 초거대 규모의 사용자 기반을 가진 기업이 AI를 도입할 때 참고할 수 있는 실무적 가이드라인을 제공합니다. 결과적으로 AI 도입의 성공은 정교한 평가와 철저한 안전장치, 효율적인 배포 전략의 조화에 달려 있습니다. 이는 향후 대규모 AI 서비스 구축을 계획하는 엔지니어들에게 중요한 시사점을 줍니다.",
+      "summary_original": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "멀티 벡터 임베딩 모델을 위한 토큰 풀링 인식 학습 (Token Pooling-Aware Training)",
+      "title_original": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+      "link": "https://huggingface.co/blog/token-pooling",
+      "published_raw": "Wed, 11 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-11 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "멀티 벡터 임베딩",
+        "토큰 풀링",
+        "ColBERT",
+        "검색 효율성",
+        "임베딩 압축"
+      ],
+      "keywords_original": [
+        "model",
+        "open source"
+      ],
+      "summary": "Hugging Face는 멀티 벡터 임베딩 모델의 효율성을 높이기 위한 '토큰 풀링 인식 학습' 방법을 소개했다. 기존의 ColBERT와 같은 멀티 벡터 모델은 문서의 모든 토큰을 벡터로 저장하여 검색 정확도는 높지만 저장 공간과 계산 비용이 매우 크다. 이를 해결하기 위해 토큰 풀링 기술을 사용하여 문서당 벡터 수를 줄이는 시도가 이어져 왔다. 하지만 일반적인 풀링은 학습 단계에서 고려되지 않아 정보 손실이 발생하고 성능이 저하되는 문제가 있었다. 이번에 제안된 방식은 학습 과정 자체에 풀링 메커니즘을 통합하여 모델이 압축된 표현에서도 최적의 성능을 내도록 유도한다. 이를 통해 벡터 수를 획기적으로 줄이면서도 단일 벡터 모델보다 높은 검색 품질을 유지할 수 있다. 특히 풀링 인식 학습을 적용하면 기존 사후 풀링 방식보다 검색 정확도가 크게 향상된다. 이는 대규모 문서 집합을 다루는 실무 환경에서 인덱스 크기를 줄여 인프라 비용을 절감하는 효과를 준다. 또한 추론 속도를 높여 실시간 검색 서비스의 응답 시간을 단축할 수 있다. 결과적으로 고성능 검색 시스템을 더 적은 자원으로 구축할 수 있는 가능성을 열었다. 이 기술은 오픈 소스 생태계를 통해 더 많은 개발자가 효율적인 임베딩 모델을 사용할 수 있게 돕는다. 향후 다양한 도메인의 데이터셋에 적용되어 멀티 벡터 모델의 대중화를 이끌 것으로 기대된다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "싱가포르 항공, OpenAI 기술로 여행 및 업무 경험 혁신",
+      "title_original": "Singapore Airlines elevates travel & work with OpenAI technology",
+      "link": "https://openai.com/index/singapore-airlines-travel-work",
+      "published_raw": "Tue, 10 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-10 17:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "싱가포르 항공",
+        "OpenAI",
+        "생성형 AI",
+        "Kris 챗봇",
+        "CSAT"
+      ],
+      "keywords_original": [
+        "model",
+        "api"
+      ],
+      "summary": "싱가포르 항공이 OpenAI의 모델과 API를 도입하여 고객 지원과 여행 탐색, 직원 생산성을 강화하고 있습니다. 이번 협력의 핵심은 고객 서비스의 디지털 전환을 통해 사용자 경험을 최적화하는 것입니다. 특히 AI 기반의 'Kris' 챗봇에 OpenAI 기술을 적용하여 고객 응대 효율을 대폭 높였습니다. 그 결과, Kris 챗봇의 고객 만족도 점수인 CSAT가 이전 대비 두 배로 증가하는 성과를 거두었습니다. 고객들은 이제 더욱 정교하고 자연스러운 대화를 통해 여행 정보를 탐색하고 예약 관련 도움을 받을 수 있습니다. 내부적으로는 직원들의 업무 프로세스에 AI를 통합하여 반복적인 작업 시간을 줄이고 생산성을 향상시켰습니다. 이는 항공 산업 내에서 생성형 AI를 실무에 적용해 구체적인 수치적 성과를 낸 사례로 평가받습니다. OpenAI의 API는 맞춤형 솔루션 구축을 가능하게 하여 항공사의 특수한 요구사항을 충족시켰습니다. 이를 통해 싱가포르 항공은 개인화된 여행 경험을 제공하는 디지털 리더로서의 입지를 다지고 있습니다. 향후 AI 기술의 지속적인 고도화를 통해 서비스 품질을 더욱 개선할 계획입니다. 이번 사례는 AI가 단순한 도구를 넘어 기업의 운영 효율성과 고객 충성도를 높이는 핵심 전략임을 보여줍니다. 결과적으로 기술 혁신이 실제 비즈니스 지표의 상승으로 이어졌음을 입증했습니다.",
+      "summary_original": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Cogent와 OpenAI, 기업용 사이버 방어 팩토리 구축",
+      "title_original": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "link": "https://openai.com/index/cogent-security",
+      "published_raw": "Tue, 10 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-10 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "keywords": [
+        "Cogent",
+        "OpenAI",
+        "사이버 보안",
+        "AI 에이전트",
+        "취약점 자동 해결"
+      ],
+      "keywords_original": [
+        "model",
+        "agent",
+        "에이전트 워크플로 확장",
+        "기업 파트너십/투자"
+      ],
+      "summary": "Cogent와 OpenAI가 기업의 보안 강화를 위해 '사이버 방어 팩토리'를 구축한다. 이번 협력의 핵심은 OpenAI의 최신 모델과 기업 내부의 맥락 데이터를 결합하는 것이다. 이를 통해 보안 취약점을 자동으로 식별하고 해결하는 AI 에이전트 시스템을 구현한다. 기존의 보안 도구들이 단순 탐지에 그쳤다면, 이 시스템은 실제 수정 조치까지 수행한다. AI 에이전트는 복잡한 워크플로를 확장하여 보안 운영의 효율성을 극대화한다. 기업은 이를 통해 수동으로 처리하던 취약점 패치 시간을 획기적으로 단축할 수 있다. 특히 대규모 인프라를 운영하는 기업일수록 자동화된 대응 체계의 이점이 크다. OpenAI의 모델 성능과 Cogent의 보안 전문성이 결합되어 정밀한 대응이 가능하다. 이는 단순한 도구 도입을 넘어 기업 보안 전략의 패러다임을 바꾸는 시도다. 실무적으로는 보안 전문가의 단순 반복 업무를 줄이고 고도화된 위협 분석에 집중하게 한다. 양사는 파트너십과 투자를 통해 에이전트 기반의 보안 생태계를 확장할 계획이다. 결과적으로 기업은 더 빠르고 정확하게 사이버 공격에 대응하는 방어 체계를 갖추게 된다.",
+      "summary_original": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents."
+    }
+  ]
+}
