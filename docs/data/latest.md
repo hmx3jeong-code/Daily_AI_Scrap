@@ -1,61 +1,64 @@
-# Daily AI Brief - 2026-11-17
+# Daily AI Brief - 2026-11-18
 
-- Generated at: 2026-11-17 14:18:07 KST
+- Generated at: 2026-11-18 13:47:12 KST
 - Total articles: 10
 - Sources scanned: 8
 
 ## 오늘의 주요 이슈
-- 에이전트 워크플로 확장: 4건
-- 기업 파트너십/투자: 3건
-- 안전/리스크 논의: 2건
+- 신규 모델/제품 발표: 6건
+- 기업 파트너십/투자: 2건
+- 비용/성능 경쟁: 1건
+- 정책/규제 변화: 1건
+- 안전/리스크 논의: 1건
+- 에이전트 워크플로 확장: 1건
 
 ## 주제별 요약
-### 모델/출시 (4)
-- [OpenAI, 전 세계 과학자 대상 AI 접근성 확대 추진](https://openai.com/index/expanding-chatgpt-for-academic-researchers) | OpenAI News | 2026-11-17 02:00
-  - 요약: OpenAI가 '학술 연구자를 위한 ChatGPT' 프로그램을 확대하여 전 세계 20만 명의 연구자에게 최신 프런티어 모델 무료 접근 권한을 제공한다. 이는 과학적 발견의 속도를 높이고 AI 기술이 학술 연구 전반에 긍정적인 영향을 미치도록 하기 위한 조치다. 연구자들은 복잡한 데이터 분석, 가설 설정, 논문 작성 보조 등 다양한 연구 과정에 최신 AI 모델을 활용할 수 있게 된다. 특히 고비용의 최신 모델 접근 장벽을 낮춤으로써 연구 자원이 부족한 환경의 학자들에게 실질적인 도움이 될 것으로 보인다. OpenAI는 AI가 과학적 난제를 해결하는 강력한 도구가 될 수 있다는 믿음을 바탕으로 이번 프로그램을 설계했다. 선정된 연구자들은 최신 모델의 성능을 직접 테스트하며 학문적 성과를 가속화할 수 있다. 이번 프로그램은 단순한 도구 제공을 넘어 AI와 과학의 융합을 촉진하는 생태계 구축을 목표로 한다. 실무적으로는 연구 효율성 증대와 더불어 AI 기반의 새로운 연구 방법론 개발이 가능해질 전망이다. OpenAI는 앞으로도 학계와의 협력을 강화하여 AI의 사회적 가치를 실현하고자 한다. 이번 조치는 AI 기술의 민주화를 통해 전 지구적 과학 발전에 기여하려는 전략의 일환이다. 상세 신청 방법과 자격 요건은 공식 홈페이지를 통해 확인할 수 있다. 이를 통해 AI가 학술적 혁신의 핵심 동력으로 자리 잡을 것으로 기대된다.
-  - 키워드: OpenAI, ChatGPT, 학술 연구자, 프런티어 모델, AI 접근성
-- [Science at the Frontier: How scientists use ChatGPT](https://openai.com/index/science-at-the-frontier) | OpenAI News | 2026-11-16 21:00
-  - 요약: 이 기사는 'Science at the Frontier: How scientists use ChatGPT' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: gpt, workflow, 에이전트 워크플로 확장
-- [LVMH 미디어 부문, OpenAI와 전략적 파트너십 체결](https://openai.com/index/lvmh-media-division-partnership) | OpenAI News | 2026-11-16 18:00
-  - 요약: LVMH의 미디어 부문이 OpenAI와 전략적 파트너십을 체결했다고 발표했다. 이번 협력의 핵심 목적은 인공지능을 활용해 저널리즘 활동을 지원하는 것이다. LVMH 미디어 부문은 자사의 다양한 출판물과 콘텐츠를 ChatGPT를 통해 더 쉽게 접할 수 있도록 만들 계획이다. 이를 통해 독자들은 AI 기반의 인터페이스로 고품질의 미디어 콘텐츠에 접근할 수 있게 된다. 이번 파트너십은 럭셔리 산업의 미디어 전략에 최첨단 AI 기술을 접목하려는 시도로 풀이된다. OpenAI의 GPT 모델과 비전 기술 등이 콘텐츠 최적화 및 배포 과정에 활용될 전망이다. 양사는 AI가 저널리즘의 가치를 훼손하지 않으면서 효율성을 높이는 방안을 모색한다. 특히 디지털 전환 가속화를 통해 글로벌 독자층과의 접점을 확대하는 것이 주요 목표다. 실무적으로는 콘텐츠 큐레이션과 검색 경험의 혁신적인 개선이 기대된다. 이는 전통적인 미디어 매체가 AI 시대에 어떻게 적응하고 진화하는지를 보여주는 사례가 될 것이다. LVMH는 이번 협력을 통해 브랜드 스토리텔링의 디지털 경쟁력을 한층 강화할 예정이다. 향후 구체적인 서비스 적용 범위와 일정은 단계적으로 공개될 것으로 보인다.
-  - 키워드: LVMH, OpenAI, ChatGPT, 저널리즘, 전략적 파트너십
-- [OpenAI, 모델 안전성 검증을 위한 1단계 임베디드 평가 실시](https://openai.com/index/our-first-phase-of-embedded-assessments) | OpenAI News | 2026-11-16 17:00
-  - 요약: OpenAI가 모델의 정렬, 안전장치 및 모니터링 시스템을 독립적으로 평가하기 위한 '임베디드 평가'의 첫 단계를 시작했다. 이번 협력에는 Apollo Research, METR, Transluce, Goodfire 등 외부 전문 기관들이 참여한다. 임베디드 평가란 외부 평가자가 OpenAI의 내부 프로세스에 깊이 관여하여 모델의 위험성을 직접 검증하는 방식이다. 이는 모델이 배포되기 전 잠재적인 위험을 사전에 식별하고 완화하기 위한 조치다. 특히 모델 정렬 상태를 정밀하게 분석하여 AI가 인간의 의도에 맞게 작동하는지 확인한다. 또한 구축된 안전장치가 실제 공격이나 예외 상황에서 효과적으로 작동하는지 테스트한다. 모니터링 시스템의 효율성을 점검하여 실시간 위험 감지 능력을 강화하는 것이 목표다. 이러한 독립적 평가는 AI 안전성에 대한 투명성을 높이고 객관적인 검증 체계를 구축하려는 배경에서 추진되었다. 외부 기관의 전문성을 활용함으로써 내부 평가에서 놓칠 수 있는 사각지대를 최소화할 수 있다. 실무적으로는 향후 출시될 차세대 모델들의 안전 기준을 설정하는 중요한 근거가 될 전망이다. OpenAI는 이번 1단계 평가 결과를 바탕으로 안전 프레임워크를 지속적으로 개선할 계획이다. 이는 고도화된 AI 모델의 리스크 관리를 위한 체계적인 접근 방식의 일환이다.
-  - 키워드: OpenAI, 임베디드 평가, 모델 정렬, AI 안전성, Apollo Research
+### 모델/출시 (7)
+- [Introducing GPT-6.2 Astra and Sol](https://openai.com/index/introducing-gpt-6-2-astra-sol) | OpenAI News | 2026-11-18 02:45
+  - 요약: 이 기사는 'Introducing GPT-6.2 Astra and Sol' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: gpt, api, cost, 신규 모델/제품 발표, 비용/성능 경쟁
+- [Gemini의 작업 기능 무료 제공 및 Google Workspace 통합 강화](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/) | Google Blog AI | 2026-11-18 02:00
+  - 요약: 구글이 Gemini의 '작업(Tasks)' 기능을 6개국에서 무료로 제공한다고 발표했습니다. 이번 업데이트를 통해 사용자는 별도의 비용 없이 Gemini를 통해 일정을 관리하고 할 일을 정리할 수 있습니다. 특히 미국에서는 새로운 기능들이 우선적으로 도입되어 사용자 경험을 개선할 예정입니다. 이번 업데이트의 핵심은 Google Workspace와의 더욱 깊은 통합에 있습니다. 사용자는 Gemini를 통해 이메일 작성, 일정 예약 등 다양한 작업을 대행시킬 수 있습니다. 이는 단순한 정보 제공을 넘어 실제 실행 단계까지 AI가 관여함을 의미합니다. Google 캘린더, Gmail, Keep 등 기존 서비스와의 연동이 더욱 긴밀해졌습니다. 이를 통해 사용자는 여러 앱을 오가지 않고 Gemini 인터페이스 내에서 업무를 처리할 수 있습니다. 실무적으로는 반복적인 행정 업무 시간을 단축하고 생산성을 높이는 효과가 기대됩니다. 구글은 AI가 사용자의 개인 비서처럼 작동하는 생태계를 구축하려는 전략을 보이고 있습니다. 이번 무료화 조치는 더 많은 사용자가 AI 기반의 작업 관리 시스템을 경험하게 하려는 목적입니다. 향후 더 많은 국가로 서비스 범위가 확대될 것으로 전망됩니다.
+  - 키워드: Gemini, Google Workspace, 작업 기능, 무료 제공, AI 비서
+- [ChatGPT for Sales 출시: 영업 프로세스 효율화를 위한 새로운 도구](https://openai.com/index/introducing-chatgpt-for-sales) | OpenAI News | 2026-11-17 17:00
+  - 요약: OpenAI가 영업 전문가를 위한 'ChatGPT for Sales'를 새롭게 선보였습니다. 이번 발표의 핵심은 전용 Sales 플러그인과 30개 이상의 확장된 파트너 플러그인의 도입입니다. 사용자는 이를 통해 잠재 고객에 대한 심층적인 리서치를 효율적으로 수행할 수 있습니다. 또한 고객 맞춤형 피치 자료를 준비하는 과정이 대폭 간소화됩니다. CRM(고객 관계 관리) 시스템의 업데이트를 자동화하여 데이터 입력 시간을 줄일 수 있습니다. 이러한 기능들은 영업 파이프라인 내에서 딜(Deal)을 더 빠르게 진전시키는 데 기여합니다. 이번 업데이트는 AI를 단순한 챗봇을 넘어 실무 워크플로우에 통합하려는 전략의 일환입니다. 영업 담당자는 반복적인 행정 업무 대신 전략적 고객 관계 구축에 더 집중할 수 있게 됩니다. 파트너 플러그인 생태계의 확장은 다양한 외부 툴과의 연동성을 극대화합니다. 결과적으로 기업의 영업 생산성 향상과 매출 증대에 긍정적인 영향을 미칠 것으로 보입니다. 실무자들은 이제 ChatGPT 내에서 리서치부터 CRM 관리까지 원스톱으로 처리 가능합니다. 이는 AI 기반의 영업 자동화 시대를 가속화하는 중요한 단계가 될 것입니다.
+  - 키워드: ChatGPT for Sales, OpenAI, 영업 자동화, CRM 업데이트, 파트너 플러그인
+- [Astra for Law, 법률 지능 평가에서 1위 기록하며 성능 입증](https://openai.com/index/astra-law-6-2) | OpenAI News | 2026-11-17 09:00
+  - 요약: OpenAI가 법률 전문 AI 모델인 'Astra for Law'를 공개하며 법률 지능 분야의 리더십을 확보했다. 이 모델은 출시 전 진행된 성능 평가에서 24가지의 다양한 법률 영역을 대상으로 테스트한 결과 1위를 기록하는 성과를 거두었다. 이는 복잡한 법률 문서의 분석과 해석 능력이 매우 정교해졌음을 시사한다. 현재 모든 ChatGPT Enterprise 고객은 Astra for Law에 대한 액세스를 요청하여 사용할 수 있다. 이번 모델은 법률 전문가들이 방대한 자료를 빠르게 검토하고 정확한 인사이트를 도출하도록 돕기 위해 설계되었다. 실무적으로는 계약서 검토, 판례 분석 등 반복적이고 시간이 많이 소요되는 법무 작업의 자동화가 가능해질 전망이다. 이는 기업 법무팀의 업무 효율성을 극대화하고 리스크 관리 능력을 높이는 데 기여할 것이다. OpenAI는 특정 산업에 최적화된 전문 모델을 통해 AI의 실용성을 확장하고 있다. 법률 분야의 특수성을 반영한 고도화된 학습 과정이 이번 성과의 핵심이다. 결과적으로 법률 서비스의 접근성과 처리 속도가 획기적으로 개선될 것으로 보인다.
+  - 키워드: Astra for Law, OpenAI, 법률 AI, ChatGPT Enterprise, 법률 지능
+- [How Revolut raises ambition without lowering the bar](https://openai.com/business/customer-stories/revolut) | OpenAI News | 2026-11-16 18:30
+  - 요약: 이 기사는 'How Revolut raises ambition without lowering the bar' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: model
+- [ChatGPT for Healthcare: 의료 서비스 혁신을 위한 새로운 기능 공개](https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare) | OpenAI News | 2026-11-16 15:00
+  - 요약: OpenAI가 의료 분야의 효율성을 높이기 위한 'ChatGPT for Healthcare'의 새로운 업데이트를 발표했다. 이번 업데이트의 핵심은 컴퓨터 사용 에이전트(computer-use agents)의 도입이다. 이 에이전트는 의료진이 사용하는 다양한 소프트웨어 간의 작업을 자동화하여 실질적인 업무 처리를 돕는다. 또한 임상 답변(clinical answers)의 정확도와 품질을 개선하여 의료 정보 제공 능력을 강화했다. 새롭게 도입된 헬스케어 플러그인은 서로 다른 의료 소프트웨어 환경에서도 원활하게 작동하도록 설계되었다. 이를 통해 의료진은 반복적인 행정 업무 시간을 줄이고 환자 진료에 더 집중할 수 있게 된다. 이번 조치는 AI가 단순한 정보 제공을 넘어 실제 워크플로에 통합되는 에이전트 중심의 변화를 보여준다. 특히 복잡한 의료 데이터 입력이나 소프트웨어 조작 과정을 AI가 대신 수행함으로써 오류를 줄일 수 있다. OpenAI는 의료 데이터의 보안과 개인정보 보호 표준을 준수하며 기능을 확장하고 있다. 이번 업데이트는 의료 현장의 디지털 전환을 가속화하고 운영 효율성을 극대화하는 데 기여할 전망이다. 실무적으로는 차트 작성, 예약 관리 등 번거로운 작업의 자동화가 가능해진다. 결과적으로 환자 케어의 질을 높이고 의료 시스템의 전반적인 생산성을 향상시키는 것이 목표다.
+  - 키워드: ChatGPT for Healthcare, 컴퓨터 사용 에이전트, 의료 AI, 워크플로 자동화, 헬스케어 플러그인
+- [The King’s Trust와 OpenAI, 100만 파운드 규모의 파트너십 체결](https://openai.com/index/the-kings-trust-and-openai) | OpenAI News | 2026-11-16 09:00
+  - 요약: OpenAI와 The King’s Trust가 영국 청년들의 AI 역량 강화를 위해 100만 파운드 규모의 파트너십을 체결했다. 이번 협력의 주요 목표는 영국 전역의 청년 최대 25,000명이 실무에 즉시 적용 가능한 AI 기술을 습득하도록 돕는 것이다. 프로그램은 AI 도구를 활용해 취업 준비를 하고 직무 생산성을 높이는 실질적인 교육 과정으로 구성된다. 특히 취약 계층 청년들이 디지털 격차를 극복하고 현대 노동 시장에서 경쟁력을 갖출 수 있도록 지원하는 데 중점을 둔다. OpenAI는 기술적 전문성과 도구를 제공하며, The King’s Trust는 청년 지원 네트워크와 교육 운영 노하우를 결합한다. 이를 통해 참가자들은 AI 프롬프트 엔지니어링과 자동화 도구 활용법 등을 배울 수 있을 것으로 기대된다. 이번 파트너십은 AI 기술이 고용 가능성을 높이는 핵심 역량이 되고 있다는 배경에서 추진되었다. 영국 내 청년 실업 문제 해결과 디지털 전환 가속화를 위한 전략적 접근으로 평가받는다. 실무적으로는 기업이 요구하는 AI 리터러시 수준을 높여 인력 미스매치를 해소하는 효과가 있을 것이다. 양 기관은 교육 성과를 모니터링하여 프로그램 범위를 확대할 계획이다. 이는 AI 기술의 민주화와 사회적 가치 창출을 동시에 추구하는 사례가 될 전망이다. 결과적으로 더 많은 청년이 AI 시대의 새로운 기회를 잡는 발판이 될 것이다.
+  - 키워드: OpenAI, The King’s Trust, AI 교육, 영국 청년, 디지털 격차
 
-### 에이전트/자동화 (3)
-- [Building trustworthy AI by fencing it in, not predicting it](https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/) | MIT Technology Review AI | 2026-11-17 01:04
-  - 요약: 이 기사는 'Building trustworthy AI by fencing it in, not predicting it' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 In October this year, OpenAI disclosed that two of its AI agents had switched off the systems built to monitor them. One muted its own safety alerts after misreading an instruction not to send messages; the other removed its monitoring integration during migration, then said it hadn’t. No rule had … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: agent, safety, 에이전트 워크플로 확장, 안전/리스크 논의
-- [Building AI that can work across the enterprise](https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/) | MIT Technology Review AI | 2026-11-16 22:00
-  - 요약: 이 기사는 'Building AI that can work across the enterprise' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a d… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: agent, workflow, model, 에이전트 워크플로 확장, 기업 파트너십/투자
-- [Advancing computer-use agents for healthcare teams](https://openai.com/index/advancing-computer-use-for-healthcare-teams) | OpenAI News | 2026-11-16 15:00
-  - 요약: 이 기사는 'Advancing computer-use agents for healthcare teams' 주제를 다룬다. 제공된 본문 요약이 짧아 세부 내용은 원문 확인이 필요하다.
-  - 키워드: agent, 에이전트 워크플로 확장
+### 멀티모달 (1)
+- [MIT Technology Review AI 연구 보고서 제공](https://www.technologyreview.com/2026/11/17/1148203/research-reports/) | MIT Technology Review AI | 2026-11-17 23:39
+  - 요약: MIT Technology Review AI에서 최신 연구 보고서들을 제공하는 전용 섹션을 운영하고 있다. 해당 페이지는 사용자가 다양한 AI 관련 심층 분석 보고서에 쉽게 접근할 수 있도록 설계되었다. 사용자는 화면에 제시된 각 보고서의 해당 이미지를 클릭하여 상세 내용에 접속할 수 있다. 이 서비스는 복잡한 AI 기술 동향을 체계적으로 정리하여 전문가와 일반인에게 전달하는 것을 목적으로 한다. MIT Technology Review는 기술적 정확성과 비판적 시각을 바탕으로 한 분석으로 정평이 난 매체다. 제공되는 보고서들은 최신 AI 모델의 성능, 윤리적 쟁점, 산업적 영향력을 폭넓게 다룬다. 특히 실무자들에게는 최신 연구 트렌드를 빠르게 파악할 수 있는 유용한 리소스가 될 것이다. 인터페이스는 직관적인 이미지 기반 링크 방식을 채택하여 사용자 접근성을 높였다. 이를 통해 사용자는 관심 있는 특정 주제의 보고서를 신속하게 선택해 읽을 수 있다. AI 기술의 급격한 발전 속도에 맞춰 지속적으로 새로운 보고서가 업데이트될 예정이다. 해당 플랫폼은 단순한 뉴스 전달을 넘어 심도 있는 연구 데이터를 제공하는 데 집중한다. 최신 AI 연구 성과를 확인하고자 하는 사용자들은 해당 링크를 통해 상세 리포트를 확인할 수 있다.
+  - 키워드: MIT Technology Review, AI 연구 보고서, 인공지능 트렌드, 기술 분석, 심층 리포트
 
-### 기타 (2)
-- [The open-source movement wants Jensen Huang back](https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/) | MIT Technology Review AI | 2026-11-17 03:38
-  - 요약: 이 기사는 'The open-source movement wants Jensen Huang back' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. On Friday, a petition to reinstate Jensen Huang as CEO of Nvidia began circulating on social media, and by Monday it listed some notable signatories, including E… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+### 기타 (1)
+- [Strengthening NATO and allied cyber defenses with AI](https://openai.com/index/strengthening-nato-allied-cyber-defences-ai) | OpenAI News | 2026-11-17 09:00
+  - 요약: 이 기사는 'Strengthening NATO and allied cyber defenses with AI' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
   - 키워드: -
-- [구글 맵스, 연휴 여행 및 준비를 돕는 새로운 'Ask Maps' 기능 출시](https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/) | Google Blog AI | 2026-11-16 23:00
-  - 요약: 구글이 연휴 기간 여행 계획과 준비를 돕기 위해 구글 맵스에 새로운 'Ask Maps' 기능을 도입했다. 이번 업데이트의 핵심은 AI를 활용해 사용자가 더 쉽고 효율적으로 여행 경로를 설계할 수 있도록 돕는 것이다. 사용자는 Ask Maps를 통해 연휴 로드트립 계획을 세우고 최적의 경로 팁을 실시간으로 제공받을 수 있다. 또한, 여행지 주변의 예약 가능한 로컬 서비스나 약속 장소를 빠르게 찾는 기능이 추가되었다. 기존에 저장해둔 장소 리스트 내에서 특정 조건의 장소를 검색하는 기능도 강화되었다. 이는 복잡한 연휴 이동 경로를 단순화하고 개인 맞춤형 추천을 제공하려는 구글의 전략이다. AI 기반의 대화형 인터페이스를 통해 사용자는 복잡한 필터 설정 없이 자연어로 질문할 수 있다. 이를 통해 여행 준비에 소요되는 시간을 대폭 단축하고 탐색의 편의성을 높였다. 실무적으로는 여행자뿐만 아니라 지역 비즈니스 업체들의 노출 기회가 확대될 것으로 보인다. 구글은 앞으로도 AI를 통해 지도 서비스의 검색 경험을 지속적으로 고도화할 계획이다. 이번 기능은 특히 가족 단위 여행객이나 장거리 운전자의 편의성을 극대화하는 데 초점을 맞췄다. 사용자는 이제 구글 맵스 하나로 계획부터 실행까지 통합된 여행 경험을 누릴 수 있게 되었다.
-  - 키워드: 구글 맵스, Ask Maps, AI 여행 계획, 로드트립, 장소 검색
 
 ### 기업/투자 (1)
-- [새로운 도구와 지원을 통한 온라인 아동 성착취 및 학대 대응 강화](https://openai.com/index/strengthening-online-child-safety) | OpenAI News | 2026-11-17 02:00
-  - 요약: OpenAI는 온라인 아동 성착취 및 학대(CSAM)를 방지, 탐지 및 대응하기 위한 새로운 도구와 실무 지침, 파트너십을 발표했다. 이번 조치는 AI 기술의 악용을 막고 아동 안전을 보장하기 위한 포괄적인 안전 전략의 일환이다. OpenAI는 아동 안전 전문가 및 외부 기관과 협력하여 최신 위협 모델을 분석하고 이를 시스템에 반영하고 있다. 새롭게 도입된 도구들은 유해 콘텐츠 생성 가능성을 낮추고 탐지 효율성을 높이는 데 중점을 둔다. 또한 개발자와 기업들이 AI 모델을 안전하게 배포할 수 있도록 돕는 구체적인 실무 가이드라인을 제공한다. 가이드라인에는 위험 평가 방법과 모니터링 체계 구축 방안이 포함되어 있다. OpenAI는 글로벌 파트너십을 통해 국가 간 경계를 넘는 아동 학대 콘텐츠 확산을 차단하고자 한다. 특히 법 집행 기관과의 협력을 강화하여 피해 아동 구조와 가해자 추적 체계를 지원한다. 이는 생성형 AI로 정교해진 딥페이크 및 합성 이미지 위협에 대응하기 위한 필수 조치다. 실무적으로 AI 서비스 제공자들이 더 엄격한 안전 필터를 적용하고 보고 체계를 일원화하는 계기가 될 것이다. OpenAI는 지속적인 업데이트를 통해 새로운 학대 수법에 기민하게 대응할 계획이다. 이는 기술적 진보와 윤리적 책임 사이의 균형을 맞추려는 의지를 보여준다.
-  - 키워드: OpenAI, 아동 성착취 방지, CSAM, 온라인 안전, AI 윤리
+- [OpenAI, 칠레 정부와 파트너십 체결 및 'OpenAI for Chile' 도입](https://openai.com/index/introducing-openai-for-chile) | OpenAI News | 2026-11-17 09:00
+  - 요약: OpenAI가 칠레 정부와 협력하여 'OpenAI for Chile' 프로그램을 도입한다고 발표했습니다. 이번 파트너십의 핵심 목적은 칠레 내에서 책임감 있는 AI 도입을 지원하는 것입니다. 특히 공공 부문의 AI 역량 강화를 위해 공무원들의 기술 교육을 실시할 계획입니다. 또한 칠레 현지 스타트업들이 AI 기반 애플리케이션을 개발할 수 있도록 적극 지원합니다. 이를 통해 칠레의 디지털 전환을 가속화하고 경제 성장을 도모하고자 합니다. 양측은 AI의 안전한 활용과 리스크 관리에 대한 논의를 병행할 예정입니다. 이번 협력은 남미 지역의 AI 생태계 확장을 위한 전략적 움직임으로 풀이됩니다. 공공 서비스의 효율성을 높여 시민들에게 더 나은 행정 서비스를 제공하는 것이 목표입니다. 스타트업들에게는 최신 AI 모델 접근성과 기술 지원이 제공될 것으로 보입니다. 이는 국가 차원의 AI 전략을 수립하고 실행하는 데 중요한 기반이 될 것입니다. 결과적으로 칠레는 AI 기술을 통해 산업 경쟁력을 확보하려는 의지를 보이고 있습니다. OpenAI는 글로벌 파트너십을 통해 AI의 혜택을 전 세계적으로 확산시키려 합니다.
+  - 키워드: OpenAI, 칠레 정부, AI 도입, 공공 부문 역량 강화, 스타트업 지원
 
 ## 소스 커버리지
 | Source | Collected | Included |
 |---|---:|---:|
-| Apple Machine Learning Research | 10 | 1 |
-| DeepMind Blog | 99 | 3 |
-| Google Blog AI | 20 | 6 |
+| Apple Machine Learning Research | 10 | 2 |
+| DeepMind Blog | 99 | 2 |
+| Google Blog AI | 20 | 5 |
 | Google Research Blog | 100 | 2 |
-| Hugging Face Blog | 898 | 8 |
-| MIT Technology Review AI | 10 | 4 |
-| OpenAI News | 1374 | 20 |
+| Hugging Face Blog | 898 | 6 |
+| MIT Technology Review AI | 10 | 5 |
+| OpenAI News | 1382 | 20 |
 | VentureBeat AI | 0 | 0 |
