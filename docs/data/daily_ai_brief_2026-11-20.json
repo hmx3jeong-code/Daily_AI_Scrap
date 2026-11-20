@@ -1,0 +1,328 @@
+{
+  "report_date": "2026-11-20",
+  "report_date_kst": "2026-11-20",
+  "generated_at": "2026-11-20T04:13:44.189654+00:00",
+  "generated_at_kst": "2026-11-20T13:13:44.189654+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      4
+    ],
+    [
+      "신규 모델/제품 발표",
+      2
+    ],
+    [
+      "안전/리스크 논의",
+      1
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1394,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 99,
+    "Hugging Face Blog": 903,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 20,
+    "Google Research Blog": 2,
+    "Google Blog AI": 5,
+    "DeepMind Blog": 2,
+    "Hugging Face Blog": 8,
+    "MIT Technology Review AI": 6,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 1
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 8,
+    "success_freeform": 0,
+    "fallback": 2,
+    "enabled_after_run": true,
+    "last_error": "Error code: 503",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "A game you cannot win unless you have a quantum computer",
+      "title_original": "A game you cannot win unless you have a quantum computer",
+      "link": "https://research.google/blog/a-game-you-cannot-win-unless-you-have-a-quantum-computer/",
+      "published_raw": "Thu, 19 Nov 2026 20:03:00 +0000",
+      "published_local": "2026-11-20 05:03",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [],
+      "keywords_original": [],
+      "summary": "이 기사는 'A game you cannot win unless you have a quantum computer' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Quantum 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Quantum"
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Gemini API에 '툴 리트리벌(Tool Retrieval)' 기능 도입",
+      "title_original": "Introducing Tool Retrieval in the Gemini API",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "published_raw": "Thu, 19 Nov 2026 18:00:00 +0000",
+      "published_local": "2026-11-20 03:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Gemini API",
+        "툴 리트리벌",
+        "AI 에이전트",
+        "토큰 최적화",
+        "구글 AI"
+      ],
+      "keywords_original": [
+        "gemini",
+        "preview",
+        "api",
+        "agent",
+        "신규 모델/제품 발표",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "구글이 Gemini API에 '툴 리트리벌(Tool Retrieval)' 기능을 프리뷰 형태로 공개했다. 이 기능은 AI 에이전트가 수백 개의 도구 중 필요한 것만 선택적으로 호출할 수 있게 돕는다. 기존에는 모든 도구 정의를 프롬프트에 포함해야 했으나, 이제는 필요한 도구만 검색해 사용한다. 이를 통해 컨텍스트 윈도우 내 토큰 사용량을 획기적으로 줄일 수 있다. 토큰 절감은 곧 비용 감소와 응답 속도 향상으로 이어진다. 개발자는 이제 도구의 수에 제한 없이 복잡한 에이전트 워크플로를 설계할 수 있다. 특히 대규모 API 라이브러리를 운영하는 기업 환경에서 활용도가 높을 것으로 보인다. 툴 리트리벌은 시맨틱 검색을 통해 사용자 요청에 가장 적합한 도구를 자동으로 식별한다. 이는 모델이 처리해야 할 정보량을 최적화하여 추론 효율성을 높이는 효과가 있다. 현재 프리뷰 단계이며, 개발자들은 Gemini API를 통해 즉시 테스트해 볼 수 있다. 이번 업데이트는 AI 에이전트의 확장성과 실용성을 동시에 강화하는 조치다. 결과적으로 더 정교하고 효율적인 맞춤형 AI 솔루션 구축이 가능해졌다.",
+      "summary_original": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "월터 아이작슨이 말하는 AI 시대의 호기심과 창의성",
+      "title_original": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+      "published_raw": "Thu, 19 Nov 2026 17:00:00 +0000",
+      "published_local": "2026-11-20 02:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "월터 아이작슨",
+        "구글",
+        "AI 시대",
+        "창의성",
+        "호기심"
+      ],
+      "keywords_original": [],
+      "summary": "구글 블로그는 저명한 전기 작가 월터 아이작슨이 참여한 특별 대담 영상을 공개했다. 이번 대담의 핵심 주제는 AI 시대에 인간의 호기심과 창의성이 어떻게 작용하는가이다. 아이작슨은 역사상 가장 위대한 혁신가들의 사례를 통해 창의성의 본질을 탐구한다. 그는 기술적 진보 속에서도 인간의 판단력과 비판적 사고가 여전히 중요함을 강조한다. AI가 정보를 생성하는 시대일수록 질문을 던지는 능력인 호기심이 핵심 경쟁력이 된다. 대담에서는 AI와 인간의 협업이 새로운 형태의 창작물을 만들어낼 가능성을 논의한다. 특히 과거의 혁신가들이 가졌던 융합적 사고방식이 AI 활용 능력과 맞닿아 있음을 설명한다. 이는 단순한 도구 활용을 넘어 인간의 지적 호기심을 확장하는 방향으로 나아가야 함을 시사한다. 실무적으로는 AI를 보조 도구로 활용하되 최종적인 가치 판단은 인간이 내려야 한다는 점을 명시한다. 이번 영상은 AI 시대에 필요한 인간 중심의 역량이 무엇인지에 대한 통찰을 제공한다. 구글은 이를 통해 기술과 인문학적 관점의 결합이 혁신을 이끄는 동력임을 보여준다. 시청자들은 제공된 링크를 통해 전체 대담 내용을 확인할 수 있다.",
+      "summary_original": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI의 '퍼포먼스 팩토리'가 ChatGPT의 속도를 유지하는 방법",
+      "title_original": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "published_raw": "Thu, 19 Nov 2026 08:00:00 GMT",
+      "published_local": "2026-11-19 17:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "퍼포먼스 팩토리",
+        "ChatGPT",
+        "Codex",
+        "성능 최적화",
+        "AI 에이전트"
+      ],
+      "keywords_original": [
+        "gpt",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "OpenAI는 ChatGPT의 응답 속도를 최적화하고 유지하기 위해 '퍼포먼스 팩토리(Performance Factory)' 시스템을 구축했다. 이 시스템은 Codex 기반의 워크플로를 활용해 성능 저하 문제를 자동으로 탐지하고 해결하는 구조다. 퍼포먼스 팩토리는 코드베이스 전반에서 병목 현상을 찾아내고 이를 수정하는 자동화된 프로세스를 수행한다. 기존의 수동 최적화 방식에서 벗어나 AI 에이전트가 직접 성능 이슈를 분석하고 개선안을 제시하는 것이 핵심이다. 이를 통해 개발자가 일일이 코드를 검토하지 않아도 시스템이 스스로 효율성을 높이는 환경을 조성했다. 대규모 사용자 기반을 가진 ChatGPT 특성상 미세한 성능 저하가 사용자 경험에 큰 영향을 미칠 수 있다. 퍼포먼스 팩토리는 이러한 리스크를 최소화하며 서비스의 안정성과 빠른 응답성을 보장한다. 이 시스템은 단순한 버그 수정을 넘어 런타임 효율성을 극대화하는 방향으로 작동한다. 결과적으로 인프라 비용을 절감하고 더 많은 요청을 효율적으로 처리할 수 있는 기반을 마련했다. 이는 AI 모델 성능뿐 아니라 엔지니어링 시스템 자동화의 중요성을 보여준다. 향후 이러한 에이전트 기반 워크플로는 다른 소프트웨어 최적화 영역으로 확장될 가능성이 크다. OpenAI는 이를 통해 사용자에게 끊김 없는 고속 AI 경험을 지속적으로 제공할 계획이다.",
+      "summary_original": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Daybreak Red 배포: 감독 기반 보안 조사를 위한 참조 아키텍처",
+      "title_original": "Deploying Daybreak Red",
+      "link": "https://openai.com/business/learn/deploying-daybreak-red",
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-19 09:00",
+      "primary_topic": "정책/규제/안전",
+      "topics": [
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "Daybreak Red",
+        "OpenAI",
+        "보안 조사",
+        "참조 아키텍처",
+        "안전 제어"
+      ],
+      "keywords_original": [
+        "safety",
+        "안전/리스크 논의"
+      ],
+      "summary": "OpenAI는 감독 기반 보안 조사를 위한 참조 아키텍처인 Daybreak Red의 배포 방법을 공개했다. Daybreak Red는 보안 위협 분석 및 대응 프로세스를 체계화하기 위해 설계된 프레임워크다. 이 아키텍처는 안전 제어 장치, 초기 설정 방법, 그리고 지속적인 모니터링 체계를 포함한다. 핵심 목적은 AI를 활용한 보안 조사가 안전하고 통제된 환경에서 수행되도록 하는 것이다. 사용자는 제공된 가이드를 통해 시스템의 안전 설정을 구성하고 리스크를 최소화할 수 있다. 특히 감독 하에 이루어지는 조사 프로세스를 통해 오탐을 줄이고 정확도를 높이는 데 집중한다. 설정 단계에서는 인프라 구성부터 권한 관리까지 상세한 단계별 절차가 제시된다. 모니터링 시스템은 실시간으로 보안 활동을 추적하여 이상 징후를 즉각 탐지하도록 돕는다. 이는 기업이 AI 기반 보안 도구를 도입할 때 겪는 운영상의 불확실성을 해소하는 데 기여한다. 실무적으로는 보안 분석가의 업무 효율성을 높이고 대응 시간을 단축하는 효과가 있다. 결과적으로 Daybreak Red는 안전한 AI 보안 운영의 표준 모델을 제시하고자 한다. 이를 통해 조직은 고도화된 보안 위협에 더욱 유연하고 빠르게 대응할 수 있게 된다.",
+      "summary_original": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "OpenAI, PR 스캔 기능 시연 영상 공개",
+      "title_original": "See PR scans in action",
+      "link": "https://openai.com/business/learn/pr-scans-demo",
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-19 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "PR 스캔",
+        "OpenAI",
+        "풀 리퀘스트",
+        "AI 에이전트",
+        "워크플로 최적화"
+      ],
+      "keywords_original": [
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "OpenAI가 PR(Pull Request) 스캔 기능의 실제 작동 과정을 보여주는 시연 영상을 공개했습니다. 이번 영상은 개발자가 풀 리퀘스트 워크플로 내에서 스캔 결과를 어떻게 검토하고 활용하는지에 초점을 맞춥니다. PR 스캔은 코드 변경 사항을 자동으로 분석하여 잠재적인 문제나 개선 사항을 찾아내는 핵심 기능입니다. 사용자는 시연을 통해 AI 에이전트 기반의 워크플로가 실제 개발 환경에서 어떻게 확장되는지 구체적으로 확인할 수 있습니다. 이 기능은 코드 리뷰 시간을 획기적으로 단축하고 전체적인 소프트웨어 품질을 높이는 것을 목표로 합니다. 특히 복잡한 코드베이스에서도 효율적으로 오류를 탐지하고 분석하는 과정을 상세히 다룹니다. 개발자는 AI가 제안한 수정 사항을 즉각적으로 검토하여 코드에 반영할 수 있습니다. 이는 단순한 자동화를 넘어 AI 에이전트가 개발 프로세스에 깊숙이 통합되었음을 의미합니다. 기업 환경에서 코드 안정성을 확보하고 배포 속도를 높이는 데 크게 기여할 것으로 보입니다. 실무자들은 이를 통해 반복적인 리뷰 작업을 줄이고 핵심 로직 설계에 더 집중할 수 있습니다. OpenAI는 비즈니스 솔루션의 일환으로 이러한 워크플로 최적화 도구를 지속적으로 제공하고 있습니다. 해당 데모 영상은 공식 비즈니스 학습 페이지를 통해 확인할 수 있습니다.",
+      "summary_original": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Codex Security Plugin 살펴보기",
+      "title_original": "Explore the Codex Security Plugin",
+      "link": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-19 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "Codex Security Plugin",
+        "OpenAI",
+        "보안 워크플로",
+        "코드 검토",
+        "에이전트 확장"
+      ],
+      "keywords_original": [
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "OpenAI가 Codex Security Plugin의 시연 영상을 공개하며 실제 작동 방식을 선보였습니다. 이 플러그인은 보안 분석 및 코드 검토 프로세스를 자동화하여 개발 효율성을 높이기 위해 설계되었습니다. 영상에서는 플러그인의 초기 설정부터 최종 결과 검토까지의 전체 워크플로를 상세히 보여줍니다. 사용자는 이를 통해 코드 내 보안 취약점을 더 빠르게 식별하고 즉각적으로 수정할 수 있습니다. 특히 에이전트 워크플로 확장을 통해 복잡한 보안 검사 단계를 체계적으로 관리하는 것이 특징입니다. 개발자는 수동으로 수행하던 반복적인 보안 점검 작업을 AI에게 위임함으로써 핵심 로직 개발에 집중할 수 있습니다. 이는 소프트웨어 개발 생명주기 전반에서 보안성을 강화하는 데 크게 기여합니다. 실무적으로는 코드 리뷰 시간이 단축되고 인적 오류를 획기적으로 줄이는 효과가 기대됩니다. 또한 보안 전문가가 아니더라도 기본적인 보안 가이드라인을 준수하도록 돕는 보조 도구 역할을 합니다. 이번 데모는 AI가 실제 기업 보안 환경에서 어떻게 실무에 적용되는지 구체적인 사례를 제시합니다. 결과적으로 개발 생산성과 시스템 안정성을 동시에 확보하는 핵심 도구로 활용될 전망입니다. OpenAI는 이를 통해 비즈니스 AI의 활용 범위를 보안 영역으로 더욱 확장하고 있습니다.",
+      "summary_original": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Get started with Daybreak Blue",
+      "title_original": "Get started with Daybreak Blue",
+      "link": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "published_raw": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-19 09:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [],
+      "keywords_original": [],
+      "summary": "이 기사는 'Get started with Daybreak Blue' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "구글, 고성능·저비용 AI 모델 'Gemini 4 Neon' 공개",
+      "title_original": "Introducing Gemini 4 Neon",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "published_raw": "Wed, 18 Nov 2026 21:35:43 +0000",
+      "published_local": "2026-11-19 06:35",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "Gemini 4 Neon",
+        "구글 딥마인드",
+        "코딩 AI",
+        "비용 효율성",
+        "데이터 분석"
+      ],
+      "keywords_original": [
+        "gemini",
+        "cost",
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "summary": "구글 딥마인드가 복잡한 코딩과 분석 작업에 최적화된 새로운 AI 모델인 Gemini 4 Neon을 발표했습니다. 이 모델은 최첨단 수준의 지능을 제공하면서도 운영 비용을 획기적으로 낮춘 것이 특징입니다. 특히 고도의 논리적 추론이 필요한 프로그래밍 작업에서 탁월한 성능을 발휘하도록 설계되었습니다. 데이터 분석 및 복잡한 문제 해결 능력에서도 기존 모델 대비 효율성이 크게 향상되었습니다. 이번 발표는 고성능 AI의 접근성을 높여 더 많은 개발자와 기업이 활용할 수 있도록 하는 데 목적이 있습니다. Gemini 4 Neon은 비용 효율성을 극대화하여 대규모 프로젝트 적용 시 경제적 부담을 줄여줍니다. 이는 AI 모델의 성능 경쟁을 넘어 비용 대비 성능의 최적화라는 새로운 흐름을 반영한 결과입니다. 실무적으로는 복잡한 코드 생성 및 디버깅 속도가 빨라지고 인프라 비용이 절감될 것으로 기대됩니다. 또한 정밀한 데이터 분석이 필요한 연구 및 산업 현장에서의 활용도가 높아질 전망입니다. 구글은 이번 모델을 통해 프런티어급 지능의 대중화를 가속화하려는 전략을 가지고 있습니다. 사용자는 이제 더 낮은 비용으로도 최상위 수준의 AI 분석 기능을 경험할 수 있게 되었습니다. 상세한 기능과 API 제공 일정은 공식 블로그와 개발자 문서를 통해 순차적으로 공개될 예정입니다.",
+      "summary_original": "Google introduces Gemini 4 Neon, delivering frontier-level intelligence for complex coding and analysis at a lower cost. See what's new."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "구글 딥마인드, 인터랙티브 월드 생성 AI 'Genie 4' 출시",
+      "title_original": "Genie 4 is now available",
+      "link": "https://deepmind.google/blog/genie-4-is-now-available/",
+      "published_raw": "Wed, 18 Nov 2026 18:13:42 +0000",
+      "published_local": "2026-11-19 03:13",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Genie 4",
+        "구글 딥마인드",
+        "인터랙티브 월드",
+        "실시간 오디오",
+        "Google AI Ultra"
+      ],
+      "keywords_original": [
+        "audio"
+      ],
+      "summary": "구글 딥마인드가 인터랙티브 월드를 생성할 수 있는 새로운 AI 모델인 Genie 4를 공식 출시했다. 이번 업데이트를 통해 Google AI Ultra 구독자들은 Genie 4의 강력한 기능을 직접 이용할 수 있게 되었다. Genie 4의 핵심 기능은 사용자가 텍스트나 이미지를 통해 상호작용 가능한 가상 세계를 구축하는 것이다. 특히 이번 버전에서는 실시간 오디오 생성 기능이 추가되어 더욱 몰입감 있는 환경을 제공한다. 사용자는 생성된 월드 내에서 실시간으로 편집 작업을 수행하며 세부 사항을 조정할 수 있다. 이는 단순한 영상 생성을 넘어 사용자의 입력에 반응하는 동적인 시뮬레이션 환경을 구축하는 기술이다. Project Genie의 일환으로 개발된 이 모델은 생성형 AI의 적용 범위를 게임 및 가상 시뮬레이션 영역으로 확장했다. 실시간 오디오와 편집 기능의 결합은 콘텐츠 제작 프로세스를 획기적으로 단축시킬 것으로 기대된다. 개발자와 크리에이터들은 이를 통해 복잡한 코딩 없이도 프로토타입 환경을 빠르게 구축할 수 있다. 구글은 AI Ultra 구독 모델을 통해 고성능 컴퓨팅 자원이 필요한 이 기능을 제공하고 있다. 이번 출시는 AI가 정적인 콘텐츠 생성을 넘어 상호작용 가능한 경험을 설계하는 단계로 진화했음을 보여준다. 향후 Genie 4는 가상 현실 및 교육용 시뮬레이션 등 다양한 산업 분야에 영향을 미칠 전망이다.",
+      "summary_original": "Google AI Ultra subscribers can now access Genie 4 to generate interactive worlds with real-time audio and editing. See what’s new in Project Genie."
+    }
+  ]
+}
