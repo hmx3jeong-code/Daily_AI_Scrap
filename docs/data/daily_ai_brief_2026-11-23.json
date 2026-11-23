@@ -1,0 +1,330 @@
+{
+  "report_date": "2026-11-23",
+  "report_date_kst": "2026-11-23",
+  "generated_at": "2026-11-23T04:02:54.146322+00:00",
+  "generated_at_kst": "2026-11-23T13:02:54.146322+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "신규 모델/제품 발표",
+      2
+    ],
+    [
+      "비용/성능 경쟁",
+      1
+    ],
+    [
+      "안전/리스크 논의",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1398,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 905,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 20,
+    "Google Research Blog": 2,
+    "Google Blog AI": 4,
+    "DeepMind Blog": 0,
+    "Hugging Face Blog": 7,
+    "MIT Technology Review AI": 6,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 1
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 8,
+    "success_freeform": 0,
+    "fallback": 2,
+    "enabled_after_run": true,
+    "last_error": "Error code: 503",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Perplexity와 지능: AI 모델의 발전 측정 방식",
+      "title_original": "Perplexity and Intelligence",
+      "link": "https://openai.com/index/perplexity-and-intelligence",
+      "published_raw": "Sun, 22 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-22 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "퍼플렉시티",
+        "AI 모델",
+        "지능 측정",
+        "OpenAI",
+        "모델 평가"
+      ],
+      "keywords_original": [
+        "model",
+        "developer"
+      ],
+      "summary": "OpenAI는 AI 모델의 지능과 발전을 측정하는 지표인 퍼플렉시티(Perplexity)의 역할에 대해 설명했습니다. 퍼플렉시티는 모델이 다음 토큰을 얼마나 정확하게 예측하는지를 측정하는 확률적 지표입니다. 이 수치가 낮을수록 모델이 데이터의 패턴을 더 잘 이해하고 예측력이 높음을 의미합니다. OpenAI는 이를 통해 모델의 성능 향상을 정량적으로 추적할 수 있다고 밝혔습니다. 특히 새로운 능력이 발현되는 시점을 파악하는 데 유용한 도구가 됩니다. 개발자들은 퍼플렉시티를 활용해 모델 간의 성능을 객관적으로 비교할 수 있습니다. 이는 파편화된 평가 방식 대신 공유된 표준 접근법을 수립하는 데 기여합니다. 모델 훈련 과정에서 손실 함수와 밀접하게 연관되어 학습 효율성을 판단하는 근거가 됩니다. 단순한 벤치마크 점수를 넘어 모델의 근본적인 언어 이해도를 측정하는 핵심 지표로 활용됩니다. 결과적으로 퍼플렉시티는 AI 모델의 지능적 진화를 체계적으로 관리하는 기반이 됩니다. 이는 향후 더 정교한 모델 설계와 최적화 전략을 세우는 데 실무적인 도움을 줍니다. OpenAI는 이러한 측정 방식의 투명성을 통해 AI 생태계의 발전을 가속화하고자 합니다.",
+      "summary_original": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities."
+    },
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "구글 듀플렉스의 진화: 제미나이를 통한 비즈니스 전화 대행 서비스",
+      "title_original": "How Google Duplex evolved to also call businesses for you in Gemini",
+      "link": "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/",
+      "published_raw": "Fri, 20 Nov 2026 23:30:30 +0000",
+      "published_local": "2026-11-21 08:30",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "구글 듀플렉스",
+        "제미나이",
+        "생성형 AI",
+        "AI 비서",
+        "비즈니스 자동화"
+      ],
+      "keywords_original": [
+        "gemini"
+      ],
+      "summary": "구글은 기존의 AI 예약 서비스인 듀플렉스(Duplex)가 제미나이(Gemini)와 결합하여 더욱 진화했음을 발표했다. 과거의 듀플렉스는 정해진 시나리오 기반으로 작동하여 특정 작업 수행에 한계가 있었다. 하지만 생성형 AI인 제미나이의 통합으로 이제는 더 복잡하고 개방적인 비즈니스 전화 업무를 수행할 수 있게 되었다. 제미나이는 사용자의 요청을 분석해 전화의 목적을 설정하고 대화 흐름을 실시간으로 계획한다. 상대방의 예상치 못한 답변이나 변수에도 유연하게 대응하며 자연스러운 대화를 이어가는 것이 특징이다. 이 과정에서 LLM의 추론 능력을 활용해 최적의 해결책을 찾고 사용자의 의도를 정확히 반영한다. 전화가 종료된 후에는 통화 내용을 요약하여 사용자에게 전달함으로써 효율성을 높였다. 이는 단순한 자동 응답을 넘어 AI가 사용자의 대리인으로서 실질적인 업무를 처리하는 단계로 진입했음을 의미한다. 기술적으로는 기존의 음성 합성 기술과 최신 LLM의 계획 능력이 결합된 결과물이다. 이를 통해 사용자는 식당 예약이나 서비스 문의 등 번거로운 전화 업무 시간을 획기적으로 줄일 수 있다. 구글은 앞으로 더 다양한 비즈니스 환경에서 이 기능을 확장해 나갈 계획이다. 결과적으로 제미나이 기반의 듀플렉스는 개인 비서로서의 AI 역할을 더욱 공고히 하고 있다.",
+      "summary_original": "Generative AI"
+    },
+    {
+      "source": "MIT Technology Review AI",
+      "authority": "media",
+      "title": "AI 분야에서 가장 오해받는 그래프의 대대적인 업데이트",
+      "title_original": "The most misunderstood graph in AI just got a major update",
+      "link": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+      "published_raw": "Fri, 20 Nov 2026 18:15:15 +0000",
+      "published_local": "2026-11-21 03:15",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [],
+      "keywords": [
+        "METR",
+        "타임 호라이즌 플롯",
+        "AI 평가",
+        "지수적 성장",
+        "코딩 능력"
+      ],
+      "keywords_original": [
+        "model",
+        "evaluation"
+      ],
+      "summary": "AI 평가 비영리 단체 METR이 최신 보고서를 통해 AI 역량의 발전 추세를 분석했다. 이번 보고서는 과거 널리 알려진 '타임 호라이즌 플롯'을 업데이트한 결과다. 분석 결과, 일부 AI 역량은 여전히 지수 함수적 궤적을 그리며 빠르게 향상되고 있다. 특히 코딩과 같은 기술적 작업에서는 모델의 성능 향상이 매우 뚜렷하게 관찰되었다. 반면 인간의 판단력이 필요한 복잡한 과업에서는 성능 향상 속도가 상대적으로 더딘 것으로 나타났다. 이는 AI가 단순 기술 습득보다 고차원적 추론과 판단 영역에서 한계가 있음을 시사한다. METR은 모델의 실제 능력을 측정하기 위해 엄격한 평가 프레임워크를 적용했다. 이번 업데이트는 AI 발전 속도에 대한 과도한 낙관론과 비관론 사이의 균형 잡힌 시각을 제공한다. 실무적으로 AI를 코딩 보조 도구로 활용하는 효율은 극대화되겠지만, 최종 판단은 여전히 인간의 영역임을 보여준다. 보고서는 판단력 부족 문제 해결이 향후 AI 발전의 핵심 관건이 될 것이라 전망했다. 결과적으로 AI 역량 발전은 영역별로 불균형하게 진행되고 있음이 확인되었다. 이 데이터는 AI 안전성 및 거버넌스 논의의 중요한 기초 자료가 될 것이다.",
+      "summary_original": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to the organization’s time horizon plot, which was widely…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "적대적 증류(Adversarial Distillation) 대응 방안",
+      "title_original": "Combatting adversarial distillation",
+      "link": "https://openai.com/index/combatting-adversarial-distillation",
+      "published_raw": "Fri, 20 Nov 2026 10:00:00 GMT",
+      "published_local": "2026-11-20 19:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "연구/논문"
+      ],
+      "issues": [],
+      "keywords": [
+        "적대적 증류",
+        "OpenAI",
+        "모델 보호",
+        "능력 추출",
+        "다층 방어"
+      ],
+      "keywords_original": [
+        "model",
+        "training"
+      ],
+      "summary": "OpenAI는 모델의 능력을 무단으로 추출하려는 적대적 증류 공격에 대응하기 위한 다층적 접근 방식을 발표했다. 적대적 증류란 고성능 모델의 출력을 이용해 더 작은 모델을 학습시켜 성능을 복제하는 기법을 의미한다. 이를 방지하기 위해 OpenAI는 모델 학습, 안전장치, 탐지 및 집행을 결합한 통합 전략을 도입했다. 우선 모델 학습 단계에서부터 증류 공격에 강한 특성을 갖도록 설계하여 기본 방어력을 높였다. 또한 실시간 모니터링 시스템을 통해 비정상적인 쿼리 패턴을 분석하고 증류 시도를 탐지한다. 탐지된 공격 징후에 대해서는 즉각적인 접근 제한 등의 집행 조치를 취해 추가 유출을 막는다. 이러한 다층 방어 체계는 모델의 핵심 지적 재산과 고유한 성능을 보호하는 데 목적이 있다. 특히 API를 통한 대규모 데이터 추출 시도를 효과적으로 차단함으로써 모델 생태계의 안정성을 도모한다. 이는 최신 AI 모델들이 겪고 있는 지식 증류 기반의 성능 복제 위협에 대한 실질적인 대응책이다. 실무적으로는 개발자들이 모델을 안전하게 배포하고 서비스의 경쟁력을 유지하는 데 기여할 것이다. OpenAI는 앞으로도 지속적인 모니터링과 업데이트를 통해 방어 체계를 고도화할 계획이다. 이번 조치는 AI 모델의 보안 표준을 높이고 무분별한 능력 추출을 방지하는 중요한 단계가 될 것이다.",
+      "summary_original": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Hebbia, GPT-6 Astra 도입으로 금융 리서치 성능 향상 확인",
+      "title_original": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "link": "https://openai.com/business/customer-stories/hebbia",
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-20 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "신규 모델/제품 발표"
+      ],
+      "keywords": [
+        "GPT-6 Astra",
+        "Hebbia",
+        "금융 리서치",
+        "소스 커버리지",
+        "인용 관련성"
+      ],
+      "keywords_original": [
+        "gpt",
+        "release",
+        "evaluation",
+        "신규 모델/제품 발표"
+      ],
+      "summary": "Hebbia가 금융 리서치 분야에서 GPT-6 Astra 모델의 성능을 테스트했다. 이번 테스트는 정식 출시 전 평가 단계에서 진행되었다. 평가 결과, GPT-6 Astra는 기존 모델 대비 여러 방면에서 개선된 성능을 보였다. 특히 정보원 커버리지 측면에서 유의미한 향상이 관찰되었다. 인용문의 관련성 또한 크게 개선되어 리서치의 신뢰도가 높아졌다. 결과물의 제시 품질 역시 향상된 것으로 나타났다. 금융 리서치는 방대한 데이터 분석과 정확한 출처 제시가 필수적인 분야다. GPT-6 Astra의 이러한 개선점은 복잡한 금융 문서 분석의 효율성을 높인다. 이를 통해 분석가는 더 넓은 범위의 자료를 빠르게 검토할 수 있게 된다. 정확한 인용 기능은 리서치 결과의 검증 시간을 단축시키는 효과를 준다. 결과적으로 금융 데이터 처리의 정확성과 생산성이 동시에 강화될 전망이다. Hebbia는 이번 평가를 통해 차세대 모델의 실무 적용 가능성을 확인했다.",
+      "summary_original": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality."
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "title_original": "Can AI help scientists identify promising drug candidates?",
+      "link": "https://openai.com/index/introducing-medchembench",
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-20 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "model"
+      ],
+      "keywords_original": [
+        "model"
+      ],
+      "summary": "이 기사는 'Can AI help scientists identify promising drug candidates?' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "title_original": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "link": "https://huggingface.co/blog/inkling2mini",
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-20 09:00",
+      "primary_topic": "오픈소스/개발자",
+      "topics": [
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "open source"
+      ],
+      "keywords_original": [
+        "open source"
+      ],
+      "summary": "이 기사는 'Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "하네스 어댑터(Harness Adapters) 소개: 성능 및 비용 개선을 위한 모델 최적화 도구",
+      "title_original": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+      "link": "https://huggingface.co/blog/harness-adapters-at-scale",
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-20 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "성능/벤치마크"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "하네스 어댑터",
+        "Hugging Face",
+        "모델 최적화",
+        "비용 절감",
+        "오픈 소스"
+      ],
+      "keywords_original": [
+        "model",
+        "cost",
+        "신규 모델/제품 발표",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Hugging Face가 모델 성능 향상과 비용 절감을 위한 '하네스 어댑터(harness adapters)'를 공개했다. 이 도구는 사용자가 선호하는 모델을 특정 평가 하네스에 맞게 최적화하여 적응시키는 것을 목표로 한다. 오픈 소스와 오픈 사이언스를 통해 인공지능의 민주화를 추진하려는 Hugging Face의 비전이 반영되었다. 기존에는 모델을 새로운 평가 환경에 맞추기 위해 전체 모델을 재학습시키거나 복잡한 튜닝 과정이 필요했다. 하네스 어댑터는 이러한 과정을 효율화하여 적은 자원으로도 최적의 성능을 끌어낼 수 있게 돕는다. 특히 대규모 모델을 운용할 때 발생하는 막대한 계산 비용을 획기적으로 줄일 수 있는 구조다. 이를 통해 개발자는 다양한 벤치마크 테스트에서 모델의 잠재력을 최대한 발휘하게 할 수 있다. 실무적으로는 모델 배포 전 검증 단계에서 소요되는 시간과 인프라 비용을 절감하는 효과가 있다. 또한 특정 도메인이나 특수 목적의 평가 환경에 빠르게 대응할 수 있는 유연성을 제공한다. 결과적으로 모델의 범용성과 특수성 사이의 균형을 맞추는 효율적인 경로를 제시한다. Hugging Face는 이번 발표를 통해 더 많은 연구자가 고성능 모델을 경제적으로 활용하기를 기대한다. 해당 기술은 오픈 소스 생태계의 확장과 AI 모델 평가의 표준화를 가속화할 전망이다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Apple Machine Learning Research",
+      "authority": "research",
+      "title": "Depth Pro 2: 선명함과 시간적 일관성을 갖춘 메트릭 단안 깊이 추정",
+      "title_original": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+      "link": "https://machinelearning.apple.com/research/depth-pro-2-monocular",
+      "published_raw": "Fri, 20 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-20 09:00",
+      "primary_topic": "멀티모달",
+      "topics": [
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Depth Pro 2",
+        "단안 깊이 추정",
+        "메트릭 깊이",
+        "시간적 일관성",
+        "고해상도"
+      ],
+      "keywords_original": [
+        "video",
+        "image"
+      ],
+      "summary": "Apple Machine Learning Research가 이미지와 비디오의 고해상도 밀집 메트릭 깊이를 추정하는 Depth Pro 2를 공개했다. 기존의 단안 깊이 추정 방식은 시간적 일관성과 경계면의 선명도 사이에서 상충 관계가 있었다. 다중 프레임 방식은 일관성이 높지만 선명도가 떨어지고, 단일 프레임 방식은 선명하지만 일관성이 부족했다. Depth Pro 2는 이러한 한계를 극복하기 위해 이미지와 비디오를 모두 처리하는 단일 확장 가능 네트워크를 사용한다. 이 모델은 원본 해상도에서 직접 깊이 맵을 예측하여 정밀도를 높였다. 결과적으로 메트릭 정확도, 선명도, 시간적 일관성을 동시에 확보하는 성과를 거두었다. 특히 비디오 처리 시 프레임 간의 급격한 변화 없이 매끄러운 깊이 추정이 가능하다. 이미지의 경계선 부분에서도 뭉개짐 없이 날카로운 디테일을 유지한다. 이는 자율 주행, AR/VR, 3D 재구성 등 정밀한 거리 측정이 필요한 분야에 유용하다. 기존 모델들보다 전반적인 성능 지표에서 우위를 점하며 효율적인 연산을 지원한다. 고해상도 데이터를 그대로 활용함으로써 세부 정보 손실을 최소화했다. 이번 연구는 단일 네트워크로 정적 이미지와 동적 영상을 모두 최적화했다는 점에서 의의가 있다.",
+      "summary_original": "We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor consistency, single-frame methods favor sharpness. To overcome this trade-off, we train a single, scalable network that processes both images and video and predicts depth maps at native resolution. Depth Pro 2 produces depth maps that are metrically accurate, sharp, and temporally consistent all at once, outperforming…"
+    },
+    {
+      "source": "OpenAI News",
+      "authority": "official",
+      "title": "프런티어 AI 리스크 관리: 학습부터 배포까지",
+      "title_original": "Managing frontier AI risk: From training to deployment",
+      "link": "https://openai.com/index/managing-frontier-ai-risk",
+      "published_raw": "Wed, 18 Nov 2026 06:00:00 GMT",
+      "published_local": "2026-11-18 15:00",
+      "primary_topic": "연구/논문",
+      "topics": [
+        "연구/논문",
+        "모델/출시"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "프런티어 AI",
+        "리스크 관리",
+        "모델 정렬",
+        "샌드박싱",
+        "가드레일"
+      ],
+      "keywords_original": [
+        "training",
+        "alignment",
+        "model",
+        "안전/리스크 논의"
+      ],
+      "summary": "OpenAI는 프런티어 AI 모델의 학습부터 배포 단계까지 리스크를 관리하는 체계적인 접근 방식을 공개했다. 이번 발표는 AI 모델이 가질 수 있는 잠재적 위험을 최소화하고 안전성을 확보하기 위한 전략을 담고 있다. 리스크 관리의 핵심은 모델 정렬(Alignment)을 통해 AI의 행동을 인간의 의도와 일치시키는 것이다. 학습 단계에서는 샌드박싱(Sandboxing) 기술을 적용하여 격리된 환경에서 모델의 성능과 안전성을 검증한다. 배포 전 단계에서는 차단 가드레일(Blocking Safeguards)을 설정해 유해한 콘텐츠 생성을 원천적으로 방지한다. 실시간 모니터링 시스템을 구축하여 배포 후에도 모델의 동작을 지속적으로 감시하고 이상 징후를 포착한다. 이러한 다층적 방어 체계는 모델이 예기치 못한 방식으로 작동하거나 오용되는 사례를 줄이는 데 목적이 있다. 특히 고성능 모델일수록 발생할 수 있는 복잡한 리스크에 대응하기 위해 정교한 평가 지표를 활용한다. OpenAI는 외부 전문가와의 협력을 통해 안전성 평가 기준을 지속적으로 업데이트하고 있다. 이러한 체계는 향후 출시될 차세대 모델의 안전 표준을 설정하는 중요한 기준이 될 전망이다. 실무적으로는 AI 개발 프로세스 전반에 걸쳐 안전 검증 단계가 필수적으로 통합됨을 의미한다. 결과적으로 기술적 혁신과 안전성 사이의 균형을 맞추어 책임감 있는 AI 배포를 지향한다.",
+      "summary_original": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring."
+    }
+  ]
+}
