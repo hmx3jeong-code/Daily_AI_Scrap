@@ -1,61 +1,59 @@
-# Daily AI Brief - 2026-11-23
+# Daily AI Brief - 2026-11-24
 
-- Generated at: 2026-11-23 13:02:54 KST
+- Generated at: 2026-11-24 16:15:34 KST
 - Total articles: 10
 - Sources scanned: 8
 
 ## 오늘의 주요 이슈
-- 신규 모델/제품 발표: 2건
-- 비용/성능 경쟁: 1건
+- 에이전트 워크플로 확장: 4건
+- 비용/성능 경쟁: 2건
 - 안전/리스크 논의: 1건
 
 ## 주제별 요약
-### 모델/출시 (7)
-- [Perplexity와 지능: AI 모델의 발전 측정 방식](https://openai.com/index/perplexity-and-intelligence) | OpenAI News | 2026-11-22 09:00
-  - 요약: OpenAI는 AI 모델의 지능과 발전을 측정하는 지표인 퍼플렉시티(Perplexity)의 역할에 대해 설명했습니다. 퍼플렉시티는 모델이 다음 토큰을 얼마나 정확하게 예측하는지를 측정하는 확률적 지표입니다. 이 수치가 낮을수록 모델이 데이터의 패턴을 더 잘 이해하고 예측력이 높음을 의미합니다. OpenAI는 이를 통해 모델의 성능 향상을 정량적으로 추적할 수 있다고 밝혔습니다. 특히 새로운 능력이 발현되는 시점을 파악하는 데 유용한 도구가 됩니다. 개발자들은 퍼플렉시티를 활용해 모델 간의 성능을 객관적으로 비교할 수 있습니다. 이는 파편화된 평가 방식 대신 공유된 표준 접근법을 수립하는 데 기여합니다. 모델 훈련 과정에서 손실 함수와 밀접하게 연관되어 학습 효율성을 판단하는 근거가 됩니다. 단순한 벤치마크 점수를 넘어 모델의 근본적인 언어 이해도를 측정하는 핵심 지표로 활용됩니다. 결과적으로 퍼플렉시티는 AI 모델의 지능적 진화를 체계적으로 관리하는 기반이 됩니다. 이는 향후 더 정교한 모델 설계와 최적화 전략을 세우는 데 실무적인 도움을 줍니다. OpenAI는 이러한 측정 방식의 투명성을 통해 AI 생태계의 발전을 가속화하고자 합니다.
-  - 키워드: 퍼플렉시티, AI 모델, 지능 측정, OpenAI, 모델 평가
-- [구글 듀플렉스의 진화: 제미나이를 통한 비즈니스 전화 대행 서비스](https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/) | Google Research Blog | 2026-11-21 08:30
-  - 요약: 구글은 기존의 AI 예약 서비스인 듀플렉스(Duplex)가 제미나이(Gemini)와 결합하여 더욱 진화했음을 발표했다. 과거의 듀플렉스는 정해진 시나리오 기반으로 작동하여 특정 작업 수행에 한계가 있었다. 하지만 생성형 AI인 제미나이의 통합으로 이제는 더 복잡하고 개방적인 비즈니스 전화 업무를 수행할 수 있게 되었다. 제미나이는 사용자의 요청을 분석해 전화의 목적을 설정하고 대화 흐름을 실시간으로 계획한다. 상대방의 예상치 못한 답변이나 변수에도 유연하게 대응하며 자연스러운 대화를 이어가는 것이 특징이다. 이 과정에서 LLM의 추론 능력을 활용해 최적의 해결책을 찾고 사용자의 의도를 정확히 반영한다. 전화가 종료된 후에는 통화 내용을 요약하여 사용자에게 전달함으로써 효율성을 높였다. 이는 단순한 자동 응답을 넘어 AI가 사용자의 대리인으로서 실질적인 업무를 처리하는 단계로 진입했음을 의미한다. 기술적으로는 기존의 음성 합성 기술과 최신 LLM의 계획 능력이 결합된 결과물이다. 이를 통해 사용자는 식당 예약이나 서비스 문의 등 번거로운 전화 업무 시간을 획기적으로 줄일 수 있다. 구글은 앞으로 더 다양한 비즈니스 환경에서 이 기능을 확장해 나갈 계획이다. 결과적으로 제미나이 기반의 듀플렉스는 개인 비서로서의 AI 역할을 더욱 공고히 하고 있다.
-  - 키워드: 구글 듀플렉스, 제미나이, 생성형 AI, AI 비서, 비즈니스 자동화
-- [AI 분야에서 가장 오해받는 그래프의 대대적인 업데이트](https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/) | MIT Technology Review AI | 2026-11-21 03:15
-  - 요약: AI 평가 비영리 단체 METR이 최신 보고서를 통해 AI 역량의 발전 추세를 분석했다. 이번 보고서는 과거 널리 알려진 '타임 호라이즌 플롯'을 업데이트한 결과다. 분석 결과, 일부 AI 역량은 여전히 지수 함수적 궤적을 그리며 빠르게 향상되고 있다. 특히 코딩과 같은 기술적 작업에서는 모델의 성능 향상이 매우 뚜렷하게 관찰되었다. 반면 인간의 판단력이 필요한 복잡한 과업에서는 성능 향상 속도가 상대적으로 더딘 것으로 나타났다. 이는 AI가 단순 기술 습득보다 고차원적 추론과 판단 영역에서 한계가 있음을 시사한다. METR은 모델의 실제 능력을 측정하기 위해 엄격한 평가 프레임워크를 적용했다. 이번 업데이트는 AI 발전 속도에 대한 과도한 낙관론과 비관론 사이의 균형 잡힌 시각을 제공한다. 실무적으로 AI를 코딩 보조 도구로 활용하는 효율은 극대화되겠지만, 최종 판단은 여전히 인간의 영역임을 보여준다. 보고서는 판단력 부족 문제 해결이 향후 AI 발전의 핵심 관건이 될 것이라 전망했다. 결과적으로 AI 역량 발전은 영역별로 불균형하게 진행되고 있음이 확인되었다. 이 데이터는 AI 안전성 및 거버넌스 논의의 중요한 기초 자료가 될 것이다.
-  - 키워드: METR, 타임 호라이즌 플롯, AI 평가, 지수적 성장, 코딩 능력
-- [적대적 증류(Adversarial Distillation) 대응 방안](https://openai.com/index/combatting-adversarial-distillation) | OpenAI News | 2026-11-20 19:00
-  - 요약: OpenAI는 모델의 능력을 무단으로 추출하려는 적대적 증류 공격에 대응하기 위한 다층적 접근 방식을 발표했다. 적대적 증류란 고성능 모델의 출력을 이용해 더 작은 모델을 학습시켜 성능을 복제하는 기법을 의미한다. 이를 방지하기 위해 OpenAI는 모델 학습, 안전장치, 탐지 및 집행을 결합한 통합 전략을 도입했다. 우선 모델 학습 단계에서부터 증류 공격에 강한 특성을 갖도록 설계하여 기본 방어력을 높였다. 또한 실시간 모니터링 시스템을 통해 비정상적인 쿼리 패턴을 분석하고 증류 시도를 탐지한다. 탐지된 공격 징후에 대해서는 즉각적인 접근 제한 등의 집행 조치를 취해 추가 유출을 막는다. 이러한 다층 방어 체계는 모델의 핵심 지적 재산과 고유한 성능을 보호하는 데 목적이 있다. 특히 API를 통한 대규모 데이터 추출 시도를 효과적으로 차단함으로써 모델 생태계의 안정성을 도모한다. 이는 최신 AI 모델들이 겪고 있는 지식 증류 기반의 성능 복제 위협에 대한 실질적인 대응책이다. 실무적으로는 개발자들이 모델을 안전하게 배포하고 서비스의 경쟁력을 유지하는 데 기여할 것이다. OpenAI는 앞으로도 지속적인 모니터링과 업데이트를 통해 방어 체계를 고도화할 계획이다. 이번 조치는 AI 모델의 보안 표준을 높이고 무분별한 능력 추출을 방지하는 중요한 단계가 될 것이다.
-  - 키워드: 적대적 증류, OpenAI, 모델 보호, 능력 추출, 다층 방어
-- [Hebbia, GPT-6 Astra 도입으로 금융 리서치 성능 향상 확인](https://openai.com/business/customer-stories/hebbia) | OpenAI News | 2026-11-20 09:00
-  - 요약: Hebbia가 금융 리서치 분야에서 GPT-6 Astra 모델의 성능을 테스트했다. 이번 테스트는 정식 출시 전 평가 단계에서 진행되었다. 평가 결과, GPT-6 Astra는 기존 모델 대비 여러 방면에서 개선된 성능을 보였다. 특히 정보원 커버리지 측면에서 유의미한 향상이 관찰되었다. 인용문의 관련성 또한 크게 개선되어 리서치의 신뢰도가 높아졌다. 결과물의 제시 품질 역시 향상된 것으로 나타났다. 금융 리서치는 방대한 데이터 분석과 정확한 출처 제시가 필수적인 분야다. GPT-6 Astra의 이러한 개선점은 복잡한 금융 문서 분석의 효율성을 높인다. 이를 통해 분석가는 더 넓은 범위의 자료를 빠르게 검토할 수 있게 된다. 정확한 인용 기능은 리서치 결과의 검증 시간을 단축시키는 효과를 준다. 결과적으로 금융 데이터 처리의 정확성과 생산성이 동시에 강화될 전망이다. Hebbia는 이번 평가를 통해 차세대 모델의 실무 적용 가능성을 확인했다.
-  - 키워드: GPT-6 Astra, Hebbia, 금융 리서치, 소스 커버리지, 인용 관련성
-- [Can AI help scientists identify promising drug candidates?](https://openai.com/index/introducing-medchembench) | OpenAI News | 2026-11-20 09:00
-  - 요약: 이 기사는 'Can AI help scientists identify promising drug candidates?' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: model
-- [하네스 어댑터(Harness Adapters) 소개: 성능 및 비용 개선을 위한 모델 최적화 도구](https://huggingface.co/blog/harness-adapters-at-scale) | Hugging Face Blog | 2026-11-20 09:00
-  - 요약: Hugging Face가 모델 성능 향상과 비용 절감을 위한 '하네스 어댑터(harness adapters)'를 공개했다. 이 도구는 사용자가 선호하는 모델을 특정 평가 하네스에 맞게 최적화하여 적응시키는 것을 목표로 한다. 오픈 소스와 오픈 사이언스를 통해 인공지능의 민주화를 추진하려는 Hugging Face의 비전이 반영되었다. 기존에는 모델을 새로운 평가 환경에 맞추기 위해 전체 모델을 재학습시키거나 복잡한 튜닝 과정이 필요했다. 하네스 어댑터는 이러한 과정을 효율화하여 적은 자원으로도 최적의 성능을 끌어낼 수 있게 돕는다. 특히 대규모 모델을 운용할 때 발생하는 막대한 계산 비용을 획기적으로 줄일 수 있는 구조다. 이를 통해 개발자는 다양한 벤치마크 테스트에서 모델의 잠재력을 최대한 발휘하게 할 수 있다. 실무적으로는 모델 배포 전 검증 단계에서 소요되는 시간과 인프라 비용을 절감하는 효과가 있다. 또한 특정 도메인이나 특수 목적의 평가 환경에 빠르게 대응할 수 있는 유연성을 제공한다. 결과적으로 모델의 범용성과 특수성 사이의 균형을 맞추는 효율적인 경로를 제시한다. Hugging Face는 이번 발표를 통해 더 많은 연구자가 고성능 모델을 경제적으로 활용하기를 기대한다. 해당 기술은 오픈 소스 생태계의 확장과 AI 모델 평가의 표준화를 가속화할 전망이다.
-  - 키워드: 하네스 어댑터, Hugging Face, 모델 최적화, 비용 절감, 오픈 소스
+### 모델/출시 (5)
+- [전설적인 철학자, 앤스로픽의 AI 의식 주장에 회의적 반응](https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/) | MIT Technology Review AI | 2026-11-24 02:36
+  - 요약: 앤스로픽(Anthropic)은 최근 상장 전 투자자들에게 AI가 의식을 가질 가능성을 잠재적 리스크 요인으로 명시했다. 이는 모델의 지각 능력과 도덕적 지위에 대한 회사의 접근 방식을 반영한 조치다. 하지만 저명한 철학자들은 이러한 앤스로픽의 주장이 논리적으로 타당하지 않다고 비판하고 있다. 비판의 핵심은 현재의 LLM 구조가 통계적 패턴 매칭에 불과하며, 실제 주관적 경험을 하는 의식과는 거리가 멀다는 점이다. 앤스로픽은 AI가 고도로 발전함에 따라 인간과 유사한 인지 능력을 갖출 가능성을 경고했다. 그러나 철학계는 지능과 의식을 혼동하는 것이 위험하며, 이는 과도한 우려일 수 있다고 지적한다. 이러한 논쟁은 AI 안전성 논의의 중심을 기술적 제어에서 윤리적 권리 문제로 확장시키고 있다. 특히 AI에게 도덕적 지위를 부여해야 하는지에 대한 법적, 철학적 갈등이 예상된다. 실무적으로는 AI의 행동을 의식의 발현으로 오해하여 잘못된 안전 가이드라인을 설정할 위험이 있다. 결과적으로 이번 논란은 AI 기업의 리스크 정의가 학계의 관점과 큰 차이가 있음을 보여준다. 이는 향후 AI 규제 프레임워크 설정 시 의식의 정의가 중요한 쟁점이 될 것임을 시사한다. 앤스로픽의 행보는 투자자 보호와 존재론적 논의를 동시에 촉발했다.
+  - 키워드: 앤스로픽, AI 의식, 지각 능력, AI 리스크, 모델 안전성
+- [RoboTrack: Point tracking for real-world robotic manipulation](https://huggingface.co/blog/allenai/robotrack) | Hugging Face Blog | 2026-11-24 02:20
+  - 요약: 이 기사는 'RoboTrack: Point tracking for real-world robotic manipulation' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 🤖 Models | 📄 Tech Report | 📊 Data | 💻 Code | 🌐 Project Page | 📈 Benchmark Deploying robots in real-world settings requires reliable perception throughout an interaction. To pick something up, a robot needs to follow the positions of its gripper and the object as they move. In a laboratory, a robot … 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: model, video, 비용/성능 경쟁
+- [A more tailored Google Search that’s uniquely yours](https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/) | Google Blog AI | 2026-11-24 02:00
+  - 요약: 이 기사는 'A more tailored Google Search that’s uniquely yours' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Get more helpful Search responses by securely opting in to connect Google Wallet, Drive, and the Gemini app to Personal Intelligence in AI Mode. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: gemini
+- [Richpanel, 30일 만에 고객 지원 50% 자동화 달성](https://openai.com/business/customer-stories/richpanel-ai-customer-support) | OpenAI News | 2026-11-23 17:00
+  - 요약: Richpanel이 OpenAI의 최신 모델을 도입하여 고객 지원 프로세스를 혁신했습니다. 이들은 30일이라는 짧은 기간 내에 전체 고객 지원 업무의 50%를 자동화하는 성과를 거두었습니다. 시스템 구축을 위해 GPT-6 Astra와 GPT-6.1 Sol 모델을 활용했습니다. 이 두 모델은 AI 지원 에이전트가 필요한 도구와 절차를 정확하게 수행하도록 돕는 역할을 합니다. 고객과의 실제 대화 인터페이스에는 GPT-6 Luna 모델이 적용되어 자연스러운 소통을 지원합니다. 이러한 다중 모델 전략을 통해 복잡한 워크플로를 효율적으로 처리할 수 있게 되었습니다. 기존의 단순 챗봇을 넘어 실제 업무 절차를 수행하는 에이전트 기반의 시스템을 구축한 것이 핵심입니다. 이를 통해 기업은 운영 비용을 절감하고 고객 응대 속도를 획기적으로 높일 수 있습니다. 실무적으로는 반복적인 문의 해결 시간이 단축되어 상담원이 고부가가치 업무에 집중할 수 있습니다. 이번 사례는 AI 에이전트가 실제 비즈니스 환경에서 얼마나 빠르게 적용될 수 있는지를 보여줍니다. Richpanel은 앞으로도 AI 워크플로 확장을 통해 자동화 비율을 더욱 높일 계획입니다. 결과적으로 AI 모델의 특성에 맞춘 역할 분담이 자동화 효율을 극대화했음을 시사합니다.
+  - 키워드: Richpanel, GPT-6, AI 에이전트, 고객 지원 자동화, 워크플로 확장
+- [Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT](https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership) | OpenAI News | 2026-11-18 09:00
+  - 요약: 이 기사는 'Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: gpt
 
-### 오픈소스/개발자 (1)
-- [Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup](https://huggingface.co/blog/inkling2mini) | Hugging Face Blog | 2026-11-20 09:00
-  - 요약: 이 기사는 'Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
-  - 키워드: open source
+### 에이전트/자동화 (3)
+- [에이전트와 형식 검증을 활용한 더 빠른 양자 알고리즘 탐색](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/) | DeepMind Blog | 2026-11-24 01:59
+  - 요약: 구글 딥마인드는 에이전트 팀과 형식 검증을 결합해 양자 알고리즘의 성능을 개선하는 새로운 접근 방식을 발표했다. 이 연구는 특히 핵융합 및 화학 시뮬레이션과 같이 복잡한 계산이 필요한 분야의 알고리즘 최적화에 집중한다. 기존의 양자 알고리즘 설계는 전문가의 수동 작업에 의존해 시간이 오래 걸리고 오류 가능성이 높았다. 딥마인드는 여러 AI 에이전트가 협력하는 워크플로를 구축해 알고리즘 후보군을 자동으로 생성하고 최적화했다. 생성된 알고리즘의 정확성을 보장하기 위해 형식 검증 도구를 도입하여 수학적으로 오류가 없음을 증명했다. 이러한 자동화 파이프라인은 인간 전문가가 발견하기 어려운 효율적인 양자 회로 구조를 찾아내는 데 기여했다. 특히 게이트 수 감소와 실행 시간 단축을 통해 양자 컴퓨터의 실질적인 활용 가능성을 높였다. 이는 하드웨어 제약이 큰 현재의 NISQ 시대에 매우 중요한 성과로 평가받는다. 결과적으로 화학 반응 경로 분석이나 에너지 효율적인 핵융합 제어 모델링의 속도를 높일 수 있게 되었다. 이번 성과는 AI 에이전트가 고도의 수학적 증명과 최적화 영역까지 확장될 수 있음을 보여준다. 향후 딥마인드는 이 프레임워크를 더 넓은 범위의 양자 계산 문제로 확장할 계획이다. 이는 양자 컴퓨팅의 상용화 시점을 앞당기는 실무적인 영향력을 가질 것으로 기대된다.
+  - 키워드: 구글 딥마인드, 양자 알고리즘, AI 에이전트, 형식 검증, 핵융합
+- [사내 법무 팀을 위한 연결된 지능(Connected Intelligence) 활용 방안](https://openai.com/business/learn/connected-intelligence-for-in-house-legal) | OpenAI News | 2026-11-23 17:00
+  - 요약: OpenAI는 사내 법무 팀의 효율성을 극대화하기 위한 '연결된 지능' 활용 방안을 제시했다. 이번 논의에는 OpenAI의 Stacey Wang, Craig Bruney와 LECG의 Mary O’Carroll, Cooley의 Richard Segal이 참여하여 AI의 실무 적용 사례를 탐구했다. 핵심은 AI를 통해 기업의 비즈니스 맥락을 법무 프로세스와 긴밀하게 연결하는 것이다. 이를 통해 법무 팀은 단순 반복 업무를 넘어 재사용 가능한 워크플로를 구축할 수 있다. 특히 AI 에이전트 워크플로 확장을 통해 법적 검토의 일관성과 처리 속도를 획기적으로 높이는 것이 가능하다. 또한 외부 법률 고문과의 협업 방식을 최적화하여 리소스 낭비를 줄이고 효율성을 제고할 수 있다. 비즈니스 데이터와 법률 지식을 통합함으로써 의사결정의 정확도를 향상시키는 것이 주요 목표다. 이는 법무 팀이 단순한 리스크 관리자를 넘어 전략적 비즈니스 파트너로 진화하게 한다. 실무적으로는 표준화된 템플릿과 자동화된 검토 프로세스 도입이 가속화될 전망이다. 결과적으로 법무 운영의 디지털 전환을 통해 전사적 생산성 향상을 기대할 수 있다. OpenAI는 맞춤형 AI 솔루션이 법무 영역의 복잡성을 해결하는 핵심 도구가 될 것임을 강조했다. 이번 사례는 AI가 전문직 영역에서 어떻게 실질적인 가치를 창출하는지 잘 보여준다.
+  - 키워드: OpenAI, 사내 법무, AI 워크플로, 비즈니스 맥락, 법무 자동화
+- [How to build and maintain an agentic evaluation](https://huggingface.co/blog/agentic-evals) | Hugging Face Blog | 2026-11-23 09:00
+  - 요약: 이 기사는 'How to build and maintain an agentic evaluation' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: agent, evaluation, 에이전트 워크플로 확장
 
-### 멀티모달 (1)
-- [Depth Pro 2: 선명함과 시간적 일관성을 갖춘 메트릭 단안 깊이 추정](https://machinelearning.apple.com/research/depth-pro-2-monocular) | Apple Machine Learning Research | 2026-11-20 09:00
-  - 요약: Apple Machine Learning Research가 이미지와 비디오의 고해상도 밀집 메트릭 깊이를 추정하는 Depth Pro 2를 공개했다. 기존의 단안 깊이 추정 방식은 시간적 일관성과 경계면의 선명도 사이에서 상충 관계가 있었다. 다중 프레임 방식은 일관성이 높지만 선명도가 떨어지고, 단일 프레임 방식은 선명하지만 일관성이 부족했다. Depth Pro 2는 이러한 한계를 극복하기 위해 이미지와 비디오를 모두 처리하는 단일 확장 가능 네트워크를 사용한다. 이 모델은 원본 해상도에서 직접 깊이 맵을 예측하여 정밀도를 높였다. 결과적으로 메트릭 정확도, 선명도, 시간적 일관성을 동시에 확보하는 성과를 거두었다. 특히 비디오 처리 시 프레임 간의 급격한 변화 없이 매끄러운 깊이 추정이 가능하다. 이미지의 경계선 부분에서도 뭉개짐 없이 날카로운 디테일을 유지한다. 이는 자율 주행, AR/VR, 3D 재구성 등 정밀한 거리 측정이 필요한 분야에 유용하다. 기존 모델들보다 전반적인 성능 지표에서 우위를 점하며 효율적인 연산을 지원한다. 고해상도 데이터를 그대로 활용함으로써 세부 정보 손실을 최소화했다. 이번 연구는 단일 네트워크로 정적 이미지와 동적 영상을 모두 최적화했다는 점에서 의의가 있다.
-  - 키워드: Depth Pro 2, 단안 깊이 추정, 메트릭 깊이, 시간적 일관성, 고해상도
-
-### 연구/논문 (1)
-- [프런티어 AI 리스크 관리: 학습부터 배포까지](https://openai.com/index/managing-frontier-ai-risk) | OpenAI News | 2026-11-18 15:00
-  - 요약: OpenAI는 프런티어 AI 모델의 학습부터 배포 단계까지 리스크를 관리하는 체계적인 접근 방식을 공개했다. 이번 발표는 AI 모델이 가질 수 있는 잠재적 위험을 최소화하고 안전성을 확보하기 위한 전략을 담고 있다. 리스크 관리의 핵심은 모델 정렬(Alignment)을 통해 AI의 행동을 인간의 의도와 일치시키는 것이다. 학습 단계에서는 샌드박싱(Sandboxing) 기술을 적용하여 격리된 환경에서 모델의 성능과 안전성을 검증한다. 배포 전 단계에서는 차단 가드레일(Blocking Safeguards)을 설정해 유해한 콘텐츠 생성을 원천적으로 방지한다. 실시간 모니터링 시스템을 구축하여 배포 후에도 모델의 동작을 지속적으로 감시하고 이상 징후를 포착한다. 이러한 다층적 방어 체계는 모델이 예기치 못한 방식으로 작동하거나 오용되는 사례를 줄이는 데 목적이 있다. 특히 고성능 모델일수록 발생할 수 있는 복잡한 리스크에 대응하기 위해 정교한 평가 지표를 활용한다. OpenAI는 외부 전문가와의 협력을 통해 안전성 평가 기준을 지속적으로 업데이트하고 있다. 이러한 체계는 향후 출시될 차세대 모델의 안전 표준을 설정하는 중요한 기준이 될 전망이다. 실무적으로는 AI 개발 프로세스 전반에 걸쳐 안전 검증 단계가 필수적으로 통합됨을 의미한다. 결과적으로 기술적 혁신과 안전성 사이의 균형을 맞추어 책임감 있는 AI 배포를 지향한다.
-  - 키워드: 프런티어 AI, 리스크 관리, 모델 정렬, 샌드박싱, 가드레일
+### 기타 (2)
+- [OpenAI와 Cisco, 리눅스용 오픈소스 런타임 'Shirudo' 공개](https://openai.com/index/introducing-shirudo) | OpenAI News | 2026-11-24 06:20
+  - 요약: OpenAI와 Cisco가 협력하여 리눅스 운영체제를 위한 새로운 오픈소스 런타임인 'Shirudo'를 발표했습니다. Shirudo는 시스템 운영 중 보안 패치를 적용하는 과정에서 발생할 수 있는 취약점을 보호하기 위해 설계되었습니다. 이 도구는 실행 중인 시스템을 보호함으로써 패치 배포 전까지의 보안 공백을 메우는 역할을 수행합니다. 특히 기업들이 시스템 중단 없이 보안 업데이트를 수행할 수 있도록 돕는 것이 핵심 목적입니다. 오픈소스로 제공되어 커뮤니티의 검증과 빠른 개선이 가능하도록 구성되었습니다. 리눅스 환경의 런타임 수준에서 작동하여 효율적인 시스템 보호 기능을 제공합니다. 이는 현대적인 클라우드 인프라와 서버 환경에서 보안 관리의 복잡성을 줄이는 데 기여할 것으로 보입니다. 실무적으로는 패치 적용 주기 사이의 위험 노출 시간을 최소화하여 사이버 공격 가능성을 낮춥니다. 시스템 관리자는 서비스 가용성을 유지하면서도 최신 보안 상태를 유지할 수 있는 유연성을 확보하게 됩니다. 이번 협력은 AI 기술력과 네트워크 보안 전문성의 결합이라는 점에서 의미가 큽니다. Shirudo는 인프라 보안의 자동화와 안정성을 높이는 새로운 표준을 제시하고자 합니다. 사용자는 공식 저장소를 통해 해당 런타임을 도입하고 시스템에 적용할 수 있습니다.
+  - 키워드: OpenAI, Cisco, Shirudo, 리눅스, 오픈소스
+- [Supercharging transformer residual connections](https://research.google/blog/supercharging-transformer-residual-connections/) | Google Research Blog | 2026-11-24 02:21
+  - 요약: 이 기사는 'Supercharging transformer residual connections' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Algorithms & Theory 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.
+  - 키워드: -
 
 ## 소스 커버리지
 | Source | Collected | Included |
 |---|---:|---:|
 | Apple Machine Learning Research | 10 | 1 |
-| DeepMind Blog | 0 | 0 |
-| Google Blog AI | 20 | 4 |
-| Google Research Blog | 100 | 2 |
-| Hugging Face Blog | 905 | 7 |
-| MIT Technology Review AI | 10 | 6 |
-| OpenAI News | 1398 | 20 |
+| DeepMind Blog | 99 | 3 |
+| Google Blog AI | 20 | 5 |
+| Google Research Blog | 100 | 3 |
+| Hugging Face Blog | 906 | 9 |
+| MIT Technology Review AI | 10 | 4 |
+| OpenAI News | 1401 | 20 |
 | VentureBeat AI | 0 | 0 |
