@@ -1,0 +1,332 @@
+{
+  "report_date": "2026-11-27",
+  "report_date_kst": "2026-11-27",
+  "generated_at": "2026-11-27T05:20:58.996535+00:00",
+  "generated_at_kst": "2026-11-27T14:20:58.996535+09:00",
+  "article_count": 10,
+  "issues_top": [
+    [
+      "에이전트 워크플로 확장",
+      3
+    ],
+    [
+      "비용/성능 경쟁",
+      2
+    ],
+    [
+      "안전/리스크 논의",
+      2
+    ],
+    [
+      "신규 모델/제품 발표",
+      1
+    ]
+  ],
+  "source_totals": {
+    "OpenAI News": 1406,
+    "Google Research Blog": 100,
+    "Google Blog AI": 20,
+    "DeepMind Blog": 99,
+    "Hugging Face Blog": 908,
+    "MIT Technology Review AI": 10,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 10
+  },
+  "source_kept": {
+    "OpenAI News": 9,
+    "Google Research Blog": 3,
+    "Google Blog AI": 2,
+    "DeepMind Blog": 2,
+    "Hugging Face Blog": 7,
+    "MIT Technology Review AI": 3,
+    "VentureBeat AI": 0,
+    "Apple Machine Learning Research": 0
+  },
+  "llm_stats": {
+    "attempted": 10,
+    "success_json": 6,
+    "success_freeform": 0,
+    "fallback": 4,
+    "enabled_after_run": true,
+    "last_error": "Error code: 503",
+    "init_error": ""
+  },
+  "articles": [
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "AMD Ryzen 및 Radeon을 위한 llama.cpp 벤치마크 대시보드 공개",
+      "title_original": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "link": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "published_raw": "Thu, 26 Nov 2026 11:37:17 GMT",
+      "published_local": "2026-11-26 20:37",
+      "primary_topic": "오픈소스/개발자",
+      "topics": [
+        "오픈소스/개발자",
+        "모델/출시"
+      ],
+      "issues": [
+        "신규 모델/제품 발표",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "keywords": [
+        "llama.cpp",
+        "AMD Ryzen",
+        "AMD Radeon",
+        "Hugging Face",
+        "로컬 추론"
+      ],
+      "keywords_original": [
+        "hugging face",
+        "developer",
+        "model",
+        "신규 모델/제품 발표",
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁"
+      ],
+      "summary": "Hugging Face에 AMD Ryzen 및 Radeon 하드웨어를 위한 llama.cpp 벤치마크 대시보드가 새롭게 공개되었다. 이 대시보드는 llama.cpp 빌드, 모델, 양자화 방식에 따른 프롬프트 처리 및 텍스트 생성 성능을 추적할 수 있게 한다. 사용자는 이를 통해 AMD 하드웨어 기반의 로컬 추론 성능을 상세히 탐색할 수 있다. 로컬 추론 성능은 모델, 커널, 빌드의 진화에 따라 지속적으로 변화하는 특성이 있다. AMD 개발자들이 이러한 성능 변화를 쉽게 점검할 수 있도록 돕는 것이 이번 대시보드의 핵심 목적이다. 사용자는 특정 하드웨어, 모델, 빌드를 선택하여 양자화 수준별 성능을 비교하고 시간에 따른 변화를 추적할 수 있다. 벤치마크 워크플로와 기초 결과 데이터는 모두 공개되어 있어 투명한 검증이 가능하다. 설정 사이드바를 통해 하드웨어, 모델, llama.cpp 빌드 버전을 자유롭게 선택할 수 있다. 현재 지원되는 하드웨어로는 Radeon 8060S (gfx1151)와 Radeon AI Pro R9700S (gfx1201)가 포함되어 있다. 이번 도구는 AMD 생태계 내에서 최적의 로컬 LLM 실행 환경을 구축하려는 개발자들에게 실질적인 지표를 제공한다. 하드웨어 가속 성능을 정량적으로 비교함으로써 모델 선택과 최적화 전략 수립에 기여할 것으로 보인다. 결과적으로 AMD GPU 및 CPU 사용자들의 로컬 AI 추론 효율성을 극대화하는 데 도움을 줄 전망이다.",
+      "summary_original": "The llama.cpp × AMD Benchmark dashboard is available on Hugging Face. It lets you track prompt processing and text generation performance across llama.cpp builds, models, and quantizations, so you can explore how local inference performs on AMD Ryzen and Radeon hardware. Local inference performance changes as models, kernels, and builds evolve. We want those changes to be easy to inspect for any AMD developer: pick a hardware, a model and a build, compare quantizations, and follow performance over time. The benchmark workflow and underlying results are public, so you can also inspect how we benchmark inference performance. You can choose Hardware , Model , and llama.cpp build in the Configuration sidebar. The current hardware choices are Radeon 8060S (gfx1151) and Radeon AI Pro R9700S (gfx1201)."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "title_original": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "link": "https://huggingface.co/blog/training-swarms",
+      "published_raw": "Thu, 26 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-26 09:00",
+      "primary_topic": "에이전트/자동화",
+      "topics": [
+        "에이전트/자동화",
+        "오픈소스/개발자"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장"
+      ],
+      "keywords": [
+        "agent",
+        "multi-agent",
+        "open source",
+        "에이전트 워크플로 확장"
+      ],
+      "keywords_original": [
+        "agent",
+        "multi-agent",
+        "open source",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "이 기사는 'Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 We’re on a journey to advance and democratize artificial intelligence through open source and open science. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Google Research Blog",
+      "authority": "official",
+      "title": "웨어러블 기기를 활용한 심혈관-신장-대사(CKM) 위험 프로파일링 및 개인 맞춤형 코칭",
+      "title_original": "Using wearables to enable cardiovascular-kidney-metabolic (CKM) risk profiling for personalized coaching",
+      "link": "https://research.google/blog/using-wearables-to-enable-cardiovascular-kidney-metabolic-ckm-risk-profiling-for-personalized-coaching/",
+      "published_raw": "Wed, 11 Nov 2026 19:54:00 +0000",
+      "published_local": "2026-11-12 04:54",
+      "primary_topic": "정책/규제/안전",
+      "topics": [
+        "정책/규제/안전"
+      ],
+      "issues": [
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "CKM 증후군",
+        "웨어러블 기기",
+        "개인 맞춤형 코칭",
+        "심혈관 건강",
+        "정밀 의료"
+      ],
+      "keywords_original": [
+        "risk",
+        "안전/리스크 논의"
+      ],
+      "summary": "구글 리서치는 웨어러블 기기를 통해 심혈관-신장-대사(CKM) 증후군의 위험도를 프로파일링하고 맞춤형 건강 코칭을 제공하는 연구를 진행하고 있다. CKM 증후군은 심장, 신장, 대사 건강이 서로 밀접하게 연결되어 발생하는 복합적인 건강 위험 상태를 의미한다. 기존의 의료 진단은 간헐적인 검사에 의존하지만, 웨어러블 기기는 일상생활 속의 연속적인 데이터를 수집할 수 있다는 장점이 있다. 연구팀은 심박수, 활동량, 수면 패턴 등 웨어러블에서 측정된 생체 지표를 분석하여 개인별 위험 프로필을 구축한다. 이를 통해 고혈압, 당뇨병, 만성 신장 질환과 같은 질환의 조기 발견 및 관리가 가능해진다. 특히 임상 데이터와 웨어러블 데이터를 통합함으로써 더욱 정밀한 위험 층화가 가능해질 것으로 기대된다. 이러한 접근 방식은 환자가 자신의 건강 상태를 실시간으로 이해하고 행동 변화를 유도하는 데 도움을 준다. 개인 맞춤형 코칭 시스템은 사용자에게 최적화된 운동 및 식단 가이드를 제공하여 질병 진행을 늦춘다. 이는 사후 치료 중심의 의료 체계를 예방 및 관리 중심의 정밀 의료 체계로 전환하는 중요한 단계다. 결과적으로 의료진은 더 정확한 데이터를 바탕으로 환자에게 최적의 치료 전략을 수립할 수 있다. 구글은 이러한 기술을 통해 만성 질환의 전 세계적인 부담을 줄이고 삶의 질을 향상시키는 것을 목표로 한다. 향후 더 많은 임상 데이터를 확보하여 프로파일링 모델의 정확도를 지속적으로 높일 계획이다.",
+      "summary_original": "Health & Bioscience"
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Gemini Decisions API: 빠르고 정밀한 멀티모달 의사결정 지원",
+      "title_original": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "published_raw": "Wed, 11 Nov 2026 18:00:00 +0000",
+      "published_local": "2026-11-12 03:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "멀티모달"
+      ],
+      "issues": [],
+      "keywords": [
+        "Gemini Decisions API",
+        "멀티모달",
+        "의사결정 AI",
+        "구글 AI",
+        "Gemini Decision"
+      ],
+      "keywords_original": [
+        "model",
+        "gemini",
+        "api",
+        "multimodal"
+      ],
+      "summary": "구글이 최신 Gemini Decision 모델을 기반으로 한 Gemini Decisions API를 공개했습니다. 이 API는 빠르고 정밀하게 보정된 멀티모달 의사결정을 지원하는 것이 핵심입니다. 텍스트, 이미지 등 다양한 형태의 데이터를 동시에 처리하여 최적의 판단을 내릴 수 있습니다. 특히 '보정된(calibrated)' 결과물을 제공함으로써 모델의 확신도를 신뢰할 수 있게 설계되었습니다. 이는 기존 생성형 AI의 한계를 넘어 구체적인 의사결정 최적화에 집중한 결과입니다. 개발자들은 이를 통해 실시간으로 복잡한 데이터를 분석하고 신속한 결정을 내리는 시스템을 구축할 수 있습니다. 응답 속도를 높여 지연 시간을 최소화했으며, 실무 환경에서의 효율성을 극대화했습니다. 다양한 산업 분야의 자동화 프로세스에 즉각적으로 적용 가능한 구조를 갖췄습니다. 멀티모달 입력값을 구조화된 결정으로 변환하는 능력이 탁월합니다. 결과적으로 AI의 역할이 단순 콘텐츠 생성을 넘어 전략적 판단 도구로 확장됨을 의미합니다. 이는 기업의 운영 효율성을 높이는 실질적인 도구가 될 전망입니다.",
+      "summary_original": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "title_original": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+      "published_raw": "Wed, 11 Nov 2026 16:00:00 +0000",
+      "published_local": "2026-11-12 01:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [],
+      "keywords_original": [],
+      "summary": "이 기사는 'Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Tabletop is a new Google Labs experiment for group collaboration. Build interactive itineraries, polls, and brackets with your team. Join the waitlist."
+    },
+    {
+      "source": "DeepMind Blog",
+      "authority": "official",
+      "title": "AlphaGenome 2: 질병 이해를 위한 세포의 DNA 판독 방식 해독",
+      "title_original": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+      "link": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "published_raw": "Wed, 11 Nov 2026 15:00:15 +0000",
+      "published_local": "2026-11-12 00:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [
+        "AlphaGenome 2",
+        "구글 딥마인드",
+        "DNA 서열",
+        "유전체 분석",
+        "정밀 의료"
+      ],
+      "keywords_original": [],
+      "summary": "구글 딥마인드가 DNA 서열과 변이가 특정 인간 세포 유형 및 질병에 미치는 영향을 예측하는 AlphaGenome 2를 발표했다. 이 모델은 세포가 DNA를 읽고 해석하는 방식을 정밀 분석하여 유전적 변이와 질병 간의 상관관계를 밝히는 데 집중한다. 기존 모델과 달리 AlphaGenome 2는 세포 유형별 특이성을 반영한 정밀 예측이 가능하다. 특히 비부호화 DNA 영역의 변이가 유전자 발현에 주는 영향을 예측해 희귀 질환 원인 규명에 기여한다. 대규모 데이터셋 학습을 통해 DNA 서열의 미세 변화가 단백질 생산이나 세포 기능에 미치는 영향을 수치화한다. 이를 통해 특정 변이가 특정 조직에서만 질병을 유발하는 메커니즘을 설명할 수 있다. 연구진은 이 모델이 약물 표적 발굴 및 맞춤형 정밀 의료 구현을 가속화할 것으로 기대한다. 유전체 분석 정확도 향상은 임상 시험 성공률을 높이고 신약 개발 기간을 단축하는 실무적 효과를 가져온다. AlphaGenome 2는 복잡한 생물학적 상호작용을 계산 모델로 구현해 생명과학 연구 패러다임을 전환하고 있다. 결과적으로 유전체 데이터 해석 능력을 극대화해 개인별 맞춤 치료 전략 수립에 핵심적 역할을 할 전망이다.",
+      "summary_original": "Predicting how DNA sequences and their variations impact specific human cell types and disease."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "title_original": "Experience the art and legacy of Dr. Esther Mahlangu",
+      "link": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
+      "published_raw": "Wed, 11 Nov 2026 09:00:00 +0000",
+      "published_local": "2026-11-11 18:00",
+      "primary_topic": "기타",
+      "topics": [
+        "기타"
+      ],
+      "issues": [],
+      "keywords": [],
+      "keywords_original": [],
+      "summary": "이 기사는 'Experience the art and legacy of Dr. Esther Mahlangu' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture. 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture."
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "title_original": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "link": "https://huggingface.co/blog/qvac/botpsy",
+      "published_raw": "Wed, 11 Nov 2026 05:01:16 GMT",
+      "published_local": "2026-11-11 14:01",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "에이전트/자동화"
+      ],
+      "issues": [
+        "에이전트 워크플로 확장",
+        "비용/성능 경쟁",
+        "안전/리스크 논의"
+      ],
+      "keywords": [
+        "model",
+        "llm",
+        "api",
+        "agent",
+        "workflow"
+      ],
+      "keywords_original": [
+        "model",
+        "llm",
+        "api",
+        "agent",
+        "workflow",
+        "에이전트 워크플로 확장"
+      ],
+      "summary": "이 기사는 'BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model' 관련 내용을 다룬다. 공개된 기사 요약에 따르면 Frontier cloud LLMs carry high operational costs that can fluctuate unexpectedly, and relying on such third-party models introduces vulnerabilities, as providers can modify, deny, or deprecate access at any time. Furthermore, proprietary models offer limited customization for specific workflows, wh… 핵심 배경과 세부 수치, 실제 적용 영향은 원문 링크에서 함께 확인하는 것이 좋다.",
+      "summary_original": "Frontier cloud LLMs carry high operational costs that can fluctuate unexpectedly, and relying on such third-party models introduces vulnerabilities, as providers can modify, deny, or deprecate access at any time. Furthermore, proprietary models offer limited customization for specific workflows, while posing risks to privacy, data control, and transparency. Besides, not every task demands frontier-level intelligence: small, specialized agents can be equally capable on specific tasks and significantly cheaper to run, since many routine or smaller workloads can be processed efficiently on-device. As intelligence per parameter continues to improve rapidly, we aim to stand at the forefront of this shift toward performant, privacy-focused, self-hosted models. Tether AI Research introduces BotPsy , a 0.8B-parameter model introduce BotPsy , a 0.8B-parameter model designed for function calling …"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "authority": "official",
+      "title": "멀티 벡터 임베딩 모델을 위한 토큰 풀링 인식 학습 (Token Pooling-Aware Training)",
+      "title_original": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+      "link": "https://huggingface.co/blog/token-pooling",
+      "published_raw": "Wed, 11 Nov 2026 00:00:00 GMT",
+      "published_local": "2026-11-11 09:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시",
+        "오픈소스/개발자"
+      ],
+      "issues": [],
+      "keywords": [
+        "멀티 벡터 임베딩",
+        "토큰 풀링",
+        "정보 검색",
+        "ColBERT",
+        "Hugging Face"
+      ],
+      "keywords_original": [
+        "model",
+        "open source"
+      ],
+      "summary": "Hugging Face는 멀티 벡터 임베딩 모델의 성능을 높이기 위한 '토큰 풀링 인식 학습' 방법을 소개했다. 기존의 멀티 벡터 모델은 검색 시 토큰들을 풀링하여 점수를 계산하지만, 학습 단계에서는 이를 충분히 반영하지 못하는 한계가 있었다. 이 방식은 학습 과정에서 실제 추론 시 사용되는 풀링 메커니즘을 직접 통합하여 최적화한다. 이를 통해 학습과 추론 사이의 괴리를 줄이고 검색 정확도를 유의미하게 향상시킬 수 있다. 특히 ColBERT와 같은 모델에서 토큰 간의 상호작용을 더 정교하게 학습하도록 돕는다. 결과적으로 쿼리와 문서 간의 유사도 계산이 더 정밀해지며, 정보 검색의 효율성이 증대된다. 이 기법은 임베딩 공간의 활용도를 극대화하여 적은 수의 토큰으로도 높은 성능을 내게 한다. 실무적으로는 RAG 시스템의 초기 검색 단계에서 정밀도를 높이는 데 기여한다. 오픈 소스 생태계를 통해 더 많은 개발자가 고성능 임베딩 모델을 구축할 수 있게 지원한다. 모델의 수렴 속도를 개선하고 최종적인 랭킹 성능을 최적화하는 효과가 있다. 이는 대규모 데이터셋에서 효율적인 벡터 검색을 구현하는 핵심 기술이 될 전망이다. Hugging Face는 이를 통해 AI 모델의 민주화와 오픈 사이언스 가치를 실현하고자 한다.",
+      "summary_original": "We’re on a journey to advance and democratize artificial intelligence through open source and open science."
+    },
+    {
+      "source": "Google Blog AI",
+      "authority": "official",
+      "title": "Gemini Intelligence: 더 많은 기기에서 제공되는 새로운 기능들",
+      "title_original": "Gemini Intelligence: New features, on more devices",
+      "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+      "published_raw": "Tue, 10 Nov 2026 19:00:00 +0000",
+      "published_local": "2026-11-11 04:00",
+      "primary_topic": "모델/출시",
+      "topics": [
+        "모델/출시"
+      ],
+      "issues": [],
+      "keywords": [
+        "Gemini Intelligence",
+        "구글",
+        "안드로이드",
+        "AI 비서",
+        "멀티모달"
+      ],
+      "keywords_original": [
+        "gemini"
+      ],
+      "summary": "구글이 Gemini Intelligence의 지원 범위를 더 많은 기기로 확대하며 새로운 기능을 출시했다. 이번 업데이트의 핵심은 다양한 안드로이드 기기에서 Gemini의 확장된 기능을 통해 사용자 생산성을 높이는 것이다. 사용자는 이제 더 넓은 범위의 하드웨어에서 Gemini의 지능형 보조 기능을 직접 경험할 수 있다. 특히 구글 앱 생태계와의 통합이 강화되어 워크스페이스 등과의 연동이 더욱 매끄러워졌다. 실시간 대화형 AI 기능인 Gemini Live 등을 통해 자연스러운 상호작용이 가능해졌다. 멀티모달 능력이 향상되어 텍스트뿐만 아니라 이미지, 음성 등 다양한 입력을 효율적으로 처리한다. 이번 확장은 사용자가 기기 간 경계 없이 일관된 AI 경험을 누리도록 하는 데 목적이 있다. 실무적으로는 복잡한 일정 관리나 정보 요약, 콘텐츠 생성 작업의 속도가 크게 향상될 전망이다. 구글은 지속적인 업데이트를 통해 AI 모델의 최적화와 기기 호환성을 넓혀갈 계획이다. 이를 통해 안드로이드 사용자들은 개인 맞춤형 AI 비서의 혜택을 더 광범위하게 누리게 된다. 이번 조치는 경쟁 AI 서비스들 사이에서 구글의 생태계 지배력을 강화하려는 전략으로 풀이된다. 최신 기능들은 순차적으로 배포되며 지원 기기 목록은 계속해서 추가될 예정이다.",
+      "summary_original": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more."
+    }
+  ]
+}
